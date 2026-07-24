@@ -335,6 +335,7 @@ input[type="range"] { width: 92px; accent-color: var(--accent); }
 }
 .miniplayer.is-open { transform: translateY(0); }
 .video-shell { max-width: 560px; margin: 0 auto; padding: 8px 10px 0; }
+.miniplayer.audio-mode #ytMount { display: none; }
 #ytMount { width: 100%; aspect-ratio: 16 / 9; border-radius: 10px; overflow: hidden; background: #000; }
 #ytMount iframe { width: 100%; height: 100%; display: block; }
 .progress { height: 2px; background: rgba(255,255,255,.10); margin-top: 8px; }
@@ -434,9 +435,9 @@ footer {
   <main class="grid" id="grid" aria-live="polite"></main>
 
   <footer>
-    再生はYouTube公式プレーヤーを使用し、各曲のサビ付近から約35秒だけ流します（サビ位置は目安です）。<br>
+    音源は30秒プレビュー（Apple / Deezer）を優先して再生し、見つからない曲だけYouTube動画（サビ付近〜約35秒）に切り替えます。<br>プレビューにはサビを含む聴きどころ部分が使われることが多いです。<br>
     出演情報は 2026/7/24 時点の公式発表から東京会場の主要20組×3日を抜粋。最新情報は summersonic.com でご確認ください。<br>
-    player v6
+    player v7
   </footer>
 
 </div>
@@ -717,13 +718,35 @@ function onYtError() {
   }
   if (cur) {
     store.set('yt2:' + cur.entry.songs[cur.songIndex].q, null);
-    audioFallback(cur);
+    finalDead(cur);
     return;
   }
   state.playing = false; el.pPlay.textContent = '▶';
 }
 
-/* ---------------- 音声フォールバック(iTunes 30秒プレビュー) ---------------- */
+/* ---------------- 30秒プレビュー音源(Apple / Deezer) ---------------- */
+function jsonp(url, ms) {
+  return new Promise((resolve, reject) => {
+    const cb = 'ssjp_' + Math.random().toString(36).slice(2);
+    const s = document.createElement('script');
+    let done = false;
+    const clean = () => { done = true; clearTimeout(t); try { delete window[cb]; } catch (e) { window[cb] = undefined; } s.remove(); };
+    const t = setTimeout(() => { if (!done) { clean(); reject(new Error('timeout')); } }, ms || 8000);
+    window[cb] = (d) => { if (!done) { clean(); resolve(d); } };
+    s.onerror = () => { if (!done) { clean(); reject(new Error('network')); } };
+    s.src = url + '&callback=' + cb;
+    document.head.appendChild(s);
+  });
+}
+
+const SILENT_WAV = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=';
+function unlockAudio() {
+  const a = audioEl();
+  if (a.dataset && a.dataset.unlocked) return;
+  try { a.dataset.unlocked = '1'; } catch (e) {}
+  try { a.src = SILENT_WAV; a.play().catch(() => {}); } catch (e) {}
+}
+
 let aud = null;
 function audioEl() {
   if (aud) return aud;
@@ -750,57 +773,96 @@ function stopAudio() {
   try { aud.pause(); aud.removeAttribute('src'); } catch (e) {}
 }
 
-async function resolveItunes(entry, song) {
+async function resolvePreviewAny(entry, song) {
   const term = entry.artist + ' ' + song.title;
-  const key = 'am:' + term;
+  const key = 'pv2:' + term;
   const c = store.get(key, null);
   if (c && c.u) return c.u;
   if (c && c.u === null && Date.now() - c.ts < 3600000) return null;
-  const url = 'https://itunes.apple.com/search?term=' + encodeURIComponent(term) +
-              '&entity=song&limit=5&country=JP&media=music';
-  const routes = [
-    url,
-    'https://corsproxy.io/?url=' + encodeURIComponent(url),
-    'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
-    'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url),
+
+  const nt = norm(song.title);
+  const na = norm(entry.artist);
+  const match = (tn, an) => {
+    const t = norm(tn), a = norm(an);
+    return (t && nt && (t.includes(nt) || nt.includes(t))) || (a && na && (a.includes(na) || na.includes(a)));
+  };
+
+  /* Apple(iTunes)の30秒プレビュー: 直接 → 中継3系統 */
+  const itUrl = 'https://itunes.apple.com/search?term=' + encodeURIComponent(term) +
+                '&entity=song&limit=6&country=JP&media=music';
+  const itRoutes = [
+    itUrl,
+    'https://corsproxy.io/?url=' + encodeURIComponent(itUrl),
+    'https://api.allorigins.win/raw?url=' + encodeURIComponent(itUrl),
+    'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(itUrl),
   ];
-  for (const r of routes) {
+  for (const r of itRoutes) {
     try {
       const res = await fetchT(r, 8000);
       if (!res.ok) continue;
       const j = await res.json();
-      const hit = (j.results || []).find((x) => x && x.kind === 'song' && x.previewUrl);
-      store.set(key, { u: hit ? hit.previewUrl : null, ts: Date.now() });
-      return hit ? hit.previewUrl : null;
+      const list = (j.results || []).filter((x) => x && x.kind === 'song' && x.previewUrl);
+      const hit = list.find((x) => match(x.trackName, x.artistName)) || list[0];
+      if (hit) { store.set(key, { u: hit.previewUrl, ts: Date.now() }); return hit.previewUrl; }
+      break;
     } catch (e) {}
   }
+
+  /* Deezerの30秒プレビュー: JSONP → 中継3系統 */
+  const dzUrl = 'https://api.deezer.com/search?q=' + encodeURIComponent(term) + '&limit=6';
+  try {
+    const j = await jsonp(dzUrl + '&output=jsonp', 7000);
+    const list = ((j && j.data) || []).filter((x) => x && x.preview);
+    const hit = list.find((x) => match(x.title, x.artist && x.artist.name)) || list[0];
+    if (hit) { store.set(key, { u: hit.preview, ts: Date.now() }); return hit.preview; }
+  } catch (e) {}
+  const dzRoutes = [
+    'https://corsproxy.io/?url=' + encodeURIComponent(dzUrl),
+    'https://api.allorigins.win/raw?url=' + encodeURIComponent(dzUrl),
+    'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(dzUrl),
+  ];
+  for (const r of dzRoutes) {
+    try {
+      const res = await fetchT(r, 8000);
+      if (!res.ok) continue;
+      const j = await res.json();
+      const list = ((j && j.data) || []).filter((x) => x && x.preview);
+      const hit = list.find((x) => match(x.title, x.artist && x.artist.name)) || list[0];
+      if (hit) { store.set(key, { u: hit.preview, ts: Date.now() }); return hit.preview; }
+      break;
+    } catch (e) {}
+  }
+
+  store.set(key, { u: null, ts: Date.now() });
   return null;
 }
 
-async function audioFallback(cur) {
-  const seq = state.loadSeq;
+async function playPreview(seq, cur) {
   const entry = cur.entry;
   const song = entry.songs[cur.songIndex];
-  el.pSong.textContent = song.title + '（音声版を探しています…）';
+  el.pSong.textContent = song.title + '（音源を探しています…）';
+  const pv = await resolvePreviewAny(entry, song);
+  if (seq !== state.loadSeq) return true;
+  if (!pv) return false;
   state.backend = 'audio';
+  el.player.classList.add('audio-mode');
   try { if (yt) yt.stopVideo(); } catch (e) {}
-  const pv = await resolveItunes(entry, song);
-  if (seq !== state.loadSeq) return;
-  if (!pv) { finalDead(cur); return; }
   const a = audioEl();
   a.src = pv;
-  state.seg = { start: 0, end: 30 };
-  a.play().then(() => {
+  state.seg = { start: 0, end: 31 };
+  el.pBar.style.width = '0%';
+  return a.play().then(() => {
     state.playing = true;
     el.pPlay.textContent = '❚❚';
-    el.pSong.textContent = song.title + '（音声のみ・30秒）';
-    el.pBar.style.width = '0%';
+    el.pSong.textContent = song.title + '（30秒プレビュー）';
     refreshPlayingUI();
+    return true;
   }).catch(() => {
     state.playing = false;
     el.pPlay.textContent = '▶';
-    el.pSong.textContent = song.title + '（音声のみ・▶で再生）';
-    toast('下の▶ボタンをもう一度タップしてください');
+    el.pSong.textContent = song.title + '（▶で再生）';
+    toast('▶ボタンをタップすると再生されます');
+    return true;
   });
 }
 
@@ -898,7 +960,7 @@ function cardHTML(a) {
     return '<button class="song' + isCur + dead + '" data-play="' + esc(a.id) + '" data-song="' + i + '">' +
       '<span class="song-icon" aria-hidden="true">' + (isCur ? '❚❚' : '▶') + '</span>' +
       '<span class="song-title">' + esc(s.title) + '</span>' +
-      '<span class="song-note">' + (s._dead ? '再生不可' : 'サビ〜約35秒') + '</span></button>';
+      '<span class="song-note">' + (s._dead ? '再生不可' : '約30秒試聴') + '</span></button>';
   }).join('');
 
   const ytUrl = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(a.songs[0] ? a.songs[0].q : a.artist);
@@ -1005,7 +1067,7 @@ async function playAt(index) {
   const entry = cur.entry;
   const song = entry.songs[cur.songIndex];
 
-  state.backend = 'yt';
+  state.backend = 'none';
   stopAudio();
   el.player.classList.add('is-open');
   el.pArtist.textContent = entry.artist;
@@ -1013,28 +1075,25 @@ async function playAt(index) {
   el.pBar.style.width = '0%';
   refreshPlayingUI();
 
+  /* ① まず30秒プレビュー音源(Apple/Deezer)。次の曲の分は裏で先読み */
+  prefetchNext();
+  const okAudio = await playPreview(seq, cur);
+  if (seq !== state.loadSeq) return;
+  if (okAudio) { markHeard(entry.id); return; }
+
+  /* ② 見つからない曲だけYouTube動画に切り替え */
+  el.pSong.textContent = song.title + '（動画を探しています…）';
   const player = await ensurePlayer();
   if (seq !== state.loadSeq) return;
-  if (!player) {
-    showBlockedNote();
-    el.pSong.textContent = 'プレーヤーを読み込めません';
-    state.continuous = false;
-    render();
-    return;
-  }
+  if (!player) { finalDead(cur); return; }
+  state.backend = 'yt';
+  el.player.classList.remove('audio-mode');
 
-  /* 動画IDを探す（次の曲の分は裏で先読み） */
   const ids = await resolveVideoIds(song);
   if (seq !== state.loadSeq) return;
-  prefetchNext();
-
   if (!ids.length) {
-    song._dead = true;
-    el.pSong.textContent = song.title + '（見つかりませんでした）';
     if (!navigatorOnlineGuess()) { showBlockedNote(); state.continuous = false; render(); return; }
-    if (state.continuous) { setTimeout(() => { if (seq === state.loadSeq) onSongEnd(); }, 500); }
-    else toast('動画が見つかりませんでした。▶ボタンからYouTubeで確認できます');
-    refreshPlayingUI();
+    finalDead(cur);
     return;
   }
 
@@ -1049,15 +1108,13 @@ async function playAt(index) {
     player.loadVideoById({ videoId: ids[0], startSeconds: start });
     player.playVideo();
     try { player.setVolume(state.volume); } catch (e) {}
-  } catch (e) {
-    toast('再生を開始できませんでした。動画を直接タップしてください');
-  }
+  } catch (e) {}
   startSegWatch();
   markHeard(entry.id);
 
   /* iOSで自動再生がブロックされた場合の案内 */
   setTimeout(() => {
-    if (seq !== state.loadSeq || !window.YT || !yt) return;
+    if (seq !== state.loadSeq || state.backend !== 'yt' || !window.YT || !yt) return;
     let s = -1;
     try { s = yt.getPlayerState(); } catch (e) {}
     if (s !== YT.PlayerState.PLAYING && s !== YT.PlayerState.BUFFERING) {
@@ -1071,8 +1128,8 @@ function prefetchNext() {
   const nx = state.queue[state.qi + 1];
   if (!nx) return;
   const s = nx.entry.songs[nx.songIndex];
-  if (!s || s.videoId) return;
-  resolveVideoIds(s).catch(() => {});
+  if (!s) return;
+  resolvePreviewAny(nx.entry, s).catch(() => {});
 }
 
 function navigatorOnlineGuess() {
@@ -1178,6 +1235,7 @@ el.grid.addEventListener('click', (e) => {
     const cur = state.queue[state.qi];
     if (cur && cur.id === id && cur.songIndex === si) { togglePlay(); return; }
     state.continuous = false;
+    unlockAudio();
     ensurePlayer();
     buildQueue(id, si);
     render();
@@ -1206,6 +1264,7 @@ el.playAll.addEventListener('click', () => {
   const list = visibleList();
   if (!list.length) { toast('再生できるアーティストがいません'); return; }
   state.continuous = true;
+  unlockAudio();
   ensurePlayer();
   buildQueue(null, null);
   render();
