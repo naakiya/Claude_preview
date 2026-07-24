@@ -1,0 +1,1171 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>SUMMER SONIC 2026 予習プレイヤー</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Anton&family=DM+Mono:wght@400;500&family=Zen+Kaku+Gothic+New:wght@400;500;700;900&display=swap" rel="stylesheet">
+<style>
+:root {
+  --ink:        #070A14;
+  --panel:      #0E1322;
+  --panel-2:    #161D31;
+  --line:       rgba(255,255,255,.10);
+  --line-soft:  rgba(255,255,255,.06);
+  --text:       #EDF1FA;
+  --dim:        #8892AB;
+
+  --accent:     #FF6A3D;
+  --accent-ink: #1A0A04;
+
+  --radius:     14px;
+  --radius-sm:  9px;
+  --player-h:   74px;
+
+  --font-display: 'Anton', 'Zen Kaku Gothic New', sans-serif;
+  --font-body:    'Zen Kaku Gothic New', -apple-system, BlinkMacSystemFont, 'Hiragino Sans', sans-serif;
+  --font-mono:    'DM Mono', ui-monospace, 'SF Mono', Menlo, monospace;
+}
+body[data-day="DAY1"] { --accent: #FF6A3D; --accent-ink: #200A03; }
+body[data-day="DAY2"] { --accent: #4FB8FF; --accent-ink: #04121F; }
+body[data-day="DAY3"] { --accent: #FFC94B; --accent-ink: #201704; }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  background: var(--ink);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 15px;
+  line-height: 1.7;
+  padding-bottom: calc(var(--player-h) + env(safe-area-inset-bottom, 0px) + 12px);
+  -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+}
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0 0 auto 0;
+  height: 340px;
+  background: radial-gradient(120% 100% at 50% 0%, color-mix(in srgb, var(--accent) 26%, transparent) 0%, transparent 70%);
+  pointer-events: none;
+  z-index: 0;
+  transition: background .5s ease;
+}
+.wrap { position: relative; z-index: 1; max-width: 1120px; margin: 0 auto; padding: 0 16px; }
+button, select, input { font-family: inherit; font-size: inherit; color: inherit; }
+button { cursor: pointer; border: none; background: none; }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; border-radius: 4px; }
+
+/* ---------- ヘッダー ---------- */
+.masthead { padding: 26px 0 8px; }
+.wordmark {
+  font-family: var(--font-display);
+  font-size: clamp(30px, 8.5vw, 56px);
+  line-height: .95;
+  letter-spacing: .01em;
+  text-transform: uppercase;
+}
+.wordmark em { font-style: normal; color: var(--accent); transition: color .4s ease; }
+.tagline {
+  margin-top: 8px;
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: .16em;
+  color: var(--dim);
+  text-transform: uppercase;
+}
+.venue-switch {
+  display: inline-flex;
+  margin-top: 18px;
+  padding: 3px;
+  gap: 3px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+}
+.venue-switch button {
+  padding: 8px 20px;
+  border-radius: 999px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: .1em;
+  color: var(--dim);
+  min-height: 38px;
+}
+.venue-switch button[aria-pressed="true"] { background: var(--text); color: var(--ink); font-weight: 500; }
+
+/* ---------- 日付タブ（半券） ---------- */
+.daystrip { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin: 16px 0 20px; }
+.daytab {
+  position: relative;
+  padding: 12px 10px 13px;
+  text-align: left;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  overflow: hidden;
+  transition: background .2s, border-color .2s, transform .12s;
+}
+.daytab::after {
+  content: '';
+  position: absolute;
+  right: 26px; top: -4px; bottom: -4px;
+  width: 1px;
+  background-image: radial-gradient(circle, rgba(255,255,255,.28) 1px, transparent 1.2px);
+  background-size: 2px 7px;
+  opacity: .5;
+}
+.daytab:active { transform: scale(.985); }
+.daytab .d-no { display: block; font-family: var(--font-display); font-size: 20px; line-height: 1.1; letter-spacing: .02em; }
+.daytab .d-date { display: block; font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .08em; color: var(--dim); margin-top: 2px; }
+.daytab[aria-selected="true"] { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.daytab[aria-selected="true"] .d-date { color: var(--accent-ink); opacity: .72; }
+.daytab[aria-selected="true"]::after { background-image: radial-gradient(circle, rgba(0,0,0,.35) 1px, transparent 1.2px); }
+
+/* ---------- 操作バー ---------- */
+.actionbar { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin-bottom: 14px; }
+.btn-primary {
+  flex: 1 1 220px;
+  min-height: 50px;
+  padding: 0 18px;
+  border-radius: var(--radius-sm);
+  background: var(--accent);
+  color: var(--accent-ink);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: .02em;
+  transition: filter .15s, transform .12s;
+}
+.btn-primary:hover { filter: brightness(1.08); }
+.btn-primary:active { transform: scale(.99); }
+.btn-ghost {
+  min-height: 50px;
+  padding: 0 16px;
+  border-radius: var(--radius-sm);
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--text);
+  font-size: 14px;
+}
+.btn-ghost[aria-pressed="true"] { border-color: var(--accent); color: var(--accent); }
+.volume-wrap {
+  display: flex; align-items: center; gap: 8px;
+  min-height: 50px; padding: 0 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono); font-size: 11px; color: var(--dim);
+}
+input[type="range"] { width: 92px; accent-color: var(--accent); }
+
+/* ---------- 通知バナー ---------- */
+.notice {
+  display: none;
+  margin: 0 0 14px;
+  padding: 12px 14px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  background: color-mix(in srgb, var(--accent) 12%, var(--panel));
+  font-size: 13px;
+  line-height: 1.9;
+}
+.notice.is-on { display: block; }
+.notice b { color: var(--accent); }
+.retry-btn {
+  margin-top: 10px;
+  padding: 9px 18px;
+  min-height: 40px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-weight: 700;
+  display: inline-block;
+}
+
+/* ---------- 検索・絞り込み ---------- */
+.searchrow { display: flex; gap: 8px; margin-bottom: 10px; }
+.searchrow input[type="search"] {
+  flex: 1;
+  min-height: 46px;
+  padding: 0 14px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius-sm);
+  color: var(--text);
+}
+.searchrow input[type="search"]::placeholder { color: var(--dim); }
+.filters, .filter-group { display: flex; flex-wrap: wrap; gap: 6px; margin-bottom: 8px; }
+.chip {
+  padding: 7px 13px;
+  min-height: 36px;
+  border-radius: 999px;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  color: var(--dim);
+  font-size: 12.5px;
+  transition: color .15s, border-color .15s, background .15s;
+}
+.chip[aria-pressed="true"] { color: var(--accent-ink); background: var(--accent); border-color: var(--accent); font-weight: 500; }
+.filter-label {
+  align-self: center;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .14em;
+  color: var(--dim);
+  text-transform: uppercase;
+  margin-right: 2px;
+}
+.resultline {
+  font-family: var(--font-mono);
+  font-size: 11.5px;
+  letter-spacing: .08em;
+  color: var(--dim);
+  margin: 14px 0 10px;
+  display: flex; justify-content: space-between; align-items: center; gap: 10px;
+}
+.linkish { color: var(--dim); text-decoration: underline; text-underline-offset: 3px; font-size: 11.5px; background: none; }
+.linkish:hover { color: var(--text); }
+
+/* ---------- カード ---------- */
+.grid { display: grid; grid-template-columns: 1fr; gap: 10px; }
+@media (min-width: 720px)  { .grid { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1040px) { .grid { grid-template-columns: repeat(3, 1fr); } }
+.card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  overflow: hidden;
+  transition: border-color .2s, background .2s;
+}
+.card.is-playing { border-color: var(--accent); background: color-mix(in srgb, var(--accent) 9%, var(--panel)); }
+.card.is-playing::before { content: ''; position: absolute; left: 0; top: 0; bottom: 0; width: 3px; background: var(--accent); }
+.card-head { display: flex; gap: 12px; padding: 12px; }
+.thumb { flex: 0 0 68px; width: 68px; height: 68px; border-radius: 8px; background: var(--panel-2); object-fit: cover; display: block; }
+.thumb-fallback {
+  flex: 0 0 68px; width: 68px; height: 68px;
+  border-radius: 8px;
+  background: var(--panel-2);
+  display: grid; place-items: center;
+  font-family: var(--font-display);
+  font-size: 24px;
+  color: var(--dim);
+}
+.card-meta { min-width: 0; flex: 1; }
+.artist-name { font-size: 16px; font-weight: 700; line-height: 1.35; letter-spacing: .01em; word-break: break-word; }
+.slot { font-family: var(--font-mono); font-size: 10.5px; letter-spacing: .07em; color: var(--dim); margin-top: 3px; text-transform: uppercase; }
+.genres { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 7px; }
+.genre {
+  font-family: var(--font-mono);
+  font-size: 9.5px;
+  letter-spacing: .1em;
+  padding: 2px 7px;
+  border-radius: 3px;
+  border: 1px solid var(--line);
+  color: var(--dim);
+}
+.songs { border-top: 1px solid var(--line-soft); }
+.song {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 10px 12px;
+  min-height: 48px;
+  text-align: left;
+  border-bottom: 1px solid var(--line-soft);
+  transition: background .15s;
+}
+.song:hover { background: rgba(255,255,255,.035); }
+.song:last-child { border-bottom: none; }
+.song.hidden { display: none; }
+.song.is-current .song-title { color: var(--accent); font-weight: 700; }
+.song.is-dead .song-title { color: var(--dim); }
+.song-icon {
+  flex: 0 0 26px; width: 26px; height: 26px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  border: 1px solid var(--line);
+  font-size: 10px;
+  color: var(--text);
+}
+.song.is-current .song-icon { background: var(--accent); border-color: var(--accent); color: var(--accent-ink); }
+.song-title { flex: 1; min-width: 0; font-size: 14px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.song-note { font-family: var(--font-mono); font-size: 10px; color: var(--dim); flex: 0 0 auto; }
+.more-songs {
+  width: 100%;
+  padding: 9px;
+  min-height: 40px;
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  letter-spacing: .1em;
+  color: var(--dim);
+  border-top: 1px solid var(--line-soft);
+}
+.more-songs:hover { color: var(--text); }
+.card-foot {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 9px 10px;
+  border-top: 1px solid var(--line-soft);
+  background: rgba(0,0,0,.18);
+}
+.fav {
+  min-height: 38px; padding: 0 11px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  font-size: 13px; color: var(--dim);
+  white-space: nowrap;
+}
+.fav[aria-pressed="true"] { color: var(--accent); border-color: var(--accent); }
+.status-select {
+  flex: 1; min-width: 0;
+  min-height: 38px;
+  padding: 0 26px 0 8px;
+  border-radius: var(--radius-sm);
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  font-size: 12.5px;
+  color: var(--text);
+  appearance: none;
+  background-image: linear-gradient(45deg, transparent 50%, var(--dim) 50%), linear-gradient(135deg, var(--dim) 50%, transparent 50%);
+  background-position: calc(100% - 15px) 17px, calc(100% - 11px) 17px;
+  background-size: 4px 4px, 4px 4px;
+  background-repeat: no-repeat;
+}
+.status-select[data-v="当日観たい"], .status-select[data-v="優先度高"] { border-color: var(--accent); color: var(--accent); }
+.ext {
+  min-height: 38px; min-width: 38px;
+  display: grid; place-items: center;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--line);
+  color: var(--dim);
+  font-size: 13px;
+  text-decoration: none;
+}
+.ext:hover { color: var(--text); border-color: var(--text); }
+.empty {
+  padding: 44px 16px;
+  text-align: center;
+  color: var(--dim);
+  border: 1px dashed var(--line);
+  border-radius: var(--radius);
+}
+.empty strong { display: block; color: var(--text); margin-bottom: 6px; font-size: 15px; }
+
+/* ---------- ミニプレイヤー ---------- */
+.miniplayer {
+  position: fixed;
+  left: 0; right: 0; bottom: 0;
+  z-index: 40;
+  background: rgba(10,14,26,.94);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-top: 1px solid var(--line);
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+  transform: translateY(110%);
+  transition: transform .28s cubic-bezier(.2,.8,.3,1);
+}
+.miniplayer.is-open { transform: translateY(0); }
+.progress { height: 2px; background: rgba(255,255,255,.10); }
+.progress span { display: block; height: 100%; width: 0%; background: var(--accent); transition: width .2s linear; }
+.mini-inner {
+  display: flex; align-items: center; gap: 10px;
+  height: calc(var(--player-h) - 2px);
+  max-width: 1120px; margin: 0 auto; padding: 0 12px;
+}
+.mini-thumb { width: 46px; height: 46px; border-radius: 7px; object-fit: cover; background: var(--panel-2); flex: 0 0 46px; }
+.mini-text { flex: 1; min-width: 0; }
+.mini-artist { font-size: 13.5px; font-weight: 700; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mini-song { font-family: var(--font-mono); font-size: 10.5px; color: var(--dim); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.mini-controls { display: flex; align-items: center; gap: 2px; flex: 0 0 auto; }
+.mini-controls button {
+  width: 44px; height: 44px;
+  display: grid; place-items: center;
+  border-radius: 50%;
+  color: var(--text);
+  font-size: 15px;
+}
+.mini-controls button:hover { background: rgba(255,255,255,.07); }
+.mini-controls .play { background: var(--accent); color: var(--accent-ink); font-size: 16px; }
+.mini-controls .play:hover { filter: brightness(1.08); }
+.mini-controls .close { color: var(--dim); font-size: 13px; }
+
+.toast {
+  position: fixed;
+  left: 50%; transform: translateX(-50%);
+  bottom: calc(var(--player-h) + env(safe-area-inset-bottom, 0px) + 14px);
+  z-index: 60;
+  padding: 9px 16px;
+  background: var(--panel-2);
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  font-size: 12.5px;
+  opacity: 0; pointer-events: none;
+  transition: opacity .2s;
+  max-width: calc(100vw - 32px);
+  text-align: center;
+}
+.toast.is-on { opacity: 1; }
+
+footer {
+  margin: 40px 0 10px;
+  padding-top: 18px;
+  border-top: 1px solid var(--line-soft);
+  font-family: var(--font-mono);
+  font-size: 10.5px;
+  line-height: 2;
+  letter-spacing: .05em;
+  color: var(--dim);
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { transition: none !important; animation: none !important; }
+}
+</style>
+</head>
+<body data-day="DAY1">
+<div class="wrap">
+
+  <header class="masthead">
+    <h1 class="wordmark">SUMMER SONIC <em>2026</em></h1>
+    <p class="tagline">Preview Player — 8/14 fri · 8/15 sat · 8/16 sun</p>
+    <div class="venue-switch" id="venueSwitch" role="group" aria-label="会場">
+      <button data-venue="TOKYO" aria-pressed="true">TOKYO</button>
+      <button data-venue="OSAKA" aria-pressed="false">OSAKA</button>
+    </div>
+  </header>
+
+  <nav class="daystrip" id="daystrip" role="tablist" aria-label="日付"></nav>
+
+  <div class="notice" id="envNote"></div>
+
+  <div class="actionbar">
+    <button class="btn-primary" id="playAll">▶ 連続再生</button>
+    <button class="btn-ghost" id="shuffleBtn" aria-pressed="false">⤮ シャッフル</button>
+    <label class="volume-wrap">VOL
+      <input type="range" id="volume" min="0" max="1" step="0.05" value="0.85" aria-label="音量">
+    </label>
+  </div>
+
+  <div class="searchrow">
+    <input type="search" id="search" placeholder="アーティスト名・曲名で検索" aria-label="検索">
+  </div>
+
+  <div class="filter-group" id="viewFilter">
+    <span class="filter-label">View</span>
+    <button class="chip" data-view="all" aria-pressed="true">すべて</button>
+    <button class="chip" data-view="fav" aria-pressed="false">★ 気になる</button>
+    <button class="chip" data-view="unheard" aria-pressed="false">未聴のみ</button>
+    <button class="chip" data-view="wanted" aria-pressed="false">当日観たい</button>
+  </div>
+  <div class="filter-group" id="stageFilter"></div>
+  <div class="filter-group" id="genreFilter"></div>
+
+  <div class="resultline">
+    <span id="resultCount"></span>
+    <button class="linkish" id="resetFilters">絞り込みをリセット</button>
+  </div>
+
+  <main class="grid" id="grid" aria-live="polite"></main>
+
+  <footer>
+    試聴音源は iTunes Search API の30秒プレビューを使用。Apple Music のライブラリやプレイリストには一切追加されません。<br>
+    出演情報は 2026/7/24 時点の公式発表から主要アーティストを抜粋したものです。最新のタイムテーブルは公式サイト（summersonic.com）でご確認ください。<br>player v3
+  </footer>
+
+</div>
+
+<div class="miniplayer" id="miniplayer">
+  <div class="progress"><span id="pBar"></span></div>
+  <div class="mini-inner">
+    <img class="mini-thumb" id="pThumb" alt="" referrerpolicy="no-referrer">
+    <div class="mini-text">
+      <div class="mini-artist" id="pArtist"></div>
+      <div class="mini-song" id="pSong"></div>
+    </div>
+    <div class="mini-controls">
+      <button id="pPrev" aria-label="前の曲">⏮</button>
+      <button class="play" id="pPlay" aria-label="再生・一時停止">▶</button>
+      <button id="pNext" aria-label="次の曲">⏭</button>
+      <button class="close" id="pClose" aria-label="プレイヤーを閉じる">✕</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+<script>
+window.SS_ARTISTS = [{"id":"tokyo-day1-the-strokes","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"THE STROKES","stage":"MARINE STAGE","time":"","genre":["ROCK","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb01.jpg","appleMusicUrl":"","songs":[{"title":"Reptilia","searchTerm":"The Strokes Reptilia","previewUrl":"","startTime":0,"endTime":30},{"title":"Last Nite","searchTerm":"The Strokes Last Nite","previewUrl":"","startTime":0,"endTime":30},{"title":"Someday","searchTerm":"The Strokes Someday","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-bump-of-chicken","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"BUMP OF CHICKEN","stage":"MARINE STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb__X8vVxsUfEJM4.jpg","appleMusicUrl":"","songs":[{"title":"天体観測","searchTerm":"BUMP OF CHICKEN 天体観測","previewUrl":"","startTime":0,"endTime":30},{"title":"車輪の唄","searchTerm":"BUMP OF CHICKEN 車輪の唄","previewUrl":"","startTime":0,"endTime":30},{"title":"ray","searchTerm":"BUMP OF CHICKEN ray","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-keshi","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"KESHI","stage":"MARINE STAGE","time":"","genre":["POP","R&B"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb11.jpg","appleMusicUrl":"","songs":[{"title":"beside you","searchTerm":"keshi beside you","previewUrl":"","startTime":0,"endTime":30},{"title":"limbo","searchTerm":"keshi limbo","previewUrl":"","startTime":0,"endTime":30},{"title":"TOUCH","searchTerm":"keshi TOUCH","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-babymonster","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"BABYMONSTER","stage":"MARINE STAGE","time":"","genre":["K-POP","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/02/thum_bm.jpg","appleMusicUrl":"","songs":[{"title":"SHEESH","searchTerm":"BABYMONSTER SHEESH","previewUrl":"","startTime":0,"endTime":30},{"title":"BATTER UP","searchTerm":"BABYMONSTER BATTER UP","previewUrl":"","startTime":0,"endTime":30},{"title":"DRIP","searchTerm":"BABYMONSTER DRIP","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-jennie","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"JENNIE","stage":"MOUNTAIN STAGE","time":"","genre":["K-POP","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb04.jpg","appleMusicUrl":"","songs":[{"title":"SOLO","searchTerm":"JENNIE SOLO","previewUrl":"","startTime":0,"endTime":30},{"title":"You & Me","searchTerm":"JENNIE You and Me","previewUrl":"","startTime":0,"endTime":30},{"title":"Mantra","searchTerm":"JENNIE Mantra","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-kasabian","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"KASABIAN","stage":"MOUNTAIN STAGE","time":"","genre":["ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb10.jpg","appleMusicUrl":"","songs":[{"title":"Fire","searchTerm":"Kasabian Fire","previewUrl":"","startTime":0,"endTime":30},{"title":"Club Foot","searchTerm":"Kasabian Club Foot","previewUrl":"","startTime":0,"endTime":30},{"title":"L.S.F.","searchTerm":"Kasabian LSF","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-マカロニえんぴつ","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"マカロニえんぴつ","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum-me.jpg","appleMusicUrl":"","songs":[{"title":"ブルーベリー・ナイツ","searchTerm":"マカロニえんぴつ ブルーベリー・ナイツ","previewUrl":"","startTime":0,"endTime":30},{"title":"ハッピーエンドと悪魔が笑う","searchTerm":"マカロニえんぴつ ハッピーエンドと悪魔が笑う","previewUrl":"","startTime":0,"endTime":30},{"title":"なんでもないよ、","searchTerm":"マカロニえんぴつ なんでもないよ","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-dermot-kennedy","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"DERMOT KENNEDY","stage":"MOUNTAIN STAGE","time":"","genre":["POP","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum_dk-1.jpg","appleMusicUrl":"","songs":[{"title":"Outnumbered","searchTerm":"Dermot Kennedy Outnumbered","previewUrl":"","startTime":0,"endTime":30},{"title":"Power Over Me","searchTerm":"Dermot Kennedy Power Over Me","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-fka-twigs","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"FKA TWIGS","stage":"SONIC STAGE","time":"","genre":["ELECTRONIC","R&B"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb08.jpg","appleMusicUrl":"","songs":[{"title":"Two Weeks","searchTerm":"FKA twigs Two Weeks","previewUrl":"","startTime":0,"endTime":30},{"title":"cellophane","searchTerm":"FKA twigs cellophane","previewUrl":"","startTime":0,"endTime":30},{"title":"Eusexua","searchTerm":"FKA twigs Eusexua","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-女王蜂","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"女王蜂","stage":"SONIC STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum_qb-1.jpg","appleMusicUrl":"","songs":[{"title":"メフィスト","searchTerm":"女王蜂 メフィスト","previewUrl":"","startTime":0,"endTime":30},{"title":"火炎","searchTerm":"女王蜂 火炎","previewUrl":"","startTime":0,"endTime":30},{"title":"催眠術","searchTerm":"女王蜂 催眠術","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-man-with-a-mission","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"MAN WITH A MISSION","stage":"PACIFIC STAGE","time":"","genre":["ROCK","JAPANESE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/04/thum-mwam0987654.jpg","appleMusicUrl":"","songs":[{"title":"Raise Your Flag","searchTerm":"MAN WITH A MISSION Raise Your Flag","previewUrl":"","startTime":0,"endTime":30},{"title":"database","searchTerm":"MAN WITH A MISSION database","previewUrl":"","startTime":0,"endTime":30},{"title":"2045","searchTerm":"MAN WITH A MISSION 2045","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day1-indigo-la-end","venue":"TOKYO","day":"DAY1","date":"2026-08-14","artist":"indigo la End","stage":"BEACH STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum_ide.jpg","appleMusicUrl":"","songs":[{"title":"夜行秘密","searchTerm":"indigo la End 夜行秘密","previewUrl":"","startTime":0,"endTime":30},{"title":"通り恋","searchTerm":"indigo la End 通り恋","previewUrl":"","startTime":0,"endTime":30},{"title":"花藍夢","searchTerm":"indigo la End 花藍夢","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-ado","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"Ado","stage":"MARINE STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum-ado_Ad23456723.jpg","appleMusicUrl":"","songs":[{"title":"うっせぇわ","searchTerm":"Ado うっせぇわ","previewUrl":"","startTime":0,"endTime":30},{"title":"唱","searchTerm":"Ado 唱","previewUrl":"","startTime":0,"endTime":30},{"title":"踊","searchTerm":"Ado 踊","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-alex-warren","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"ALEX WARREN","stage":"MARINE STAGE","time":"","genre":["POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb06.jpg","appleMusicUrl":"","songs":[{"title":"Ordinary","searchTerm":"Alex Warren Ordinary","previewUrl":"","startTime":0,"endTime":30},{"title":"Burning Down","searchTerm":"Alex Warren Burning Down","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-mgk","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"mgk","stage":"MARINE STAGE","time":"","genre":["ROCK","HIP-HOP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/04/thum_mgk.jpg","appleMusicUrl":"","songs":[{"title":"bloody valentine","searchTerm":"Machine Gun Kelly bloody valentine","previewUrl":"","startTime":0,"endTime":30},{"title":"my ex's best friend","searchTerm":"Machine Gun Kelly my ex's best friend","previewUrl":"","startTime":0,"endTime":30},{"title":"Emo Girl","searchTerm":"Machine Gun Kelly Emo Girl","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-be-first","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"BE:FIRST","stage":"MARINE STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/04/thum-bft.jpg","appleMusicUrl":"","songs":[{"title":"Gifted.","searchTerm":"BE:FIRST Gifted","previewUrl":"","startTime":0,"endTime":30},{"title":"Boom Boom Back","searchTerm":"BE:FIRST Boom Boom Back","previewUrl":"","startTime":0,"endTime":30},{"title":"Mainstream","searchTerm":"BE:FIRST Mainstream","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-david-byrne","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"DAVID BYRNE","stage":"MOUNTAIN STAGE","time":"","genre":["ROCK","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb07.jpg","appleMusicUrl":"","songs":[{"title":"Everybody's Coming to My House","searchTerm":"David Byrne Everybody's Coming to My House","previewUrl":"","startTime":0,"endTime":30},{"title":"Like Humans Do","searchTerm":"David Byrne Like Humans Do","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-サカナクション","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"サカナクション","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb13.jpg","appleMusicUrl":"","songs":[{"title":"新宝島","searchTerm":"サカナクション 新宝島","previewUrl":"","startTime":0,"endTime":30},{"title":"夜の踊り子","searchTerm":"サカナクション 夜の踊り子","previewUrl":"","startTime":0,"endTime":30},{"title":"ミュージック","searchTerm":"サカナクション ミュージック","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-suede","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"SUEDE","stage":"MOUNTAIN STAGE","time":"","genre":["ROCK","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb32.jpg","appleMusicUrl":"","songs":[{"title":"Beautiful Ones","searchTerm":"Suede Beautiful Ones","previewUrl":"","startTime":0,"endTime":30},{"title":"Animal Nitrate","searchTerm":"Suede Animal Nitrate","previewUrl":"","startTime":0,"endTime":30},{"title":"Trash","searchTerm":"Suede Trash","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-羊文学","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"羊文学","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb25.jpg","appleMusicUrl":"","songs":[{"title":"光るとき","searchTerm":"羊文学 光るとき","previewUrl":"","startTime":0,"endTime":30},{"title":"more than words","searchTerm":"羊文学 more than words","previewUrl":"","startTime":0,"endTime":30},{"title":"1999","searchTerm":"羊文学 1999","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-steve-lacy","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"STEVE LACY","stage":"SONIC STAGE","time":"","genre":["R&B","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb14.jpg","appleMusicUrl":"","songs":[{"title":"Bad Habit","searchTerm":"Steve Lacy Bad Habit","previewUrl":"","startTime":0,"endTime":30},{"title":"Dark Red","searchTerm":"Steve Lacy Dark Red","previewUrl":"","startTime":0,"endTime":30},{"title":"Static","searchTerm":"Steve Lacy Static","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-電気グルーヴ","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"電気グルーヴ","stage":"SONIC STAGE","time":"","genre":["ELECTRONIC","JAPANESE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2025/04/lineup_sm_thumb08.jpg","appleMusicUrl":"","songs":[{"title":"Shangri-La","searchTerm":"電気グルーヴ Shangri-La","previewUrl":"","startTime":0,"endTime":30},{"title":"N.O.","searchTerm":"電気グルーヴ N.O.","previewUrl":"","startTime":0,"endTime":30},{"title":"Fallin' Down","searchTerm":"電気グルーヴ Fallin' Down","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-cornelius","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"Cornelius","stage":"SONIC STAGE","time":"","genre":["JAPANESE","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb20.jpg","appleMusicUrl":"","songs":[{"title":"あなたがいるなら","searchTerm":"Cornelius あなたがいるなら","previewUrl":"","startTime":0,"endTime":30},{"title":"Point of View Point","searchTerm":"Cornelius Point of View Point","previewUrl":"","startTime":0,"endTime":30},{"title":"Star Fruits Surf Rider","searchTerm":"Cornelius Star Fruits Surf Rider","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day2-saucy-dog","venue":"TOKYO","day":"DAY2","date":"2026-08-15","artist":"Saucy Dog","stage":"SONIC STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum-suy2.jpg","appleMusicUrl":"","songs":[{"title":"シンデレラボーイ","searchTerm":"Saucy Dog シンデレラボーイ","previewUrl":"","startTime":0,"endTime":30},{"title":"いつか","searchTerm":"Saucy Dog いつか","previewUrl":"","startTime":0,"endTime":30},{"title":"優しさに溺れる","searchTerm":"Saucy Dog 優しさに溺れる","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-l-arc-en-ciel","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"L’Arc-en-Ciel","stage":"MARINE STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum-lac.jpg","appleMusicUrl":"","songs":[{"title":"HONEY","searchTerm":"L'Arc-en-Ciel HONEY","previewUrl":"","startTime":0,"endTime":30},{"title":"READY STEADY GO","searchTerm":"L'Arc-en-Ciel READY STEADY GO","previewUrl":"","startTime":0,"endTime":30},{"title":"花葬","searchTerm":"L'Arc-en-Ciel 花葬","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-le-sserafim","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"LE SSERAFIM","stage":"MARINE STAGE","time":"","genre":["K-POP","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/02/thum-lsr.jpg","appleMusicUrl":"","songs":[{"title":"ANTIFRAGILE","searchTerm":"LE SSERAFIM ANTIFRAGILE","previewUrl":"","startTime":0,"endTime":30},{"title":"Perfect Night","searchTerm":"LE SSERAFIM Perfect Night","previewUrl":"","startTime":0,"endTime":30},{"title":"EASY","searchTerm":"LE SSERAFIM EASY","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-pentatonix","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"PENTATONIX","stage":"MARINE STAGE","time":"","genre":["POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb28.jpg","appleMusicUrl":"","songs":[{"title":"Hallelujah","searchTerm":"Pentatonix Hallelujah","previewUrl":"","startTime":0,"endTime":30},{"title":"Daft Punk","searchTerm":"Pentatonix Daft Punk","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-yuki","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"YUKI","stage":"MARINE STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum-yk09876543.jpg","appleMusicUrl":"","songs":[{"title":"JOY","searchTerm":"YUKI JOY","previewUrl":"","startTime":0,"endTime":30},{"title":"ふがいないや","searchTerm":"YUKI ふがいないや","previewUrl":"","startTime":0,"endTime":30},{"title":"センチメンタルジャーニー","searchTerm":"YUKI センチメンタルジャーニー","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-wanima","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"WANIMA","stage":"MARINE STAGE","time":"","genre":["JAPANESE","PUNK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum-wnm_0987654.jpg","appleMusicUrl":"","songs":[{"title":"ともに","searchTerm":"WANIMA ともに","previewUrl":"","startTime":0,"endTime":30},{"title":"やってみよう","searchTerm":"WANIMA やってみよう","previewUrl":"","startTime":0,"endTime":30},{"title":"シャララ","searchTerm":"WANIMA シャララ","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-jamiroquai","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"JAMIROQUAI","stage":"MOUNTAIN STAGE","time":"","genre":["POP","ELECTRONIC"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb03.jpg","appleMusicUrl":"","songs":[{"title":"Virtual Insanity","searchTerm":"Jamiroquai Virtual Insanity","previewUrl":"","startTime":0,"endTime":30},{"title":"Canned Heat","searchTerm":"Jamiroquai Canned Heat","previewUrl":"","startTime":0,"endTime":30},{"title":"Cosmic Girl","searchTerm":"Jamiroquai Cosmic Girl","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-suchmos","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"Suchmos","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","R&B"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb15.jpg","appleMusicUrl":"","songs":[{"title":"STAY TUNE","searchTerm":"Suchmos STAY TUNE","previewUrl":"","startTime":0,"endTime":30},{"title":"A.G.I.T.","searchTerm":"Suchmos AGIT","previewUrl":"","startTime":0,"endTime":30},{"title":"VOLT-AGE","searchTerm":"Suchmos VOLT-AGE","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-キタニタツヤ","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"キタニタツヤ","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb26.jpg","appleMusicUrl":"","songs":[{"title":"青のすみか","searchTerm":"キタニタツヤ 青のすみか","previewUrl":"","startTime":0,"endTime":30},{"title":"スカー","searchTerm":"キタニタツヤ スカー","previewUrl":"","startTime":0,"endTime":30},{"title":"化け猫","searchTerm":"キタニタツヤ 化け猫","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-babymetal","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"BABYMETAL","stage":"SONIC “METAL” STAGE","time":"","genre":["METAL","JAPANESE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/02/thum-BM-1.jpg","appleMusicUrl":"","songs":[{"title":"ギミチョコ！！","searchTerm":"BABYMETAL ギミチョコ","previewUrl":"","startTime":0,"endTime":30},{"title":"メギツネ","searchTerm":"BABYMETAL メギツネ","previewUrl":"","startTime":0,"endTime":30},{"title":"KARATE","searchTerm":"BABYMETAL KARATE","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-pendulum","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"PENDULUM","stage":"SONIC “METAL” STAGE","time":"","genre":["ELECTRONIC","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb29.jpg","appleMusicUrl":"","songs":[{"title":"Propane Nightmares","searchTerm":"Pendulum Propane Nightmares","previewUrl":"","startTime":0,"endTime":30},{"title":"Watercolour","searchTerm":"Pendulum Watercolour","previewUrl":"","startTime":0,"endTime":30},{"title":"The Island","searchTerm":"Pendulum The Island","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-band-maid","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"BAND-MAID","stage":"PACIFIC STAGE","time":"","genre":["METAL","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum_BM.jpg","appleMusicUrl":"","songs":[{"title":"Domination","searchTerm":"BAND-MAID Domination","previewUrl":"","startTime":0,"endTime":30},{"title":"Thrill","searchTerm":"BAND-MAID Thrill","previewUrl":"","startTime":0,"endTime":30},{"title":"Unleash","searchTerm":"BAND-MAID Unleash","previewUrl":"","startTime":0,"endTime":30}]},{"id":"tokyo-day3-きゃりーぱみゅぱみゅ","venue":"TOKYO","day":"DAY3","date":"2026-08-16","artist":"きゃりーぱみゅぱみゅ","stage":"BEACH STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum_kpp.jpg","appleMusicUrl":"","songs":[{"title":"PONPONPON","searchTerm":"きゃりーぱみゅぱみゅ PONPONPON","previewUrl":"","startTime":0,"endTime":30},{"title":"つけまつける","searchTerm":"きゃりーぱみゅぱみゅ つけまつける","previewUrl":"","startTime":0,"endTime":30},{"title":"にんじゃりばんばん","searchTerm":"きゃりーぱみゅぱみゅ にんじゃりばんばん","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-l-arc-en-ciel","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"L’Arc-en-Ciel","stage":"AIR STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum-lac.jpg","appleMusicUrl":"","songs":[{"title":"HONEY","searchTerm":"L'Arc-en-Ciel HONEY","previewUrl":"","startTime":0,"endTime":30},{"title":"READY STEADY GO","searchTerm":"L'Arc-en-Ciel READY STEADY GO","previewUrl":"","startTime":0,"endTime":30},{"title":"花葬","searchTerm":"L'Arc-en-Ciel 花葬","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-le-sserafim","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"LE SSERAFIM","stage":"AIR STAGE","time":"","genre":["K-POP","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/02/thum-lsr.jpg","appleMusicUrl":"","songs":[{"title":"ANTIFRAGILE","searchTerm":"LE SSERAFIM ANTIFRAGILE","previewUrl":"","startTime":0,"endTime":30},{"title":"Perfect Night","searchTerm":"LE SSERAFIM Perfect Night","previewUrl":"","startTime":0,"endTime":30},{"title":"EASY","searchTerm":"LE SSERAFIM EASY","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-pentatonix","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"PENTATONIX","stage":"AIR STAGE","time":"","genre":["POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb28.jpg","appleMusicUrl":"","songs":[{"title":"Hallelujah","searchTerm":"Pentatonix Hallelujah","previewUrl":"","startTime":0,"endTime":30},{"title":"Daft Punk","searchTerm":"Pentatonix Daft Punk","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-yuki","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"YUKI","stage":"AIR STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum-yk09876543.jpg","appleMusicUrl":"","songs":[{"title":"JOY","searchTerm":"YUKI JOY","previewUrl":"","startTime":0,"endTime":30},{"title":"ふがいないや","searchTerm":"YUKI ふがいないや","previewUrl":"","startTime":0,"endTime":30},{"title":"センチメンタルジャーニー","searchTerm":"YUKI センチメンタルジャーニー","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-wanima","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"WANIMA","stage":"AIR STAGE","time":"","genre":["JAPANESE","PUNK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum-wnm_0987654.jpg","appleMusicUrl":"","songs":[{"title":"ともに","searchTerm":"WANIMA ともに","previewUrl":"","startTime":0,"endTime":30},{"title":"やってみよう","searchTerm":"WANIMA やってみよう","previewUrl":"","startTime":0,"endTime":30},{"title":"シャララ","searchTerm":"WANIMA シャララ","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-jamiroquai","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"JAMIROQUAI","stage":"MOUNTAIN STAGE","time":"","genre":["POP","ELECTRONIC"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb03.jpg","appleMusicUrl":"","songs":[{"title":"Virtual Insanity","searchTerm":"Jamiroquai Virtual Insanity","previewUrl":"","startTime":0,"endTime":30},{"title":"Canned Heat","searchTerm":"Jamiroquai Canned Heat","previewUrl":"","startTime":0,"endTime":30},{"title":"Cosmic Girl","searchTerm":"Jamiroquai Cosmic Girl","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-キタニタツヤ","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"キタニタツヤ","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb26.jpg","appleMusicUrl":"","songs":[{"title":"青のすみか","searchTerm":"キタニタツヤ 青のすみか","previewUrl":"","startTime":0,"endTime":30},{"title":"スカー","searchTerm":"キタニタツヤ スカー","previewUrl":"","startTime":0,"endTime":30},{"title":"化け猫","searchTerm":"キタニタツヤ 化け猫","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-babymetal","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"BABYMETAL","stage":"SONIC “METAL” STAGE","time":"","genre":["METAL","JAPANESE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/02/thum-BM-1.jpg","appleMusicUrl":"","songs":[{"title":"ギミチョコ！！","searchTerm":"BABYMETAL ギミチョコ","previewUrl":"","startTime":0,"endTime":30},{"title":"メギツネ","searchTerm":"BABYMETAL メギツネ","previewUrl":"","startTime":0,"endTime":30},{"title":"KARATE","searchTerm":"BABYMETAL KARATE","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-ave-mujica","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"Ave Mujica","stage":"SONIC “METAL” STAGE","time":"","genre":["METAL","JAPANESE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum_am-1.jpg","appleMusicUrl":"","songs":[{"title":"KiLLKiSS","searchTerm":"Ave Mujica KiLLKiSS","previewUrl":"","startTime":0,"endTime":30},{"title":"Ether","searchTerm":"Ave Mujica Ether","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-travis-japan","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"Travis Japan","stage":"MASSIVE STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum-tj_0987654.jpg","appleMusicUrl":"","songs":[{"title":"JUST DANCE!","searchTerm":"Travis Japan JUST DANCE","previewUrl":"","startTime":0,"endTime":30},{"title":"Moving Pieces","searchTerm":"Travis Japan Moving Pieces","previewUrl":"","startTime":0,"endTime":30},{"title":"LEVEL UP","searchTerm":"Travis Japan LEVEL UP","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-akmu","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"AKMU","stage":"MASSIVE STAGE","time":"","genre":["K-POP","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/04/thum-akmu09876.jpg","appleMusicUrl":"","songs":[{"title":"200%","searchTerm":"AKMU 200%","previewUrl":"","startTime":0,"endTime":30},{"title":"Love Lee","searchTerm":"AKMU Love Lee","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day1-chilli-beans","venue":"OSAKA","day":"DAY1","date":"2026-08-14","artist":"Chilli Beans.","stage":"MASSIVE STAGE","time":"","genre":["JAPANESE","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum-clb.jpg","appleMusicUrl":"","songs":[{"title":"シェキララ","searchTerm":"Chilli Beans. シェキララ","previewUrl":"","startTime":0,"endTime":30},{"title":"lemonade","searchTerm":"Chilli Beans. lemonade","previewUrl":"","startTime":0,"endTime":30},{"title":"School","searchTerm":"Chilli Beans. School","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-the-strokes","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"THE STROKES","stage":"AIR STAGE","time":"","genre":["ROCK","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb01.jpg","appleMusicUrl":"","songs":[{"title":"Reptilia","searchTerm":"The Strokes Reptilia","previewUrl":"","startTime":0,"endTime":30},{"title":"Last Nite","searchTerm":"The Strokes Last Nite","previewUrl":"","startTime":0,"endTime":30},{"title":"Someday","searchTerm":"The Strokes Someday","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-kasabian","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"KASABIAN","stage":"AIR STAGE","time":"","genre":["ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb10.jpg","appleMusicUrl":"","songs":[{"title":"Fire","searchTerm":"Kasabian Fire","previewUrl":"","startTime":0,"endTime":30},{"title":"Club Foot","searchTerm":"Kasabian Club Foot","previewUrl":"","startTime":0,"endTime":30},{"title":"L.S.F.","searchTerm":"Kasabian LSF","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-keshi","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"KESHI","stage":"AIR STAGE","time":"","genre":["POP","R&B"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb11.jpg","appleMusicUrl":"","songs":[{"title":"beside you","searchTerm":"keshi beside you","previewUrl":"","startTime":0,"endTime":30},{"title":"limbo","searchTerm":"keshi limbo","previewUrl":"","startTime":0,"endTime":30},{"title":"TOUCH","searchTerm":"keshi TOUCH","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-west","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"WEST.","stage":"AIR STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum-wt_0987654.jpg","appleMusicUrl":"","songs":[{"title":"アメノチハレ","searchTerm":"WEST. アメノチハレ","previewUrl":"","startTime":0,"endTime":30},{"title":"証","searchTerm":"ジャニーズWEST 証","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-fruits-zipper","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"FRUITS ZIPPER","stage":"AIR STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum-fz_0987654.jpg","appleMusicUrl":"","songs":[{"title":"わたしの一番かわいいところ","searchTerm":"FRUITS ZIPPER わたしの一番かわいいところ","previewUrl":"","startTime":0,"endTime":30},{"title":"NEW KAWAII","searchTerm":"FRUITS ZIPPER NEW KAWAII","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-audrey-nuna","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"AUDREY NUNA","stage":"AIR STAGE","time":"","genre":["R&B","HIP-HOP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/02/artist_thumb16.jpg","appleMusicUrl":"","songs":[{"title":"damn Right","searchTerm":"Audrey Nuna damn Right","previewUrl":"","startTime":0,"endTime":30},{"title":"Comic Sans","searchTerm":"Audrey Nuna Comic Sans","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-dermot-kennedy","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"DERMOT KENNEDY","stage":"MOUNTAIN STAGE","time":"","genre":["POP","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum_dk-1.jpg","appleMusicUrl":"","songs":[{"title":"Outnumbered","searchTerm":"Dermot Kennedy Outnumbered","previewUrl":"","startTime":0,"endTime":30},{"title":"Power Over Me","searchTerm":"Dermot Kennedy Power Over Me","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-マカロニえんぴつ","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"マカロニえんぴつ","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum-me.jpg","appleMusicUrl":"","songs":[{"title":"ブルーベリー・ナイツ","searchTerm":"マカロニえんぴつ ブルーベリー・ナイツ","previewUrl":"","startTime":0,"endTime":30},{"title":"ハッピーエンドと悪魔が笑う","searchTerm":"マカロニえんぴつ ハッピーエンドと悪魔が笑う","previewUrl":"","startTime":0,"endTime":30},{"title":"なんでもないよ、","searchTerm":"マカロニえんぴつ なんでもないよ","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-kodaline","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"KODALINE","stage":"MOUNTAIN STAGE","time":"","genre":["INDIE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb27.jpg","appleMusicUrl":"","songs":[{"title":"All I Want","searchTerm":"Kodaline All I Want","previewUrl":"","startTime":0,"endTime":30},{"title":"High Hopes","searchTerm":"Kodaline High Hopes","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-アイナ・ジ・エンド","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"アイナ・ジ・エンド","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/04/thum-atend_2.jpg","appleMusicUrl":"","songs":[{"title":"宝物","searchTerm":"アイナ・ジ・エンド 宝物","previewUrl":"","startTime":0,"endTime":30},{"title":"金木犀","searchTerm":"アイナ・ジ・エンド 金木犀","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-fka-twigs","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"FKA TWIGS","stage":"SONIC STAGE","time":"","genre":["ELECTRONIC","R&B"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb08.jpg","appleMusicUrl":"","songs":[{"title":"Two Weeks","searchTerm":"FKA twigs Two Weeks","previewUrl":"","startTime":0,"endTime":30},{"title":"cellophane","searchTerm":"FKA twigs cellophane","previewUrl":"","startTime":0,"endTime":30},{"title":"Eusexua","searchTerm":"FKA twigs Eusexua","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day2-告五人-accusefive","venue":"OSAKA","day":"DAY2","date":"2026-08-15","artist":"告五人 Accusefive","stage":"MASSIVE STAGE","time":"","genre":["INDIE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum-copy-1.jpg","appleMusicUrl":"","songs":[{"title":"唯一","searchTerm":"告五人 唯一","previewUrl":"","startTime":0,"endTime":30},{"title":"披星戴月的想你","searchTerm":"告五人 披星戴月的想你","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-ado","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"Ado","stage":"AIR STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum-ado_Ad23456723.jpg","appleMusicUrl":"","songs":[{"title":"うっせぇわ","searchTerm":"Ado うっせぇわ","previewUrl":"","startTime":0,"endTime":30},{"title":"唱","searchTerm":"Ado 唱","previewUrl":"","startTime":0,"endTime":30},{"title":"踊","searchTerm":"Ado 踊","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-jennie","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"JENNIE","stage":"AIR STAGE","time":"","genre":["K-POP","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb04.jpg","appleMusicUrl":"","songs":[{"title":"SOLO","searchTerm":"JENNIE SOLO","previewUrl":"","startTime":0,"endTime":30},{"title":"You & Me","searchTerm":"JENNIE You and Me","previewUrl":"","startTime":0,"endTime":30},{"title":"Mantra","searchTerm":"JENNIE Mantra","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-alex-warren","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"ALEX WARREN","stage":"AIR STAGE","time":"","genre":["POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb06.jpg","appleMusicUrl":"","songs":[{"title":"Ordinary","searchTerm":"Alex Warren Ordinary","previewUrl":"","startTime":0,"endTime":30},{"title":"Burning Down","searchTerm":"Alex Warren Burning Down","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-mazzel","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"MAZZEL","stage":"AIR STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum_mzl.jpg","appleMusicUrl":"","songs":[{"title":"VIVID","searchTerm":"MAZZEL VIVID","previewUrl":"","startTime":0,"endTime":30},{"title":"Carnival","searchTerm":"MAZZEL Carnival","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-david-byrne","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"DAVID BYRNE","stage":"MOUNTAIN STAGE","time":"","genre":["ROCK","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb07.jpg","appleMusicUrl":"","songs":[{"title":"Everybody's Coming to My House","searchTerm":"David Byrne Everybody's Coming to My House","previewUrl":"","startTime":0,"endTime":30},{"title":"Like Humans Do","searchTerm":"David Byrne Like Humans Do","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-サカナクション","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"サカナクション","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb13.jpg","appleMusicUrl":"","songs":[{"title":"新宝島","searchTerm":"サカナクション 新宝島","previewUrl":"","startTime":0,"endTime":30},{"title":"夜の踊り子","searchTerm":"サカナクション 夜の踊り子","previewUrl":"","startTime":0,"endTime":30},{"title":"ミュージック","searchTerm":"サカナクション ミュージック","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-suede","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"SUEDE","stage":"MOUNTAIN STAGE","time":"","genre":["ROCK","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb32.jpg","appleMusicUrl":"","songs":[{"title":"Beautiful Ones","searchTerm":"Suede Beautiful Ones","previewUrl":"","startTime":0,"endTime":30},{"title":"Animal Nitrate","searchTerm":"Suede Animal Nitrate","previewUrl":"","startTime":0,"endTime":30},{"title":"Trash","searchTerm":"Suede Trash","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-羊文学","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"羊文学","stage":"MOUNTAIN STAGE","time":"","genre":["JAPANESE","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb25.jpg","appleMusicUrl":"","songs":[{"title":"光るとき","searchTerm":"羊文学 光るとき","previewUrl":"","startTime":0,"endTime":30},{"title":"more than words","searchTerm":"羊文学 more than words","previewUrl":"","startTime":0,"endTime":30},{"title":"1999","searchTerm":"羊文学 1999","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-steve-lacy","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"STEVE LACY","stage":"SONIC STAGE","time":"","genre":["R&B","INDIE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/artist_thumb14.jpg","appleMusicUrl":"","songs":[{"title":"Bad Habit","searchTerm":"Steve Lacy Bad Habit","previewUrl":"","startTime":0,"endTime":30},{"title":"Dark Red","searchTerm":"Steve Lacy Dark Red","previewUrl":"","startTime":0,"endTime":30},{"title":"Static","searchTerm":"Steve Lacy Static","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-電気グルーヴ","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"電気グルーヴ","stage":"SONIC STAGE","time":"","genre":["ELECTRONIC","JAPANESE"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2025/04/lineup_sm_thumb08.jpg","appleMusicUrl":"","songs":[{"title":"Shangri-La","searchTerm":"電気グルーヴ Shangri-La","previewUrl":"","startTime":0,"endTime":30},{"title":"N.O.","searchTerm":"電気グルーヴ N.O.","previewUrl":"","startTime":0,"endTime":30},{"title":"Fallin' Down","searchTerm":"電気グルーヴ Fallin' Down","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-saucy-dog","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"Saucy Dog","stage":"SONIC STAGE","time":"","genre":["JAPANESE","ROCK"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/03/thum-suy2.jpg","appleMusicUrl":"","songs":[{"title":"シンデレラボーイ","searchTerm":"Saucy Dog シンデレラボーイ","previewUrl":"","startTime":0,"endTime":30},{"title":"いつか","searchTerm":"Saucy Dog いつか","previewUrl":"","startTime":0,"endTime":30},{"title":"優しさに溺れる","searchTerm":"Saucy Dog 優しさに溺れる","previewUrl":"","startTime":0,"endTime":30}]},{"id":"osaka-day3-木村カエラ","venue":"OSAKA","day":"DAY3","date":"2026-08-16","artist":"木村カエラ","stage":"MASSIVE STAGE","time":"","genre":["JAPANESE","POP"],"image":"https://www.summersonic.com/wp/wp-content/uploads/2026/05/thum_kk.jpg","appleMusicUrl":"","songs":[{"title":"Butterfly","searchTerm":"木村カエラ Butterfly","previewUrl":"","startTime":0,"endTime":30},{"title":"リルラ リルハ","searchTerm":"木村カエラ リルラ リルハ","previewUrl":"","startTime":0,"endTime":30},{"title":"TREE CLIMBERS","searchTerm":"木村カエラ TREE CLIMBERS","previewUrl":"","startTime":0,"endTime":30}]}];
+</script>
+
+<script>
+(() => {
+'use strict';
+
+/* =========================================================
+   SUMMER SONIC 2026 予習プレイヤー（単一ファイル版）
+   - Apple Music のライブラリには一切追加しません
+   - iTunes Search API の30秒試聴だけを再生します
+   - 保存はメモリ上のみ（この画面を開いている間だけ保持）
+   ========================================================= */
+
+const CACHE_TTL_NEG = 1000 * 60 * 30;
+const STATUSES = ['未聴', '試聴済み', '当日観たい', '優先度高', '見送る'];
+const GAP_MS = 900;
+
+/* この環境ではlocalStorageが使えないため、メモリ上に保持する */
+const mem = Object.create(null);
+const store = {
+  get(k, fallback) { return (k in mem) ? mem[k] : fallback; },
+  set(k, v) { mem[k] = v; },
+};
+
+const state = {
+  artists: [],
+  venue: 'TOKYO',
+  day: 'DAY1',
+  q: '',
+  stages: new Set(),
+  genres: new Set(),
+  view: 'all',
+  expanded: new Set(),
+  fav: new Set(),
+  status: {},
+  volume: 0.85,
+  shuffle: false,
+  queue: [],
+  qi: -1,
+  playing: false,
+  continuous: false,
+  audio: null,
+  markTimer: null,
+  netBlocked: false,
+};
+
+const $ = (s) => document.querySelector(s);
+const el = {
+  venueSwitch: $('#venueSwitch'),
+  daystrip:    $('#daystrip'),
+  playAll:     $('#playAll'),
+  shuffle:     $('#shuffleBtn'),
+  volume:      $('#volume'),
+  search:      $('#search'),
+  stageFilter: $('#stageFilter'),
+  genreFilter: $('#genreFilter'),
+  viewFilter:  $('#viewFilter'),
+  resultCount: $('#resultCount'),
+  resetBtn:    $('#resetFilters'),
+  grid:        $('#grid'),
+  player:      $('#miniplayer'),
+  pThumb:      $('#pThumb'),
+  pArtist:     $('#pArtist'),
+  pSong:       $('#pSong'),
+  pPlay:       $('#pPlay'),
+  pBar:        $('#pBar'),
+  toast:       $('#toast'),
+  envNote:     $('#envNote'),
+};
+
+const esc = (s) => String(s == null ? '' : s)
+  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+function norm(s) {
+  return String(s || '')
+    .normalize('NFKC')
+    .toLowerCase()
+    .replace(/[（(\[].*?[)）\]]/g, ' ')
+    .replace(/\b(feat\.?|featuring|ft\.?|with)\b/g, ' ')
+    .replace(/&/g, 'and')
+    .replace(/[^\p{L}\p{N}]+/gu, '');
+}
+
+let toastTimer = null;
+function toast(msg) {
+  el.toast.textContent = msg;
+  el.toast.classList.add('is-on');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => el.toast.classList.remove('is-on'), 2800);
+}
+
+const dayLabel = { DAY1: '08/14 FRI', DAY2: '08/15 SAT', DAY3: '08/16 SUN' };
+
+/* iOSでは無音を一度鳴らして音声再生を許可させておく */
+const SILENT_WAV = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=';
+function unlockAudio() {
+  const a = audio();
+  if (a.dataset.unlocked) return;
+  a.dataset.unlocked = '1';
+  try { a.src = SILENT_WAV; a.play().catch(() => {}); } catch (e) {}
+}
+
+/* ---------------- iTunes Search API ---------------- */
+function jsonp(url) {
+  return new Promise((resolve, reject) => {
+    const cb = 'ssjsonp_' + Math.random().toString(36).slice(2);
+    const s = document.createElement('script');
+    let done = false;
+    const cleanup = () => {
+      done = true;
+      clearTimeout(timer);
+      try { delete window[cb]; } catch (e) { window[cb] = undefined; }
+      s.remove();
+    };
+    const timer = setTimeout(() => { if (!done) { cleanup(); reject(new Error('timeout')); } }, 9000);
+    window[cb] = (data) => { if (!done) { cleanup(); resolve(data); } };
+    s.onerror = () => { if (!done) { cleanup(); reject(new Error('network')); } };
+    s.src = url + '&callback=' + cb;
+    document.head.appendChild(s);
+  });
+}
+
+function fetchT(u, ms) {
+  return new Promise((resolve, reject) => {
+    const t = setTimeout(() => reject(new Error('timeout')), ms);
+    fetch(u).then((r) => { clearTimeout(t); resolve(r); }, (err) => { clearTimeout(t); reject(err); });
+  });
+}
+
+async function itunesSearch(term) {
+  const url = 'https://itunes.apple.com/search?term=' + encodeURIComponent(term) +
+              '&entity=song&limit=12&country=JP&media=music';
+  /* 直接 → 中継サーバー3系統 → JSONP の順に、各7〜8秒で見切りながら試す */
+  try {
+    const res = await fetchT(url, 7000);
+    if (res.ok) { noteNetworkOk(); return await res.json(); }
+  } catch (e) {}
+  try {
+    const res = await fetchT('https://corsproxy.io/?url=' + encodeURIComponent(url), 7000);
+    if (res.ok) { noteNetworkOk(); return await res.json(); }
+  } catch (e) {}
+  try {
+    const res = await fetchT('https://api.allorigins.win/raw?url=' + encodeURIComponent(url), 8000);
+    if (res.ok) { noteNetworkOk(); return await res.json(); }
+  } catch (e) {}
+  try {
+    const res = await fetchT('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url), 8000);
+    if (res.ok) { noteNetworkOk(); return await res.json(); }
+  } catch (e) {}
+  try {
+    const res = await fetchT('https://api.allorigins.win/get?url=' + encodeURIComponent(url), 8000);
+    if (res.ok) { const w = await res.json(); noteNetworkOk(); return JSON.parse(w.contents); }
+  } catch (e) {}
+  const d = await jsonp(url);
+  noteNetworkOk();
+  return d;
+}
+
+function pickBest(results, song, artistName) {
+  const wantTitle = norm(song.title);
+  let wantArtist = norm(String(song.searchTerm || '').replace(song.title, ''));
+  if (!wantArtist) wantArtist = norm(artistName);
+
+  const ok = (a, b) => a && b && (a.includes(b) || b.includes(a));
+  const usable = (r) => r && r.wrapperType === 'track' && r.kind === 'song' && r.previewUrl;
+
+  const strict = results.find((r) =>
+    usable(r) && ok(norm(r.trackName), wantTitle) && ok(norm(r.artistName), wantArtist));
+  if (strict) return strict;
+
+  const byArtist = results.find((r) => usable(r) && ok(norm(r.artistName), wantArtist));
+  if (byArtist && ok(norm(byArtist.trackName), wantTitle)) return byArtist;
+
+  return null;
+}
+
+/* 戻り値: {previewUrl,...} / null=見つからず / 'blocked'=通信不可 */
+async function resolvePreview(entry, song) {
+  if (song.previewUrl) return { previewUrl: song.previewUrl };
+
+  const key = 'pv:' + song.searchTerm;
+  const hit = store.get(key, null);
+  if (hit) {
+    if (hit.previewUrl) return hit;
+    if (Date.now() - hit.ts < CACHE_TTL_NEG) return null;
+  }
+
+  let found = null;
+  try {
+    const data = await itunesSearch(song.searchTerm);
+    found = pickBest(data && data.results ? data.results : [], song, entry.artist);
+  } catch (e) {
+    return 'blocked';
+  }
+
+  const rec = found
+    ? { previewUrl: found.previewUrl, trackViewUrl: found.trackViewUrl || '', ts: Date.now() }
+    : { previewUrl: null, ts: Date.now() };
+  store.set(key, rec);
+  return found ? rec : null;
+}
+
+function noteNetworkOk() {
+  if (!state.netBlocked) return;
+  state.netBlocked = false;
+  el.envNote.classList.remove('is-on');
+}
+
+function showBlockedNote() {
+  state.netBlocked = true;
+  el.envNote.innerHTML =
+    '<b>試聴データを取得できませんでした。</b><br>' +
+    '電波状況やApple側の一時的な制限で失敗することがあります。少し待って「再試行」を押すか、Wi-Fiとモバイル回線を切り替えてみてください。' +
+    'Claudeアプリ内のプレビューで開いている場合は、仕様上再生できないため、このページのURLをSafariで開いてください。<br>' +
+    '<button class="retry-btn" id="retryBtn">↻ 再試行</button>';
+  el.envNote.classList.add('is-on');
+  const b = document.getElementById('retryBtn');
+  if (b) b.addEventListener('click', () => {
+    el.envNote.classList.remove('is-on');
+    state.netBlocked = false;
+    if (!state.queue.length) { toast('聴きたい曲をタップしてください'); return; }
+    playAt(state.qi >= 0 ? state.qi : 0);
+  });
+}
+
+/* ---------------- 絞り込み ---------------- */
+function visibleList() {
+  const q = norm(state.q);
+  return state.artists.filter((a) => {
+    if (a.venue !== state.venue || a.day !== state.day) return false;
+    if (state.stages.size && !state.stages.has(a.stage)) return false;
+    if (state.genres.size && !a.genre.some((g) => state.genres.has(g))) return false;
+    const st = state.status[a.id] || '未聴';
+    if (state.view === 'fav' && !state.fav.has(a.id)) return false;
+    if (state.view === 'unheard' && st !== '未聴') return false;
+    if (state.view === 'wanted' && st !== '当日観たい' && st !== '優先度高') return false;
+    if (q && !norm(a.artist + a.stage + a.songs.map((s) => s.title).join('')).includes(q)) return false;
+    return true;
+  });
+}
+
+/* ---------------- 描画 ---------------- */
+function renderVenueAndDays() {
+  el.venueSwitch.querySelectorAll('button').forEach((b) => {
+    b.setAttribute('aria-pressed', String(b.dataset.venue === state.venue));
+  });
+  el.daystrip.querySelectorAll('.daytab').forEach((b) => {
+    b.setAttribute('aria-selected', String(b.dataset.day === state.day));
+  });
+  document.body.dataset.day = state.day;
+}
+
+function renderFilterChips() {
+  const pool = state.artists.filter((a) => a.venue === state.venue && a.day === state.day);
+
+  const stages = [...new Set(pool.map((a) => a.stage))];
+  el.stageFilter.innerHTML = '<span class="filter-label">Stage</span>' + stages.map((s) =>
+    '<button class="chip" data-stage="' + esc(s) + '" aria-pressed="' + state.stages.has(s) + '">' +
+    esc(s.replace(/ STAGE$/, '')) + '</button>').join('');
+
+  const genres = [...new Set(pool.flatMap((a) => a.genre))].sort();
+  el.genreFilter.innerHTML = '<span class="filter-label">Genre</span>' + genres.map((g) =>
+    '<button class="chip" data-genre="' + esc(g) + '" aria-pressed="' + state.genres.has(g) + '">' +
+    esc(g) + '</button>').join('');
+
+  el.viewFilter.querySelectorAll('[data-view]').forEach((b) => {
+    b.setAttribute('aria-pressed', String(b.dataset.view === state.view));
+  });
+}
+
+function cardHTML(a) {
+  const open = state.expanded.has(a.id);
+  const isFav = state.fav.has(a.id);
+  const st = state.status[a.id] || '未聴';
+  const cur = state.queue[state.qi];
+  const playingHere = state.playing && cur && cur.id === a.id;
+
+  const songs = a.songs.map((s, i) => {
+    const hidden = i > 0 && !open ? ' hidden' : '';
+    const isCur = playingHere && cur.songIndex === i ? ' is-current' : '';
+    const dead = s._dead ? ' is-dead' : '';
+    const note = s._dead ? '試聴なし' : '';
+    return '<button class="song' + hidden + isCur + dead + '" data-play="' + esc(a.id) + '" data-song="' + i + '">' +
+      '<span class="song-icon" aria-hidden="true">' + (isCur ? '❚❚' : '▶') + '</span>' +
+      '<span class="song-title">' + esc(s.title) + '</span>' +
+      '<span class="song-note">' + note + '</span></button>';
+  }).join('');
+
+  const moreBtn = a.songs.length > 1
+    ? '<button class="more-songs" data-more="' + esc(a.id) + '">' +
+      (open ? '閉じる' : 'もっと聴く（あと' + (a.songs.length - 1) + '曲）') + '</button>'
+    : '';
+
+  const q = encodeURIComponent(a.artist);
+  const appleUrl = a.appleMusicUrl || ('https://music.apple.com/jp/search?term=' + q);
+  const ytUrl = 'https://www.youtube.com/results?search_query=' + q;
+
+  const img = a.image
+    ? '<img class="thumb" src="' + esc(a.image) + '" alt="" loading="lazy" referrerpolicy="no-referrer" data-fb="' + esc(a.artist.slice(0, 1)) + '">'
+    : '<div class="thumb-fallback">' + esc(a.artist.slice(0, 1)) + '</div>';
+
+  return '<article class="card' + (playingHere ? ' is-playing' : '') + '" id="card-' + esc(a.id) + '">' +
+    '<div class="card-head">' + img +
+      '<div class="card-meta">' +
+        '<h2 class="artist-name">' + esc(a.artist) + '</h2>' +
+        '<p class="slot">' + esc(a.stage) + ' ／ ' + (a.time ? esc(a.time) : '時間未発表') + '</p>' +
+        '<div class="genres">' + a.genre.map((g) => '<span class="genre">' + esc(g) + '</span>').join('') + '</div>' +
+      '</div>' +
+    '</div>' +
+    '<div class="songs">' + songs + '</div>' + moreBtn +
+    '<div class="card-foot">' +
+      '<button class="fav" data-fav="' + esc(a.id) + '" aria-pressed="' + isFav + '">' + (isFav ? '★' : '☆') + ' 気になる</button>' +
+      '<select class="status-select" data-status="' + esc(a.id) + '" data-v="' + esc(st) + '" aria-label="' + esc(a.artist) + 'の予習状況">' +
+        STATUSES.map((s) => '<option' + (s === st ? ' selected' : '') + '>' + s + '</option>').join('') +
+      '</select>' +
+      '<a class="ext" href="' + esc(appleUrl) + '" target="_blank" rel="noopener" title="Apple Musicで開く">♫</a>' +
+      '<a class="ext" href="' + esc(ytUrl) + '" target="_blank" rel="noopener" title="YouTubeで検索">▶</a>' +
+    '</div></article>';
+}
+
+function render() {
+  renderVenueAndDays();
+  renderFilterChips();
+
+  const list = visibleList();
+  const total = state.artists.filter((a) => a.venue === state.venue && a.day === state.day).length;
+  el.resultCount.textContent = list.length + ' / ' + total + ' 組';
+  el.playAll.textContent = state.continuous
+    ? '■ 連続再生を停止'
+    : '▶ ' + state.day + ' を連続再生（' + list.length + '組）';
+
+  el.grid.innerHTML = list.length
+    ? list.map(cardHTML).join('')
+    : '<div class="empty"><strong>条件に合うアーティストがいません</strong>絞り込みを外すか、別の日付を選んでください。</div>';
+
+  el.grid.querySelectorAll('img.thumb').forEach((img) => {
+    img.addEventListener('error', () => {
+      const d = document.createElement('div');
+      d.className = 'thumb-fallback';
+      d.textContent = img.dataset.fb || '♪';
+      img.replaceWith(d);
+    }, { once: true });
+  });
+}
+
+function refreshPlayingUI() {
+  const cur = state.queue[state.qi];
+  document.querySelectorAll('.card').forEach((c) => c.classList.remove('is-playing'));
+  document.querySelectorAll('.song').forEach((s) => {
+    s.classList.remove('is-current');
+    const icon = s.querySelector('.song-icon');
+    if (icon) icon.textContent = '▶';
+  });
+  if (!cur) return;
+  const card = document.getElementById('card-' + cur.id);
+  if (card) {
+    card.classList.add('is-playing');
+    const song = card.querySelector('[data-song="' + cur.songIndex + '"]');
+    if (song) {
+      song.classList.add('is-current');
+      const icon = song.querySelector('.song-icon');
+      if (icon) icon.textContent = state.playing ? '❚❚' : '▶';
+    }
+  }
+}
+
+/* ---------------- プレイヤー ---------------- */
+function audio() {
+  if (state.audio) return state.audio;
+  const a = new Audio();
+  a.preload = 'none';
+  a.volume = state.volume;
+  a.addEventListener('timeupdate', () => {
+    const cur = state.queue[state.qi];
+    if (!cur || !state.playing) return;
+    const song = cur.entry.songs[cur.songIndex];
+    const end = Math.min(song.endTime || 30, isFinite(a.duration) && a.duration ? a.duration : 30);
+    const start = song.startTime || 0;
+    const pct = Math.max(0, Math.min(100, ((a.currentTime - start) / Math.max(1, end - start)) * 100));
+    el.pBar.style.width = pct + '%';
+    if (a.currentTime >= end) { a.pause(); onSongEnd(); }
+  });
+  a.addEventListener('ended', () => { if (state.playing) onSongEnd(); });
+  a.addEventListener('error', () => {
+    const cur = state.queue[state.qi];
+    if (!cur || !a.src) return;
+    cur.entry.songs[cur.songIndex]._dead = true;
+    toast('この曲は再生できませんでした');
+    if (state.continuous) onSongEnd(); else pauseUI();
+  });
+  state.audio = a;
+  return a;
+}
+
+function pauseUI() {
+  state.playing = false;
+  el.pPlay.textContent = '▶';
+  refreshPlayingUI();
+}
+
+function onSongEnd() {
+  if (state.continuous) {
+    if (state.qi + 1 >= state.queue.length) { stop(); toast('この日の予習はここまでです'); return; }
+    state.playing = false;
+    setTimeout(() => playAt(state.qi + 1), GAP_MS);
+  } else {
+    el.pBar.style.width = '100%';
+    pauseUI();
+  }
+}
+
+function buildQueue(startId, startSongIndex) {
+  const list = visibleList();
+  let q = [];
+  list.forEach((entry) => {
+    const n = state.expanded.has(entry.id) ? entry.songs.length : 1;
+    for (let i = 0; i < n; i++) q.push({ id: entry.id, songIndex: i, entry });
+  });
+  if (state.shuffle) {
+    for (let i = q.length - 1; i > 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      const t = q[i]; q[i] = q[j]; q[j] = t;
+    }
+  }
+  if (startId != null) {
+    const idx = q.findIndex((x) => x.id === startId && x.songIndex === startSongIndex);
+    if (idx >= 0) {
+      q = state.shuffle
+        ? [q[idx]].concat(q.filter((_, i) => i !== idx))
+        : q.slice(idx).concat(q.slice(0, idx));
+    } else {
+      const entry = state.artists.find((a) => a.id === startId);
+      if (entry) q = [{ id: startId, songIndex: startSongIndex, entry }].concat(q);
+    }
+  }
+  state.queue = q;
+  state.qi = -1;
+}
+
+async function playAt(index) {
+  if (index < 0 || index >= state.queue.length) { stop(); return; }
+  state.qi = index;
+  const cur = state.queue[index];
+  const entry = cur.entry;
+  const song = entry.songs[cur.songIndex];
+
+  openPlayer(entry, '読み込み中…');
+  refreshPlayingUI();
+
+  const res = await resolvePreview(entry, song);
+  if (state.qi !== index) return;
+
+  if (res === 'blocked') {
+    showBlockedNote();
+    try { el.envNote.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) {}
+    state.continuous = false;
+    el.pSong.textContent = '試聴データを取得できません';
+    pauseUI();
+    render();
+    return;
+  }
+
+  if (!res || !res.previewUrl) {
+    song._dead = true;
+    el.pSong.textContent = '試聴音源が見つかりませんでした';
+    const card = document.getElementById('card-' + entry.id);
+    const node = card && card.querySelector('[data-song="' + cur.songIndex + '"]');
+    if (node) { node.classList.add('is-dead'); node.querySelector('.song-note').textContent = '試聴なし'; }
+    if (state.continuous) setTimeout(() => { if (state.qi === index) onSongEnd(); }, 500);
+    else toast('試聴音源が見つかりませんでした。♫ / ▶ のリンクから確認できます');
+    return;
+  }
+
+  const a = audio();
+  a.src = res.previewUrl;
+  try {
+    await a.play();
+    if (song.startTime) { try { a.currentTime = song.startTime; } catch (e) {} }
+    state.playing = true;
+    el.pSong.textContent = song.title;
+    el.pPlay.textContent = '❚❚';
+    el.pBar.style.width = '0%';
+    refreshPlayingUI();
+    markHeard(entry.id);
+  } catch (e) {
+    pauseUI();
+    toast('再生を開始できませんでした。もう一度タップしてください');
+  }
+}
+
+function markHeard(id) {
+  clearTimeout(state.markTimer);
+  state.markTimer = setTimeout(() => {
+    if (!state.status[id] || state.status[id] === '未聴') {
+      state.status[id] = '試聴済み';
+      const sel = document.querySelector('[data-status="' + (window.CSS && CSS.escape ? CSS.escape(id) : id) + '"]');
+      if (sel) { sel.value = '試聴済み'; sel.dataset.v = '試聴済み'; }
+    }
+  }, 3500);
+}
+
+function next() {
+  if (state.qi + 1 >= state.queue.length) { toast('最後の曲です'); return; }
+  playAt(state.qi + 1);
+}
+function prev() { playAt(Math.max(0, state.qi - 1)); }
+
+function togglePlay() {
+  const a = audio();
+  if (!state.queue.length) return;
+  if (state.playing) {
+    a.pause(); state.playing = false; el.pPlay.textContent = '▶';
+  } else if (a.src) {
+    a.play().then(() => { state.playing = true; el.pPlay.textContent = '❚❚'; refreshPlayingUI(); }).catch(() => {});
+  } else {
+    playAt(Math.max(0, state.qi));
+  }
+  refreshPlayingUI();
+}
+
+function stop() {
+  if (state.audio) { state.audio.pause(); state.audio.removeAttribute('src'); }
+  state.playing = false;
+  state.continuous = false;
+  state.qi = -1;
+  el.pPlay.textContent = '▶';
+  el.pBar.style.width = '0%';
+  el.player.classList.remove('is-open');
+  refreshPlayingUI();
+  render();
+}
+
+function openPlayer(entry, note) {
+  el.player.classList.add('is-open');
+  el.pArtist.textContent = entry.artist;
+  el.pSong.textContent = note;
+  if (entry.image) { el.pThumb.src = entry.image; el.pThumb.style.visibility = 'visible'; }
+  else { el.pThumb.removeAttribute('src'); el.pThumb.style.visibility = 'hidden'; }
+  el.pPlay.textContent = '❚❚';
+}
+
+/* ---------------- イベント ---------------- */
+el.venueSwitch.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-venue]'); if (!b) return;
+  state.venue = b.dataset.venue;
+  state.stages.clear(); state.genres.clear();
+  stop();
+});
+
+el.daystrip.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-day]'); if (!b) return;
+  state.day = b.dataset.day;
+  state.stages.clear();
+  stop();
+});
+
+el.stageFilter.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-stage]'); if (!b) return;
+  const v = b.dataset.stage;
+  if (state.stages.has(v)) state.stages.delete(v); else state.stages.add(v);
+  render();
+});
+el.genreFilter.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-genre]'); if (!b) return;
+  const v = b.dataset.genre;
+  if (state.genres.has(v)) state.genres.delete(v); else state.genres.add(v);
+  render();
+});
+el.viewFilter.addEventListener('click', (e) => {
+  const b = e.target.closest('[data-view]'); if (!b) return;
+  state.view = b.dataset.view;
+  render();
+});
+
+let searchTimer = null;
+el.search.addEventListener('input', () => {
+  clearTimeout(searchTimer);
+  searchTimer = setTimeout(() => { state.q = el.search.value.trim(); render(); }, 180);
+});
+
+el.resetBtn.addEventListener('click', () => {
+  state.q = ''; el.search.value = '';
+  state.stages.clear(); state.genres.clear(); state.view = 'all';
+  render();
+});
+
+el.grid.addEventListener('click', (e) => {
+  const playBtn = e.target.closest('[data-play]');
+  if (playBtn) {
+    unlockAudio();
+    const id = playBtn.dataset.play, si = Number(playBtn.dataset.song);
+    const cur = state.queue[state.qi];
+    if (cur && cur.id === id && cur.songIndex === si) { togglePlay(); return; }
+    state.continuous = false;
+    buildQueue(id, si);
+    render();
+    playAt(0);
+    return;
+  }
+  const more = e.target.closest('[data-more]');
+  if (more) {
+    const id = more.dataset.more;
+    if (state.expanded.has(id)) state.expanded.delete(id); else state.expanded.add(id);
+    render(); refreshPlayingUI();
+    return;
+  }
+  const fav = e.target.closest('[data-fav]');
+  if (fav) {
+    const id = fav.dataset.fav;
+    if (state.fav.has(id)) state.fav.delete(id); else state.fav.add(id);
+    render(); refreshPlayingUI();
+  }
+});
+
+el.grid.addEventListener('change', (e) => {
+  const sel = e.target.closest('[data-status]'); if (!sel) return;
+  state.status[sel.dataset.status] = sel.value;
+  sel.dataset.v = sel.value;
+  if (state.view !== 'all') { render(); refreshPlayingUI(); }
+});
+
+el.playAll.addEventListener('click', () => {
+  if (state.continuous) { stop(); return; }
+  const list = visibleList();
+  if (!list.length) { toast('再生できるアーティストがいません'); return; }
+  state.continuous = true;
+  unlockAudio();
+  buildQueue(null, null);
+  render();
+  playAt(0);
+});
+
+el.shuffle.addEventListener('click', () => {
+  state.shuffle = !state.shuffle;
+  el.shuffle.setAttribute('aria-pressed', String(state.shuffle));
+  toast(state.shuffle ? 'シャッフル：オン' : 'シャッフル：オフ');
+});
+
+el.volume.addEventListener('input', () => {
+  state.volume = Number(el.volume.value);
+  if (state.audio) state.audio.volume = state.volume;
+});
+
+$('#pPrev').addEventListener('click', prev);
+$('#pNext').addEventListener('click', next);
+el.pPlay.addEventListener('click', togglePlay);
+$('#pClose').addEventListener('click', stop);
+
+document.addEventListener('keydown', (e) => {
+  if (e.target.matches('input, select, textarea')) return;
+  if (e.code === 'Space' && state.queue.length) { e.preventDefault(); togglePlay(); }
+  if (e.key === 'ArrowRight') next();
+  if (e.key === 'ArrowLeft') prev();
+});
+
+/* ---------------- 起動 ---------------- */
+el.daystrip.innerHTML = ['DAY1', 'DAY2', 'DAY3'].map((d) =>
+  '<button class="daytab" role="tab" data-day="' + d + '" aria-selected="false">' +
+  '<span class="d-no">' + d + '</span><span class="d-date">' + dayLabel[d] + '</span></button>').join('');
+
+state.artists = Array.isArray(window.SS_ARTISTS) ? window.SS_ARTISTS : [];
+render();
+
+})();
+</script>
+</body>
+</html>
