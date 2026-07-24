@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<meta name="referrer" content="strict-origin-when-cross-origin">
 <title>SUMMER SONIC 2026 TOKYO 予習プレイヤー</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -435,7 +436,7 @@ footer {
   <footer>
     再生はYouTube公式プレーヤーを使用し、各曲のサビ付近から約35秒だけ流します（サビ位置は目安です）。<br>
     出演情報は 2026/7/24 時点の公式発表から東京会場の主要20組×3日を抜粋。最新情報は summersonic.com でご確認ください。<br>
-    player v4
+    player v6
   </footer>
 
 </div>
@@ -523,6 +524,9 @@ const state = {
   segTimer: null,
   seg: null,           // { start, end } 再生中区間
   loadSeq: 0,
+  cands: null,
+  candIdx: 0,
+  backend: 'yt',
   netBlocked: false,
 };
 
@@ -600,28 +604,32 @@ function showBlockedNote() {
 
 const ID_RE = /"videoId":"([A-Za-z0-9_-]{11})"/;
 
-/* 検索語 → videoId。埋め込み値 → キャッシュ → 各ルートの順に試す */
-async function resolveVideoId(song) {
-  if (song.videoId) return song.videoId;
+/* 検索語 → videoId候補(最大4件)。埋め込み値 → キャッシュ → 各ルートの順に試す */
+async function resolveVideoIds(song) {
+  if (song.videoId) return [song.videoId];
 
-  const key = 'yt:' + song.q;
+  const key = 'yt2:' + song.q;
   const cached = store.get(key, null);
-  if (cached && cached.id) return cached.id;
+  if (cached && cached.ids && cached.ids.length) return cached.ids;
 
   const q = song.q;
   const ytUrl = 'https://www.youtube.com/results?search_query=' + encodeURIComponent(q) + '&sp=EgIQAQ%253D%253D';
-  let id = null;
+  let ids = [];
+  const push = (v) => { if (v && ids.indexOf(v) < 0) ids.push(v); };
 
   /* 1) Piped(YouTubeの非公式API)。軽くて速い */
   const piped = ['https://pipedapi.kavin.rocks', 'https://pipedapi.adminforge.de'];
   for (const base of piped) {
-    if (id) break;
+    if (ids.length) break;
     try {
       const r = await fetchT(base + '/search?q=' + encodeURIComponent(q) + '&filter=videos', 6000);
       if (!r.ok) continue;
       const j = await r.json();
-      const item = (j.items || []).find((x) => x && x.url && x.url.indexOf('/watch?v=') === 0);
-      if (item) id = item.url.slice(9, 20);
+      (j.items || []).forEach((x) => {
+        if (x && x.type === 'stream' && typeof x.url === 'string' && x.url.indexOf('/watch?v=') === 0) {
+          push(x.url.slice(9, 20));
+        }
+      });
     } catch (e) {}
   }
 
@@ -632,22 +640,22 @@ async function resolveVideoId(song) {
     (u) => 'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(u),
   ];
   for (const p of proxies) {
-    if (id) break;
+    if (ids.length) break;
     try {
       const r = await fetchT(p(ytUrl), 10000);
       if (!r.ok) continue;
       const html = await r.text();
-      const m = html.match(ID_RE);
-      if (m) id = m[1];
+      const ms = html.match(/"videoId":"([A-Za-z0-9_-]{11})"/g) || [];
+      ms.forEach((s) => push(s.slice(11, 22)));
     } catch (e) {}
   }
 
-  if (id) {
+  ids = ids.slice(0, 4);
+  if (ids.length) {
     noteNetworkOk();
-    store.set(key, { id: id, ts: Date.now() });
-    return id;
+    store.set(key, { ids: ids, ts: Date.now() });
   }
-  return null;
+  return ids;
 }
 
 /* =========================================================
@@ -669,7 +677,8 @@ function ensurePlayer() {
     if (yt) { resolve(yt); return; }
     yt = new YT.Player('ytMount', {
       width: '100%', height: '100%',
-      playerVars: { playsinline: 1, rel: 0, controls: 1, modestbranding: 1, iv_load_policy: 3 },
+      playerVars: { playsinline: 1, rel: 0, controls: 1, modestbranding: 1, iv_load_policy: 3,
+        origin: location.origin, widget_referrer: location.href },
       events: {
         onReady: () => { try { yt.setVolume(state.volume); } catch (e) {} resolve(yt); },
         onStateChange: onYtState,
@@ -680,7 +689,7 @@ function ensurePlayer() {
 }
 
 function onYtState(ev) {
-  if (!window.YT) return;
+  if (!window.YT || state.backend !== 'yt') return;
   if (ev.data === YT.PlayerState.PLAYING) {
     state.playing = true;
     el.pPlay.textContent = '❚❚';
@@ -695,21 +704,123 @@ function onYtState(ev) {
 }
 
 function onYtError() {
+  if (state.backend !== 'yt') return;
   const cur = state.queue[state.qi];
-  if (cur) {
-    cur.entry.songs[cur.songIndex]._dead = true;
-    const key = 'yt:' + cur.entry.songs[cur.songIndex].q;
-    store.set(key, null);
+  if (cur && state.cands && state.candIdx + 1 < state.cands.length) {
+    state.candIdx++;
+    toast('別の動画で再試行しています…（' + (state.candIdx + 1) + '/' + state.cands.length + '）');
+    try {
+      yt.loadVideoById({ videoId: state.cands[state.candIdx], startSeconds: state.seg ? state.seg.start : 0 });
+      yt.playVideo();
+    } catch (e) {}
+    return;
   }
-  toast('この動画は再生できませんでした。次へ進みます');
-  if (state.continuous) onSongEnd(); else { state.playing = false; el.pPlay.textContent = '▶'; }
+  if (cur) {
+    store.set('yt2:' + cur.entry.songs[cur.songIndex].q, null);
+    audioFallback(cur);
+    return;
+  }
+  state.playing = false; el.pPlay.textContent = '▶';
+}
+
+/* ---------------- 音声フォールバック(iTunes 30秒プレビュー) ---------------- */
+let aud = null;
+function audioEl() {
+  if (aud) return aud;
+  aud = new Audio();
+  aud.preload = 'none';
+  aud.volume = Math.max(0, Math.min(1, state.volume / 100));
+  aud.addEventListener('timeupdate', () => {
+    if (state.backend !== 'audio' || !state.seg) return;
+    const end = Math.min(state.seg.end, isFinite(aud.duration) && aud.duration ? aud.duration : 30);
+    const pct = Math.max(0, Math.min(100, (aud.currentTime / Math.max(1, end)) * 100));
+    el.pBar.style.width = pct + '%';
+    if (aud.currentTime >= end) { aud.pause(); onSongEnd(); }
+  });
+  aud.addEventListener('ended', () => { if (state.backend === 'audio' && state.playing) onSongEnd(); });
+  aud.addEventListener('error', () => {
+    if (state.backend !== 'audio' || !aud.src) return;
+    const cur = state.queue[state.qi];
+    if (cur) finalDead(cur);
+  });
+  return aud;
+}
+function stopAudio() {
+  if (!aud) return;
+  try { aud.pause(); aud.removeAttribute('src'); } catch (e) {}
+}
+
+async function resolveItunes(entry, song) {
+  const term = entry.artist + ' ' + song.title;
+  const key = 'am:' + term;
+  const c = store.get(key, null);
+  if (c && c.u) return c.u;
+  if (c && c.u === null && Date.now() - c.ts < 3600000) return null;
+  const url = 'https://itunes.apple.com/search?term=' + encodeURIComponent(term) +
+              '&entity=song&limit=5&country=JP&media=music';
+  const routes = [
+    url,
+    'https://corsproxy.io/?url=' + encodeURIComponent(url),
+    'https://api.allorigins.win/raw?url=' + encodeURIComponent(url),
+    'https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url),
+  ];
+  for (const r of routes) {
+    try {
+      const res = await fetchT(r, 8000);
+      if (!res.ok) continue;
+      const j = await res.json();
+      const hit = (j.results || []).find((x) => x && x.kind === 'song' && x.previewUrl);
+      store.set(key, { u: hit ? hit.previewUrl : null, ts: Date.now() });
+      return hit ? hit.previewUrl : null;
+    } catch (e) {}
+  }
+  return null;
+}
+
+async function audioFallback(cur) {
+  const seq = state.loadSeq;
+  const entry = cur.entry;
+  const song = entry.songs[cur.songIndex];
+  el.pSong.textContent = song.title + '（音声版を探しています…）';
+  state.backend = 'audio';
+  try { if (yt) yt.stopVideo(); } catch (e) {}
+  const pv = await resolveItunes(entry, song);
+  if (seq !== state.loadSeq) return;
+  if (!pv) { finalDead(cur); return; }
+  const a = audioEl();
+  a.src = pv;
+  state.seg = { start: 0, end: 30 };
+  a.play().then(() => {
+    state.playing = true;
+    el.pPlay.textContent = '❚❚';
+    el.pSong.textContent = song.title + '（音声のみ・30秒）';
+    el.pBar.style.width = '0%';
+    refreshPlayingUI();
+  }).catch(() => {
+    state.playing = false;
+    el.pPlay.textContent = '▶';
+    el.pSong.textContent = song.title + '（音声のみ・▶で再生）';
+    toast('下の▶ボタンをもう一度タップしてください');
+  });
+}
+
+function finalDead(cur) {
+  cur.entry.songs[cur.songIndex]._dead = true;
+  refreshPlayingUI();
+  if (state.continuous) { toast('再生できないためスキップします'); onSongEnd(); }
+  else {
+    state.playing = false;
+    el.pPlay.textContent = '▶';
+    el.pSong.textContent = cur.entry.songs[cur.songIndex].title + '（再生不可）';
+    toast('この曲は再生できませんでした。▶リンクからYouTubeで確認できます');
+  }
 }
 
 /* 区間の終わりを監視 */
 function startSegWatch() {
   clearInterval(state.segTimer);
   state.segTimer = setInterval(() => {
-    if (!yt || !state.seg || !state.playing) return;
+    if (state.backend !== 'yt' || !yt || !state.seg || !state.playing) return;
     let t = 0;
     try { t = yt.getCurrentTime() || 0; } catch (e) { return; }
     const { start, end } = state.seg;
@@ -894,6 +1005,8 @@ async function playAt(index) {
   const entry = cur.entry;
   const song = entry.songs[cur.songIndex];
 
+  state.backend = 'yt';
+  stopAudio();
   el.player.classList.add('is-open');
   el.pArtist.textContent = entry.artist;
   el.pSong.textContent = song.title + '（探しています…）';
@@ -911,11 +1024,11 @@ async function playAt(index) {
   }
 
   /* 動画IDを探す（次の曲の分は裏で先読み） */
-  const id = await resolveVideoId(song);
+  const ids = await resolveVideoIds(song);
   if (seq !== state.loadSeq) return;
   prefetchNext();
 
-  if (!id) {
+  if (!ids.length) {
     song._dead = true;
     el.pSong.textContent = song.title + '（見つかりませんでした）';
     if (!navigatorOnlineGuess()) { showBlockedNote(); state.continuous = false; render(); return; }
@@ -928,10 +1041,12 @@ async function playAt(index) {
   const start = Math.max(0, Number(song.start) || 0);
   const dur = Math.max(10, Number(song.dur) || 35);
   state.seg = { start: start, end: start + dur };
+  state.cands = ids;
+  state.candIdx = 0;
 
   el.pSong.textContent = song.title;
   try {
-    player.loadVideoById({ videoId: id, startSeconds: start });
+    player.loadVideoById({ videoId: ids[0], startSeconds: start });
     player.playVideo();
     try { player.setVolume(state.volume); } catch (e) {}
   } catch (e) {
@@ -957,7 +1072,7 @@ function prefetchNext() {
   if (!nx) return;
   const s = nx.entry.songs[nx.songIndex];
   if (!s || s.videoId) return;
-  resolveVideoId(s).catch(() => {});
+  resolveVideoIds(s).catch(() => {});
 }
 
 function navigatorOnlineGuess() {
@@ -982,7 +1097,17 @@ function next() {
 function prev() { playAt(Math.max(0, state.qi - 1)); }
 
 function togglePlay() {
-  if (!yt || state.qi < 0) return;
+  if (state.qi < 0) return;
+  if (state.backend === 'audio') {
+    const a = audioEl();
+    if (state.playing) { a.pause(); state.playing = false; el.pPlay.textContent = '▶'; }
+    else if (a.src) {
+      a.play().then(() => { state.playing = true; el.pPlay.textContent = '❚❚'; refreshPlayingUI(); }).catch(() => {});
+    }
+    refreshPlayingUI();
+    return;
+  }
+  if (!yt) return;
   try {
     if (state.playing) yt.pauseVideo();
     else yt.playVideo();
@@ -993,6 +1118,8 @@ function stop() {
   state.loadSeq++;
   clearInterval(state.segTimer);
   state.seg = null;
+  stopAudio();
+  state.backend = 'yt';
   try { if (yt) yt.stopVideo(); } catch (e) {}
   state.playing = false;
   state.continuous = false;
@@ -1095,6 +1222,7 @@ el.volume.addEventListener('input', () => {
   state.volume = Number(el.volume.value);
   store.set('volume', state.volume);
   try { if (yt) yt.setVolume(state.volume); } catch (e) {}
+  try { if (aud) aud.volume = Math.max(0, Math.min(1, state.volume / 100)); } catch (e) {}
 });
 
 $('#pPrev').addEventListener('click', prev);
