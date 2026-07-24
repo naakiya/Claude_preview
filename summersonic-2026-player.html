@@ -174,6 +174,16 @@ input[type="range"] { width: 92px; accent-color: var(--accent); }
 }
 .notice.is-on { display: block; }
 .notice b { color: var(--accent); }
+.retry-btn {
+  margin-top: 10px;
+  padding: 9px 18px;
+  min-height: 40px;
+  border: 1px solid var(--accent);
+  border-radius: var(--radius-sm);
+  color: var(--accent);
+  font-weight: 700;
+  display: inline-block;
+}
 
 /* ---------- 検索・絞り込み ---------- */
 .searchrow { display: flex; gap: 8px; margin-bottom: 10px; }
@@ -466,7 +476,7 @@ footer {
 
   <footer>
     試聴音源は iTunes Search API の30秒プレビューを使用。Apple Music のライブラリやプレイリストには一切追加されません。<br>
-    出演情報は 2026/7/24 時点の公式発表から主要アーティストを抜粋したものです。最新のタイムテーブルは公式サイト（summersonic.com）でご確認ください。
+    出演情報は 2026/7/24 時点の公式発表から主要アーティストを抜粋したものです。最新のタイムテーブルは公式サイト（summersonic.com）でご確認ください。<br>player v3
   </footer>
 
 </div>
@@ -585,6 +595,15 @@ function toast(msg) {
 
 const dayLabel = { DAY1: '08/14 FRI', DAY2: '08/15 SAT', DAY3: '08/16 SUN' };
 
+/* iOSでは無音を一度鳴らして音声再生を許可させておく */
+const SILENT_WAV = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEAQB8AAEAfAAABAAgAZGF0YQAAAAA=';
+function unlockAudio() {
+  const a = audio();
+  if (a.dataset.unlocked) return;
+  a.dataset.unlocked = '1';
+  try { a.src = SILENT_WAV; a.play().catch(() => {}); } catch (e) {}
+}
+
 /* ---------------- iTunes Search API ---------------- */
 function jsonp(url) {
   return new Promise((resolve, reject) => {
@@ -605,16 +624,40 @@ function jsonp(url) {
   });
 }
 
+function fetchT(u, ms) {
+  return new Promise((resolve, reject) => {
+    const t = setTimeout(() => reject(new Error('timeout')), ms);
+    fetch(u).then((r) => { clearTimeout(t); resolve(r); }, (err) => { clearTimeout(t); reject(err); });
+  });
+}
+
 async function itunesSearch(term) {
   const url = 'https://itunes.apple.com/search?term=' + encodeURIComponent(term) +
               '&entity=song&limit=12&country=JP&media=music';
+  /* 直接 → 中継サーバー3系統 → JSONP の順に、各7〜8秒で見切りながら試す */
   try {
-    const res = await fetch(url);
-    if (!res.ok) throw new Error(res.status);
-    return await res.json();
-  } catch (e) {
-    return await jsonp(url);
-  }
+    const res = await fetchT(url, 7000);
+    if (res.ok) { noteNetworkOk(); return await res.json(); }
+  } catch (e) {}
+  try {
+    const res = await fetchT('https://corsproxy.io/?url=' + encodeURIComponent(url), 7000);
+    if (res.ok) { noteNetworkOk(); return await res.json(); }
+  } catch (e) {}
+  try {
+    const res = await fetchT('https://api.allorigins.win/raw?url=' + encodeURIComponent(url), 8000);
+    if (res.ok) { noteNetworkOk(); return await res.json(); }
+  } catch (e) {}
+  try {
+    const res = await fetchT('https://api.codetabs.com/v1/proxy?quest=' + encodeURIComponent(url), 8000);
+    if (res.ok) { noteNetworkOk(); return await res.json(); }
+  } catch (e) {}
+  try {
+    const res = await fetchT('https://api.allorigins.win/get?url=' + encodeURIComponent(url), 8000);
+    if (res.ok) { const w = await res.json(); noteNetworkOk(); return JSON.parse(w.contents); }
+  } catch (e) {}
+  const d = await jsonp(url);
+  noteNetworkOk();
+  return d;
 }
 
 function pickBest(results, song, artistName) {
@@ -661,14 +704,27 @@ async function resolvePreview(entry, song) {
   return found ? rec : null;
 }
 
+function noteNetworkOk() {
+  if (!state.netBlocked) return;
+  state.netBlocked = false;
+  el.envNote.classList.remove('is-on');
+}
+
 function showBlockedNote() {
-  if (state.netBlocked) return;
   state.netBlocked = true;
   el.envNote.innerHTML =
-    '<b>この表示環境では試聴APIに接続できないため、音声を再生できません。</b><br>' +
-    '右上のダウンロードからこのHTMLを保存し、SafariやChromeで開くと、この画面のまま試聴・連続再生ができます。' +
-    '各カードの ♫（Apple Music）と ▶（YouTube）リンクからも曲を確認できます。';
+    '<b>試聴データを取得できませんでした。</b><br>' +
+    '電波状況やApple側の一時的な制限で失敗することがあります。少し待って「再試行」を押すか、Wi-Fiとモバイル回線を切り替えてみてください。' +
+    'Claudeアプリ内のプレビューで開いている場合は、仕様上再生できないため、このページのURLをSafariで開いてください。<br>' +
+    '<button class="retry-btn" id="retryBtn">↻ 再試行</button>';
   el.envNote.classList.add('is-on');
+  const b = document.getElementById('retryBtn');
+  if (b) b.addEventListener('click', () => {
+    el.envNote.classList.remove('is-on');
+    state.netBlocked = false;
+    if (!state.queue.length) { toast('聴きたい曲をタップしてください'); return; }
+    playAt(state.qi >= 0 ? state.qi : 0);
+  });
 }
 
 /* ---------------- 絞り込み ---------------- */
@@ -900,8 +956,9 @@ async function playAt(index) {
 
   if (res === 'blocked') {
     showBlockedNote();
+    try { el.envNote.scrollIntoView({ behavior: 'smooth', block: 'center' }); } catch (e) {}
     state.continuous = false;
-    el.pSong.textContent = '試聴APIに接続できません';
+    el.pSong.textContent = '試聴データを取得できません';
     pauseUI();
     render();
     return;
@@ -1034,6 +1091,7 @@ el.resetBtn.addEventListener('click', () => {
 el.grid.addEventListener('click', (e) => {
   const playBtn = e.target.closest('[data-play]');
   if (playBtn) {
+    unlockAudio();
     const id = playBtn.dataset.play, si = Number(playBtn.dataset.song);
     const cur = state.queue[state.qi];
     if (cur && cur.id === id && cur.songIndex === si) { togglePlay(); return; }
@@ -1070,6 +1128,7 @@ el.playAll.addEventListener('click', () => {
   const list = visibleList();
   if (!list.length) { toast('再生できるアーティストがいません'); return; }
   state.continuous = true;
+  unlockAudio();
   buildQueue(null, null);
   render();
   playAt(0);
