@@ -11,8 +11,8 @@ V:pad clef=bass
 [V:pad] "^イントロ""D5"[D,A,]12- | [D,A,]12- | [D,A,]12- | [D,A,]12- |
 [V:pad] [D,A,]12- | [D,A,]12- | "^イントロ 2"[D,A,]12- | [D,,D,A,]12- |
 [V:pad] [D,,D,A,]12- | [D,,D,A,]12- | [D,,D,A,]6 [D,A,]6- | "^A"[D,A,]12- |
-[V:pad] [D,A,]6 "Csus2"[D,G,=CG]6- | "D5"[D,A,G]3 [D,A,]3- [D,A,]6- | [D,A,]6 "Csus2"[D,G,=CG]6- | "D5"[D,A,G]3 [D,A,]3- [D,A,]6- |
-[V:pad] [D,A,]6 "Csus2"[D,G,=CG]6- | "^A（後半）""Am7"[D,G,=C]12- | [D,G,]6- [D,G,]2A,,- A,,3- | "D"[A,,A,D]12 |
+[V:pad] [D,A,]6 "Csus2"[D,-G,=CG-]6 | "D5"[D,A,G]3 [D,A,]3- [D,A,]6- | [D,A,]6 "Csus2"[D,-G,=CG-]6 | "D5"[D,A,G]3 [D,A,]3- [D,A,]6- |
+[V:pad] [D,A,]6 "Csus2"[D,-G,-=C-G]6 | "^A（後半）""Am7"[D,-G,-=C]12 | [D,G,]6- [D,G,]2A,,- A,,3- | "D"[A,,A,D]12 |
 [V:pad] "G"[G,,D,G,DG]6 [G,DG]6 | "^B""D"[A,,D,A,D]12 | "G"[G,,D,G,DG]12 | "Bm"[D,F,B,D]6 "Asus4"[A,,A,DE]6 |
 [V:pad] "G"[G,,D,G,D]12 | "D"[A,,D,A,D]12 | "Asus4"[A,,A,D]6 "Esus4"[A,,A,DE]6 | "^B リフレイン1""Bm"[F,B,DF]12 |
 [V:pad] "G"[G,,D,G,D]12 | "D"[A,,D,A,D]6 "Asus4"[A,,E,A,DE]6 | "^B リフレイン2""Bm"[B,,B,D]12 | "G"[G,,D,G,D]12 |
