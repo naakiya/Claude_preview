@@ -1,0 +1,1869 @@
+{
+ "part": "drums",
+ "display_name": "Drums / Percussion",
+ "instrument": "drum kit (kick ~57 Hz, deep snare) + shaker",
+ "clef": "perc",
+ "written_octave_shift": 0,
+ "events": [
+  {
+   "bar": 11,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare"
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare"
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare"
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare"
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare"
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare"
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare"
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 18,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare"
+   ]
+  },
+  {
+   "bar": 18,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 18,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 18,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 18,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 18,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare"
+   ]
+  },
+  {
+   "bar": 34,
+   "pos": 0,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 34,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "shaker",
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 34,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "kick"
+   ]
+  },
+  {
+   "bar": 34,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 34,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker",
+    "snare"
+   ]
+  },
+  {
+   "bar": 34,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  }
+ ],
+ "chords": [
+  {
+   "bar": 1,
+   "pos": 0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 13,
+   "pos": 6,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 14,
+   "pos": 0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 15,
+   "pos": 6,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 16,
+   "pos": 0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 17,
+   "pos": 6,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 18,
+   "pos": 0,
+   "symbol": "Am7"
+  },
+  {
+   "bar": 20,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 21,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 22,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 23,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 24,
+   "pos": 0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 24,
+   "pos": 6,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 25,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 26,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 27,
+   "pos": 0,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 27,
+   "pos": 6,
+   "symbol": "Esus4"
+  },
+  {
+   "bar": 28,
+   "pos": 0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 29,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 30,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 30,
+   "pos": 6,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 31,
+   "pos": 0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 32,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 33,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 33,
+   "pos": 6,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 34,
+   "pos": 0,
+   "symbol": "D"
+  }
+ ],
+ "sections": [
+  {
+   "bar": 1,
+   "label": "Intro"
+  },
+  {
+   "bar": 7,
+   "label": "Intro 2"
+  },
+  {
+   "bar": 12,
+   "label": "A"
+  },
+  {
+   "bar": 18,
+   "label": "A (ending)"
+  },
+  {
+   "bar": 22,
+   "label": "B"
+  },
+  {
+   "bar": 28,
+   "label": "B refrain 1"
+  },
+  {
+   "bar": 31,
+   "label": "B refrain 2"
+  }
+ ],
+ "confidence": {
+  "12": "high",
+  "13": "high",
+  "14": "high",
+  "15": "high",
+  "16": "high",
+  "17": "high",
+  "18": "high",
+  "19": "medium",
+  "20": "medium",
+  "21": "medium",
+  "22": "high",
+  "23": "high",
+  "24": "medium",
+  "25": "high",
+  "26": "high",
+  "27": "medium",
+  "28": "high",
+  "29": "high",
+  "30": "high",
+  "31": "high",
+  "32": "high",
+  "33": "high",
+  "34": "medium",
+  "11": "medium"
+ },
+ "notes_ja": "1〜10小節目は休み。11小節目後半のスネアのフィル（弱い6番目→7・9・11・12番目の8分）で入ります。基本形はキックが8分の1・4・7・9・11番目（後半は4分音符刻み）、スネアは7番目（3拍目）のバックビート、8分の3番目に小さなゴーストノート。A（12〜21小節）は1拍目にも軽いスネアが重なり、小節によって7番目や9番目のキックが抜けるので、譜面どおりに踏み分けてください。シェイカーは20小節目から4分音符（8分の奇数番目）で加わります（ハイハットで代用可）。B（22小節〜）はゴーストノートが8分の3・6・10・12番目に増えます（6番目はごく弱く省略可）。19・21・27・30・33小節目はスネアのフィルなので、手順（R/L）を先に決めておくと安定します。",
+ "method": "Source: audio/stems/drums.wav (44.1 kHz), cross-checked with bass/other/vocals stems and the mix. Kit identified from band-limited Hilbert envelopes (<150 Hz, 150-400, 400-1.5k, 1.5-6k, >7 kHz), 1/3-octave onset-rise maps, log-frequency spectrograms and band-filtered waveforms, inspected bar by bar (images in work/drums/fin_*.png, v_*.png). Instruments: KICK = long-ringing kick tuned ~57 Hz (fixed in every section regardless of harmony, pitch sweep ~120->57 Hz, beater click); detected as a <150 Hz envelope jump >=8 dB plus a >=8 dB rise of a narrow 51-63 Hz band. SNARE = 1.5-6 kHz wire burst (fast ~30 ms decay) with a deep ~73-77 Hz body (A section, fills) and a ~540 Hz head ring (B); hits where the <150 Hz onset is only this 75 Hz body (no 57 Hz kick ring) are written as snare without kick (bars 11, 13:6, 18:6, 19:6/10/11, 27:5). Accent vs ghost from the 1.5-6 kHz peak relative to the median eighth-7 backbeat, after subtracting the kick's own click/sympathetic snare buzz (kick-only hits sit at -24..-36 dB in A, -11..-19 dB in B): downbeat snare written as 'snare' (A >= -13 dB) or 'snare_ghost' (A -13..-20, B -9..-13). B-section ghosts on eighths 2, 9, 11 (0-based pos) are confirmed by the 540 Hz snare ring, absent on empty eighths. SHAKER = rounded 3-15 kHz noise swells (rise ~35 ms, peak ~+20 ms after the grid, -15 dB by ~90 ms, no metallic partials): quarter-note pulse (pos 0,2,4,6,8,10) from bar 20, extra off-beats only where a separate swell is visible (bar 24: 5,9,11; bar 31: 9); isolated soft accents at 12:4, 12:10 and a swell into 19:10. No crash/ride: no long-decay cymbal anywhere (all >7 kHz peaks fall 15 dB within <100 ms). Grid: 0.5-step slot analysis found no sixteenths (mean rise at x.5 slots ~0 dB in every band), so everything is on eighths. Bars 1-10: tacet. The two low thumps at 10.02 s (bar 7 pos 4.0) and 11.54 s (bar 8 pos 4.1) are NOT notated: they are single ~10 ms damped impulses centred ~60 Hz with no tonal ring (-20 dB in ~90 ms vs the kick's ~57 Hz ring lasting >250 ms), no 2-8 kHz attack, 21-29 dB below groove kicks and ~10 dB below the other stem's low end in the mix, appear on an off-beat eighth only twice and nowhere else in the intro, and also leak into the vocals stem; judged a body/foot/stand bump from the performer rather than backing-track percussion (if one wants to play them: a very soft floor-tom/bass-drum note at bar 7 and 8, pos 4). Treated as bleed and not notated: weak transients (-25..-30 dB) on A-section eighth 2 and B-section eighth ~5.1, spectrally identical to empty eighths and coinciding with guitar strums in other.wav. Evaluation (synth_drums vs stem, 50 ms window). Full-band onsets() of the stem vs all event times: overall F=0.92 (P=0.93, R=0.91); per bar 11:1.00 12:0.67 13:0.67 14:0.80 15:0.83 16:0.89 17:1.00 18:0.80 19:1.00 20:0.86 21:0.94 22:0.82 23:0.95 24:1.00 25:0.94 26:0.95 27:1.00 28:0.94 29:0.89 30:1.00 31:0.89 32:1.00 33:0.95 34:1.00. Kick (envelope-jump detector on <150 Hz, robust to the kick ring): overall F=0.90 (P=0.98 R=0.83); per bar 12:0.67 13:0.55 14:0.67 15:0.80 16:0.67 17:0.80 18:0.67 19:0.40 20:0.80 21:0.80 22:0.67 23:0.91 24:0.80 25:0.80 26:0.80 27:0.80 28:0.91 29:0.89 30:1.00 31:1.00 32:0.91 33:0.80 34:0.86. With the plain onsets(30-150 Hz) helper kick F=0.60 (P=1.00, R=0.42) because it fires 2x per hit on the ringing tail. Snare band onsets(1.5-6 kHz) vs snare+ghost+shaker+kick times: F=0.87 (P=0.86 R=0.89); per bar 11:1.00 12:0.73 13:0.50 14:0.91 15:0.83 16:0.80 17:0.89 18:0.73 19:0.91 20:0.83 21:0.80 22:0.75 23:0.89 24:0.95 25:0.94 26:0.80 27:1.00 28:0.88 29:0.89 30:1.00 31:0.89 32:0.82 33:0.95 34:0.91; snare-only events precision 0.92. Shaker band onsets(7-11 kHz) vs shaker+snare times: F=0.73 (P=1.00 R=0.58); per bar (from 20) 20:0.86 21:0.73 22:0.80 23:0.75 24:0.90 25:0.80 26:0.75 27:0.90 28:0.75 29:0.80 30:0.78 31:0.88 32:0.75 33:0.82 34:0.80; shaker-only precision 1.00. Detector-matched (onsets() of the synth vs of the stem) F=0.81. Chroma not applicable (unpitched). Uncertain: whether the A-section deep backbeat is one snare sample or snare+floor tom (written as snare); exact ghost dynamics; bar 11 pos 5 (soft pickup, snare ghost vs floor tom); bar 34 fades out (kick at pos 8 soft). [Superseded in part by the 'verification' field: A-section eighth-2 hits, B-section eighth-5 hits and two kick slots were corrected.]",
+ "verification": "Independent verification (verify_drums/v2). Evidence re-derived for every bar 11-34 from audio/stems/drums.wav: per-slot band features (1-4 kHz and 7-13 kHz Hilbert envelopes: peak relative to the section backbeat and rise above the local floor; 150-1000 Hz spectral flux; 95-160 Hz kick pitch-sweep onset jump), a two-template matching pursuit on the <180 Hz waveform (kick template averaged from the eighth-3 kicks, which correlate 0.95-0.99 with each other, plus a snare-body template taken from the bar-11 fill), cross-correlation of the low waveforms between slots, bar-averaged spectrograms for A and B, and the stem's own onsets() detector (full band and 1-4 kHz) against the part. Images: verify_drums/v2/f_*.png (final part over the spectrogram, bands and envelopes), avgbar.png, avglow.png, ring.png, ring_stems.png, pos6.png, pos8.png. CHANGES (26): (1) Removed kick at 14:6. The low end matches the snare-only backbeats of 13:6 and 18:6: matching-pursuit kick amplitude is -13 dB (true kick+snare backbeats are -5 to +2 dB), low-band RMS is 0.045 (snare-only 0.038-0.046, kick+snare 0.066-0.10), and it correlates 0.80-0.84 with the bar-11 snare-only hits but only 0.47-0.49 with 20:6 and 21:6. (2) Added kick at 19:10, under the fill snare. There is a 57 Hz ring (snare body is 72-76 Hz), the kick amplitude is -4 dB, and the hit correlates 0.73 with the 20:10 and 21:10 kicks against 0.10-0.24 with snare-only hits. (3) Added snare_ghost on eighth 2 in bars 12-18 and 20. These are sharp 0.5-5 kHz transients 16-25 dB above the local floor, at -16 to -25 dB relative to the A backbeat, the same level as the B-section eighth-2 ghosts already in the part. The full-band onsets() detector finds them in 12, 13, 14, 15, 16 and 18, and the 1-4 kHz detector finds 17. The original reason for leaving them out (guitar strums leaking from other.wav) does not hold: other.wav, bass.wav and vocals.wav show no transient on eighth 2 in their bar-averaged 1-4 kHz envelopes, and no guitar is audible (see guitar.json). (4) Added snare_ghost at 12:9 and 20:9. Both are detected by onsets() in the full and 1-4 kHz bands, at -24 and -13 dB with 17-18 dB rises; this matches the existing 21:9 ghost. (5) Added snare_ghost on eighth 5 in bars 22-26, 28, 29 and 31-34. Every B bar has a soft hit on eighth 5: onsets() detects it in 22, 23, 25, 26, 28, 29, 31 and 33 (full band) and in 32 and 34 (1-4 kHz). Its attack spectrum (150-400 Hz body plus broadband up to 8 kHz) matches the existing eighth-9 and eighth-11 ghosts, and it is only about 3 dB softer than the eighth-11 ghosts (about -28 dB relative to the backbeat). Bar 30 was left out (no detector onset). Bar 27 already has a snare on 5. (6) Added shaker at 14:10 and 18:10. These are 8-15 kHz bursts at -15 and -17 dB relative to the B shaker with 19-23 dB rises. That is stronger than the shaker already notated at 12:4 (-18 dB, rise 17) and well above kick-only eighth-10 slots (-23 to -29 dB, rise 8-9). (7) Removed shaker at 31:9. Its 8-15 kHz burst (-5 dB, rise 16) cannot be told apart from 23:9, 25:9, 28:9, 30:9 and 32:9, which carry only the eighth-9 ghost snare. The bar-24 off-beat shakes (0/-3/-4 dB, rises 19-24) are clearly stronger and were kept. CHECKED AND KEPT: no kick on 8 in bars 12, 16 and 17. The kick-sweep (95-160 Hz) onset jump is 7, 4 and 2 dB there, against 9-13 dB for real kicks; the 57 Hz phase-extrapolation residual shows only a weak excess. The soft kick at 34:8 has a 15 dB sweep-band jump (a real kick, attenuated by the end fade). Snare-only backbeats at 13:6, 18:6 and 19:6 are kept. Fill notes in bars 11, 19, 21, 27, 30 and 33 are all confirmed by strong 1-4 kHz attacks. Downbeat snare and ghost choices are roughly right; 17:0 and 19:0 are only 4-5 dB above a kick alone and stay unnotated. Bars 1-10 are tacet, as before: the only drum-stem onsets are the isolated 60 Hz thump at 10.03 s and a negligible -48 dB event at 11.68 s. The grid is fine: all onsets land within +8 to +16 ms of the eighth grid, with no sixteenths. NOT CHANGED, BUT PRESENT: very faint hits at about -26 to -28 dB on 13:5, 16:5, 15:9 and 17:9, picked up only by the 1-4 kHz detector, and late swells at 16:8.2 and 18:4.2. These are too sporadic and soft to notate. Kit identity: kick plus deep snare plus shaker is confirmed; no hi-hat, ride, crash or toms. The eighth-5 B hits could also be a soft second percussion sound, but their spectrum is snare-like. METRICS before -> after (50 ms window, stem onsets() vs part event times). Full band: F 0.918 -> 0.957, P 0.931 -> 0.922, R 0.905 -> 0.994. 1-4 kHz band (vs snare, ghost and kick times): F 0.893 -> 0.953. 7-13 kHz band (vs shaker and snare): F 0.734 -> 0.738. 30-150 Hz band (vs kick and snare; the kick ring makes the detector fire twice): F 0.685 -> 0.726. Detector-matched (onsets() of synth_drums vs of the stem): F 0.806 -> 0.867. Per-bar full-band F before: 11:1.00 12:0.67 13:0.67 14:0.80 15:0.83 16:0.89 17:1.00 18:0.80 19:1.00 20:0.86 21:0.94 22:0.82 23:0.95 24:1.00 25:0.94 26:0.95 27:1.00 28:0.94 29:0.89 30:1.00 31:0.89 32:1.00 33:0.95 34:1.00. After: 11:1.00 12:0.86 13:0.80 14:0.91 15:0.92 16:1.00 17:0.89 18:0.91 19:1.00 20:0.93 21:0.94 22:0.89 23:1.00 24:1.00 25:1.00 26:1.00 27:1.00 28:1.00 29:0.95 30:1.00 31:0.95 32:0.95 33:1.00 34:0.91. Per-bar 1-4 kHz F after: 11:1.00 12:1.00 13:0.73 14:1.00 15:0.86 16:0.83 17:0.91 18:0.92 19:1.00 20:1.00 21:0.93 22:0.94 23:1.00 24:0.89 25:1.00 26:0.94 27:0.95 28:1.00 29:1.00 30:1.00 31:1.00 32:0.95 33:0.95 34:1.00. Chroma similarity does not apply to unpitched percussion; band-envelope agreement was used instead (see the images).",
+ "reconciled": "Reconciled with bass/pad/guitar/drums/harmony: one chord list and one sections list for all parts (see chords.json). Chord decisions checked on the violin-notched accompaniment (guitar/accomp.wav), the other-stem side channel and the bass stem: 13b/15b/17b = Csus2 (C4+G4 loudest, the D3 pedal keeps sounding ~17 dB below); bars 18-19 = one Am7 (bass A1 tied, pad D3-G3 tied over the barline, C4 tail still ~8 dB above the floor in 19a, so no chord change at bar 19); bar 21 = G for the whole bar (backing G3-D4-G4, no E or B; bass E2 is a one-quarter passing note at pos 8); 27b Esus4 kept (A2/A3/E on top of bass E2, no G/G#, no B). Grid-shift test of every part against its stem: best at 0 (no part offset by a grid step)."
+}

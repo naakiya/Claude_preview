@@ -1,0 +1,171 @@
+{
+ "part": "chords",
+ "key": "D（イントロ・A＝Dミクソリディアン／B＝Dメジャー）",
+ "key_en": "D (Intro & A: D mixolydian, C natural; B: D major)",
+ "abc_key": "D",
+ "tuning_offset_cents": 8,
+ "chords": [
+  {
+   "bar": 1,
+   "pos": 0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 13,
+   "pos": 6,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 14,
+   "pos": 0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 15,
+   "pos": 6,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 16,
+   "pos": 0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 17,
+   "pos": 6,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 18,
+   "pos": 0,
+   "symbol": "Am7"
+  },
+  {
+   "bar": 20,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 21,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 22,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 23,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 24,
+   "pos": 0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 24,
+   "pos": 6,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 25,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 26,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 27,
+   "pos": 0,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 27,
+   "pos": 6,
+   "symbol": "Esus4"
+  },
+  {
+   "bar": 28,
+   "pos": 0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 29,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 30,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 30,
+   "pos": 6,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 31,
+   "pos": 0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 32,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 33,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 33,
+   "pos": 6,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 34,
+   "pos": 0,
+   "symbol": "D"
+  }
+ ],
+ "sections": [
+  {
+   "bar": 1,
+   "label": "Intro"
+  },
+  {
+   "bar": 7,
+   "label": "Intro 2"
+  },
+  {
+   "bar": 12,
+   "label": "A"
+  },
+  {
+   "bar": 18,
+   "label": "A (ending)"
+  },
+  {
+   "bar": 22,
+   "label": "B"
+  },
+  {
+   "bar": 28,
+   "label": "B refrain 1"
+  },
+  {
+   "bar": 31,
+   "label": "B refrain 2"
+  }
+ ],
+ "notes_ja": "キーはD（イントロとAはCナチュラルのDミクソリディアン、BはF#が出るDメジャー）。イントロ（1〜11小節）はD5のドローンだけで、7小節目からバイオリンのメロディ、11小節目後半にドラムのフィル。A（12〜21）は「D5｜D5 Csus2」の2小節パターンを3回→Am7（2小節）→D→G。B（22〜34）はD｜G｜Bm Asus4｜G｜D｜Asus4 Esus4のあと、3小節のリフレイン「Bm｜G｜D Asus4」を2回くり返し、34小節目のDの途中で動画が終わります。伴奏はDとAの開放弦のようなドローンが鳴り続けて3度がほとんど聞こえないため、5・sus表記にしています（普通のD・C・A・Eで弾いても大きくは外れません）。",
+ "method": "Reconciled with bass/pad/guitar/drums/harmony: one chord list and one sections list for all parts (see chords.json). Chord decisions checked on the violin-notched accompaniment (guitar/accomp.wav), the other-stem side channel and the bass stem: 13b/15b/17b = Csus2 (C4+G4 loudest, the D3 pedal keeps sounding ~17 dB below); bars 18-19 = one Am7 (bass A1 tied, pad D3-G3 tied over the barline, C4 tail still ~8 dB above the floor in 19a, so no chord change at bar 19); bar 21 = G for the whole bar (backing G3-D4-G4, no E or B; bass E2 is a one-quarter passing note at pos 8); 27b Esus4 kept (A2/A3/E on top of bass E2, no G/G#, no B). Grid-shift test of every part against its stem: best at 0 (no part offset by a grid step)."
+}

@@ -1,0 +1,1075 @@
+{
+ "part": "bass",
+ "display_name": "Bass",
+ "instrument": "electric bass (4-string, EADG)",
+ "clef": "bass",
+ "written_octave_shift": 1,
+ "tuning": [
+  "E1",
+  "A1",
+  "D2",
+  "G2"
+ ],
+ "events": [
+  {
+   "bar": 12,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 6,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 9,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 6,
+   "dur": 2,
+   "pitches": [
+    "C2"
+   ],
+   "tab": [
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "C2"
+   ],
+   "tab": [
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "C2"
+   ],
+   "tab": [
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 6,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 9,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 6,
+   "dur": 2,
+   "pitches": [
+    "C2"
+   ],
+   "tab": [
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "C2"
+   ],
+   "tab": [
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "C2"
+   ],
+   "tab": [
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 6,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 9,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 6,
+   "dur": 2,
+   "pitches": [
+    "C2"
+   ],
+   "tab": [
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "C2"
+   ],
+   "tab": [
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "C2"
+   ],
+   "tab": [
+    [
+     3,
+     3
+    ]
+   ]
+  },
+  {
+   "bar": 18,
+   "pos": 0,
+   "dur": 12,
+   "pitches": [
+    "A1"
+   ],
+   "tab": [
+    [
+     3,
+     0
+    ]
+   ],
+   "tie": true
+  },
+  {
+   "bar": 19,
+   "pos": 0,
+   "dur": 6,
+   "pitches": [
+    "A1"
+   ],
+   "tab": [
+    [
+     3,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "A2"
+   ],
+   "tab": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "A2"
+   ],
+   "tab": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 0,
+   "dur": 12,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 0,
+   "dur": 6,
+   "pitches": [
+    "G2"
+   ],
+   "tab": [
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "E2"
+   ],
+   "tab": [
+    [
+     2,
+     2
+    ]
+   ]
+  },
+  {
+   "bar": 21,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "G2"
+   ],
+   "tab": [
+    [
+     2,
+     5
+    ]
+   ]
+  },
+  {
+   "bar": 22,
+   "pos": 0,
+   "dur": 12,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 23,
+   "pos": 0,
+   "dur": 12,
+   "pitches": [
+    "G2"
+   ],
+   "tab": [
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 0,
+   "dur": 6,
+   "pitches": [
+    "B2"
+   ],
+   "tab": [
+    [
+     1,
+     4
+    ]
+   ]
+  },
+  {
+   "bar": 24,
+   "pos": 6,
+   "dur": 6,
+   "pitches": [
+    "A2"
+   ],
+   "tab": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "bar": 25,
+   "pos": 0,
+   "dur": 10,
+   "pitches": [
+    "G2"
+   ],
+   "tab": [
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 26,
+   "pos": 0,
+   "dur": 12,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 0,
+   "dur": 6,
+   "pitches": [
+    "A1"
+   ],
+   "tab": [
+    [
+     3,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 27,
+   "pos": 6,
+   "dur": 6,
+   "pitches": [
+    "E2"
+   ],
+   "tab": [
+    [
+     2,
+     2
+    ]
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 0,
+   "dur": 8,
+   "pitches": [
+    "B2"
+   ],
+   "tab": [
+    [
+     1,
+     4
+    ]
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "B2"
+   ],
+   "tab": [
+    [
+     1,
+     4
+    ]
+   ]
+  },
+  {
+   "bar": 28,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "A2"
+   ],
+   "tab": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 0,
+   "dur": 8,
+   "pitches": [
+    "G2"
+   ],
+   "tab": [
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "G2"
+   ],
+   "tab": [
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 29,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "F#2"
+   ],
+   "tab": [
+    [
+     2,
+     4
+    ]
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 0,
+   "dur": 6,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 6,
+   "dur": 2,
+   "pitches": [
+    "A1"
+   ],
+   "tab": [
+    [
+     3,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "A1"
+   ],
+   "tab": [
+    [
+     3,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 30,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "A1"
+   ],
+   "tab": [
+    [
+     3,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 0,
+   "dur": 8,
+   "pitches": [
+    "B1"
+   ],
+   "tab": [
+    [
+     3,
+     2
+    ]
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "B2"
+   ],
+   "tab": [
+    [
+     1,
+     4
+    ]
+   ]
+  },
+  {
+   "bar": 31,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "A2"
+   ],
+   "tab": [
+    [
+     1,
+     2
+    ]
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 0,
+   "dur": 8,
+   "pitches": [
+    "G2"
+   ],
+   "tab": [
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 8,
+   "dur": 2,
+   "pitches": [
+    "G2"
+   ],
+   "tab": [
+    [
+     1,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 32,
+   "pos": 10,
+   "dur": 2,
+   "pitches": [
+    "E2"
+   ],
+   "tab": [
+    [
+     2,
+     2
+    ]
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 0,
+   "dur": 6,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 33,
+   "pos": 6,
+   "dur": 6,
+   "pitches": [
+    "A1"
+   ],
+   "tab": [
+    [
+     3,
+     0
+    ]
+   ]
+  },
+  {
+   "bar": 34,
+   "pos": 0,
+   "dur": 12,
+   "pitches": [
+    "D2"
+   ],
+   "tab": [
+    [
+     2,
+     0
+    ]
+   ]
+  }
+ ],
+ "chords": [
+  {
+   "bar": 1,
+   "pos": 0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 13,
+   "pos": 6,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 14,
+   "pos": 0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 15,
+   "pos": 6,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 16,
+   "pos": 0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 17,
+   "pos": 6,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 18,
+   "pos": 0,
+   "symbol": "Am7"
+  },
+  {
+   "bar": 20,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 21,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 22,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 23,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 24,
+   "pos": 0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 24,
+   "pos": 6,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 25,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 26,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 27,
+   "pos": 0,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 27,
+   "pos": 6,
+   "symbol": "Esus4"
+  },
+  {
+   "bar": 28,
+   "pos": 0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 29,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 30,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 30,
+   "pos": 6,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 31,
+   "pos": 0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 32,
+   "pos": 0,
+   "symbol": "G"
+  },
+  {
+   "bar": 33,
+   "pos": 0,
+   "symbol": "D"
+  },
+  {
+   "bar": 33,
+   "pos": 6,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 34,
+   "pos": 0,
+   "symbol": "D"
+  }
+ ],
+ "sections": [
+  {
+   "bar": 1,
+   "label": "Intro"
+  },
+  {
+   "bar": 7,
+   "label": "Intro 2"
+  },
+  {
+   "bar": 12,
+   "label": "A"
+  },
+  {
+   "bar": 18,
+   "label": "A (ending)"
+  },
+  {
+   "bar": 22,
+   "label": "B"
+  },
+  {
+   "bar": 28,
+   "label": "B refrain 1"
+  },
+  {
+   "bar": 31,
+   "label": "B refrain 2"
+  }
+ ],
+ "confidence": {
+  "12": "high",
+  "13": "high",
+  "14": "high",
+  "15": "high",
+  "16": "medium",
+  "17": "high",
+  "18": "high",
+  "19": "high",
+  "20": "high",
+  "21": "medium",
+  "22": "high",
+  "23": "high",
+  "24": "high",
+  "25": "high",
+  "26": "high",
+  "27": "high",
+  "28": "high",
+  "29": "high",
+  "30": "high",
+  "31": "high",
+  "32": "high",
+  "33": "high",
+  "34": "high"
+ },
+ "notes_ja": "1〜11小節目は休み。11小節目後半のスネアのフィルを合図に12小節目から入ります。A（12〜21小節）は開放Dを付点4分で4回ずつ弾き直し、13・15・17小節目の後半だけC（A弦3フレット）を4分音符3つで弾きます（3拍子に聞こえるヘミオラ）。キックは小節後半を8分の9・11番目で踏みますが、ベースはDの小節では4拍目頭（10番目）なので、つられないように。18小節目から開放Aを1小節半伸ばし、19小節目後半はオクターブ上のA2を4分音符2つ。21小節目はG→E→Gのスライドで22小節目のDへつなぎます。B（22小節〜）は1小節か半小節の長い音が中心で、28・29・31・32小節目は後半の4分音符2つ（B-A、G-F#、B-A、G-E）で次のコードへ。31小節目は頭がB1（A弦2フレット）で後半にB2へ上がる点に注意し、どの音も次の音の直前までレガートで伸ばしてください。",
+ "method": "Bars 1-11: bass tacet. The bass stem there is ~-80 dBFS RMS vs ~-29 dBFS once the groove starts (≈50 dB lower); its faint D3 sits ~50 dB below the D3 of other.wav and follows that envelope, and the full mix has no low D2/A1 energy beyond what other.wav carries, so the D3 is separation bleed of the drone. The low \"D2\" thumps basic-pitch found in bars 7-8 and the end of bar 11 are broadband (F#1-A2), coincide with drum hits and the bar-11 fill (drums stem ~15 dB louder in the same frames), i.e. drum bleed, not bass notes. Rhythm: basic-pitch note splits were ignored; re-attacks were taken from dips in the 30-400 Hz RMS envelope and in the 2nd-4th harmonic CQT envelopes (re-plucks show 5-40 dB dips just before the grid point), checked against pYIN f0 and zoomed CQT images. Groove A is legato dotted quarters on D (re-plucked on every beat, bar 16 beat 2 only softly), and in bars 13/15/17 the second half is three quarter-note Cs (eighths 6, 8, 10: a hemiola), not jig eighths; bar 20 is one sustained D. Bars 19/21/28/29/31/32 end with the same two-quarter figure on eighths 8 and 10. Octaves verified from the CQT fundamental (no energy an octave below any written note; A1/B1 fundamentals within 2-5 dB of their 2nd harmonic; A2/B2 in bars 19, 24, 28, 31 have no A1/B1 energy). Tuning ≈ +7 cents (A=440). Attack timing vs grid: median +5 ms, IQR -10..+17 ms. Evaluation (synth vs stem): onset F-measure (50 ms) vs onsets(bass stem, 30-1000 Hz, delta 0.1) per bar: 12:0.75 13:0.75 14:0.86 15:0.50 16:0.33 17:0.89 18:1.00 19:0.86 20:0.67 21:1.00 22:1.00 23:0.00 24:1.00 25:1.00 26:1.00 27:1.00 28:1.00 29:1.00 30:0.57 31:1.00 32:0.86 33:1.00 34:1.00; overall F=0.81 (P=0.77, R=0.86) vs 0.66 for raw basic-pitch; detector-matched (synth through the same detector) F=0.83. Low bars (15, 16, 23, 30) are legato pitch changes with no energy onset plus ~40-60 ms detector lag, not missing notes. Against full-band onsets() F=0.60 because the stem carries hi-hat/drum bleed onsets inside long notes. Bass-band chroma similarity per bar (sustained synth) min 0.955, mean 0.990; worst half-bar 0.897 (bar 19 first half, decaying A1 tail). Uncertain: release points of decaying notes rounded (bar 19 A1 stops ~eighth 7, bar 21 G2 ~7, bar 25 G2 ~10.5); bar 21 E2 is scooped up from ~D2 and slides to G2 without a re-pluck; bar 26 D2 has a quiet slide-in from below. Fingering is a suggestion (open D/A/G strings, B2/A2 on the G string); D-C-A could also be played on the A/E strings with slides. chords = bass note at each change; the eighth-10 notes in bars 21, 28, 29, 31, 32 (and bar 21 eighth 8) are passing/approach tones.",
+ "verification": "Independent verification (verifier agent). NOTES/RHYTHM/TAB: no changes - every event was re-derived and confirmed. Evidence: (1) pitch per event from zero-padded harmonic-sum spectra: all 62 events match the written pitch (C2 not C#2, F#2 not F2, B not Bb; tuning within ~+-20 c); (2) octave: real A1/B1 notes have the fundamental 0-7 dB below the 2nd harmonic, while the written A2/B2 notes in bars 19, 24, 28, 31 have the lower octave 13-40 dB down (bar 31 eighth 8: B1 drops 14 dB at the re-attack while B2 stays, so the new note is B2); E2 in 27/32 has no E1; (3) re-attacks from 40-800 Hz level dips and harmonic-band (h1-h5) envelopes at every eighth of bars 11-34: every written onset has a dip/attack and no unwritten slot has one; the kick (drums.json: eighths 0,3,6,8,10) causes no dips in sustained bars 20/22/23/26, so the A-section dips at 3/6/9 and the 8/10 hemiola in bars 13/15/17 are real bass articulations; (4) pYIN f0 per sixteenth agrees with the part except transition sixteenths (pre-attack mutes, release glides); (5) releases (level < sustained-15 dB) agree with written ends (bar 21 G2 6.2, bar 25 G2 10.4); bars 18 and 20 have no re-attack; (6) bars 1-11: pYIN finds no voiced pitch; the bar-11 eighth-9 thump is broadband and the ~70 Hz tone there is in drums.wav (fill), so tacet is confirmed; (7) attack timing vs grid median +4 ms (IQR -10..+17 ms); bar 23 G2 enters ~55 ms late and bar 19 A2 ~40 ms early, still best quantized to eighths 0 and 8. Extra observations (not notated, added to notes_ja): bar 15->16 C2->D2 is a slide without a new pluck (pYIN glides 36.1->37.9 across the barline); bar 16 beat-2 re-pluck is a ~5 dB harmonic dip with no fresh attack (kept, medium). CHANGED - chords: the old list was bass roots, written as plain triad symbols, and it included passing tones as chord changes. build_player.py uses bass.json's chords for the whole page, because bass comes first in ORDER and there is no chords.json. The old symbols B (24, 28, 31) were wrong: the violin-removed accompaniment (guitar/accomp.wav) has D natural and no D#, so these are Bm. The old A at bar 18 was wrong because C natural is present and C# absent. The old A at bar 19 had neither C nor C#, with G present. The old A at 27/30b/33b had no third, with D present. The old E at 27b had no G or G#. The old C at 13b/15b/17b had no E. 21.8 E, 21.10 G, 28.10 A, 29.10 F#, 31.10 A and 32.10 E were passing tones. Replaced with the harmony/pad/guitar consensus, which my chroma checks confirm: D5 (from bar 1, intro included) | Csus2 at 13/15/17 eighth 6 | Am7 18 | A7sus4 19 | D 20 | G, Em7 at 21.6 | D | G | Bm, Asus4 at 24.6 | G | D | Asus4, Esus4 at 27.6 | Bm | G | D, Asus4 at 30.6 | Bm | G | D, Asus4 at 33.6 | D. old chords=[{\"bar\":12,\"pos\":0,\"symbol\":\"D\"},{\"bar\":13,\"pos\":6,\"symbol\":\"C\"},{\"bar\":14,\"pos\":0,\"symbol\":\"D\"},{\"bar\":15,\"pos\":6,\"symbol\":\"C\"},{\"bar\":16,\"pos\":0,\"symbol\":\"D\"},{\"bar\":17,\"pos\":6,\"symbol\":\"C\"},{\"bar\":18,\"pos\":0,\"symbol\":\"A\"},{\"bar\":20,\"pos\":0,\"symbol\":\"D\"},{\"bar\":21,\"pos\":0,\"symbol\":\"G\"},{\"bar\":21,\"pos\":8,\"symbol\":\"E\"},{\"bar\":21,\"pos\":10,\"symbol\":\"G\"},{\"bar\":22,\"pos\":0,\"symbol\":\"D\"},{\"bar\":23,\"pos\":0,\"symbol\":\"G\"},{\"bar\":24,\"pos\":0,\"symbol\":\"B\"},{\"bar\":24,\"pos\":6,\"symbol\":\"A\"},{\"bar\":25,\"pos\":0,\"symbol\":\"G\"},{\"bar\":26,\"pos\":0,\"symbol\":\"D\"},{\"bar\":27,\"pos\":0,\"symbol\":\"A\"},{\"bar\":27,\"pos\":6,\"symbol\":\"E\"},{\"bar\":28,\"pos\":0,\"symbol\":\"B\"},{\"bar\":28,\"pos\":10,\"symbol\":\"A\"},{\"bar\":29,\"pos\":0,\"symbol\":\"G\"},{\"bar\":29,\"pos\":10,\"symbol\":\"F#\"},{\"bar\":30,\"pos\":0,\"symbol\":\"D\"},{\"bar\":30,\"pos\":6,\"symbol\":\"A\"},{\"bar\":31,\"pos\":0,\"symbol\":\"B\"},{\"bar\":31,\"pos\":10,\"symbol\":\"A\"},{\"bar\":32,\"pos\":0,\"symbol\":\"G\"},{\"bar\":32,\"pos\":10,\"symbol\":\"E\"},{\"bar\":33,\"pos\":0,\"symbol\":\"D\"},{\"bar\":33,\"pos\":6,\"symbol\":\"A\"},{\"bar\":34,\"pos\":0,\"symbol\":\"D\"}]. Confidence reviewed, no change. METRICS (identical before/after, since no notes changed), bars 12-34: onset F (50 ms, part onsets vs onsets(bass,30-1000 Hz,delta .1)) = 0.803 (P 0.770, R 0.839); detector-matched synth F = 0.807; vs full-band onsets F = 0.591; per bar: 12:0.75 13:0.75 14:0.86 15:0.50 16:0.33 17:0.89 18:1.00 19:0.67 20:0.67 21:1.00 22:1.00 23:0.00 24:1.00 25:1.00 26:1.00 27:1.00 28:1.00 29:1.00 30:0.57 31:1.00 32:0.86 33:1.00 34:1.00. The low-scoring bars are explained by detector lag (+40..+80 ms on legato pitch changes: bars 12.9, 15.6, 16.6, 23.0, 30.6), by missed soft re-plucks (bars 13.6/8, 15.8/10, 16.0/3, 30.10), and by drum-bleed false onsets (bars 20.3, 32.9). None of these is a missing note. Bass-band (C1-C4) chroma per half bar: mean 0.987, min 0.869 (bar 19 first half, decaying A1 tail); per-bar full chroma min 0.947.",
+ "reconciled": "Reconciled with bass/pad/guitar/drums/harmony: one chord list and one sections list for all parts (see chords.json). Chord decisions checked on the violin-notched accompaniment (guitar/accomp.wav), the other-stem side channel and the bass stem: 13b/15b/17b = Csus2 (C4+G4 loudest, the D3 pedal keeps sounding ~17 dB below); bars 18-19 = one Am7 (bass A1 tied, pad D3-G3 tied over the barline, C4 tail still ~8 dB above the floor in 19a, so no chord change at bar 19); bar 21 = G for the whole bar (backing G3-D4-G4, no E or B; bass E2 is a one-quarter passing note at pos 8); 27b Esus4 kept (A2/A3/E on top of bass E2, no G/G#, no B). Grid-shift test of every part against its stem: best at 0 (no part offset by a grid step)."
+}

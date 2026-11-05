@@ -1,0 +1,19 @@
+X:1
+T:Touch the Sky - アコースティックギター
+%%barnumbers 1
+M:12/8
+L:1/8
+Q:3/8=159
+%%stretchlast 1
+%%score guitar
+K:D
+V:guitar clef=treble
+[V:guitar] "^イントロ""D5"DAd AdA DAd AdA | DAd AdA DAd AdA | DAd AdA DAd AdA | DAd AdA DAd AdA |
+[V:guitar] DAd AdA DAd AdA | DAd AdA DAd AdA | "^イントロ 2"!downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 | !downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 |
+[V:guitar] !downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 | !downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 | !downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 !downbow![DAd]3 | "^A"!downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] |
+[V:guitar] !downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] "Csus2"!downbow![DG=c]2!downbow![DGc]2!downbow![DGc]2 | "D5"!downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] | !downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] "Csus2"!downbow![DG=c]2!downbow![DGc]2!downbow![DGc]2 | "D5"!downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] |
+[V:guitar] !downbow![DAd]2!upbow![DAd] !downbow![DAd]2!upbow![DAd] "Csus2"!downbow![DG=c]2!downbow![DGc]2!downbow![DGc]2 | "^A（後半）""Am7"!downbow![A,DG=c]2!upbow![A,DGc] !downbow![A,DGc]2!upbow![A,DGc] !downbow![A,DGc]2!upbow![A,DGc] !downbow![A,DGc]2!upbow![A,DGc] | !downbow![A,DG=c]2!upbow![A,DGc] !downbow![A,DGc]2!upbow![A,DGc] !downbow![A,DGc]2!downbow![A,DGc]2!downbow![A,DGc]2 | "D"!downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] |
+[V:guitar] "G"!downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!downbow![G,B,DGdg]2!downbow![G,B,DGdg]2 | "^B""D"!downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] | "G"!downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!upbow![G,B,DGdg] | "Bm"!downbow![FBdf]2!upbow![FBdf] !downbow![FBdf]2!upbow![FBdf] "Asus4"!downbow![A,DAde]2!upbow![A,DAde] !downbow![A,DAde]2!upbow![A,DAde] |
+[V:guitar] "G"!downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!upbow![G,B,DGdg] | "D"!downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] | "Asus4"!downbow![A,DAde]2!upbow![A,DAde] !downbow![A,DAde]2!upbow![A,DAde] "Esus4"!downbow![E,B,EABe]2!upbow![E,B,EABe] !downbow![E,B,EABe]2!upbow![E,B,EABe] | "^B リフレイン1""Bm"!downbow![FBdf]2!upbow![FBdf] !downbow![FBdf]2!upbow![FBdf] !downbow![FBdf]2!downbow![FBdf]2!downbow![FBdf]2 |
+[V:guitar] "G"!downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!downbow![G,B,DGdg]2!downbow![G,B,DGdg]2 | "D"!downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] "Asus4"!downbow![A,DAde]2!downbow![A,DAde]2!downbow![A,DAde]2 | "^B リフレイン2""Bm"!downbow![FBdf]2!upbow![FBdf] !downbow![FBdf]2!upbow![FBdf] !downbow![FBdf]2!downbow![FBdf]2!downbow![FBdf]2 | "G"!downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!upbow![G,B,DGdg] !downbow![G,B,DGdg]2!downbow![G,B,DGdg]2!downbow![G,B,DGdg]2 |
+[V:guitar] "D"!downbow![DAdf]2!upbow![DAdf] !downbow![DAdf]2!upbow![DAdf] "Asus4"!downbow![A,DAde]2!upbow![A,DAde] !downbow![A,DAde]2!upbow![A,DAde] | "D"!downbow![DAdf]12 |]
