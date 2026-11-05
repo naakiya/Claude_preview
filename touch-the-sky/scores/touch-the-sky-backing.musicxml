@@ -22,57 +22,57 @@
     </scaling>
   </defaults>
   <part-list>
-    <score-part id="Pa0be5be04509109b03009991ac5d6232">
+    <score-part id="Pd3ec3a9253fd3f2b30eb4543db63d081">
       <part-name>Guitar</part-name>
       <part-abbreviation>Ac Gtr</part-abbreviation>
-      <score-instrument id="I59a55449f911aac597253a9c55638c52">
+      <score-instrument id="Icf9092241c21c335c55518b100a5fdeb">
         <instrument-name>Acoustic Guitar</instrument-name>
         <instrument-abbreviation>Ac Gtr</instrument-abbreviation>
       </score-instrument>
-      <midi-instrument id="I59a55449f911aac597253a9c55638c52">
+      <midi-instrument id="Icf9092241c21c335c55518b100a5fdeb">
         <midi-channel>1</midi-channel>
         <midi-program>25</midi-program>
       </midi-instrument>
     </score-part>
-    <score-part id="Pdc5987ba5dc1526cbe55873d8ec8cac2">
+    <score-part id="Pcac898b53d178c6aa54ccb766737e805">
       <part-name>Guitar_easy</part-name>
       <part-abbreviation>Ac Gtr</part-abbreviation>
-      <score-instrument id="I59a0bda0594d6dc3f21a68a37c800d8c">
+      <score-instrument id="I744ba1eff1d7756ad414d1de74df97ac">
         <instrument-name>Acoustic Guitar</instrument-name>
         <instrument-abbreviation>Ac Gtr</instrument-abbreviation>
       </score-instrument>
-      <midi-instrument id="I59a0bda0594d6dc3f21a68a37c800d8c">
+      <midi-instrument id="I744ba1eff1d7756ad414d1de74df97ac">
         <midi-channel>2</midi-channel>
         <midi-program>25</midi-program>
       </midi-instrument>
     </score-part>
-    <score-part id="Pa61ceef8d7b4834dd12df95c824c939e">
+    <score-part id="Pe1fff9841c6c508ec9a0c4a785663fcd">
       <part-name>Bass</part-name>
       <part-abbreviation>Elec b</part-abbreviation>
-      <score-instrument id="I0aeee2ea3444769bda535f879f92a3ae">
+      <score-instrument id="I76a5cf7ab5fc711cd58ad12e7aa3cfd5">
         <instrument-name>Electric Bass</instrument-name>
         <instrument-abbreviation>Elec b</instrument-abbreviation>
       </score-instrument>
-      <midi-instrument id="I0aeee2ea3444769bda535f879f92a3ae">
+      <midi-instrument id="I76a5cf7ab5fc711cd58ad12e7aa3cfd5">
         <midi-channel>3</midi-channel>
         <midi-program>34</midi-program>
       </midi-instrument>
     </score-part>
-    <score-part id="Pcde25b2e7fb25cf016c330adb8cb52fc">
+    <score-part id="Pd36114600780a2e9967c706c5d95977e">
       <part-name>Pad</part-name>
       <part-abbreviation>Ac Gtr</part-abbreviation>
-      <score-instrument id="I9ff8184858c29265abc064060d57a2ca">
+      <score-instrument id="I64e9588c84d0c2cd4e25c860d902c272">
         <instrument-name>Acoustic Guitar</instrument-name>
         <instrument-abbreviation>Ac Gtr</instrument-abbreviation>
       </score-instrument>
-      <midi-instrument id="I9ff8184858c29265abc064060d57a2ca">
+      <midi-instrument id="I64e9588c84d0c2cd4e25c860d902c272">
         <midi-channel>4</midi-channel>
         <midi-program>25</midi-program>
       </midi-instrument>
     </score-part>
   </part-list>
   <!--=========================== Part 1 ===========================-->
-  <part id="Pa0be5be04509109b03009991ac5d6232">
+  <part id="Pd3ec3a9253fd3f2b30eb4543db63d081">
     <!--========================= Measure 1 ==========================-->
     <measure implicit="no" number="1">
       <attributes>
@@ -7487,7 +7487,7 @@
     </measure>
   </part>
   <!--=========================== Part 2 ===========================-->
-  <part id="Pdc5987ba5dc1526cbe55873d8ec8cac2">
+  <part id="Pcac898b53d178c6aa54ccb766737e805">
     <!--========================= Measure 1 ==========================-->
     <measure implicit="no" number="1">
       <attributes>
@@ -11792,7 +11792,7 @@
     </measure>
   </part>
   <!--=========================== Part 3 ===========================-->
-  <part id="Pa61ceef8d7b4834dd12df95c824c939e">
+  <part id="Pe1fff9841c6c508ec9a0c4a785663fcd">
     <!--========================= Measure 1 ==========================-->
     <measure implicit="no" number="1">
       <attributes>
@@ -12538,7 +12538,7 @@
     </measure>
   </part>
   <!--=========================== Part 4 ===========================-->
-  <part id="Pcde25b2e7fb25cf016c330adb8cb52fc">
+  <part id="Pd36114600780a2e9967c706c5d95977e">
     <!--========================= Measure 1 ==========================-->
     <measure implicit="no" number="1">
       <attributes>
