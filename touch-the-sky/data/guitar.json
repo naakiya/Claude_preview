@@ -642,7 +642,7 @@
   {
    "bar": 7,
    "pos": 0,
-   "dur": 3,
+   "dur": 2,
    "pitches": [
     "A4"
    ],
@@ -650,6 +650,20 @@
     [
      2,
      10
+    ]
+   ]
+  },
+  {
+   "bar": 7,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
     ]
    ]
   },
@@ -684,7 +698,8 @@
      1,
      7
     ]
-   ]
+   ],
+   "tech": "p"
   },
   {
    "bar": 7,
@@ -698,16 +713,22 @@
      1,
      8
     ]
-   ]
+   ],
+   "tech": "h"
   },
   {
    "bar": 7,
    "pos": 6,
    "dur": 1,
    "pitches": [
+    "D5",
     "D4"
    ],
    "tab": [
+    [
+     1,
+     10
+    ],
     [
      3,
      7
@@ -717,7 +738,7 @@
   {
    "bar": 7,
    "pos": 7,
-   "dur": 2,
+   "dur": 1.5,
    "pitches": [
     "B4"
    ],
@@ -726,7 +747,23 @@
      1,
      7
     ]
-   ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 7,
+   "pos": 8.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
   },
   {
    "bar": 7,
@@ -745,13 +782,26 @@
      3,
      7
     ]
-   ],
-   "tie": true
+   ]
   },
   {
    "bar": 8,
    "pos": 0,
-   "dur": 3,
+   "dur": 2,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 8,
+   "pos": 2,
+   "dur": 1,
    "pitches": [
     "C5"
    ],
@@ -793,16 +843,22 @@
      1,
      7
     ]
-   ]
+   ],
+   "tech": "p"
   },
   {
    "bar": 8,
    "pos": 6,
    "dur": 1,
    "pitches": [
+    "B4",
     "D4"
    ],
    "tab": [
+    [
+     1,
+     7
+    ],
     [
      3,
      7
@@ -812,7 +868,7 @@
   {
    "bar": 8,
    "pos": 7,
-   "dur": 2,
+   "dur": 1.5,
    "pitches": [
     "B4"
    ],
@@ -821,7 +877,31 @@
      1,
      7
     ]
+   ],
+   "grace": [
+    "D5"
+   ],
+   "grace_tab": [
+    [
+     1,
+     10
+    ]
    ]
+  },
+  {
+   "bar": 8,
+   "pos": 8.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
   },
   {
    "bar": 8,
@@ -854,7 +934,8 @@
      1,
      7
     ]
-   ]
+   ],
+   "tech": "p"
   },
   {
    "bar": 8,
@@ -868,13 +949,35 @@
      2,
      10
     ]
-   ],
-   "tie": true
+   ]
   },
   {
    "bar": 9,
    "pos": 0,
-   "dur": 3,
+   "dur": 2,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ],
+   "grace": [
+    "B4"
+   ],
+   "grace_tab": [
+    [
+     2,
+     12
+    ]
+   ]
+  },
+  {
+   "bar": 9,
+   "pos": 2,
+   "dur": 1,
    "pitches": [
     "A4"
    ],
@@ -916,16 +1019,22 @@
      1,
      7
     ]
-   ]
+   ],
+   "tech": "p"
   },
   {
    "bar": 9,
    "pos": 6,
    "dur": 1,
    "pitches": [
+    "B4",
     "D4"
    ],
    "tab": [
+    [
+     1,
+     7
+    ],
     [
      3,
      7
@@ -935,7 +1044,7 @@
   {
    "bar": 9,
    "pos": 7,
-   "dur": 2,
+   "dur": 1.5,
    "pitches": [
     "B4"
    ],
@@ -945,6 +1054,21 @@
      7
     ]
    ]
+  },
+  {
+   "bar": 9,
+   "pos": 8.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
   },
   {
    "bar": 9,
@@ -968,7 +1092,7 @@
   {
    "bar": 10,
    "pos": 0,
-   "dur": 3,
+   "dur": 2,
    "pitches": [
     "A4",
     "D4"
@@ -986,6 +1110,20 @@
   },
   {
    "bar": 10,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 10,
    "pos": 3,
    "dur": 1,
    "pitches": [
@@ -1015,7 +1153,8 @@
      1,
      7
     ]
-   ]
+   ],
+   "tech": "p"
   },
   {
    "bar": 10,
@@ -1039,7 +1178,7 @@
   {
    "bar": 10,
    "pos": 7,
-   "dur": 2,
+   "dur": 1.5,
    "pitches": [
     "B4"
    ],
@@ -1048,7 +1187,23 @@
      1,
      7
     ]
-   ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 10,
+   "pos": 8.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
   },
   {
    "bar": 10,
@@ -1081,7 +1236,8 @@
      1,
      7
     ]
-   ]
+   ],
+   "tech": "p"
   },
   {
    "bar": 10,
@@ -1095,8 +1251,7 @@
      2,
      10
     ]
-   ],
-   "tie": true
+   ]
   },
   {
    "bar": 11,
@@ -1110,12 +1265,40 @@
      2,
      10
     ]
+   ],
+   "grace": [
+    "B4"
+   ],
+   "grace_tab": [
+    [
+     2,
+     12
+    ]
    ]
   },
   {
    "bar": 11,
    "pos": 3,
-   "dur": 9,
+   "dur": 1,
+   "pitches": [
+    "A4",
+    "D4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 4,
+   "dur": 4,
    "pitches": [
     "D5",
     "D4"
@@ -1125,6 +1308,39 @@
      1,
      10
     ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 8,
+   "dur": 3,
+   "pitches": [
+    "D5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     10
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
     [
      3,
      7
@@ -6739,13 +6955,13 @@
   "5": "medium",
   "6": "medium",
   "7": "medium",
-  "8": "high",
-  "9": "high",
+  "8": "medium",
+  "9": "medium",
   "10": "high",
   "11": "medium"
  },
  "arrangement": true,
- "notes_ja": "【1〜11小節（イントロ）】原曲のイントロはバイオリンだけで、ギターは入っていません。このTABはバイオリンのラインをギターに移したものなので、難しければ休んで12小節から入ってもかまいません。弾く場合は指弾きで、全部7ポジション（7〜10フレット）です。1〜6小節は3弦7（D）と4弦7（A）を交互に鳴らし続け、3小節1拍目と5小節3拍目だけ1弦10（高いD）を重ねます。2・4・6小節の後半は C–B–A（4弦10・9・7）を2回。7〜10小節は C（1弦8）–B（1弦7）–A（2弦10）のメロディーに、2・3・4拍目の頭で3弦7のDを重ねます。11小節は3弦7＋1弦10を伸ばし、その間に12小節の D5 へ左手を移します。【12小節目から】録音のコード・コードが変わる位置・キメに合わせたアコギ用アレンジです。1拍（付点4分）を「ダウン（4分）＋アップ（8分）」で刻むジグのストローク（譜面の ⊓＝ダウン、V＝アップ）。13・15・17・19・21小節と28〜32小節の後半は、ベースとドラムに合わせて4分音符でダウンを3回（キメ）。使うフォーム（6弦→1弦）：D5 = xx023x、Csus2 = xx001x、Am7 = x0001x、D = xx0232、G = 320033、Bm = xx4432、Asus4 = x00230、Esus4 = 022200。",
- "method": "Bars 1-11: VERDICT: no separate guitar in bars 1-11; the high-register line the user hears is the violin (two-voice playing on open D + its stereo reverb). Evidence weighed: 4 independent lenses (envelope/pluck calibration, stereo/pan-coherence masks, video bow tracking, doubling/beating) all found no plucked attack, no off-grid or off-centre onset stream, no 3rd/6th/octave partner line; all high-register attacks coincide with the violinist's bow reversals. Judge re-checks: (1) video frames 1.0-3.15 s show a flat bow with raised arm (G/D strings) vs steep bow at 11.6-13.1 s (A string); (2) E5 (3rd harmonic of A3) rises 10-15 dB in the \"A\" eighths of bars 1-6, so the A there is A3 on the G string (its 2nd harmonic A4 is the loudest partial), likewise the C4/B3 figure of bars 2/4/6 (h1 -3..-11 dB re h2; absent under the A-string motif of bars 7-10); (3) the C5 that lingers under B4 in bars 7-10 has L/R coherence 0.21-0.64 vs 0.80-0.97 for the active B4 and 0.98-1.00 at C5 attacks = diffuse reverb, not a coherent second source; (4) only anomaly: odd partials of the bars 2/4/6 figure lean right (G5 pan -0.23..-0.38) while C4/C5/B4 are centred - no plucked onset or separate timing accompanies it, so it is read as mic/directivity, not a guitar. TRANSCRIPTION: per-eighth CQT tables (36 bins/oct, mid), partial envelopes, dominant-pitch tracking and onset/bow tables; sounding pitches kept (A3/B3/C4/D4 in bars 1-6, C5/B4/A4/D5 over D4 in 7-11); jig rhythm D(2)-A(1)|A(3) per half bar is a simplification of bowed eighth re-articulations; tiny violin ornaments (C/B grace notes at pos 5/11, slides into A in bars 4/6, faint pos-2 re-bows in bars 7-10) omitted. Fingering: everything in 7th position (frets 7-10). VALIDATION (pluck synth vs other.wav high-passed 200 Hz): onset F (80 ms) all bars 0.81 (P 0.85, R 0.76), 50 ms 0.75; chroma per bar mean 0.94 (plain D4 drone baseline 0.74), half-bar mean 0.92. Per bar: 1: onF 0.73 / chroma 0.94; 2: onF 0.75 / chroma 0.90; 3: onF 0.71 / chroma 0.92; 4: onF 0.84 / chroma 0.88; 5: onF 0.92 / chroma 0.90; 6: onF 0.71 / chroma 0.91; 7: onF 0.88 / chroma 0.98; 8: onF 0.88 / chroma 0.97; 9: onF 0.80 / chroma 0.98; 10: onF 0.89 / chroma 0.96; 11: onF 0.57 / chroma 0.97. Octave check (semitone CQT A3-C#6 correlation): bars 1,3,5,6 fit better at the written octave, bars 2/4 slightly better 8va (0.40/0.42 vs 0.33/0.39) because the violin's G-string notes radiate mostly their 2nd harmonic - hence the 8va option in notes_ja. Piano rolls: work/intro_gtr/judge/roll_*.png. [Verifier 2026-11-05: events corrected - see \"verification\". Re-validated with the same pluck synth vs other.wav high-passed 200 Hz: onset F (80 ms) all bars 0.82 (P 0.87, R 0.77), 50 ms 0.77; chroma per bar mean 0.93, half-bar mean 0.93. Per bar: 1: onF 0.73 / chroma 0.94; 2: onF 0.63 / chroma 0.91; 3: onF 0.71 / chroma 0.92; 4: onF 0.95 / chroma 0.87; 5: onF 0.92 / chroma 0.91; 6: onF 0.71 / chroma 0.88; 7: onF 0.88 / chroma 0.98; 8: onF 0.94 / chroma 0.95; 9: onF 0.86 / chroma 0.98; 10: onF 0.89 / chroma 0.96; 11: onF 0.57 / chroma 0.97.] | Bars 12-34: ARRANGEMENT for acoustic guitar. Chords/change points from the reconciled harmony; groove = 12/8 jig strum (down quarter + up eighth per dotted-quarter beat) matching the drum pattern; hemiola half bars (three quarter-note hits) wherever the bass plays them; intro arpeggio mirrors the audible D-A-D eighth figure; voicings follow the pad's chord tones in open position.",
- "intro_verification": "Independent verification (2026-11-05), scripts and images in work/intro_gtr/verify/ (v1-v20, cqt_final_*.png, env_*.png, voices_*.png, zoom_*.png, pitchcheck_final.txt, metrics_*.json). VERDICT CHECK: agrees that no separate guitar is audible in bars 1-11. Own evidence: (a) all intro energy is in other.wav (bass/drums/vocals stems and the mix-minus-stems residual are about 40-60 dB down until the bar-11 pickup); (b) stopped notes carry violin vibrato (bar-7 C5 track range 78 cents) while open-string notes are dead steady (A4 in bars 7/9/10/11 +4..+9 cents, sd 2-4 cents; D4/D5 in bar 11 track each other at +11..+14 cents) - a fretted doubling would show as a steady line under the vibrato and none was seen; (c) the bars 1-6 A has its 3rd/5th harmonics (E5, C#6) and sits 16-19 cents flat with vibrato in bars 2/3/5, i.e. a stopped A3 on the G string, and the bars 2/4/6 C carries G5 (its 3rd harmonic, -23..-30 dB) that is absent (-45..-61 dB) under the A-string C5 of bars 7-10, so C4/B3 is the right octave; (d) the side (L-R) copy of the violin band lags the mid by about 64 ms in bars 1-10 - a stereo delay/reverb that can sound like a second instrument shadowing the violin; (e) own video frames (frames_grid.png: 0.9/2.85/5.95/8.95 s vs 9.7/10.45/13.0/16.5 s) show only the violinist, with a flat bow and raised arm (G/D strings) during the bars 1-6 drone and the C-B-A figures, and a steep bow (A string) from bar 7 beat 1 on. EVENT CHECK (36-bin/oct CQT with the part overlaid for every bar, 46 ms STFT partial tables, harmonic-specific voice curves, basic-pitch onsets as a third opinion): all tab frets equal the written pitch in standard tuning; no C/C# or B/Bb errors (neighbour semitones 10-25 dB lower; the few low-row flags are weak G-string fundamentals, settled by h2/h3); schema ok (pos+dur<=12, ties end on the barline into a matching pitch). CHANGES (75 -> 75 events): 1) bars 2/4/6: removed the C4 at pos 5 - the C enters on pos 6 in all three bars (C5/G5 rise at pos 5.6-6.0, basic-pitch C4 onsets at 6.0/5.7/5.9; pos 5 is still A, the old pos-5 C came from the long low-frequency CQT window smearing C4 backwards); A3 at pos 3 now lasts 3 eighths. 2) bars 2/4/6: B3 at pos 7 shortened to 1 eighth and an A3 added at pos 8 - A4/C#6 rise at pos 7.7-8.5 in all three bars and basic-pitch finds A3 at 8.0/7.5/7.9, so the figure is C-B-A | C-B-A. 3) bars 2 and 6 pos 11: C4 -> A3 (A4, E5 and C#6 rise from pos 10.4-10.8, basic-pitch A3 at 10.6/10.2; bar 4 already had A3). In bar 6 a fresh C5 without the C4 3rd harmonic also sounds at pos 10.9-11.4 (possible double stop or pickup), left out. 4) bar 7 pos 0: A3 -> A4 (s2f10): no A3 3rd harmonic (E5 -41..-44 dB), and the A is pitch-steady like the open A string (+9 cents, sd 3.7), unlike the vibrato G-string A3 of bars 1-6, and the bow is already at the A-string angle at 9.7 s. 5) bar 8: B4+D4 at pos 6 (dur 3) -> D4 at pos 6 + B4 at pos 7 (dur 2): the B4 dips at pos 6.2-7.0 and re-swells at pos 7.1 (basic-pitch B4 onset 7.1), the same shape as bars 7/9/10. 6) bar 9: removed the C5 at pos 5, B4 from pos 4 now lasts 2 eighths (B4 5-15 dB above C5 through pos 4-5.3; basic-pitch B4 3.7-7.0). Bar 7 keeps B4-C5 at pos 4/5 because there C5 >= B4 at pos 4.6-5.0. 7) bar 3 pos 0 and bar 5 pos 6: D4 -> D5+D4 (D5 is 10-17 dB above D4 there, against -1..-7 dB at the other D attacks; the same criterion as the existing D5 in bar 10). NOT CHANGED but noted: the D4/A3 rocking of bars 1-6 is really a bowed double stop that re-articulates almost every eighth (broadband onsets at pos ~5 of most bars are D4 pulses); the D(2)-A(1)|A(3) rhythm is a playable simplification. In bar 8 the tied C5 decays by about pos 1.5 (written dur 3 = let ring). In bar 11 the D5 may partly be the open D4 2nd harmonic. Ornaments (16th C-B turns in bars 7-10, B->C slide into pos 6 in bars 4/6) are omitted. VALIDATION before -> after: onset F80 0.805 -> 0.818, onF50 0.755 -> 0.767, chroma/bar 0.937 -> 0.934, half-bar 0.920 -> 0.926, per-eighth semitone-spectrum fit 0.545 -> 0.542 (better at the corrected slots: bar 2 pos 5 -0.19 -> +0.37, pos 11 +0.24 -> +0.37, bar 4 pos 5 +0.01 -> +0.29; lower at bar 8 pos 6-8 only because the schema forbids overlapping notes, so the D4 at pos 6 is written for one eighth while the real drone keeps ringing). Confidence: bars 1-7 and 11 medium (ornamented bowed double stops; bar 6 pos 11 and bar 7 pos 0 are the least certain), bars 8-10 high."
+ "notes_ja": "【1〜11小節（イントロ）】原曲のイントロはバイオリンだけで、ギターは入っていません。このTABはバイオリンのラインをギターに移したものなので、難しければ休んで12小節から入ってもかまいません。弾く場合は指弾きで、全部7ポジション（7〜10フレット）です。1〜6小節は3弦7（D）と4弦7（A）を交互に鳴らし続け、3小節1拍目と5小節3拍目だけ1弦10（高いD）を重ねます。2・4・6小節の後半は C–B–A（4弦10・9・7）を2回。7〜11小節（Intro 2）には、バイオリンが実際に弾いている細かい音（装飾音・カット・重音・弓のアクセント）を入れたので、音数が31から42に増えました（ほかに装飾音が3つ）。左手は7ポジションのままです。人差し指は7フレット（1弦7＝B4と3弦7＝D4を軽くセーハ）、中指は1弦8（C5）、薬指は2弦10（A4）、小指は1弦10（D5）を押さえます。TABの h はハンマリング、p はプリング（右手では弾かず、左手だけで鳴らす）です。小さい音符は装飾音で、拍の直前に素早く入れます。【1拍目の3つ目の8分】7・10小節は、2弦10（A4）を8分2つ伸ばしたあと、1弦7（B4）を弱く弾きます。C5はまだ出さず、2拍目の頭で1弦8＋3弦7（C5＋D4）をしっかり弾きます。8小節はここで1弦8（C5）だけを軽く弾き直します。9小節はB4を入れず、2弦10（A4）を軽く弾き直すだけです。どれもバイオリンの弓のアクセントなので、2拍目より弱くてかまいません。【8小節の頭】7小節から伸ばしたC5はタイにせず、8小節の頭で1弦8だけを弾き直します（装飾音はなし）。3弦7（D4）は、7小節4拍目から押さえたまま自然に鳴らしておけば十分です。【2拍目】C5＋D4を弾いたら、2つ目の8分で8p7（B4）。7小節だけはC5に戻るので、3つ目の8分で中指を7h8とハンマリングします（3弦は弾き足しません）。8〜10小節はB4のまま伸ばします。【3拍目】7小節と10小節は1弦10＋3弦7（D5＋D4のオクターブ）を弾き、2つ目の8分で小指を離して10p7でB4へ下ります。8小節は1弦7＋3弦7（B4＋D4）を弾き、次のB4の直前に小指で1弦10を一瞬鳴らして7へプリングします（10p7の装飾音＝D5のカット）。9小節はB4＋D4のあと、B4を素直に弾き直すだけです。【4拍目】拍の16分前に1弦7→8とハンマリングしてC5を少し早めに鳴らし（バイオリンは拍の少し前でC5に上がります）、拍の頭で3弦7（D4）を足して弾きます（1弦8も一緒に弾き直してかまいません）。8・10小節は、そのあとC5→B4（8p7）→A4（2弦10）と下ります。【9・11小節の頭：カット】前の小節のA4から続けて、頭のA4を2弦12→10のプリング装飾音で切ってから鳴らします（小指で12を弾き、すぐ薬指の10へ）。アイリッシュ・フィドルの「カット」です。小指が届きにくければ、装飾音なしで弾き直すだけでもかまいません（9小節のカットは11小節より控えめです）。【11小節】A4を8分3つ伸ばし、2拍目の頭で3弦7（D4）を足します。2拍目の2つ目の8分から1弦10＋3弦7（D5＋D4のオクターブ）に変えて伸ばします。3拍目の3つ目の8分での弾き直しは任意です。バイオリンは弓を返さず、音をふくらませているだけなので、伸ばしたままでもかまいません。最後の8分で3弦7のD4だけを弾き直して、12小節へつなぎます。【12小節目から】録音のコード・コードが変わる位置・キメに合わせたアコギ用アレンジです。1拍（付点4分）を「ダウン（4分）＋アップ（8分）」で刻むジグのストローク（譜面の ⊓＝ダウン、V＝アップ）。13・15・17・19・21小節と28〜32小節の後半は、ベースとドラムに合わせて4分音符でダウンを3回（キメ）。使うフォーム（6弦→1弦）：D5 = xx023x、Csus2 = xx001x、Am7 = x0001x、D = xx0232、G = 320033、Bm = xx4432、Asus4 = x00230、Esus4 = 022200。",
+ "method": "Bars 1-11: NOTE: this arranger record was checked by an independent verifier on 2026-11-05. Decision (1), the B4 grace and dyad D4 of (5), and the D4 at bar 7 pos 5 in (2) were revised. See \"verification\" for the evidence. v2 ARRANGER RECONCILIATION (2026-11-05). Bars 1-6 copied unchanged from guitar_intro.json; bars 7-11 rebuilt from three analyst reports (fine-f0/audio, video bowing, fiddle idiom) plus my own re-measurement of every point where they disagreed. My measurements (work/intro2/arranger/r1-r25): mid/side STFT 2048/1024 (hop 1.45 ms) with a direct-sound estimate (|M|^2-|S|^2), per-pitch partial energies (h1-h3, +6 c tuning), 2.5-10 kHz HF flux, the analysts' YIN (raw and D-series-notched) and pYIN tracks, zero-padded long-window spectra for D5-vs-D4 level and cents, 4096-window low-register views, and the video bow reversals. DECISIONS: (1) End of beat 1, bars 7-10: HF flux 2.1-2.3x median at pos 1.73-2.02 and librosa onsets at 1.82-2.11 in all four bars; notched YIN goes Bb4/B4 -> C5 by pos 2.25-2.75 (B4 h2 +16 dB at bar 10 pos 1.75; weak in bar 9). The simultaneous A3 swell (+7-13 dB, no rise of its 3rd harmonic E5) is the pad, which swells at pos 0 too but without any HF spike, so the HF articulation is the violin. Video lens read pos 2 as pad only; fine-f0 as an A4 re-bow; fiddle lens as a B4 grace sliding to C5 -> adopted B4 (pos 2) + C5 hammer (2.5), then C5+D4 at 3. (2) Bar 7 beat 2: YIN raw, YIN notched and pYIN all stay within -45 c of C5 for pos 3-6 (bars 8-10 switch cleanly to B4 +20..+45 c at pos 4.1); C5 h2 is 8-12 dB above B4 h2 (equal in bar 8); onsets at 4.17 and 5.0-5.14 with D4 dropping out at 4.75 and returning at 5.0 -> C5+D4, B4 (p) at 4, C5+D4 (h) at 5 (the video/fiddle reading 'C5 slurred to B4' was not adopted). (3) D5 at beat 3 (long-window D5-D4 level / cents off 2xD4; plain C5+D4 slots give -1.5..+1.6 dB, +-2 c): bar 7 pos 6-6.5 -1.5 dB/+15 c = independent sharp D5 falling into B4; bar 8 pos 6.4-6.8 +12 c = short D5 cut (fiddle 11.855 s, fine-f0 6.5); bar 9 +1.8 dB/+3.5 c = only the open D's own 2nd harmonic (fine-f0/video A4+D5 at 5.75-6 rejected); bar 10 +7.8 dB/-4 c = clear octave. Bars 3/5 D5 re-confirmed (+8..+9 dB, +14..+23 c). (4) Beat-4 entry: C5 pitch reached at pos 8.6-8.75 after a B4 slide from ~8.25 (all three lenses), HF peaks 8.65-8.76, broadband onsets 8.65-8.92, D4 rising 8.75-9.1, bow reversals 8.74-9.05; her beat-3 attacks are also early (5.73-5.89) -> C5 hammered at 8.5 (slide arrival) + C5+D4 pinch at 9 (bow change). (5) Bar 8 beat 1: bow-speed burst on the downbeat (video) and an ornament at 11.00-11.02 s (fine-f0 B4 tap, fiddle D5 cut; my YIN shows a -15..-21 c dip and a Bb4/B4 h2 bump -> B4 grace chosen, pitch uncertain); C5 not tied but re-picked; D4 re-energized +5 dB so kept in the dyad; the A4 rise at the downbeat is the pad's A3 swell (not notated). B4 tap at pos 1.875-2.25 (YIN notched and pYIN B4 +25..+49 c, HF 2.3x) then C5 at 2.375 -> C5 (0-2), B4 (2, p), C5 (2.5, h). (6) Cuts: bar 9 and bar 11 downbeat A4s are re-articulated inside the bow by a quick upper B4 (video index re-touch frames 374-375/464-465; fiddle HF 1.8x at 12.518/15.540 s; fine-f0 re-attack at 11.75; my bar-10 data: B4 blip at pos 11.5-11.63 with raw YIN B4 +10/+36 c and pYIN +39/+45 c while A4 dips 6 dB, HF 1.7-1.8x at 11.75-11.88) -> grace B4 (s2 12p10) on the downbeat A4 instead of a tie. (7) Bars 8/10 beat 4: C5 -> B4 at 9.75-10 (bar 10 a slower ~110 ms slide) -> A4 entering 10.74 (bar 8) / 10.89 (bar 10); both written B4 10, A4 11. (8) Bar 11: A4 holds to ~pos 4 (26-28 dB to 3.5, then decays); D4 enters at 2.92-3.09; D5 rises 4-8 dB above the D string's own h2 from pos 2.5-4 to ~7; a +9 dB crescendo at pos 7.25-8.0 with no HF articulation (one slow up-bow per the video lens) is rendered as a re-pluck at 8 (arrangement of the swell); a re-bow at 10.74 (video reversal 16.917 s, onset 10.74, D4 dip and re-rise, D5 falls 12-16 dB below D4; drum-fill hits are at 10.0 and 11.06, so not bleed) -> D4 at 11. Fiddle's C#5 at 10.5 and B4 cut at pos 1 not adopted. (9) Bar 6 kept: the proposed C5-B4 pickup at pos 11-11.75 is not supported (C5 h2 -4..+7 dB vs 13-18 dB for real C5s, no C4 either; the C/C# YIN readings coincide with A3's 5th harmonic); note that bar 6's second C-B-A is played about a 16th early (C~8.5, B~9.25-9.5, A~10.25-10.5 from h2/h3 traces; bar 2 sits on 9/10/11), still written in eighths as in v1. Also rejected: fine-f0 C5 cut/B4 at 4.5/4.75 and C5 grace at 5.75 in bar 7, its bar-8 C5 re-bows at pos 1 (vibrato), the video's bar-8 pos-0.5 dip (vibrato), fiddle D5 cuts on the bar 8/10 downbeats. VALIDATION (pluck synth incl. grace notes 45 ms early vs other.wav high-passed 200/400 Hz, bars 7-11, old -> new): chroma per half bar 0.953 -> 0.965 (200 Hz HP) and 0.932 -> 0.945 (400 Hz HP); per-16th semitone-spectrum fit 0.623 -> 0.633. Onsets (librosa reference, all events incl. h/p/grace): F30 0.778 -> 0.725 (P 0.90 -> 0.66, R 0.68 -> 0.80), F50 0.861 -> 0.813 (R 0.76 -> 0.90); against an articulation reference (onsets + HF peaks) F50 0.873 -> 0.800 (R 0.78 -> 0.90). Recall rises because the lead-ins, turns and cuts are now present; precision falls because hammer-ons/pull-offs and grace notes stand for slurred violin notes that have no attack transient (expected). Per half bar (F30 / chroma200 / fit16, old -> new): 7a 0.80->0.83 / 0.972->0.984 / 0.53->0.52; 7b 1.00->0.75 / 0.936->0.949 / 0.72->0.72; 8a 0.86->0.89 / 0.869->0.924 / 0.49->0.59; 8b 0.60->0.46 / 0.975->0.973 / 0.62->0.68; 9a 0.86->0.89 / 0.971->0.954 / 0.60->0.53; 9b 0.57->0.75 / 0.942->0.957 / 0.72->0.74; 10a 0.75->0.80 / 0.946->0.968 / 0.62->0.56; 10b 1.00->0.83 / 0.967->0.981 / 0.65->0.65; 11a 1.00->0.80 / 0.959->0.962 / 0.47->0.53; 11b 0.00->0.00 / 0.990->0.997 / 0.82->0.83 (11b reference onsets are drum-fill bleed). Fit dips in 9a/10a come from the soft lead-in B4-C5 that the synth plays at full level. Bars 1-6 unchanged (same metrics as v1). Piano rolls: work/intro2/arranger/roll_v2c_*.png. UNCERTAIN: grace pitch on the bar-8 downbeat (B4 vs D5), the bar-9 lead-in (weak), bar 7 beat 2 (C5/B4 mixture, pitch sits 20-40 c flat of C5), the bar-11 re-pluck at 8 (swell, not an articulation) and the D4 re-bow at 10.74 (written at 11). | Bars 12-34: ARRANGEMENT for acoustic guitar. Chords/change points from the reconciled harmony; groove = 12/8 jig strum (down quarter + up eighth per dotted-quarter beat) matching the drum pattern; hemiola half bars (three quarter-note hits) wherever the bass plays them; intro arpeggio mirrors the audible D-A-D eighth figure; voicings follow the pad's chord tones in open position.",
+ "intro_verification": "INDEPENDENT VERIFICATION (2026-11-05). The pre-verify file is parts/guitar_intro_v2.pre_verify.json. Scripts and images are in work/intro2/verifier/ (v01-v24, sal_v2_*/sal_v3_* pitch-aligned h2/h3/h4 images, h2_*.png, lv_*.png level curves, zoom_*.png, roll_roll_v3_*.png CQT rolls, metrics_v2/v3.json, frames/). METHOD: mid of other.wav at 44.1 kHz. STFTs used 2048/1536/1024-sample windows at hop 64 (1.45 ms) and 128 (2.9 ms), zero-padded to 8192-32768. pYIN and YIN ran at hop 2.9 ms on the mid and on a D-series-notched mid. HF flux (2.5-10 kHz) marks bow noise. A long-window D5-vs-D4 test was added, and left-hand crops of the video were checked. The key step was to judge pitch only from partials that no drone partial touches: B4 h4 (1983 Hz) and h5, C5 h4 (2100 Hz) and h6 (3150 Hz), A4 h3 and h5, and D4 h4, h8 and h11. Several readings behind v2 came from contaminated bands. D4 h5 (1468 Hz) lies 16 c below B4 h3. The pad's A3 h7 (1546 Hz) reads as \"C5 -30 c\" in the h3 band. The pad's D3 h7 (1028 Hz) reads as \"C5 -32 c\" in the h2 band. From bar 8 the pad's D2 adds to the D4 fundamental (its h4). pYIN voicing stays at about 0.02 in these bars, so its sub-semitone readings during soft passages are not reliable. CHECKS PASSED: every tab and grace_tab fret matches its pitch in standard tuning (s1 7/8/10 = B4/C5/D5, s2 10/12 = A4/B4, s3 7 = D4, s4 7/9/10 = A3/B3/C4). pos+dur <= 12, no overlaps, no ties needed. validate_parts.py reports 0 errors and 0 warnings with chords.json. Fingerings stay in 7th position. The fastest figures are 16ths (63 ms at dotted quarter = 159) plus grace notes. The s2 12p10 cut needs the pinky at 12 over the ring finger at 10, which is playable. CONFIRMED v2 DECISIONS: (a) B4 at pos 4 in bars 7-10: B4 h2 rises from about 0 to 20 dB at pos 4.0 in all four bars. In bar 7 the C5 returns at pos 5 (C5 h2 is 11 dB above B4 h2 at 5-5.5, while in bar 8 B4 dominates). (b) Beat-3 D5. Bars 7 and 10: the 587 Hz partial is +7 to +20 dB relative to D4 h3 at pos 6.0-6.5, pYIN reads D5 from 6.1 to 6.6, and a D5-to-B4 slide is visible at 6.7-7.0. Bar 8: a short D5 at 6.4-6.9, where B4 h4 drops from 17 to 6 dB while D4 h8 (= D5 h4) rises to 22-25 dB, and B4 returns at 7.0; this supports the grace. Bar 9: no D5, since the 587 Hz level is steady at 0 c from 2xD4 and B4 is never interrupted. (c) Beat-4 C5: clean C5 partials rise at about pos 8.6-8.7 (bars 7 and 9) and 8.8 (bars 8 and 10), and D4 h8 rises at 8.75-9.0. The arranger's \"C5 h at 8.5 + C5+D4 at 9\" is kept as a readable approximation. The violin has a single C5 attack 20-40 ms before beat 4. (d) Cuts on the bar 9 and bar 11 downbeats. Into bar 11: a B4 h4 blip of +13 dB at bar 10 pos 11.75-12.0 with HF 2.5x, so the cut is clear. Into bar 9: HF 3.3x at bar 8 pos 11.75 and B4 energy lasting to the barline, so this one is kept at medium. (e) Bar 11: D4 enters at about pos 2.9 (HF 2.0x), A4 holds to about 4 (notched pYIN), D5 sounds from 4.0, and D4 re-articulates at about 10.75 (D4 rises from -29 to -24 dB as D5 drops). The swell at 7.5-8 has no HF articulation, so the re-pluck at 8 stays as an arrangement choice and notes_ja now marks it optional. CHANGES (90 -> 86 events, 4 -> 3 grace notes; bars 7-11 46 -> 42 events): (1) Lead-in at the end of beat 1, bars 7-10. In every bar C5 partials stay at background level until pos 2.875-3.0: C5 h4 is -8 to +3 dB against 14-24 dB once the beat-2 C5 starts. The C5 therefore arrives with the beat-2 bow change (video reversal at about pos 2.9, HF peak at 2.9), so the hammered C5 at 2.5 was removed everywhere. The pos-2 articulation (HF 2.4-4.8x at pos 1.75-2.0) carries a different pitch in each bar. Bars 7 and 10: a soft B4. B4 h4 rises from -3..-7 to +7..+9 dB at pos 2.0-2.1 and holds to 2.875, about 15 dB below the beat-2 C5. Written as B4 at pos 2 for one eighth. Bar 9: no B4 or C5 at all. B4 h4 stays flat near 1 dB, the CQT shows A4 continuing to 2.9, and A4 h5 re-swells from 1.6 to 10.4 dB right after the HF burst at 1.875. This is an A4 re-bow, written as A4 re-picked at pos 2. Bar 8: B4 h2 hits its lowest level (-10 to -19 dB) at pos 2.0-2.4, so there was no B4 turn. The strongest HF burst of the bar (4.8x at 1.75-1.875) interrupts the C5, which resumes softly at about 2.5. Written as C5 re-picked at pos 2 instead of B4 p + C5 h. (2) Bar 8 downbeat. The B4 grace was removed: at -0.125 the B4, Bb4 and A4 h4 bins all jump together, which is broadband bow noise; B4 h2 does not rise; and the clean-band tracker stays on C5 with vibrato. The dyad D4 was also removed. D4 h4, h8 and h11 keep decaying from bar 7 pos 9 (D4 h8 19.6, 14.2, 8.5, 5.6, -1.9 dB), and the \"+5 dB\" D4 rise coincides with the entry of the pad's D2. C5 alone is re-picked, because of an HF burst of 3.4x at bar 7 pos 11.6-11.75; the video shows a bow-speed burst there, not a reversal. (3) Bar 7 pos 5: the D4 was removed, leaving the C5 hammer alone as in v1. D4 h4 at pos 5-5.5 is 4.9-6.7 dB, the same as bar 8 pos 5 where no D4 is written, and D4 h8/h11 do not rise. CHECKED, NOT CHANGED: Bar 6, second C-B-A: C4 h2 rises about 0.4 eighth earlier than in bar 2, but C4 h3, B3 h3 and A3 h3 do not shift consistently, so it stays on eighths. The bar-6 pickup C at pos 11 is 8-10 dB below the real C notes and is not added. Bar 10 beat 1, A4+D4: clean D4 partials there are no higher than in bar 7 beat 1, where no D4 is written, so the D4 is probably pad-inflated. It is kept from v1 as a harmless open-string drone, at low confidence. Bar 9 pos 7 B4 re-pick: B4 h4 re-swells by 6-8 dB at 7.0, so it is kept. Bars 1-5 spot check: the C/B onsets of bars 2 and 4 fall on 6/7 and 9/10, and the bar 3/5 D5 is 7-14 dB above the D4 fundamental. Both agree with the part. VALIDATION (arranger's r21 metric, v2 -> verified, bars 7-11): onset F30 0.725 -> 0.767 (P 0.66 -> 0.733, R 0.805 -> 0.805); F50 0.813 -> 0.837 (R 0.902 -> 0.878); chroma per half bar 0.965 -> 0.956 (200 Hz HP) and 0.945 -> 0.944 (400 Hz HP); per-16th fit 0.633 -> 0.629. Half bar 9a improves (fit 0.527 -> 0.6, chroma 0.954 -> 0.97). The small losses are in 8a (fit 0.588 -> 0.486), where the reference D4 bin is filled by the pad's D2/D3, and in 10a (chroma400 0.926 -> 0.892), where a full-level synth B4 stands in for a soft violin B4. REMAINING UNCERTAINTY: the bar-9 cut, the bar-10 beat-1 D4, the exact pos of the beat-4 C5 (between 8.5 and 9), and the soft pos-2 notes, which are 15 dB below the melody and should be played lightly."
 }
