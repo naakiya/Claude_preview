@@ -79,3 +79,28 @@
 | `scores/touch-the-sky-backing.musicxml` | MuseScore などで開ける MusicXML（ギター・ベース） |
 | `scores/touch-the-sky-backing.mid` | 全パートの MIDI（動画と同じ時間軸。0秒が動画の先頭） |
 | `data/*.json` | 採譜データ（小節・8分音符単位の位置、音名、TAB） |
+
+<!-- tab-exports:begin -->
+## Guitar Pro / MusicXML（TAB 付き）ファイル
+
+`scores/` には、Guitar Pro などの TAB 譜ソフトや楽譜ソフトで開けるファイルも入っています。中身はプレイヤーと同じ採譜データ（`data/*.json`）です。
+
+| ファイル | 内容 |
+| --- | --- |
+| `scores/touch-the-sky-backing.gp5` | Guitar Pro 5 形式。Acoustic Guitar（通常版）・Acoustic Guitar (easy)（かんたん版）・Bass（4弦）・Drums の4トラック |
+| `scores/touch-the-sky-tab.musicxml` | MusicXML 4.0 形式。ギター（通常版・かんたん版）とベースを、五線譜と TAB 譜の2段で収録 |
+
+### 開き方
+
+- **Guitar Pro（5〜8）**：`.gp5` をそのまま開けます。かんたん版のトラックは最初ミュートしてあります。かんたん版で練習するときは、ミキサーでかんたん版のミュートを外し、通常版をミュートしてください
+- **TuxGuitar**（無料）：「ファイル → 開く」で `.gp5` を選びます
+- **MuseScore 4**（無料）：「ファイル → 開く」で `.gp5` も `.musicxml` も読み込めます。五線譜と TAB 譜を上下に並べて見たいときは `.musicxml`、ドラムも入った4トラックで再生したいときは `.gp5` が便利です
+
+### 譜面について
+
+- 12/8 拍子、キーは D です。テンポは1拍（付点4分音符）＝約159。Guitar Pro 形式はテンポを4分音符で数えるので「♩ = 238」と表示されますが、同じ速さです
+- 小節番号はプレイヤーと同じです（1小節目は動画の約0.45秒から）。Intro・A・B などのセクション名は、マーカー（MusicXML ではリハーサルマーク）として入っています
+- ギターとベースの五線譜は、慣例どおり実音より1オクターブ高く書いています（音部記号の下の小さな「8」）
+- 1〜11小節のギターには、ハンマリング（H）・プリング（P）・装飾音と、ドローン（D と A の音）を鳴らしっぱなしにする「let ring」を入れています
+- 12小節からは、ストロークの向き（⊓＝ダウン、V＝アップ）とコードダイアグラムを入れています。Guitar Pro では再生もストロークらしく鳴ります
+<!-- tab-exports:end -->
