@@ -1,0 +1,1674 @@
+{
+ "part": "guitar_violin_line",
+ "display_name": "イントロ旋律（ギター用）",
+ "short_name": "Gtr 旋律",
+ "instrument": "guitar, standard tuning, 7th position - ARRANGEMENT of the violin's intro line (bars 1-11) incl. its open-D/open-A drone; the real acoustic-guitar part is guitar.json",
+ "clef": "treble",
+ "written_octave_shift": 1,
+ "tuning": [
+  "E2",
+  "A2",
+  "D3",
+  "G3",
+  "B3",
+  "E4"
+ ],
+ "events": [
+  {
+   "bar": 1,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 1,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 1,
+   "pos": 6,
+   "dur": 2,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 1,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 1,
+   "pos": 9,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 2,
+   "pos": 0,
+   "dur": 2,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 2,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 2,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 2,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 2,
+   "pos": 7,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 2,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 2,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 2,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 2,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
+  },
+  {
+   "bar": 3,
+   "pos": 0,
+   "dur": 2,
+   "pitches": [
+    "D5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     10
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 3,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 3,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 3,
+   "pos": 6,
+   "dur": 2,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 3,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 3,
+   "pos": 9,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 4,
+   "pos": 0,
+   "dur": 2,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 4,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 4,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 4,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 4,
+   "pos": 7,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 4,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 4,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 4,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 4,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
+  },
+  {
+   "bar": 5,
+   "pos": 0,
+   "dur": 2,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 5,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 5,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 5,
+   "pos": 6,
+   "dur": 2,
+   "pitches": [
+    "D5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     10
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 5,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 5,
+   "pos": 9,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 6,
+   "pos": 0,
+   "dur": 2,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 6,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 6,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 6,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 6,
+   "pos": 7,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 6,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 6,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 6,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 6,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
+  },
+  {
+   "bar": 7,
+   "pos": 0,
+   "dur": 2,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 7,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 7,
+   "pos": 3,
+   "dur": 3,
+   "pitches": [
+    "C5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 7,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "D5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     10
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 7,
+   "pos": 7,
+   "dur": 1.5,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 7,
+   "pos": 8.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
+  },
+  {
+   "bar": 7,
+   "pos": 9,
+   "dur": 3,
+   "pitches": [
+    "C5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ],
+    [
+     3,
+     7
+    ]
+   ],
+   "tie": true
+  },
+  {
+   "bar": 8,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 8,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "C5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 8,
+   "pos": 4,
+   "dur": 2,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 8,
+   "pos": 6,
+   "dur": 0.5,
+   "pitches": [
+    "B4",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 8,
+   "pos": 6.5,
+   "dur": 0.5,
+   "pitches": [
+    "D5"
+   ],
+   "tab": [
+    [
+     1,
+     10
+    ]
+   ],
+   "tech": "h"
+  },
+  {
+   "bar": 8,
+   "pos": 7,
+   "dur": 2,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 8,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "C5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 8,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 8,
+   "pos": 11,
+   "dur": 0.5,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 8,
+   "pos": 11.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 9,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 9,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "C5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 9,
+   "pos": 4,
+   "dur": 1.5,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 9,
+   "pos": 5.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
+  },
+  {
+   "bar": 9,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "B4",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 9,
+   "pos": 7,
+   "dur": 1.5,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 9,
+   "pos": 8.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
+  },
+  {
+   "bar": 9,
+   "pos": 9,
+   "dur": 3,
+   "pitches": [
+    "C5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ],
+    [
+     3,
+     7
+    ]
+   ],
+   "tie": true
+  },
+  {
+   "bar": 10,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 10,
+   "pos": 3,
+   "dur": 1,
+   "pitches": [
+    "C5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 10,
+   "pos": 4,
+   "dur": 2,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 10,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "D5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     10
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 10,
+   "pos": 7,
+   "dur": 1.5,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 10,
+   "pos": 8.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ],
+   "tech": "h"
+  },
+  {
+   "bar": 10,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "C5",
+    "D4"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ],
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 10,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "B4"
+   ],
+   "tab": [
+    [
+     1,
+     7
+    ]
+   ],
+   "tech": "p"
+  },
+  {
+   "bar": 10,
+   "pos": 11,
+   "dur": 0.5,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 10,
+   "pos": 11.5,
+   "dur": 0.5,
+   "pitches": [
+    "C5"
+   ],
+   "tab": [
+    [
+     1,
+     8
+    ]
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 0,
+   "dur": 3,
+   "pitches": [
+    "A4"
+   ],
+   "tab": [
+    [
+     2,
+     10
+    ]
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 3,
+   "dur": 5,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 8,
+   "dur": 3,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  },
+  {
+   "bar": 11,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "D4"
+   ],
+   "tab": [
+    [
+     3,
+     7
+    ]
+   ]
+  }
+ ],
+ "chords": [
+  {
+   "bar": 1,
+   "pos": 0.0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 13,
+   "pos": 6.0,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 14,
+   "pos": 0.0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 15,
+   "pos": 6.0,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 16,
+   "pos": 0.0,
+   "symbol": "D5"
+  },
+  {
+   "bar": 17,
+   "pos": 6.0,
+   "symbol": "Csus2"
+  },
+  {
+   "bar": 18,
+   "pos": 0.0,
+   "symbol": "Am7"
+  },
+  {
+   "bar": 20,
+   "pos": 0.0,
+   "symbol": "D"
+  },
+  {
+   "bar": 21,
+   "pos": 0.0,
+   "symbol": "G"
+  },
+  {
+   "bar": 22,
+   "pos": 0.0,
+   "symbol": "D"
+  },
+  {
+   "bar": 23,
+   "pos": 0.0,
+   "symbol": "G"
+  },
+  {
+   "bar": 24,
+   "pos": 0.0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 24,
+   "pos": 6.0,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 25,
+   "pos": 0.0,
+   "symbol": "G"
+  },
+  {
+   "bar": 26,
+   "pos": 0.0,
+   "symbol": "D"
+  },
+  {
+   "bar": 27,
+   "pos": 0.0,
+   "symbol": "Asus4"
+  },
+  {
+   "bar": 27,
+   "pos": 6.0,
+   "symbol": "Asus4/E"
+  },
+  {
+   "bar": 28,
+   "pos": 0.0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 29,
+   "pos": 0.0,
+   "symbol": "G"
+  },
+  {
+   "bar": 30,
+   "pos": 0.0,
+   "symbol": "D"
+  },
+  {
+   "bar": 30,
+   "pos": 6.0,
+   "symbol": "A"
+  },
+  {
+   "bar": 31,
+   "pos": 0.0,
+   "symbol": "Bm"
+  },
+  {
+   "bar": 32,
+   "pos": 0.0,
+   "symbol": "G"
+  },
+  {
+   "bar": 33,
+   "pos": 0.0,
+   "symbol": "D"
+  },
+  {
+   "bar": 33,
+   "pos": 6.0,
+   "symbol": "A"
+  },
+  {
+   "bar": 34,
+   "pos": 0.0,
+   "symbol": "D"
+  }
+ ],
+ "sections": [
+  {
+   "bar": 1,
+   "label": "Intro"
+  },
+  {
+   "bar": 7,
+   "label": "Intro 2"
+  },
+  {
+   "bar": 12,
+   "label": "A"
+  },
+  {
+   "bar": 18,
+   "label": "A (ending)"
+  },
+  {
+   "bar": 22,
+   "label": "B"
+  },
+  {
+   "bar": 28,
+   "label": "B refrain 1"
+  },
+  {
+   "bar": 31,
+   "label": "B refrain 2"
+  }
+ ],
+ "confidence": {
+  "1": "medium",
+  "2": "medium",
+  "3": "medium",
+  "4": "medium",
+  "5": "medium",
+  "6": "medium",
+  "7": "high",
+  "8": "medium",
+  "9": "high",
+  "10": "high",
+  "11": "medium"
+ },
+ "notes_ja": "【v3で直したところ】バイオリンだけを分離した音で確かめると、1〜6小節は前の版より1オクターブ上でした（A3→A4、C4→C5、B3→B4）。左手は7ポジションのままで、3弦7＝D4、2弦10＝A4、1弦7・8・10＝B4・C5・D5です。3弦7の人差し指は押さえたままにして、D4を下で鳴らし続けると、バイオリンの重音（開放弦Dのドローン）に近くなります。2・4・6小節の後半は「C5・B4・A4・C5・B4・C5」と動き、最後のC5（1弦8へハンマリング）は3つとも同じ形です（3拍目の最後のA4は小さめに）。3小節の頭はD5（1弦10）とD4を同時に弾き直します（2小節の終わりで先にD5へ上がらないこと）。7小節2拍目はC5を3つ分伸ばしたままです（B4には下りません）。10小節の頭はA4を弾かず、9小節から伸ばしたC5をそのまま保ちます。8・10小節の最後は「B4 → A4（16分）→ C5（16分、1弦8を軽く）→ 次の小節頭のA4」で、C5はアイリッシュの『カット』です。8小節3拍目は16分で1弦7→10とハンマリングし、10→7とプリングします。11小節はD5を弾かず、2拍目の頭から3弦7のD4だけを伸ばし、3拍目の3つ目の8分と小節最後の8分で弾き直します（バイオリンの弓の返しに合わせたもので、伸ばしたままでもかまいません）。（検証メモ）1〜6小節では、同じ動きが1オクターブ下（A3・C4・B3）でも小さく重なって聞こえます。この譜面は、より大きく聞こえる上のオクターブを弾く形です。",
+ "method": "v3 RE-VERIFICATION of the 7th-position guitar arrangement of the violin line (bars 1-11) against the clean MVSep Mega-53 violin stem (mid channel, 0-18.6 s). Scripts/images: work/v3/vline2/. PITCH ENSEMBLE: SwiftF0 (4 phase-shifted runs -> 4 ms hop), torchcrepe full + tiny (5 ms hop, weighted-argmax), PESTO (5 ms step), each thresholded on its own confidence, resampled to a 5 ms grid and median-voted (>= 2 voters and a majority of the voiced members; members 12 st off the winning cluster are counted as octave errors and ignored). Run on the raw stem and on a copy with the open-D harmonic series (k x 293.73 Hz, k=1..24) notched out so that the melody above the drone can be tracked. Octave errors were then rejected spectrally: a voted pitch whose own fundamental and 3rd partial are both >= 12 dB below the partial one octave up is re-read an octave higher (245 of 2766 notched frames, all in bars 1-6). ONSETS: common.onsets() on the stem (94 reference onsets in bars 1-11) plus clean-partial level rises (partials that no open-D harmonic touches), 2.5-10 kHz bow-noise flux, and narrowband (4096-pt) and CQT zooms per bar. D5 vs the open D's 2nd harmonic: level h2-h1 against D-alone references (-6..0 dB) plus the h2 frequency offset/vibrato relative to 2 x h1. FINDINGS / CHANGES vs v2: (1) Bars 1-6 were one octave too low. In the violin stem the 'A3' slots have no 220 Hz energy at all (-64..-85 dB vs -21..-35 dB at 440 Hz) and the C/B notes have their odd low-octave partials (h1,h3,h5,h7 of C4/B3) 14-25 dB under the even ones, while the clean C5/B4 of bars 7-8 have the same upper-octave spectrum; the guitar stems carry the A3 (the accompaniment's D3/A3 drone), not the violin. So the violin plays the open-D drone with open-A double stops (D4 + A4) and the figure C5-B4-A4 / C5-B4-C5 on the A string: A3->A4, C4->C5, B3->B4 throughout (same 7th-position frets as bars 7-11: s3 7 = D4, s2 10 = A4, s1 7/8/10 = B4/C5/D5). The v2 rhythm of the drone (A4 entering at pos 2 and 8, D4 re-bowed at 0 and 6) was confirmed by level rises; the quieter C4/B3 component (about 17 dB under C5/B4, absent from every guitar stem) is not part of this line. Ensemble frames at the notated pitch in bars 1-6: 0.337 -> 0.469; duration-weighted stem level at the notated fundamentals in bars 1-6: -42.1 -> -21.2 dB. (2) Bars 2/4/6 second half: C5 (6) B4 (7) A4 (8, soft) C5 (9) B4 (10) and then C5 at 11 in bars 4/6 (C5 3-7 dB over A4 at 11-11.5; ensemble C5 from 10.99/11.33); bar 2 ends B4 (10) C5 (11, 16th) D5 (11.5, tied): the bar-3 D5 is already +9.7 dB at 11-11.5 and +15 dB at 11.5-12 (and 20 c off 2 x D4, i.e. a separate stopped D5). [SUPERSEDED by the verification: the D5 starts on the bar-3 downbeat; bar 2 now ends C5 (11, 8th, h) like bars 4/6.] (3) Bar 7 beat 2: C5 held 3-6 (all four trackers within +-15 c of C5 for pos 3-6.5), so v2's B4 p (4) / C5 h (5) were removed. (4) Bar 8: C5 tied over from bar 7 (no downbeat or pos-2 re-pick; C5 just decays until the D4 + bow change at 3), B4 at 4; the D5 'grace' is a 16th D5 at 6.5 (h2-h1 +8.6 dB at 6.4-6.9) written as 7h10 / 10p7; C5 arrives at 9 directly (C5 salience -31/-25/-13 dB at 8.5/8.75/9), so v2's C5 h at 8.5 was removed. (5) Bars 8 and 10 endings: B4 (10), A4 at 11 (onsets at 10.74/10.75, A4 +14..+20 dB), then a 16th C5 'cut' at 11.5 (ensemble C5 at 11.3-11.7 in bar 10, B4+67 c rising to C5 in bar 8), and the next bar's A4 on the downbeat; v2's B4 grace (s2 12p10) on the bar 9/11 downbeats is replaced by this C5 16th. (6) Bar 9: A4 held 0-3 (no re-pick at 2), C5 (3), B4 (4), C5 hammered back at 5.5 (ensemble C5 at 5.43-5.99), B4 + D4 at 6. (7) Bar 10 beat 1: no A4 and no D4 - the C5 of bar 9 pos 8.5 is held (tied) into bar 10 (A4 band -50..-60 dB, D4 absent 14.2-14.43 s); v2's A4+D4 (0) and B4 (2) were removed. (8) Bar 11: no independent D5: h2-h1 is +5.4 dB at pos 3-4 and falls to -10.7 dB by pos 10-11 (lone open-D references -6..0 dB, stopped D5s of bars 7/10 +9..+25 dB), and the 587 Hz partial stays within 0.7-1.2 c (sd) of 2 x D4 (bar 10's D5: 2-4 c). Written A4 (0-3) then D4 (3), D4 re-bows at 8 (onset 7.88) and 11 (onset 10.74). Kept from v2: bar 7 A4 (0) and soft B4 (2) sliding to C5, D5 (+9 dB) at bar 7 pos 6 and bar 10 pos 6 (+21..+25 dB), D5 in bar 3 (0-1) and bar 5 (6-8) (+10..+15 dB), B4 at pos 4 in bars 8-10, C5 hammer at 8.5 in bars 7/9/10. METRICS vs the violin stem (pluck synth incl. graces/16ths; reference onsets = common.onsets of the stem; v2 -> v3): onset F30 0.383 -> 0.386, F50 0.59 -> 0.602 (P 0.607 -> 0.646, R 0.574 -> 0.564); bars 7-11 F30/F50 0.519/0.675 -> 0.551/0.725; bars 1-6 0.283/0.528 -> 0.28/0.523 (unchanged rhythm; the stem's detected onsets there trail the soft double-stop entries by 40-80 ms, so F is low for both); chroma per half bar 0.796 -> 0.826; octave-aware semitone-CQT cosine per 16th 0.709 -> 0.733 (bars 1-6 0.633 -> 0.658, bars 7-11 0.801 -> 0.822); ensemble pitch agreement bars 7-11 0.77 -> 0.839. Per bar F30/F50/chroma/cqt16, v2: 1 0.00/0.29/0.76/0.64; 2 0.32/0.42/0.72/0.62; 3 0.29/0.43/0.73/0.65; 4 0.36/0.73/0.64/0.64; 5 0.56/0.56/0.69/0.62; 6 0.11/0.63/0.69/0.63; 7 0.56/0.67/0.91/0.76; 8 0.35/0.59/0.96/0.83; 9 0.75/0.75/0.93/0.83; 10 0.53/0.74/0.78/0.74; 11 0.29/0.57/0.97/0.85. v3: 1 0.00/0.29/0.78/0.70; 2 0.30/0.40/0.76/0.68; 3 0.29/0.43/0.74/0.69; 4 0.36/0.73/0.65/0.63; 5 0.56/0.56/0.71/0.63; 6 0.11/0.63/0.71/0.63; 7 0.50/0.63/0.93/0.77; 8 0.43/0.71/0.95/0.82; 9 0.75/0.75/0.94/0.83; 10 0.59/0.82/0.94/0.83; 11 0.33/0.67/0.97/0.86. UNCERTAIN: the soft A4 at pos 8 in bars 2/4/6 (about 14 dB under the C5s), the end of bar 2 (C5 16th vs B4 held), the pitch of the bar-8 cut (B4 sliding toward C5; written C5 like bar 10), a soft D5 (octave over the open D) in bar 11 pos 3-6 cannot be fully excluded, the drone re-picks at pos 3 in bars 2-6 and at 8/11 in bar 11 (bow swells rather than clear attacks). Chords and sections copied from parts_v3/guitar.json.",
+ "metrics": {
+  "reference": "MVSep Mega-53 violin stem, bars 1-11",
+  "v2": {
+   "n_ref_onsets": 94,
+   "n_est_onsets": 89,
+   "all_F30": [
+    0.383,
+    0.393,
+    0.372
+   ],
+   "all_F50": [
+    0.59,
+    0.607,
+    0.574
+   ],
+   "picked_F30": [
+    0.318,
+    0.355,
+    0.287
+   ],
+   "picked_F50": [
+    0.541,
+    0.605,
+    0.489
+   ],
+   "chroma_halfbar": 0.796,
+   "cqt16": 0.709,
+   "cqt16_bars1_6": 0.633,
+   "cqt16_bars7_11": 0.801,
+   "f0level_bars1_6_dB": -42.1,
+   "f0level_bars7_11_dB": -19.3,
+   "F_bars1_6": [
+    0.283,
+    0.528
+   ],
+   "F_bars7_11": [
+    0.519,
+    0.675
+   ],
+   "pitch_agree_1_6": 0.337,
+   "pitch_agree_7_11": 0.77
+  },
+  "v3": {
+   "n_ref_onsets": 94,
+   "n_est_onsets": 82,
+   "all_F30": [
+    0.386,
+    0.415,
+    0.362
+   ],
+   "all_F50": [
+    0.602,
+    0.646,
+    0.564
+   ],
+   "picked_F30": [
+    0.312,
+    0.4,
+    0.255
+   ],
+   "picked_F50": [
+    0.506,
+    0.65,
+    0.415
+   ],
+   "chroma_halfbar": 0.826,
+   "cqt16": 0.733,
+   "cqt16_bars1_6": 0.658,
+   "cqt16_bars7_11": 0.822,
+   "f0level_bars1_6_dB": -21.2,
+   "f0level_bars7_11_dB": -17.3,
+   "F_bars1_6": [
+    0.28,
+    0.523
+   ],
+   "F_bars7_11": [
+    0.551,
+    0.725
+   ],
+   "pitch_agree_1_6": 0.469,
+   "pitch_agree_7_11": 0.839
+  },
+  "perbar_v2": {
+   "1": {
+    "F30": 0.0,
+    "F50": 0.29,
+    "chroma": 0.756,
+    "cqt16": 0.644
+   },
+   "2": {
+    "F30": 0.32,
+    "F50": 0.42,
+    "chroma": 0.719,
+    "cqt16": 0.625
+   },
+   "3": {
+    "F30": 0.29,
+    "F50": 0.43,
+    "chroma": 0.727,
+    "cqt16": 0.645
+   },
+   "4": {
+    "F30": 0.36,
+    "F50": 0.73,
+    "chroma": 0.637,
+    "cqt16": 0.638
+   },
+   "5": {
+    "F30": 0.56,
+    "F50": 0.56,
+    "chroma": 0.688,
+    "cqt16": 0.617
+   },
+   "6": {
+    "F30": 0.11,
+    "F50": 0.63,
+    "chroma": 0.692,
+    "cqt16": 0.63
+   },
+   "7": {
+    "F30": 0.56,
+    "F50": 0.67,
+    "chroma": 0.907,
+    "cqt16": 0.763
+   },
+   "8": {
+    "F30": 0.35,
+    "F50": 0.59,
+    "chroma": 0.962,
+    "cqt16": 0.83
+   },
+   "9": {
+    "F30": 0.75,
+    "F50": 0.75,
+    "chroma": 0.926,
+    "cqt16": 0.826
+   },
+   "10": {
+    "F30": 0.53,
+    "F50": 0.74,
+    "chroma": 0.777,
+    "cqt16": 0.74
+   },
+   "11": {
+    "F30": 0.29,
+    "F50": 0.57,
+    "chroma": 0.966,
+    "cqt16": 0.847
+   }
+  },
+  "perbar_v3": {
+   "1": {
+    "F30": 0.0,
+    "F50": 0.29,
+    "chroma": 0.778,
+    "cqt16": 0.697
+   },
+   "2": {
+    "F30": 0.3,
+    "F50": 0.4,
+    "chroma": 0.764,
+    "cqt16": 0.676
+   },
+   "3": {
+    "F30": 0.29,
+    "F50": 0.43,
+    "chroma": 0.743,
+    "cqt16": 0.688
+   },
+   "4": {
+    "F30": 0.36,
+    "F50": 0.73,
+    "chroma": 0.649,
+    "cqt16": 0.629
+   },
+   "5": {
+    "F30": 0.56,
+    "F50": 0.56,
+    "chroma": 0.712,
+    "cqt16": 0.628
+   },
+   "6": {
+    "F30": 0.11,
+    "F50": 0.63,
+    "chroma": 0.71,
+    "cqt16": 0.63
+   },
+   "7": {
+    "F30": 0.5,
+    "F50": 0.63,
+    "chroma": 0.926,
+    "cqt16": 0.765
+   },
+   "8": {
+    "F30": 0.43,
+    "F50": 0.71,
+    "chroma": 0.951,
+    "cqt16": 0.822
+   },
+   "9": {
+    "F30": 0.75,
+    "F50": 0.75,
+    "chroma": 0.94,
+    "cqt16": 0.827
+   },
+   "10": {
+    "F30": 0.59,
+    "F50": 0.82,
+    "chroma": 0.938,
+    "cqt16": 0.831
+   },
+   "11": {
+    "F30": 0.33,
+    "F50": 0.67,
+    "chroma": 0.973,
+    "cqt16": 0.863
+   }
+  }
+ },
+ "source": "parts/guitar_intro_v2.json (v2, verified 2026-11-05) re-verified 2026-11-17",
+ "verification": "VERIFIED 2026-11-18 by an independent checker (scripts/images: work/v3/verify_vline/). Evidence re-derived mainly from stems the transcriber did not rely on: BS-RoFormer SW6 'other' (sw6o) and htdemucs_6s 'other' (h6o), the full mix, and the guitar stems for leakage; tools not used by the transcriber: torchfcpe (on sw6o/h6o, their D-notched copies and a D-notched Mega violin stem), basic-pitch (multi-pitch, on sw6o/h6o/violin), per-16th partial levels (4096/3072/1536-pt STFT), 1536-pt fine envelopes, harmonic frequency/phase-coherence tests, common.onsets() on three stems. CHANGE (1 event removed, 1 lengthened): bar 2 no longer ends with a tied 16th D5 at pos 11.5. The D5 belongs to the bar-3 downbeat: its 587 Hz level stays flat through bar 2 pos 10.5-11.7 (Mega violin 16th means -16.7/-17.0/-18.1 dB, 35-ms frames -20.5..-21.5 dB) and rises only from pos 11.8-11.85 (+9.5 dB by the downbeat; plateau at bar 3 pos 0.2); onset detectors fire at bar-3 pos -0.14/-0.14/-0.10 (violin/sw6o/h6o), the usual 15-25 ms anticipation of this player (cf. the bar-5 D4 bow attack, which starts at bar 4 pos 11.6 and is written on the downbeat). The transcriber's '+9.7/+15 dB' was h2-h1, inflated by a dip of the D4 drone (-34 dB at 11.47, -37 dB at 11.74, bow change), not by a D5 attack. Bar 2 now ends B4 (10, p) C5 (11, 8th, h) exactly like bars 4 and 6, and bar 3 starts with a new D5+D4 (s1 10 + s3 7). Before -> after: written D5 onset -0.50 -> 0.00 eighth re the bar-3 downbeat; onset F30 vs Mega violin 0.384 -> 0.386, vs sw6o 0.378 -> 0.38; F50 0.599 -> 0.602 / 0.544 -> 0.547; bar-2 F50 0.4 -> 0.421 / 0.333 -> 0.353; chroma per half bar 0.826 -> 0.823 / 0.917 -> 0.915; octave-aware semitone-CQT cosine per 16th unchanged (bars 1-6 0.659 / 0.724, bars 7-11 0.837 / 0.814). CONFIRMED: (a) A4 not A3 in bars 1-6: in both non-Mega 'other' stems the A slots have 440 Hz at -12..-20 dB and 220 Hz at -29..-44 dB; the 220 Hz of the mix (-24..-28) is the acoustic guitar's D3/A3 drone (guitar stems -24..-36), and the 220/440 components are not phase-locked (coherence R 0.09/0.20 over 2.5 eighths vs 0.58-0.99 for same-source partial pairs). (b) Bars 2/4/6 rhythm C5 6, B4 7, A4 8 (soft; weakest in bar 6), C5 9, B4 10, C5 11. (c) Bars 7-11 with torchfcpe pitch crossings on the Mega violin stem: bar 7 C5 held 3-6 (no B4 at 4), B4->C5 at 8.51; bar 8 B4->C5 at 9.06 (no hammer at 8.5), C5->B4 9.85, B4->A4 10.80; bar 9 C5 2.93, B4 3.89, C5 5.47, B4 5.7-5.9, C5 8.65; bar 10 B4 4.11, C5 8.80 (kept at 8.5 like bars 7/9), B4 9.75, A4 10.94; onsets at ~7.0 in all three stems support the bar-9 B4 re-pick at 7. (d) D5 vs the open D's 2nd partial (h2-h1 and h2 offset from 2 x h1): bar 3 pos 0 +12.5..+15 dB, bar 5 pos 6 +5..+13 dB and +25 c, bar 10 pos 6 +7..+25 dB are real D5s; bar 1 pos 0 and bar 5 pos 0 are D4 attacks (h2-h1 -0.4..+3.5 dB, h2 within 10 c of 2 x h1) - correctly written without D5. (e) Bar 10 beat 1: the C5 decays like the tied C5 of bar 8 (strong to ~pos 0.2-0.4, soft swell around pos 1-1.5) - the tie is consistent. (f) TAB: tabtools/fingering.py evaluate - one position (7), no shifts, max stretch 3 frets, 22/22 slurs on one string, no issues; validate_parts.py - no event/tab errors. OPEN / CORRECTED STATEMENT: the octave-lower component in bars 1-6 is much stronger than the transcriber's '17 dB under' (that is the Mega stem only). In the mix and both other separations C4 is only 3-11 dB under C5 (C4 -13..-18 dB, its 3rd partial G5 -21..-32 dB) and B3 1-21 dB under B4 (B3 -21..-37 dB), with A3-series partials in bars 1-6 as well (E5 -22..-43 dB vs -47..-64 in bars 7-8), absent from bars 7-11 and from every guitar stem. torchfcpe (all D-notched stems, incl. the Mega violin) and basic-pitch (C4 posteriors 0.34-0.54 vs C5/B4 0.24-0.39 on sw6o/h6o) hear the LOWER octave in bars 1-6, because the combined periodicity is the lower one. Whether it is a separate octave-down layer (the Mega violin model keeps C5 within 4-6 dB of the mix and B4 within 6-12 dB but cuts C4 by 12-14 dB, as it cuts the loud C4 at 13b) or the fundamental of a G-string violin tone (the bars 2/4/6 C5 has its 2nd partial 18-31 dB down vs 14 dB for the bar-7 C5) is not resolved; C4/C5 phase coherence over 0.85-eighth notes is inconclusive (R 0.19-0.76). The upper octave is kept (louder layer, same 7th-position frets as bars 7-11) and notes_ja now mentions the lower layer. Also still uncertain: the 16th C5 'cut' at pos 11.5 of bars 8/10 (torchfcpe on the violin stem shows A4 throughout; only a +8 dB C5-band bump), the drone re-picks at pos 3 in bars 2-6 (stem onsets near 3.0 only in bars 2 and 4) and a weak 587 Hz component in bar 11 pos 0-3. NOT CHANGED (cross-part): 'chords differ from chords.json' - parts_v3/chords.json was revised at 00:16 and uses 'Csus4(add9)', which validate_parts.py's CHORD_RE rejects, and guitar/bass/drums each carry a different list; bars 1-11 are D5 in all of them, so the transcriber's list is kept for the reconcile step. Backup of the pre-verification file: parts_v3/guitar_violin_line.pre_verify.json.",
+ "exclude_from_score": true,
+ "reconciled": "RECONCILER (v3): chords and sections set to the verified chart in parts_v3/chords.json, identical in every part file (27 chord entries differed before: Csus4(add9)->Csus2 at 13b/15b/17b and Asus2->Asus4 at 24b for bass/drums; the violin-line arrangement carried the guitar transcriber's G7sus4/C, Dm7/A, Am11, D5, Asus2 names). No events changed. Grid check: bass onsets (SW bass stem) median +0.02 eighth (+3 ms), kick +0.05 (+6 ms), snare -0.01 (-1 ms); no part is offset by a grid step. exclude_from_score set to true: this is a guitar ARRANGEMENT of the violin's intro line (the user does not play the violin part), so it stays a separate view and is not stacked into the ensemble score; the real intro guitar (D5 strum) is in guitar.json."
+}

@@ -1,89 +1,18 @@
 {
  "part": "pad",
- "display_name": "Pad / drone",
+ "display_name": "パッド（シンセ）",
  "short_name": "Pad",
- "instrument": "sustained synth/string pad with D drone (programmed backing; slow attack, no decay, identical repeats)",
+ "instrument": "synth pad swell (quiet; bars 8-11 only)",
  "clef": "bass",
  "written_octave_shift": 0,
  "events": [
-  {
-   "bar": 1,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 2,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 3,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 4,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 5,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 6,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 7,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
   {
    "bar": 8,
    "pos": 0,
    "dur": 12,
    "pitches": [
     "D2",
-    "D3",
-    "A3"
+    "E4"
    ],
    "tie": true
   },
@@ -93,8 +22,10 @@
    "dur": 12,
    "pitches": [
     "D2",
-    "D3",
-    "A3"
+    "A2",
+    "F#3",
+    "C4",
+    "E4"
    ],
    "tie": true
   },
@@ -104,523 +35,157 @@
    "dur": 12,
    "pitches": [
     "D2",
-    "D3",
-    "A3"
+    "A2",
+    "F#3",
+    "A3",
+    "C4",
+    "E4"
    ],
    "tie": true
   },
   {
    "bar": 11,
    "pos": 0,
-   "dur": 6,
+   "dur": 5,
    "pitches": [
     "D2",
-    "D3",
-    "A3"
-   ]
-  },
-  {
-   "bar": 11,
-   "pos": 6,
-   "dur": 6,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 12,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 13,
-   "pos": 0,
-   "dur": 6,
-   "pitches": [
-    "D3",
-    "A3"
-   ]
-  },
-  {
-   "bar": 13,
-   "pos": 6,
-   "dur": 6,
-   "pitches": [
-    "D3",
-    "G3",
-    "C4",
-    "G4"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 14,
-   "pos": 0,
-   "dur": 3,
-   "pitches": [
-    "D3",
-    "A3",
-    "G4"
-   ]
-  },
-  {
-   "bar": 14,
-   "pos": 3,
-   "dur": 9,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 15,
-   "pos": 0,
-   "dur": 6,
-   "pitches": [
-    "D3",
-    "A3"
-   ]
-  },
-  {
-   "bar": 15,
-   "pos": 6,
-   "dur": 6,
-   "pitches": [
-    "D3",
-    "G3",
-    "C4",
-    "G4"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 16,
-   "pos": 0,
-   "dur": 3,
-   "pitches": [
-    "D3",
-    "A3",
-    "G4"
-   ]
-  },
-  {
-   "bar": 16,
-   "pos": 3,
-   "dur": 9,
-   "pitches": [
-    "D3",
-    "A3"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 17,
-   "pos": 0,
-   "dur": 6,
-   "pitches": [
-    "D3",
-    "A3"
-   ]
-  },
-  {
-   "bar": 17,
-   "pos": 6,
-   "dur": 6,
-   "pitches": [
-    "D3",
-    "G3",
-    "C4",
-    "G4"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 18,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "D3",
-    "G3",
-    "C4"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 19,
-   "pos": 0,
-   "dur": 8,
-   "pitches": [
-    "D3",
-    "G3"
-   ]
-  },
-  {
-   "bar": 19,
-   "pos": 8,
-   "dur": 4,
-   "pitches": [
-    "A2"
-   ],
-   "tie": true
-  },
-  {
-   "bar": 20,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
     "A2",
-    "A3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 21,
-   "pos": 0,
-   "dur": 6,
-   "pitches": [
-    "G2",
-    "D3",
-    "G3",
-    "D4",
-    "G4"
-   ]
-  },
-  {
-   "bar": 21,
-   "pos": 6,
-   "dur": 6,
-   "pitches": [
-    "G3",
-    "D4",
-    "G4"
-   ]
-  },
-  {
-   "bar": 22,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "A2",
-    "D3",
-    "A3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 23,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "G2",
-    "D3",
-    "G3",
-    "D4",
-    "G4"
-   ]
-  },
-  {
-   "bar": 24,
-   "pos": 0,
-   "dur": 6,
-   "pitches": [
-    "D3",
     "F#3",
-    "B3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 24,
-   "pos": 6,
-   "dur": 6,
-   "pitches": [
-    "A2",
     "A3",
-    "D4",
+    "C4",
     "E4"
-   ]
-  },
-  {
-   "bar": 25,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "G2",
-    "D3",
-    "G3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 26,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "A2",
-    "D3",
-    "A3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 27,
-   "pos": 0,
-   "dur": 6,
-   "pitches": [
-    "A2",
-    "A3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 27,
-   "pos": 6,
-   "dur": 6,
-   "pitches": [
-    "A2",
-    "A3",
-    "D4",
-    "E4"
-   ]
-  },
-  {
-   "bar": 28,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "F#3",
-    "B3",
-    "D4",
-    "F#4"
-   ]
-  },
-  {
-   "bar": 29,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "G2",
-    "D3",
-    "G3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 30,
-   "pos": 0,
-   "dur": 6,
-   "pitches": [
-    "A2",
-    "D3",
-    "A3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 30,
-   "pos": 6,
-   "dur": 6,
-   "pitches": [
-    "A2",
-    "E3",
-    "A3",
-    "D4",
-    "E4"
-   ]
-  },
-  {
-   "bar": 31,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "B2",
-    "B3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 32,
-   "pos": 0,
-   "dur": 12,
-   "pitches": [
-    "G2",
-    "D3",
-    "G3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 33,
-   "pos": 0,
-   "dur": 6,
-   "pitches": [
-    "A2",
-    "D3",
-    "A3",
-    "D4"
-   ]
-  },
-  {
-   "bar": 33,
-   "pos": 6,
-   "dur": 6,
-   "pitches": [
-    "A2",
-    "E3",
-    "A3",
-    "D4",
-    "E4"
-   ]
-  },
-  {
-   "bar": 34,
-   "pos": 0,
-   "dur": 10,
-   "pitches": [
-    "A2",
-    "D3",
-    "A3",
-    "D4"
    ]
   }
  ],
  "chords": [
   {
    "bar": 1,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D5"
   },
   {
    "bar": 13,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Csus2"
   },
   {
    "bar": 14,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D5"
   },
   {
    "bar": 15,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Csus2"
   },
   {
    "bar": 16,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D5"
   },
   {
    "bar": 17,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Csus2"
   },
   {
    "bar": 18,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Am7"
   },
   {
    "bar": 20,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 21,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 22,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 23,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 24,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Bm"
   },
   {
    "bar": 24,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Asus4"
   },
   {
    "bar": 25,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 26,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 27,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Asus4"
   },
   {
    "bar": 27,
-   "pos": 6,
-   "symbol": "Esus4"
+   "pos": 6.0,
+   "symbol": "Asus4/E"
   },
   {
    "bar": 28,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Bm"
   },
   {
    "bar": 29,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 30,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 30,
-   "pos": 6,
-   "symbol": "Asus4"
+   "pos": 6.0,
+   "symbol": "A"
   },
   {
    "bar": 31,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Bm"
   },
   {
    "bar": 32,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 33,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 33,
-   "pos": 6,
-   "symbol": "Asus4"
+   "pos": 6.0,
+   "symbol": "A"
   },
   {
    "bar": 34,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   }
  ],
@@ -655,43 +220,11 @@
   }
  ],
  "confidence": {
-  "1": "medium",
-  "2": "medium",
-  "3": "medium",
-  "4": "medium",
-  "5": "medium",
-  "6": "medium",
-  "7": "medium",
-  "8": "medium",
+  "8": "low",
   "9": "medium",
   "10": "medium",
-  "11": "medium",
-  "12": "medium",
-  "13": "high",
-  "14": "medium",
-  "15": "high",
-  "16": "medium",
-  "17": "high",
-  "18": "medium",
-  "19": "low",
-  "20": "medium",
-  "21": "medium",
-  "22": "medium",
-  "23": "medium",
-  "24": "low",
-  "25": "medium",
-  "26": "medium",
-  "27": "low",
-  "28": "low",
-  "29": "low",
-  "30": "low",
-  "31": "low",
-  "32": "medium",
-  "33": "medium",
-  "34": "low"
+  "11": "medium"
  },
- "notes_ja": "録音の伴奏は、ゆっくり立ち上がって減衰しない持続音のパッド（シンセ／ストリングス系）です。キーボードではアタックの遅い音色を選び、コードが変わる所で静かに押さえ替えてレガートにつなぎます。イントロ（1〜11小節）はD3＋A3を伸ばし続け、8〜11小節目前半だけ低いD2を足します（8分音符のD-A-Dの刻みはバイオリンなので弾きません）。Aセクションも同じD3＋A3で、13・15・17小節後半だけG3-C4-G4（Csus2）に替え、D3とG4は次の小節へタイでつなぎます。19小節目後半からは左手で低音（D・AコードはA2、GコードはG2、31小節のBmはB2）、右手で上の和音を押さえると原曲に近くなります。B（22小節〜）は音量がかなり小さいので控えめに。",
- "method": "WHAT IS THERE: other.wav = violin + ONE sustained accompaniment instrument (pad). No guitar: no plucked attack/decay, no strum or pick transients that are not explained by the violin's bow changes (video frames: bow reversals at 2.72 s and 3.10 s coincide with the broadband transients) or by drum bleed; all accompaniment notes have slow attacks (100-150 ms, upper partials peak ~250 ms after onset), no decay across a half bar, a slow ~3.5 Hz chorus-like pitch wobble that is IDENTICAL in bars 13/15/17 (programmed backing), and the D3 drone is pitch-stable for whole bars -> synth/string pad. METHOD: violin f0 tracked with a CQT harmonic-sum Viterbi on the upper line (>=G#4; >=A#4 in B) and notched (k*f0 +-45 cents) -> work/guitar/accomp.wav; basic-pitch re-run on it (work/guitar/bp_accomp.json); CQT images of the residual for every section, half-bar sustained-level tables, bass-stem levels to reject bass bleed (A2/G2/B2/E3 in B are bleed and were excluded), and grid-aligned repeats (bars 12/14/16). INTRO 1-11: the D/A/D eighth-note figure is the VIOLIN itself (open D4 + A4/D5 on the A string with A3 string crossings; she is bowing from t=0.5 s). Backing = D3 drone (certain), A3 (likely; partly masked by the violin), plus a soft low D2 swell bars 8-11.1. D4 is not notated: it is dominated by the violin's open D string (drone harmonic). A 12-21: D3 pedal + A3; bars 13/15/17 second half G3-C4-G4 over the D3 pedal (= Csus2 with the C bass; loudest and certain), its G4 held one beat into bars 14/16; 18: G3+C4 over A bass (Am7), 19: G3 (A7sus4), 20: A3-D4, 21: G3-D4-G4. B 22-34: one 2-4-note voicing per chord change (D=D3-A3-D4, G=D3-G3-D4(-G4), Bm=D3-F#3-D4 / F#3-B3-D4-F#4 / B3-D4, Asus4=A3-D4-E4, 27: A3 then A3+E4), 15-20 dB quieter than in A and partly masked -> medium/low confidence; voicing details there are the least certain. OTHER: vocals.wav is violin bleed except a faint voice-like A3-D4-F#4 chord at 50.2-51.1 s (bar 34, possibly backing 'ah' vocals as the video ends; too short/faint to transcribe). A diffuse ~104 Hz rumble in bars 1-11 is non-musical noise. Chroma similarity (CQT chroma C3-B4) pad synth vs residual, mean: intro 1-11 0.88 (plain D3+A3 drone baseline 0.86), A 12-21 0.80 (baseline 0.66), B 22-34 0.83 (baseline 0.76); full-range chroma 0.85/0.79/0.76. Per bar (C3-B4): 1:0.91 2:0.84 3:0.91 4:0.83 5:0.91 6:0.84 7:0.85 8:0.92 9:0.89 10:0.90 11:0.91 12:0.81 13:0.84 14:0.91 15:0.82 16:0.84 17:0.78 18:0.69 19:0.59 20:0.88 21:0.82 22:0.87 23:0.93 24:0.87 25:0.77 26:0.71 27:0.72 28:0.71 29:0.90 30:0.85 31:0.76 32:0.92 33:0.83 34:0.95. Lowest bars 19 (violin B4/C5 leakage dominates), 26 (violin long A4), 18, 27, 28. Onsets: every pad chord change coincides with an onset of the residual (120-700 Hz) within 50 ms (precision 1.00); recall 0.05 / F 0.10 only because the residual's other onsets are violin leakage and drum bleed - the pad itself never re-attacks inside a chord. [Verifier note: the low A2/G2/B2 voice (and E3 in 30b/33b) was later shown not to be bass bleed - it is in the stereo side channel where the mono bass is absent, and A2 sounds over D2/E2 bass notes - and was added; see 'verification'.]",
- "verification": "CHANGES (evidence: per-eighth narrow-band levels and half-bar long-FFT peaks of other.wav, of its side channel (L-R) and of the full-mix side channel; CQT piano rolls work/verify_guitar/v2/final_*.png, lowz_*.png, wide_*.png): (1) ADDED THE LOW VOICE A2/G2/B2 in bars 19.8-34 that the transcription had dropped as 'bass bleed'. It is not bleed: the bass stem is mono (side/mid -44 dB) and the bass is absent from the side channel (side level at D2 changes -2.0 dB between strong and weak bass half-bars while the bass changes +44 dB; bass E2/E3 in 21 eighths 8-9 and 32 eighth 10 and bass F#2 in 29 eighths 10-11 leave no trace in the side), yet A2/G2/B2 are among the strongest low components of the side channel; A2 also sounds under D2 bass notes (bars 20, 22, 26, 30a, 33a, 34) and under the E2 of bar 27b, which bleed cannot do (D2 has no A2 partial), and other.wav carries almost no D2 bleed (+1.1 dB). Pattern: A2 on D and A chords (19 eighth 8 -> 20, 22, 24b, 26, 27, 30, 33, 34), G2 on G (21a, 23, 25, 29 - 29 weaker), B2 on Bm in bar 31 (releases ~eighth 9); no low note in 24a and 28 (side level there stays at the floor). It may be a separate low string/synth layer; written in this part because it is sustained, stereo-wide and moves with the pad's chord changes. (2) E3 added in 30b and 33b (Asus4 = A2-E3-A3-D4-E4): present in mono and side at the level of A3/E4; not a bass partial in the side (see 1). (3) D4 added to bar 27 (Asus4; side-channel D4 only 3-5 dB below the pad D4 of bar 26 and flat, not decaying). (4) Bar 24a Bm: B3 added (D3-F#3-B3-D4): B3 is among the strongest side/mono components at the chord change. (5) Bar 18: C4 kept for the whole bar (was cut at eighth 6): after the loud C chord it drops ~25 dB but then stays at the level of G3 through bar 18 in mono and side, unlike bars 14/16 where it fades out by eighth 6. (6) Bar 19: D3+G3 end at eighth 8 (G3 falls 10-15 dB at eighths 8-9) instead of holding to the barline; the low A2 starts there. (7) Ties added where the pad holds common tones across the barline: 7->8 (D3/A3 drone), 13b->14 and 15b->16 (D3 and the carried-over G4), 17b->18 (D3/G3/C4), 18->19; previously these were notated as re-attacks. (8) Chords: removed a duplicate 'D5' at bar 18 pos 0 (it coexisted with 'Am7' at the same position, left over from the bars 14/16 pattern). NOT CHANGED but noted: in B there is a melodic line an octave below the violin (27 eighths 7-11 F#4->E4 -> 28 D4; repeated B4 under the violin's repeated B5 in 29 and 32; 30 eighths 6-9 F#4) with timing of its own (leads the violin by ~0.2 s in bar 27, lags ~0.4 s in bar 30) - a guide melody in the backing or an octave double of the violin; not pad material, not transcribed. A sustained B4 in bar 27 and A4 in bar 22 (pad top voice vs violin double stops) remain unresolved. Confidence: 19 medium->low (release/entry detail, G2->A2 scoop around eighths 6-10 not notated), 26 low->medium, 29 medium->low, 33 low->medium. INSTRUMENT IDENTITY re-checked and CONFIRMED (no guitar): (a) 3-9 kHz onsets of other.wav in bars 11-34: 27 of 42 coincide (+-30 ms) with drums.wav onsets, the rest sit on kick positions (eighths 8/10 of bars 13/15/17) or violin note changes; no repeating strum pattern on the 12/8 grid; in the intro (no drums) they fall on eighths 2/3/6 and line up with bow reversals in the video (bar 3: bow turns at ~3.75-3.85 s and ~4.23 s, 30 fps frames); (b) attacks are slow: C4 of the C chord rises 10->90 % in 159/171/163 ms (bars 13/15/17, band-pass envelope) and is still -5.6..-6.6 dB at +0.5 s after the peak, then stops at the chord change - a plucked/strummed guitar would rise in <10 ms and decay continuously; (c) the linear spectrograms of other.wav and of the full mix show no strum striations other than drum hits. The transcriber's exclusion of D4 in bars 1-21 is also supported: D4 fluctuates like a bowed note (10-15 dB dips, envelope correlates with D5 +0.69 and A5 +0.35 = its own partials, anti-correlates with A4 -0.23 = string crossings) while D3 is smooth; in A it rises with every violin D5 (+0.52) and drops on C5 (-0.36), peaks at each downbeat and rings down ~20 dB in 0.5 s (open-string ring). METRICS before->after (pad synthesized with sustained tones; work/verify_guitar/v2/evaluate.py). Chroma C2-B4 vs the violin-notched residual work/guitar/accomp.wav: intro 1-11 0.833->0.833, A 12-21 0.791->0.809, B 22-34 0.793->0.853, all 0.805->0.834. Same vs the side channel (L-R) of other.wav: intro 1-11 0.809->0.809, A 12-21 0.692->0.723, B 22-34 0.733->0.803, all 0.746->0.781. Same vs other.wav: intro 1-11 0.811->0.811, A 12-21 0.722->0.756, B 22-34 0.748->0.806, all 0.761->0.793. Low-octave chroma C2-B2 vs side channel: intro 1-11 0.658->0.658, A 12-21 0.786->0.884, B 22-34 0.739->0.801, all 0.727->0.779 (noisy: a ~100-105 Hz rumble sits in that octave). Per bar after (C2-B4 vs residual): 1:0.89 2:0.81 3:0.88 4:0.81 5:0.89 6:0.82 7:0.74 8:0.79 9:0.81 10:0.83 11:0.92 12:0.80 13:0.84 14:0.90 15:0.82 16:0.83 17:0.77 18:0.69 19:0.72 20:0.87 21:0.84 22:0.91 23:0.92 24:0.86 25:0.81 26:0.89 27:0.86 28:0.71 29:0.85 30:0.87 31:0.72 32:0.87 33:0.87 34:0.94. Changed bars before->after: 18:0.69->0.69 19:0.57->0.72 20:0.86->0.87 21:0.82->0.84 22:0.76->0.91 23:0.88->0.92 24:0.77->0.86 25:0.73->0.81 26:0.65->0.89 27:0.86->0.86 28:0.70->0.71 29:0.85->0.85 30:0.82->0.87 31:0.80->0.72 32:0.87->0.87 33:0.81->0.87 34:0.80->0.94 (31 drops because B2 is written for the whole bar but releases at eighth ~9). Independent salient-pitch check (E2-F#4, peak >= -15 dB of the half-bar maximum and >= 10 dB above the local spectral floor in the side channel or in other.wav; D4 ignored in bars 1-21 because it is the violin's open D): precision 0.856->0.855, recall 0.544->0.655 (TP 137->165, FP 23->28, FN 115->87; most remaining 'missing' pitches are violin-related: C#4/C4 ornaments in the intro, short F#4/B4/A4 melody shadows in B). Onsets (chord-change attacks vs onsets of the residual, 80-700 Hz, +-50 ms): F 0.104->0.101, precision 1.0->1.0 (recall stays ~0.05 because the residual's onsets are violin/drum leakage; the pad never re-attacks inside a chord).",
- "reconciled": "Reconciled with bass/pad/guitar/drums/harmony: one chord list and one sections list for all parts (see chords.json). Chord decisions checked on the violin-notched accompaniment (guitar/accomp.wav), the other-stem side channel and the bass stem: 13b/15b/17b = Csus2 (C4+G4 loudest, the D3 pedal keeps sounding ~17 dB below); bars 18-19 = one Am7 (bass A1 tied, pad D3-G3 tied over the barline, C4 tail still ~8 dB above the floor in 19a, so no chord change at bar 19); bar 21 = G for the whole bar (backing G3-D4-G4, no E or B; bass E2 is a one-quarter passing note at pos 8); 27b Esus4 kept (A2/A3/E on top of bass E2, no G/G#, no B). Grid-shift test of every part against its stem: best at 0 (no part offset by a grid step)."
+ "notes_ja": "録音の中でギター以外に残る持続音は、8〜11小節のごく小さなシンセのふくらみ（スウェル）だけです（ミックスより約26dB小さい）。8小節で低いD2とE4が静かに立ち上がり、9小節でA2・F#3・C4、10小節でA3が加わってD9の響き（D-A-F#-A-C-E）になり、11小節の2拍目の手前（位置5）で切れます。キーボードなら左手D2＋A2、右手F#3・A3・C4・E4を、アタックの遅い音色で小さく。12小節以降は休み（前の版のパッドの音は、ほとんどがアコギでした）。",
+ "method": "v3 REWRITE (reconciler; scripts work/v3/reconciler/r05-r10, images pad_synth_7_12.png / pad_mix_7_12.png). The v2 pad.json (bars 1-34) is NOT copied: its notes were the acoustic guitar (intro D3+A3 drone, A-section D3/A3, the A2/G2/B2 low voice = open 5th string, 6th string fret 3, 5th string fret 2) plus a C4/C5 layer at 13b/15b/17b that the harmony verifier attributes to violin double stops. The only sustained non-guitar layer is the synth swell that MVSep Mega-53 puts in its synth stem: RMS relative to the mix bars 1-6 -69..-77 dB (silent), bar 7 -50, bar 8 -40, bars 9-11 -27/-26/-25 dB, bars 12-34 -55..-70 dB (silent). In bars 9-11 the mix itself rises at the synth pitches against bars 3-5 (no synth, no bass yet): D2 +27.2 dB, E4 +12.8, A2 +11.7, F#3 +10.5, C4 +8.1; at those pitches the mix is only 3-10 dB above the synth stem, so the synth carries most of that energy. None of these are guitar notes (standard tuning, no D2; the intro guitar plays D3/A3/D4 only) or violin notes (the violin plays A4/B4/C5/D5 with an open-D drone; at 9.0 and 11.0, where synth C4 is strongest, the violin plays A4). Per-eighth levels in the synth stem (16384-pt FFT): D2 10-17 dB from bar 8, 18-27 dB in 9-11; E4 7-17 dB from 8.3, 12-29 dB in 9-11; A2 15-29 dB from 9.0; F#3 2-24 dB from 9.0; C4 7-33 dB from 9.0 (dips at 9.3/10.4); A3 18-30 dB from 9.5; all fall 15-40 dB between 11.5 and 11.8 (release at about pos 5). Omitted: D3 and E5/F#4/C5 (2nd harmonics of D2/E4/F#3/C4 in level and timing), A3 written from bar 10 (it enters at 9.5; the guitar also plays A3). Bar 8 is barely audible (-40 dB): low confidence. Also checked and NOT a pad: a voice-like layer in all three vocal stems that starts at bar 34 pos 0 (-30 dBFS, F#5/A5 with D4) as the video ends - a sung melody over the last bar, not a sustained accompaniment."
 }

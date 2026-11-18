@@ -1,0 +1,19 @@
+X:1
+T:Touch the Sky - イントロ旋律
+%%barnumbers 1
+M:12/8
+L:1/8
+Q:3/8=159
+%%stretchlast 1
+%%score guitar_violin_line
+K:D
+V:guitar_violin_line clef=treble
+[V:guitar_violin_line] "^イントロ""D5"d3 a3 d2a a3 | d2a a3 =c'"^p"ba c'"^p"b"^h"c' | [dd']2a a3 d2a a3 | d2a a3 =c'"^p"ba c'"^p"b"^h"c' |
+[V:guitar_violin_line] d2a a3 [dd']2a a3 | d2a a3 =c'"^p"ba c'"^p"b"^h"c' | "^イントロ 2"a2b [d=c']3 [dd']"^p"b3/2"^h"c'/2 [dc'-]3 | =c'3 [dc']"^p"b2 [db]/2"^h"d'/2"^p"b2 [dc']"^p"ba/2c'/2 |
+[V:guitar_violin_line] a3 [d=c']"^p"b3/2"^h"c'/2 [db]b3/2"^h"c'/2 [dc'-]3 | =c'3 [dc']"^p"b2 [dd']"^p"b3/2"^h"c'/2 [dc']"^p"ba/2c'/2 | a3 d3- d2d- d2d | "^A"z12 |
+[V:guitar_violin_line] z6 "Csus2"z6 | "D5"z12 | z6 "Csus2"z6 | "D5"z12 |
+[V:guitar_violin_line] z6 "Csus2"z6 | "^A（後半）""Am7"z12 | z12 | "D"z12 |
+[V:guitar_violin_line] "G"z12 | "^B""D"z12 | "G"z12 | "Bm"z6 "Asus4"z6 |
+[V:guitar_violin_line] "G"z12 | "D"z12 | "Asus4"z6 "Asus4/E"z6 | "^B リフレイン1""Bm"z12 |
+[V:guitar_violin_line] "G"z12 | "D"z6 "A"z6 | "^B リフレイン2""Bm"z12 | "G"z12 |
+[V:guitar_violin_line] "D"z6 "A"z6 | "D"z12 |]

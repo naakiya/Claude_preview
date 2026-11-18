@@ -1,139 +1,226 @@
 {
  "part": "chords",
- "key": "D（イントロ・A＝Dミクソリディアン／B＝Dメジャー）",
- "key_en": "D (Intro & A: D mixolydian, C natural; B: D major)",
+ "key": "D（イントロ＝Dミクソリディアン、A＝3度なしのD（Cナチュラル、ギターのC・Amの和音にFナチュラル）、B＝Dメジャー）",
+ "key_en": "D. Intro: D mixolydian (C natural in the melody, F# only in a quiet synth swell). A: D with no third in the accompaniment (C natural; the guitar voicings of the C and Am chords add F natural, a dorian colour). B: D major (F# in Bm and in the melody).",
  "abc_key": "D",
  "tuning_offset_cents": 8,
  "chords": [
   {
    "bar": 1,
    "pos": 0,
-   "symbol": "D5"
+   "symbol": "D5",
+   "confidence": "high",
+   "evidence": "Guitar D3+A3 (open 4th string + 3rd string fret 2), D4 added on the bar-start strokes of bars 8-11; bass tacet to bar 11. Bars 8-11: a quiet synth swell (Mega synth stem, D2-A2-D3-F#3-A3-C4-E4, 10-20 dB under the mix, D9 colour) under it; violin melody C5/B4 from bar 7."
   },
   {
    "bar": 13,
    "pos": 6,
-   "symbol": "Csus2"
+   "symbol": "Csus2",
+   "confidence": "medium",
+   "alt": "Csus4(add9) (= G7sus4/C, the full guitar voicing with F4 on top)",
+   "evidence": "Bass C2 (quarters at 6, 8, 10). Guitars G2-D3-G3-F4 (the guitar part's 3x00x1; F4 is a real guitar note in both channels of all three separators, about +20 c). The loudest layer is a C4/C5 (+C6) layer, C4 53-56 dB and C5 55-60 dB in the mix, at most 24 dB in any guitar stem and 26 dB under the mix in the Mega violin stem; it is tuned +14..+21 c, like the violinist's own C natural elsewhere (+16..+27 c in bars 12b, 14a, 16b, 18b, 19b), so it is most likely violin double-stopping that the violin model missed. Violin G4 on top. No E anywhere. In the mix F4 is 25-35 dB under C4/C5, so the audible chord is C-D-G; 'Csus4(add9)' is also not accepted by validate_parts.py's CHORD_RE."
   },
   {
    "bar": 14,
    "pos": 0,
-   "symbol": "D5"
+   "symbol": "D5",
+   "confidence": "high"
   },
   {
    "bar": 15,
    "pos": 6,
-   "symbol": "Csus2"
+   "symbol": "Csus2",
+   "confidence": "medium",
+   "alt": "Csus4(add9) (= G7sus4/C, the full guitar voicing with F4 on top)"
   },
   {
    "bar": 16,
    "pos": 0,
-   "symbol": "D5"
+   "symbol": "D5",
+   "confidence": "high"
   },
   {
    "bar": 17,
    "pos": 6,
-   "symbol": "Csus2"
+   "symbol": "Csus2",
+   "confidence": "medium",
+   "alt": "Csus4(add9) (= G7sus4/C, the full guitar voicing with F4 on top)"
   },
   {
    "bar": 18,
    "pos": 0,
-   "symbol": "Am7"
+   "symbol": "Am7",
+   "confidence": "medium",
+   "alt": "Dm7/A (bars 18-19a, guitar x00011 incl. F4); Am7(11) (19b, guitar x0001x)",
+   "evidence": "Bass A1 for two bars; guitar A2-D3-G3-C4-F4 with G3 loudest; at 19 pos 6 F4 stops (x0001x) and no E4 is added (E4 stays at the level of the bass harmonics); violin C5/B4/A4. The E of Am7 is heard as the bass's 3rd harmonic (E3 25-28 dB in the bass stem)."
   },
   {
    "bar": 20,
    "pos": 0,
-   "symbol": "D"
+   "symbol": "D",
+   "confidence": "high",
+   "alt": "D5 (guitar x0023x has no 3rd)"
   },
   {
    "bar": 21,
    "pos": 0,
-   "symbol": "G"
+   "symbol": "G",
+   "confidence": "high",
+   "evidence": "Bass E2 at pos 8 is a neighbour note; guitar stays on G (B3 audible in 21b)."
   },
   {
    "bar": 22,
    "pos": 0,
-   "symbol": "D"
+   "symbol": "D",
+   "confidence": "high",
+   "alt": "D5"
   },
   {
    "bar": 23,
    "pos": 0,
-   "symbol": "G"
+   "symbol": "G",
+   "confidence": "high"
   },
   {
    "bar": 24,
    "pos": 0,
-   "symbol": "Bm"
+   "symbol": "Bm",
+   "confidence": "high",
+   "alt": "Bm7 (violin A5 is melody)"
   },
   {
    "bar": 24,
    "pos": 6,
-   "symbol": "Asus4"
+   "symbol": "Asus4",
+   "confidence": "medium",
+   "alt": "Asus2 (right guitar in the Mega stem; the guitar part writes x0220x at 24.6 and x0223x at 24.9)",
+   "evidence": "Bass A2. A2-E3-A3 with D4 and B3. Left channel, eighths 6-8: D4 above B3 in every separator and in the raw left channel (htdemucs_6s +14..+18 dB, SW +8..+13, Mega +1..+6, raw L +7..+13); D4 keeps the level it had in the Bm of 24a, and it is the same 2nd string, so the left guitar holds fret 3 (x0223x); B3 rises only at eighth 9. Right channel: Mega B3 > D4 by 7-13 dB, SW about equal, htdemucs D4 > B3 by 4-11 dB. No C#."
   },
   {
    "bar": 25,
    "pos": 0,
-   "symbol": "G"
+   "symbol": "G",
+   "confidence": "high"
   },
   {
    "bar": 26,
    "pos": 0,
-   "symbol": "D"
+   "symbol": "D",
+   "confidence": "high",
+   "alt": "D5"
   },
   {
    "bar": 27,
    "pos": 0,
-   "symbol": "Asus4"
+   "symbol": "Asus4",
+   "confidence": "high",
+   "alt": "Asus2 (B3 alternates with D4 around pos 2.5-7)"
   },
   {
    "bar": 27,
    "pos": 6,
-   "symbol": "Esus4"
+   "symbol": "Asus4/E",
+   "confidence": "medium",
+   "alt": "Esus4 / E7sus4 (same notes plus B)",
+   "evidence": "Bass moves to E2; guitars keep the A-sus4 shape (A2-E3-A3-D4); no C#, no G#."
   },
   {
    "bar": 28,
    "pos": 0,
-   "symbol": "Bm"
+   "symbol": "Bm",
+   "confidence": "high"
   },
   {
    "bar": 29,
    "pos": 0,
-   "symbol": "G"
+   "symbol": "G",
+   "confidence": "high"
   },
   {
    "bar": 30,
    "pos": 0,
-   "symbol": "D"
+   "symbol": "D",
+   "confidence": "high",
+   "alt": "D5"
   },
   {
    "bar": 30,
    "pos": 6,
-   "symbol": "Asus4"
+   "symbol": "A",
+   "confidence": "medium",
+   "alt": "Asus2 (right guitar) / A(add9) (both guitars together)",
+   "evidence": "Bass A1. B3 enters in both guitars at eighth 6 (+10..+19 dB over 30a in the SW and Mega stems, only a few dB in htdemucs); D4 falls by 10-13 dB in the Mega stem and by 4-8 dB in the SW and htdemucs stems (not fully released); C#4 rises 5-14 dB above its bar-27 level (same bass A1, so the same bass-harmonic leakage) in the left channel of all three separators (htdemucs, SW, Mega), much less on the right. Left guitar = A (x0222x) with B3 also present, right guitar = Asus2. Violin E5, then D5 at 10-11 anticipating bar 31."
   },
   {
    "bar": 31,
    "pos": 0,
-   "symbol": "Bm"
+   "symbol": "Bm",
+   "confidence": "high"
   },
   {
    "bar": 32,
    "pos": 0,
-   "symbol": "G"
+   "symbol": "G",
+   "confidence": "high"
   },
   {
    "bar": 33,
    "pos": 0,
-   "symbol": "D"
+   "symbol": "D",
+   "confidence": "high",
+   "alt": "D5"
   },
   {
    "bar": 33,
    "pos": 6,
-   "symbol": "Asus4"
+   "symbol": "A",
+   "confidence": "medium",
+   "alt": "Asus2 / A(add9)",
+   "evidence": "Same as 30b: left C#4 +10..+16 dB above the bar-27 floor at eighths 6-7, B3 in both channels (strongest on the right), D4 down 10-15 dB."
   },
   {
    "bar": 34,
    "pos": 0,
-   "symbol": "D"
+   "symbol": "D",
+   "confidence": "high",
+   "evidence": "A faint voice-like D-F#-A chord appears in the vocal stems here, so D major is confirmed. The video ends around pos 10."
+  }
+ ],
+ "passing_chords": [
+  {
+   "bar": 21,
+   "pos": 8,
+   "symbol": "G/E",
+   "dur": 2,
+   "note": "bass E2 neighbour note, back to G2 at pos 10; guitar holds G"
+  },
+  {
+   "bar": 28,
+   "pos": 10,
+   "symbol": "Bm/A",
+   "dur": 2,
+   "note": "bass walk B2-A2-G2; guitars add A3 from pos 9 (also in the side channel)"
+  },
+  {
+   "bar": 29,
+   "pos": 10,
+   "symbol": "G/F#",
+   "dur": 2,
+   "note": "bass F#2 leads to D; guitar holds G"
+  },
+  {
+   "bar": 31,
+   "pos": 10,
+   "symbol": "Bm/A",
+   "dur": 2,
+   "note": "same walk as bar 28"
+  },
+  {
+   "bar": 32,
+   "pos": 10,
+   "symbol": "G/E",
+   "dur": 2,
+   "note": "bass E2 leads to D; guitar holds G"
   }
  ],
  "sections": [
@@ -166,6 +253,14 @@
    "label": "B refrain 2"
   }
  ],
- "notes_ja": "キーはD（イントロとAはCナチュラルのDミクソリディアン、BはF#が出るDメジャー）。イントロ（1〜11小節）はD5のドローンだけで、7小節目からバイオリンのメロディ、11小節目後半にドラムのフィル。A（12〜21）は「D5｜D5 Csus2」の2小節パターンを3回→Am7（2小節）→D→G。B（22〜34）はD｜G｜Bm Asus4｜G｜D｜Asus4 Esus4のあと、3小節のリフレイン「Bm｜G｜D Asus4」を2回くり返し、34小節目のDの途中で動画が終わります。伴奏はDとAの開放弦のようなドローンが鳴り続けて3度がほとんど聞こえないため、5・sus表記にしています（普通のD・C・A・Eで弾いても大きくは外れません）。",
- "method": "Reconciled with bass/pad/guitar/drums/harmony: one chord list and one sections list for all parts (see chords.json). Chord decisions checked on the violin-notched accompaniment (guitar/accomp.wav), the other-stem side channel and the bass stem: 13b/15b/17b = Csus2 (C4+G4 loudest, the D3 pedal keeps sounding ~17 dB below); bars 18-19 = one Am7 (bass A1 tied, pad D3-G3 tied over the barline, C4 tail still ~8 dB above the floor in 19a, so no chord change at bar 19); bar 21 = G for the whole bar (backing G3-D4-G4, no E or B; bass E2 is a one-quarter passing note at pos 8); 27b Esus4 kept (A2/A3/E on top of bass E2, no G/G#, no B). Grid-shift test of every part against its stem: best at 0 (no part offset by a grid step)."
+ "notes_ja": "キーはD。イントロ（1〜11小節）はギターのD5（D3＋A3）の刻みだけで、8〜11小節に小さなシンセのふくらみ（D9系）が重なります。A（12〜21）は「D5｜D5 Csus2」の2小節パターンを3回→Am7（2小節）→D→G。Csus2の所はベースがC、ギターは3x00x1（G・D・G・F。1弦1フレットのFが入るので正確にはCsus4(add9)）、その上で（おそらくバイオリンの）低いCの重音（C4＋C5）が大きく鳴るため、耳にはCsus2（C・D・G）に聞こえます。B（22〜34）はD｜G｜Bm Asus4｜G｜D｜Asus4 Asus4/E（ベースがEに下りてもギターはAsus4のまま）のあと、「Bm｜G｜D A」を2回くり返して34小節目のDで終わります。Aの和音は3度（C#）が弱く、2弦3フレットのD（sus4）と開放B（sus2）を行き来するのが特徴です（24小節後半は左のギターがsus4、右のギターがsus2寄り）。30・33小節後半だけは左のギターがC#（x0222x）を弾くのでA。28・31小節の最後はベースがB→A→Gと下ります。",
+ "method": "v3 harmony re-check. Chord recognisers: BTC (large vocabulary, 170 classes) and Chordino (NNLS chroma, slash chords), each run on 7 inputs: the full mix, guitar+bass mixes from three separators (BS-RoFormer SW 6-stem, htdemucs_6s, MVSep Mega-53 acoustic guitar + SW bass, and Mega acoustic + Mega guitar + SW bass), and guitar-only stems (Mega acoustic, SW guitar). Their labels were reduced to one label per half bar (longest-overlap) and compared with v2 (final_parts/chords.json). Pitch evidence per half bar and per eighth: basic-pitch note posteriors on the Mega acoustic-guitar and SW guitar stems (left, right and side channels separately), 8192-point STFT peak levels per semitone (+8 c tuning) for every stem and channel, 4096-point per-eighth tables, 64k-point zoomed spectra, linear spectrogram images (B3-D4 region, bars 24/27/30/33), and the bass, drums, violin, synth and vocal stems to rule out leakage (bass harmonics, snare energy around 250-300 Hz, violin partials). Decision rule: root = bass note; a tone is part of the symbol if it is sustained in the accompaniment (guitar/bass/pad) in both guitar channels or in at least two separators and is not explained as a harmonic or leakage; violin melody notes do not change the symbol. Bass passing notes shorter than a half bar are listed in passing_chords, not in chords.",
+ "changes_from_v2": [
+  "27b: Esus4 -> Asus4/E (the guitar keeps A2-E3-A3-D4 over the bass E2; BTC says A in all 7 of the transcriber's inputs and all 4 of the verifier's)",
+  "30b/33b: Asus4 -> A (B3 and, in the left guitar, C#4 enter at the chord change; D4 drops 5-15 dB)",
+  "new key passing_chords: one-quarter bass passing notes (bars 21, 28, 29, 31, 32), not shown by the page generator",
+  "13b/15b/17b and 24b: the transcriber's Csus4(add9) and Asus2 were reverted to the v2 symbols Csus2 and Asus4 in verification (see 'verification')"
+ ],
+ "transcriber_checks": "Root agreement per half bar (68 half bars) with the 14 recogniser runs: v2 0.779-0.882, v3 0.794-0.882 (v3 >= v2 on every run; the gain is bar 27b, where all 7 BTC runs say A). Pitch-set Jaccard with the recogniser labels: BTC runs +0.010 to +0.024 for v3, Chordino runs -0.004 to -0.011. Remaining recogniser disagreements are explained in harmony_notes.md: BTC G in bars 7-11 (violin B4/C5 over the D-A drone, no G in any accompaniment stem), BTC/Chordino G or D6 on single half bars of bars 14-17 (violin G4 and a one-eighth ring of the guitar G3), Chordino D7 in bars 6-17 (violin C5), Chordino D/D6/Bm7 on the A chords of bars 27-33 (violin D5/F#5 melody). Chroma-template cosine (CQT chroma per half bar) for the 7 changed half bars, v2 -> v3: Mega acoustic-guitar stem 0.651 -> 0.662, guitar+bass mix 0.797 -> 0.765, mix side channel 0.743 -> 0.694, full mix 0.722 -> 0.707 (all 68 half bars: 0.717/0.739/0.623/0.654 -> 0.718/0.736/0.618/0.652). Binary templates penalise the weak F of Csus4(add9) and the faint C# of A, and the violin D5/G4 favour the v2 labels in the mix, so this metric was not used on its own. Dry run of build_player.py with this file (scratch copy of parts_v3 bass/guitar + v2 drums): builds; chord diagrams from the v3 guitar part match the labels (Csus4(add9)=3x0011, Am7=x00011, Asus2=x0220x, Asus4=x0223x, Asus4/E=xx223x, A=x0222x).",
+ "verification": "INDEPENDENT VERIFICATION (verifier agent, 2026-11-18; scripts, recogniser outputs and images in work/v3/vharm/; backup of the checked file: parts_v3/chords.pre_verify.json, the transcriber's self-check is kept in 'transcriber_checks').\n\nEVIDENCE USED (different from the transcriber's main sources, which were the Mega acoustic-guitar stem, basic-pitch and the mix side channel):\n- stems: htdemucs_6s guitar and BS-RoFormer SW guitar, left and right channels separately; the Mega 'guitar' stem; the raw left and right channels of the mix; an accompaniment estimate 'acc' = mix - Mega violin - SW drums; a residual = mix - Mega violin - SW guitar - SW bass - SW drums; SW/htdemucs bass and vocal stems and the Mega synth stem for leakage.\n- tools: 9 new recogniser runs (BTC large-vocabulary on acc, mix-minus-violin, htdemucs guitar, htdemucs guitar + SW bass; Chordino on the same four plus the Mega guitar stem); per-beat (16384-pt) and per-eighth (8192-pt) semitone peak tables; per-eighth pitch tracks in cents; CQT and linear-spectrogram images (img/c13_14.png, img/lin24.png); chroma-template cosine on 10 inputs; root check against the verified bass part; validate_parts.py and a build_player.py dry run on scratch copies.\n\nCONFIRMED: every root and bass note in bars 12-34 matches the verified bass part (46 of 46 half bars; 21b is G with the one-quarter E2 neighbour listed in passing_chords). Intro D5 (the BTC 'G' in 7b-10b appears only on inputs that still contain violin; htdemucs guitar alone says D). Bars 18-19 Am7 (BTC and Chordino on 'acc' both say Am7 for all four half bars; F4 stops at 19 pos 6 and no E4 enters, so 19b is Am7(11), not Am11 with E). 27b Asus4/E (SW/Mega left D4 16-23 dB at eighths 6-9, no G#3 above its bar-27a level, B3 weak; BTC 'A' on all 4 new inputs). 30b/33b A (C#4 rises 5-16 dB above its bar-27 level in the left channel of all three separators, with the same bass A1 below; B3 enters on both sides in the SW and Mega stems (+10..+19 dB), weakly in htdemucs; D4 falls 10-15 dB in the Mega stem but only 4-8 dB in the SW and htdemucs stems, so it is reduced, not released). D chords in B, 24a/28/31 Bm, G bars, sections.\n\nCHANGES (2 symbols, 4 half bars; both return to the v2 symbol)\n(1) 13b/15b/17b: Csus4(add9) -> Csus2 (alt Csus4(add9) = G7sus4/C).\n- The guitars play G2-D3-G3-F4 (the verified guitar part's 3x00x1); F4 is real (left-channel F4 20-29 dB in all three separators, re-attacked at 6, 8 and 10, about +20 c) but in the mix it is 25-35 dB under a C4/C5 layer (C4 53-56 dB, C5 55-60 dB). The audible chord is C (bass, C layer) + D3 + G (guitar G3/G2, violin G4).\n- Chroma, mean of the three half bars, Csus2 vs Csus4(add9): acc 0.80 vs 0.73, htdemucs guitar+SW bass 0.77 vs 0.72, raw L 0.77 vs 0.72, raw R 0.74 vs 0.70; guitar stems alone 0.53-0.65 vs 0.58-0.66 (Csus4(add9) ahead by -0.01..+0.08 there).\n- 'Csus4(add9)' does not match CHORD_RE in validate_parts.py: the live parts_v3 folder, whose bass.json and drums.json copied it, gives 6 errors (3 each); synced scratch copies give 9 errors with the transcriber's file and 0 with this one.\n- Correction to the transcriber's evidence: the loud layer is C4 with C5 (and C6), not 'C4+G4'. It is absent from every guitar stem (C4 at most 24 dB) and 26 dB under the mix in the Mega violin stem; it is tuned +14..+21 c (half-bar medians) like the violinist's own C natural (+16..+27 c in 12b, 14a, 16b, 18b, 19b), while the violin's G4 is -8..+2 c, so C4-G4 measures 671-681 c, 20-30 c narrower than a pure fifth: not one stopped fifth. Most likely the violinist double-stopping C4/C5 (the violin model missed it); it does not change the chord.\n(2) 24b: Asus2 -> Asus4 (alt Asus2).\n- Left channel, eighths 6-8, D4 minus B3: htdemucs +14..+18 dB, SW +8..+13 dB, Mega guitar +1..+6 dB, raw left channel +7..+13 dB. D4 keeps the level it had in the Bm of 24a on the same (2nd) string, so the left guitar holds fret 3 (x0223x); B3 appears only at eighth 9. Right channel: Mega B3 > D4 by 7-13 dB, SW about equal (D4 +0..+2), htdemucs D4 > B3 by 4-11 dB at eighths 6-8. The guitar verifier independently noted 'left channel has D4 >= B3 already at pos 6-7'.\n- Chroma Asus4 vs Asus2: htdemucs L 0.72 vs 0.64, htdemucs R 0.71 vs 0.67, SW L 0.75 vs 0.70, acc 0.75 vs 0.73, htdemucs guitar+bass 0.72 vs 0.69; Asus2 is ahead on SW R (0.78 vs 0.76), acc R (0.76 vs 0.74) and the raw mix (0.72-0.73 vs 0.69-0.70, where the violin's B4 adds B).\n- The transcriber's own numbers (Mega L D4 12.2 vs B3 10.1 dB, SW L 21.0 vs 12.4, SW R 16.1 vs 16.6) also put D4 above B3 in two channels and level with it (-0.5 dB) in a third; only Mega R favours B3.\n\nOTHER EVIDENCE CORRECTIONS: the mix side channel is not a guitar-only signal here (the violin is wide stereo: side only 3-4 dB under mid for its G4/C5 in 13b), so side-channel arguments were not used. Bar-1 evidence now mentions the D4 on the bar-start strokes of bars 8-11 (verified guitar part).\n\nMETRICS (v2 -> transcriber v3 -> verified)\n- Root agreement, 23 recogniser runs (transcriber's 14 + verifier's 9): mean 0.851 -> 0.860 -> 0.860 (min 0.779 -> 0.794 -> 0.794). Pitch-class Jaccard: 0.719 -> 0.722 -> 0.723.\n- Chroma cosine, mean over the 7 half bars the transcriber changed: acc 0.774 -> 0.736 -> 0.767; htdemucs guitar+SW bass 0.753 -> 0.724 -> 0.748; raw L 0.740 -> 0.713 -> 0.732; raw R 0.721 -> 0.707 -> 0.718; guitar-only stems (htdemucs L/R, SW L/R) 0.646/0.655/0.666/0.664 -> 0.642/0.640/0.682/0.672 -> 0.642/0.641/0.666/0.656. All 68 half bars: acc 0.738 -> 0.734 -> 0.737 (the other inputs change by at most 0.003).\n- validate_parts.py on scratch copies whose parts carry this file's chords and sections: transcriber's file 9 errors (Csus4(add9) x3 in each of bass, drums, guitar) -> 0 errors. On the live parts_v3 folder the 6 bass/drums errors remain until those parts are re-synced.\n\nFOR THE INTEGRATOR / GUITAR PART\n- Chord diagrams that build_player.py draws from the current parts_v3/guitar.json with this file: D5 xx02xx, Csus2 3x00x1, Am7 x00011, D x0023x, G 3x0033, Bm xx4432, Asus4 x0220x (!), Asus4/E xx223x, A x0222x. 'Asus4' comes out as the Asus2 shape because chord_shapes() breaks a 2-2 tie (x0220x at 24.6 and 27.3, x0223x at 24.9 and 27.0) by first occurrence. Changing the guitar event 24.6 to A2-E3-A3-D4 (x0223x), which the left-channel evidence above supports, fixes it. Csus2 is drawn as the guitar's real shape 3x00x1 (F4 on top, the C is in the bass).\n- bass.json and drums.json still carry 'Csus4(add9)' and must be re-synced; guitar.json's own chord list (G7sus4/C, Dm7/A, Am11, D5, Asus2/Asus4 split) also differs.\n- build_player.py PRACTICE texts still describe 27b as Esus4 (xx2200) and 30b as Asus4 (v2 labels); this chart has Asus4/E and A there."
 }

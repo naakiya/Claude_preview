@@ -1,7 +1,7 @@
 {
  "part": "drums",
  "display_name": "Drums / Percussion",
- "instrument": "drum kit (kick ~57 Hz, deep snare) + shaker",
+ "instrument": "drum kit (kick ~57 Hz, deep snare with ghost notes) + shaker; no hi-hat, cymbals or toms",
  "clef": "perc",
  "written_octave_shift": 0,
  "events": [
@@ -51,7 +51,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -59,7 +60,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -80,11 +82,28 @@
   },
   {
    "bar": 12,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 12,
    "pos": 6,
    "dur": 1,
    "pitches": [
     "kick",
-    "snare"
+    "snare",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 12,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "shaker"
    ]
   },
   {
@@ -105,12 +124,21 @@
    ]
   },
   {
+   "bar": 12,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
    "bar": 13,
    "pos": 0,
    "dur": 1,
    "pitches": [
     "kick",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -118,7 +146,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -131,10 +160,27 @@
   },
   {
    "bar": 13,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 13,
    "pos": 6,
    "dur": 1,
    "pitches": [
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -142,7 +188,16 @@
    "pos": 8,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   },
   {
@@ -150,7 +205,16 @@
    "pos": 10,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 13,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   },
   {
@@ -159,7 +223,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -167,7 +232,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -180,10 +246,27 @@
   },
   {
    "bar": 14,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 14,
    "pos": 6,
    "dur": 1,
    "pitches": [
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -191,7 +274,16 @@
    "pos": 8,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 14,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   },
   {
@@ -204,12 +296,21 @@
    ]
   },
   {
+   "bar": 14,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
    "bar": 15,
    "pos": 0,
    "dur": 1,
    "pitches": [
     "kick",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -217,7 +318,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -230,11 +332,28 @@
   },
   {
    "bar": 15,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 15,
    "pos": 6,
    "dur": 1,
    "pitches": [
     "kick",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -242,7 +361,16 @@
    "pos": 8,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 15,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   },
   {
@@ -250,7 +378,8 @@
    "pos": 10,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "shaker"
    ]
   },
   {
@@ -267,7 +396,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -275,7 +405,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -288,11 +419,44 @@
   },
   {
    "bar": 16,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 16,
    "pos": 6,
    "dur": 1,
    "pitches": [
     "kick",
-    "snare"
+    "snare",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   },
   {
@@ -300,7 +464,16 @@
    "pos": 10,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 16,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   },
   {
@@ -308,7 +481,9 @@
    "pos": 0,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -316,7 +491,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -329,11 +505,44 @@
   },
   {
    "bar": 17,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 17,
    "pos": 6,
    "dur": 1,
    "pitches": [
     "kick",
-    "snare"
+    "snare",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   },
   {
@@ -341,7 +550,16 @@
    "pos": 10,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 17,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   },
   {
@@ -350,7 +568,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -358,7 +577,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -371,10 +591,27 @@
   },
   {
    "bar": 18,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 18,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 18,
    "pos": 6,
    "dur": 1,
    "pitches": [
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -382,7 +619,16 @@
    "pos": 8,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 18,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   },
   {
@@ -395,11 +641,30 @@
    ]
   },
   {
+   "bar": 18,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
    "bar": 19,
    "pos": 0,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "snare_ghost",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 2,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -408,37 +673,63 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "snare"
-   ]
-  },
-  {
-   "bar": 19,
-   "pos": 6,
-   "dur": 1,
-   "pitches": [
-    "snare"
-   ]
-  },
-  {
-   "bar": 19,
-   "pos": 8,
-   "dur": 1,
-   "pitches": [
-    "kick"
-   ]
-  },
-  {
-   "bar": 19,
-   "pos": 10,
-   "dur": 1,
-   "pitches": [
-    "kick",
-    "shaker",
     "snare"
    ]
   },
   {
    "bar": 19,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "snare",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 19,
+   "pos": 10,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 19,
    "pos": 11,
    "dur": 1,
    "pitches": [
@@ -451,8 +742,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -460,8 +751,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -482,26 +773,7 @@
   },
   {
    "bar": 20,
-   "pos": 6,
-   "dur": 1,
-   "pitches": [
-    "kick",
-    "shaker",
-    "snare"
-   ]
-  },
-  {
-   "bar": 20,
-   "pos": 8,
-   "dur": 1,
-   "pitches": [
-    "kick",
-    "shaker"
-   ]
-  },
-  {
-   "bar": 20,
-   "pos": 9,
+   "pos": 5,
    "dur": 1,
    "pitches": [
     "snare_ghost"
@@ -509,6 +781,33 @@
   },
   {
    "bar": 20,
+   "pos": 6,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "snare",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 8,
+   "dur": 1,
+   "pitches": [
+    "kick",
+    "shaker"
+   ]
+  },
+  {
+   "bar": 20,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 20,
    "pos": 10,
    "dur": 1,
    "pitches": [
@@ -517,13 +816,21 @@
    ]
   },
   {
+   "bar": 20,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
    "bar": 21,
    "pos": 0,
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -531,7 +838,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -552,12 +860,20 @@
   },
   {
    "bar": 21,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 21,
    "pos": 6,
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -565,7 +881,8 @@
    "pos": 8,
    "dur": 1,
    "pitches": [
-    "kick"
+    "kick",
+    "shaker"
    ]
   },
   {
@@ -582,8 +899,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -600,8 +917,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -609,8 +926,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -643,8 +960,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -687,8 +1004,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -696,8 +1013,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -730,8 +1047,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -774,8 +1091,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -783,8 +1100,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -808,8 +1125,8 @@
    "pos": 5,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -818,8 +1135,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -836,8 +1153,8 @@
    "pos": 9,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -854,8 +1171,8 @@
    "pos": 11,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -864,8 +1181,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -873,8 +1190,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -907,8 +1224,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -938,13 +1255,21 @@
    ]
   },
   {
+   "bar": 25,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
    "bar": 26,
    "pos": 0,
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -952,8 +1277,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -986,8 +1311,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1030,8 +1355,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1039,8 +1364,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -1073,8 +1398,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1083,8 +1408,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1101,8 +1426,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1127,8 +1452,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -1161,8 +1486,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1192,13 +1517,21 @@
    ]
   },
   {
+   "bar": 28,
+   "pos": 11,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
    "bar": 29,
    "pos": 0,
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -1206,8 +1539,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -1240,8 +1573,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1284,8 +1617,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1293,8 +1626,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -1315,12 +1648,20 @@
   },
   {
    "bar": 30,
+   "pos": 5,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
+   ]
+  },
+  {
+   "bar": 30,
    "pos": 6,
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1346,8 +1687,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1372,8 +1713,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -1406,8 +1747,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1450,8 +1791,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1459,8 +1800,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -1493,8 +1834,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1545,8 +1886,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -1579,8 +1920,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1589,8 +1930,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1607,8 +1948,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1625,8 +1966,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1634,8 +1975,8 @@
    "pos": 2,
    "dur": 1,
    "pitches": [
-    "shaker",
-    "snare_ghost"
+    "snare_ghost",
+    "shaker"
    ]
   },
   {
@@ -1644,6 +1985,14 @@
    "dur": 1,
    "pitches": [
     "kick"
+   ]
+  },
+  {
+   "bar": 34,
+   "pos": 4,
+   "dur": 1,
+   "pitches": [
+    "shaker"
    ]
   },
   {
@@ -1660,8 +2009,8 @@
    "dur": 1,
    "pitches": [
     "kick",
-    "shaker",
-    "snare"
+    "snare",
+    "shaker"
    ]
   },
   {
@@ -1671,138 +2020,146 @@
    "pitches": [
     "kick",
     "shaker"
+   ]
+  },
+  {
+   "bar": 34,
+   "pos": 9,
+   "dur": 1,
+   "pitches": [
+    "snare_ghost"
    ]
   }
  ],
  "chords": [
   {
    "bar": 1,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D5"
   },
   {
    "bar": 13,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Csus2"
   },
   {
    "bar": 14,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D5"
   },
   {
    "bar": 15,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Csus2"
   },
   {
    "bar": 16,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D5"
   },
   {
    "bar": 17,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Csus2"
   },
   {
    "bar": 18,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Am7"
   },
   {
    "bar": 20,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 21,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 22,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 23,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 24,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Bm"
   },
   {
    "bar": 24,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Asus4"
   },
   {
    "bar": 25,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 26,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 27,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Asus4"
   },
   {
    "bar": 27,
-   "pos": 6,
-   "symbol": "Esus4"
+   "pos": 6.0,
+   "symbol": "Asus4/E"
   },
   {
    "bar": 28,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Bm"
   },
   {
    "bar": 29,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 30,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 30,
-   "pos": 6,
-   "symbol": "Asus4"
+   "pos": 6.0,
+   "symbol": "A"
   },
   {
    "bar": 31,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Bm"
   },
   {
    "bar": 32,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 33,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 33,
-   "pos": 6,
-   "symbol": "Asus4"
+   "pos": 6.0,
+   "symbol": "A"
   },
   {
    "bar": 34,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   }
  ],
@@ -1837,13 +2194,14 @@
   }
  ],
  "confidence": {
-  "12": "high",
-  "13": "high",
-  "14": "high",
-  "15": "high",
-  "16": "high",
-  "17": "high",
-  "18": "high",
+  "11": "medium",
+  "12": "medium",
+  "13": "medium",
+  "14": "medium",
+  "15": "medium",
+  "16": "medium",
+  "17": "medium",
+  "18": "medium",
   "19": "medium",
   "20": "medium",
   "21": "medium",
@@ -1859,11 +2217,12 @@
   "31": "high",
   "32": "high",
   "33": "high",
-  "34": "medium",
-  "11": "medium"
+  "34": "medium"
  },
- "notes_ja": "1〜10小節目は休み。11小節目後半のスネアのフィル（弱い6番目→7・9・11・12番目の8分）で入ります。基本形はキックが8分の1・4・7・9・11番目（後半は4分音符刻み）、スネアは7番目（3拍目）のバックビート、8分の3番目に小さなゴーストノート。A（12〜21小節）は1拍目にも軽いスネアが重なり、小節によって7番目や9番目のキックが抜けるので、譜面どおりに踏み分けてください。シェイカーは20小節目から4分音符（8分の奇数番目）で加わります（ハイハットで代用可）。B（22小節〜）はゴーストノートが8分の3・6・10・12番目に増えます（6番目はごく弱く省略可）。19・21・27・30・33小節目はスネアのフィルなので、手順（R/L）を先に決めておくと安定します。",
- "method": "Source: audio/stems/drums.wav (44.1 kHz), cross-checked with bass/other/vocals stems and the mix. Kit identified from band-limited Hilbert envelopes (<150 Hz, 150-400, 400-1.5k, 1.5-6k, >7 kHz), 1/3-octave onset-rise maps, log-frequency spectrograms and band-filtered waveforms, inspected bar by bar (images in work/drums/fin_*.png, v_*.png). Instruments: KICK = long-ringing kick tuned ~57 Hz (fixed in every section regardless of harmony, pitch sweep ~120->57 Hz, beater click); detected as a <150 Hz envelope jump >=8 dB plus a >=8 dB rise of a narrow 51-63 Hz band. SNARE = 1.5-6 kHz wire burst (fast ~30 ms decay) with a deep ~73-77 Hz body (A section, fills) and a ~540 Hz head ring (B); hits where the <150 Hz onset is only this 75 Hz body (no 57 Hz kick ring) are written as snare without kick (bars 11, 13:6, 18:6, 19:6/10/11, 27:5). Accent vs ghost from the 1.5-6 kHz peak relative to the median eighth-7 backbeat, after subtracting the kick's own click/sympathetic snare buzz (kick-only hits sit at -24..-36 dB in A, -11..-19 dB in B): downbeat snare written as 'snare' (A >= -13 dB) or 'snare_ghost' (A -13..-20, B -9..-13). B-section ghosts on eighths 2, 9, 11 (0-based pos) are confirmed by the 540 Hz snare ring, absent on empty eighths. SHAKER = rounded 3-15 kHz noise swells (rise ~35 ms, peak ~+20 ms after the grid, -15 dB by ~90 ms, no metallic partials): quarter-note pulse (pos 0,2,4,6,8,10) from bar 20, extra off-beats only where a separate swell is visible (bar 24: 5,9,11; bar 31: 9); isolated soft accents at 12:4, 12:10 and a swell into 19:10. No crash/ride: no long-decay cymbal anywhere (all >7 kHz peaks fall 15 dB within <100 ms). Grid: 0.5-step slot analysis found no sixteenths (mean rise at x.5 slots ~0 dB in every band), so everything is on eighths. Bars 1-10: tacet. The two low thumps at 10.02 s (bar 7 pos 4.0) and 11.54 s (bar 8 pos 4.1) are NOT notated: they are single ~10 ms damped impulses centred ~60 Hz with no tonal ring (-20 dB in ~90 ms vs the kick's ~57 Hz ring lasting >250 ms), no 2-8 kHz attack, 21-29 dB below groove kicks and ~10 dB below the other stem's low end in the mix, appear on an off-beat eighth only twice and nowhere else in the intro, and also leak into the vocals stem; judged a body/foot/stand bump from the performer rather than backing-track percussion (if one wants to play them: a very soft floor-tom/bass-drum note at bar 7 and 8, pos 4). Treated as bleed and not notated: weak transients (-25..-30 dB) on A-section eighth 2 and B-section eighth ~5.1, spectrally identical to empty eighths and coinciding with guitar strums in other.wav. Evaluation (synth_drums vs stem, 50 ms window). Full-band onsets() of the stem vs all event times: overall F=0.92 (P=0.93, R=0.91); per bar 11:1.00 12:0.67 13:0.67 14:0.80 15:0.83 16:0.89 17:1.00 18:0.80 19:1.00 20:0.86 21:0.94 22:0.82 23:0.95 24:1.00 25:0.94 26:0.95 27:1.00 28:0.94 29:0.89 30:1.00 31:0.89 32:1.00 33:0.95 34:1.00. Kick (envelope-jump detector on <150 Hz, robust to the kick ring): overall F=0.90 (P=0.98 R=0.83); per bar 12:0.67 13:0.55 14:0.67 15:0.80 16:0.67 17:0.80 18:0.67 19:0.40 20:0.80 21:0.80 22:0.67 23:0.91 24:0.80 25:0.80 26:0.80 27:0.80 28:0.91 29:0.89 30:1.00 31:1.00 32:0.91 33:0.80 34:0.86. With the plain onsets(30-150 Hz) helper kick F=0.60 (P=1.00, R=0.42) because it fires 2x per hit on the ringing tail. Snare band onsets(1.5-6 kHz) vs snare+ghost+shaker+kick times: F=0.87 (P=0.86 R=0.89); per bar 11:1.00 12:0.73 13:0.50 14:0.91 15:0.83 16:0.80 17:0.89 18:0.73 19:0.91 20:0.83 21:0.80 22:0.75 23:0.89 24:0.95 25:0.94 26:0.80 27:1.00 28:0.88 29:0.89 30:1.00 31:0.89 32:0.82 33:0.95 34:0.91; snare-only events precision 0.92. Shaker band onsets(7-11 kHz) vs shaker+snare times: F=0.73 (P=1.00 R=0.58); per bar (from 20) 20:0.86 21:0.73 22:0.80 23:0.75 24:0.90 25:0.80 26:0.75 27:0.90 28:0.75 29:0.80 30:0.78 31:0.88 32:0.75 33:0.82 34:0.80; shaker-only precision 1.00. Detector-matched (onsets() of the synth vs of the stem) F=0.81. Chroma not applicable (unpitched). Uncertain: whether the A-section deep backbeat is one snare sample or snare+floor tom (written as snare); exact ghost dynamics; bar 11 pos 5 (soft pickup, snare ghost vs floor tom); bar 34 fades out (kick at pos 8 soft). [Superseded in part by the 'verification' field: A-section eighth-2 hits, B-section eighth-5 hits and two kick slots were corrected.]",
- "verification": "Independent verification (verify_drums/v2). Evidence re-derived for every bar 11-34 from audio/stems/drums.wav: per-slot band features (1-4 kHz and 7-13 kHz Hilbert envelopes: peak relative to the section backbeat and rise above the local floor; 150-1000 Hz spectral flux; 95-160 Hz kick pitch-sweep onset jump), a two-template matching pursuit on the <180 Hz waveform (kick template averaged from the eighth-3 kicks, which correlate 0.95-0.99 with each other, plus a snare-body template taken from the bar-11 fill), cross-correlation of the low waveforms between slots, bar-averaged spectrograms for A and B, and the stem's own onsets() detector (full band and 1-4 kHz) against the part. Images: verify_drums/v2/f_*.png (final part over the spectrogram, bands and envelopes), avgbar.png, avglow.png, ring.png, ring_stems.png, pos6.png, pos8.png. CHANGES (26): (1) Removed kick at 14:6. The low end matches the snare-only backbeats of 13:6 and 18:6: matching-pursuit kick amplitude is -13 dB (true kick+snare backbeats are -5 to +2 dB), low-band RMS is 0.045 (snare-only 0.038-0.046, kick+snare 0.066-0.10), and it correlates 0.80-0.84 with the bar-11 snare-only hits but only 0.47-0.49 with 20:6 and 21:6. (2) Added kick at 19:10, under the fill snare. There is a 57 Hz ring (snare body is 72-76 Hz), the kick amplitude is -4 dB, and the hit correlates 0.73 with the 20:10 and 21:10 kicks against 0.10-0.24 with snare-only hits. (3) Added snare_ghost on eighth 2 in bars 12-18 and 20. These are sharp 0.5-5 kHz transients 16-25 dB above the local floor, at -16 to -25 dB relative to the A backbeat, the same level as the B-section eighth-2 ghosts already in the part. The full-band onsets() detector finds them in 12, 13, 14, 15, 16 and 18, and the 1-4 kHz detector finds 17. The original reason for leaving them out (guitar strums leaking from other.wav) does not hold: other.wav, bass.wav and vocals.wav show no transient on eighth 2 in their bar-averaged 1-4 kHz envelopes, and no guitar is audible (see guitar.json). (4) Added snare_ghost at 12:9 and 20:9. Both are detected by onsets() in the full and 1-4 kHz bands, at -24 and -13 dB with 17-18 dB rises; this matches the existing 21:9 ghost. (5) Added snare_ghost on eighth 5 in bars 22-26, 28, 29 and 31-34. Every B bar has a soft hit on eighth 5: onsets() detects it in 22, 23, 25, 26, 28, 29, 31 and 33 (full band) and in 32 and 34 (1-4 kHz). Its attack spectrum (150-400 Hz body plus broadband up to 8 kHz) matches the existing eighth-9 and eighth-11 ghosts, and it is only about 3 dB softer than the eighth-11 ghosts (about -28 dB relative to the backbeat). Bar 30 was left out (no detector onset). Bar 27 already has a snare on 5. (6) Added shaker at 14:10 and 18:10. These are 8-15 kHz bursts at -15 and -17 dB relative to the B shaker with 19-23 dB rises. That is stronger than the shaker already notated at 12:4 (-18 dB, rise 17) and well above kick-only eighth-10 slots (-23 to -29 dB, rise 8-9). (7) Removed shaker at 31:9. Its 8-15 kHz burst (-5 dB, rise 16) cannot be told apart from 23:9, 25:9, 28:9, 30:9 and 32:9, which carry only the eighth-9 ghost snare. The bar-24 off-beat shakes (0/-3/-4 dB, rises 19-24) are clearly stronger and were kept. CHECKED AND KEPT: no kick on 8 in bars 12, 16 and 17. The kick-sweep (95-160 Hz) onset jump is 7, 4 and 2 dB there, against 9-13 dB for real kicks; the 57 Hz phase-extrapolation residual shows only a weak excess. The soft kick at 34:8 has a 15 dB sweep-band jump (a real kick, attenuated by the end fade). Snare-only backbeats at 13:6, 18:6 and 19:6 are kept. Fill notes in bars 11, 19, 21, 27, 30 and 33 are all confirmed by strong 1-4 kHz attacks. Downbeat snare and ghost choices are roughly right; 17:0 and 19:0 are only 4-5 dB above a kick alone and stay unnotated. Bars 1-10 are tacet, as before: the only drum-stem onsets are the isolated 60 Hz thump at 10.03 s and a negligible -48 dB event at 11.68 s. The grid is fine: all onsets land within +8 to +16 ms of the eighth grid, with no sixteenths. NOT CHANGED, BUT PRESENT: very faint hits at about -26 to -28 dB on 13:5, 16:5, 15:9 and 17:9, picked up only by the 1-4 kHz detector, and late swells at 16:8.2 and 18:4.2. These are too sporadic and soft to notate. Kit identity: kick plus deep snare plus shaker is confirmed; no hi-hat, ride, crash or toms. The eighth-5 B hits could also be a soft second percussion sound, but their spectrum is snare-like. METRICS before -> after (50 ms window, stem onsets() vs part event times). Full band: F 0.918 -> 0.957, P 0.931 -> 0.922, R 0.905 -> 0.994. 1-4 kHz band (vs snare, ghost and kick times): F 0.893 -> 0.953. 7-13 kHz band (vs shaker and snare): F 0.734 -> 0.738. 30-150 Hz band (vs kick and snare; the kick ring makes the detector fire twice): F 0.685 -> 0.726. Detector-matched (onsets() of synth_drums vs of the stem): F 0.806 -> 0.867. Per-bar full-band F before: 11:1.00 12:0.67 13:0.67 14:0.80 15:0.83 16:0.89 17:1.00 18:0.80 19:1.00 20:0.86 21:0.94 22:0.82 23:0.95 24:1.00 25:0.94 26:0.95 27:1.00 28:0.94 29:0.89 30:1.00 31:0.89 32:1.00 33:0.95 34:1.00. After: 11:1.00 12:0.86 13:0.80 14:0.91 15:0.92 16:1.00 17:0.89 18:0.91 19:1.00 20:0.93 21:0.94 22:0.89 23:1.00 24:1.00 25:1.00 26:1.00 27:1.00 28:1.00 29:0.95 30:1.00 31:0.95 32:0.95 33:1.00 34:0.91. Per-bar 1-4 kHz F after: 11:1.00 12:1.00 13:0.73 14:1.00 15:0.86 16:0.83 17:0.91 18:0.92 19:1.00 20:1.00 21:0.93 22:0.94 23:1.00 24:0.89 25:1.00 26:0.94 27:0.95 28:1.00 29:1.00 30:1.00 31:1.00 32:0.95 33:0.95 34:1.00. Chroma similarity does not apply to unpitched percussion; band-envelope agreement was used instead (see the images).",
- "reconciled": "Reconciled with bass/pad/guitar/drums/harmony: one chord list and one sections list for all parts (see chords.json). Chord decisions checked on the violin-notched accompaniment (guitar/accomp.wav), the other-stem side channel and the bass stem: 13b/15b/17b = Csus2 (C4+G4 loudest, the D3 pedal keeps sounding ~17 dB below); bars 18-19 = one Am7 (bass A1 tied, pad D3-G3 tied over the barline, C4 tail still ~8 dB above the floor in 19a, so no chord change at bar 19); bar 21 = G for the whole bar (backing G3-D4-G4, no E or B; bass E2 is a one-quarter passing note at pos 8); 27b Esus4 kept (A2/A3/E on top of bass E2, no G/G#, no B). Grid-shift test of every part against its stem: best at 0 (no part offset by a grid step)."
+ "notes_ja": "1〜10小節目は休み。11小節目後半のスネアのフィル（弱い6番目→7・9・11・12番目の8分）で入ります。キックは8分の1・4・7・9・11番目が基本ですが、小節によって7番目や9番目が抜けるので譜面どおりに踏み分けてください。スネアは7番目（3拍目）のバックビートで、ほとんどの小節は1拍目にもキックと一緒にスネア（小節により普通の音量かゴースト）が重なります。ゴーストノートはAもBも同じ型で8分の3・6・10・12番目（3番目がいちばん強く、6番目はごく弱いので最初は省略してかまいません）。Aセクション（12〜21小節）の10・12番目のゴーストはヴァイオリンに隠れて原曲ではほとんど聞こえないので、慣れるまでは省略してもかまいません。シェイカー（ハイハットで代用可）は12小節目から最後まで8分の奇数番目（1・3・5・7・9・11番目）を一定に刻みます（24小節目だけ6・10・12番目にも追加）。19・21・27・30・33小節目はスネアのフィルなので、手順（R/L）を先に決めておくと安定します。",
+ "method": "v3 (re-verified against the BS-RoFormer SW 6-stem drums stem, cross-checked with htdemucs_6s and the earlier htdemucs 4-stem drums, the Mega-53 acoustic-guitar and violin stems and the mix). Kit: kick (~57 Hz ring), one deep snare (65-78 Hz body + ~540 Hz head ring, panned slightly right) with ghost notes, and a shaker (rounded 8-13 kHz swells peaking ~20 ms after the grid). Every slot of bars 11-34 was measured on 0.5-eighth steps: band rises (30-90 Hz, 90-250, 250-1k, 1-4k, 5-9k, 9-16k), Hilbert peak/background in 150-1000 Hz and 1.5-6 kHz, 8-16 kHz late/early window energy (shaker), 57 vs 75 Hz ring (kick vs snare body), low-pass waveform shape, stereo balance per band, and onset micro-timing; ambiguous slots were inspected as band-passed waveforms and spectrograms (work/v3/drums3/*.png). Everything is on the eighth grid (no sixteenths). Bars 1-10 tacet (the SW6 drum stem is silent there). Scores (onsets() of the stem vs part times, 50 ms window, +10 ms lag): SW6 stem full band F=0.943 (P 0.89, R 1.00), 1-4 kHz F=0.963, 7-11 kHz (shaker+snare) F=0.823; htdemucs_6s full F=0.941; htdemucs 4-stem full F=0.869. Per bar (SW6, full band): 11:1.00 12:1.00 13:0.95 14:1.00 15:1.00 16:1.00 17:1.00 18:0.95 19:0.95 20:0.82 21:0.89 22:0.82 23:1.00 24:0.89 25:0.89 26:0.89 27:0.95 28:0.95 29:1.00 30:0.95 31:0.82 32:1.00 33:0.95 34:0.93. Detector-matched (onsets() of synth_drums(part) vs of the stem): SW6 F=0.869. Chroma does not apply to unpitched percussion. Uncertain: the very soft eighth-6 (pos 5) ghosts (clear in 150-1000 Hz in all three separations but near the noise floor above 1.5 kHz) and the A-section eighth-10/12 ghosts, which only the BS-RoFormer stem shows clearly (see verification_v3).",
+ "verification": "v3 INDEPENDENT VERIFICATION (verifier agent, 2026-11-18; scripts and images in work/v3/vdrums/; backup of the checked file: parts_v3/drums.pre_verify.json). VERDICT: the transcriber's 233 events are confirmed. No event was added, removed, moved or reclassified, so the event list is identical before and after this check. CHANGED: (1) chords: drums.json still carried the v2 chord names (Csus2 at 13b/15b/17b, Asus4 at 24b/30b/33b, Esus4 at 27b), while parts_v3/chords.json and the verified bass.json now use Csus4(add9), Asus2 (24b), Asus4/E (27b) and A (30b/33b); the chord list was copied from chords.json (sections were already identical). (2) notes_ja: one sentence added saying that the A-section ghosts on eighths 10/12 (1-based) are masked by the violin in the record and can be left out at first. EVIDENCE. Stems and tools used differ from the transcriber's main one (the BS-RoFormer SW drum stem): the MIX itself (mid/side analysis), htdemucs_6s drums, the htdemucs 4-stem drums, and the Mega acoustic-guitar and violin stems as leakage references. Tools: 8-16 kHz shaker-swell detector (peak in +5..+45 ms against the minimum in -40..0 ms, with peak time), mid/side band energies, Hilbert peak/background per band (30-90 Hz, 150-1000 Hz, 1.5-6 kHz, 8-16 kHz), a spectral-valley flux on the mix (energy rise between violin/guitar partials), whitened fine-spectrum correlation of the drum bursts with the violin and guitar stems, per-slot peak-timing statistics, and bar rasters (vdrums/ras_hf.png, ras_wire.png, sa_hf.png). (1) A-SECTION SHAKER (46 added notes): confirmed without using any drum separation. In the MIX at eighth 4 (1-based 5; no kick, snare or guitar strum in most A bars) the 8-16 kHz level / rise / peak time is -54.3 dB / 3.6 dB / +8 ms in the intro (guitar and violin, no drums), -46.2 / 7.3 / +24 ms in A and -46.9 / 7.2 / +26 ms in B, where the shaker is undisputed. So A has the same level and the same late, rounded swell as the B shaker. The acoustic-guitar stem at A eighth 4 is -59.9 dB, 14 dB below the mix, with a rise of only 3.5 dB. In A the acoustic guitar is a decorrelated left/right pair (1.5-6 kHz L/R correlation 0.04, mid = side), whereas in the intro it is almost mono (0.88). The centred (mid minus side) 8-16 kHz energy at A eighth 4 is -50.4 dB, close to -49.9 dB at B eighth 4 and far above the guitar stem's centred part (-70 dB). In htdemucs_6s (a different model family from BS-RoFormer) the shaker swell at A even eighths rises 9-37 dB (median 20; eighth 4: 11-21 dB in every bar 12-21) with a +23 ms peak at eighth 4 (B: +26 ms), against a median of 2 dB (max 11) at the empty eighths 1/7. The 4-stem drums have nothing there (A eighth 4 at -82 dB), which confirms the transcriber's explanation of why v2 missed it. Gap fills 21:2, 21:8 and 34:4: htdemucs_6s swell 19.2, 17.2 and 8.1 dB. 34:4 is weaker in htdemucs_6s near the end of the clip, but it is 16 dB in SW6 and the mix peak is at +27 ms (shaker timing). Bar 24 extras (eighths 5/9/11): htdemucs_6s 22.4/23.2/17.7 dB against -1..15 dB at the same eighths in other B bars, so they are kept. (2) GHOST NOTES (31 added). Eighth 5 (1-based 6) is supported by all three separations in 150-1000 Hz: rises in bars 12-21 are 12.8-24.5 dB (SW6), 11.6-27.6 dB (htdemucs_6s) and 3.8-28.4 dB (4-stem), against a median of 5 dB at the empty eighths. A-section eighths 9 and 11 (1-based 10 and 12): (a) the SW6 bursts have the same 150-1000 Hz peak level as the consensus B ghosts (-22.6..-27.9 dB at A:9 against -23.8..-28.8 at B:9). (b) Their fine spectrum does not copy the violin or guitar partials (whitened-spectrum correlation -0.33..0.01 with the violin stem and -0.12..0.35 with the guitar stem, the same as at consensus ghosts and empty slots). (c) They are locked to the grid like real hits: the 1.5-6 kHz peak-time IQR is 2.3 ms (A:9) and 2.5 ms (A:11), against 0.6 ms for the accepted A eighth-2 ghosts and 1.9/2.9 ms for B:9/B:11, while empty eighths 1/7 in A scatter by 8.5-10.2 ms. (d) The Demucs stems under-report ALL soft snare energy in A, including the v2-accepted eighth-2 ghosts. Measured as the SW6 peak minus the stem peak in 150-1000 Hz, eighth-2 ghosts are 10.6 dB (htdemucs_6s) and 11.2 dB (4-stem) lower in A, against 3.3/2.5 dB in B. For A:9/11 the gap is larger (14-19 dB, B: 0.7-3.0 dB). So these ghosts rest mainly on SW6, and their 'medium' confidence is right. 73 of the 77 added notes have an onset (any band) in at least one Demucs stem. The four shown only by SW6 are the ghosts 13:11, 17:11 and 18:9, and the shaker 16:4, whose htdemucs_6s swell is 16.4 dB (only the onset detector misses it). In the mix the A ghosts on 9/11 are masked: the spectral-valley rise at the no-strum slots 13:9, 15:9, 17:9, 13:11 and 17:11 is 0.7-4.3 dB, about the empty-slot level. Hence the new practice note. Downbeat ghosts 17:0/19:0: 1.5-6 kHz peak -36.0/-31.6 dB in SW6 and -39.7/-40.6 dB in htdemucs_6s. That is above both the A eighth-3 kicks (SW6 -56..-43, htdemucs_6s -52..-43) and the A eighth-4 shaker hits (SW6 -54..-47, htdemucs_6s -62..-52), and at the level of the v2 ghosts at 14:0/15:0 (SW6 -34.5/-30.7, htdemucs_6s -41.8/-38.6). They are kept. (3) KICKS AND BACKBEATS unchanged and confirmed. The htdemucs_6s 30-90 Hz rise is 8-32 dB (median 17) at every notated kick except 34:8, and at most 4.1 dB at 12:8, 16:8 and 17:8 (no kick there). 34:8 rises only 4-5 dB in 30-90 Hz in all three stems, because the 34:6 kick is still ringing and the clip fades out from about 51.45 s. Its 95-160 Hz kick sweep jumps 17.1/16.6/21.0 dB (SW6/htdemucs_6s/4-stem), against 18-28 dB for 34:6, 33:8 and 34:3, so it is a real, soft kick and is kept. The snare-only backbeats 13:6, 14:6, 18:6 and 19:6 were left as v2 and v3 have them. (4) NOTHING MISSED. Every slot with an onset rise in at least two of the three drum stems is notated, except two kinds of event. Very soft (-50..-61 dB) half-eighth events at x:5.5 and x:11.5 appear mainly in the Demucs stems (SW6 rise 2-9 dB) and are probably guitar or shaker bleed. Low-mid smears at 19:7 and 25:7 have no 1.5-6 kHz attack. Neither kind is notated. No sixteenths are needed. Bars 1-10 and 11:0-11:4 are tacet: all three drum stems read -65..-127 dB, and the drums enter at 11:5 in every stem. METRICS (onsets() of each stem, 50 ms window, +10 ms lag; v2 -> v3, which is also the after-verification state). htdemucs_6s: full band F 0.935 -> 0.941 (A section 0.863 -> 0.895, recall 0.78 -> 1.00); 150-1000 Hz vs kick/snare/ghosts 0.901 -> 0.943 (A 0.838 -> 0.925); 7-16 kHz vs shaker/snare 0.684 -> 0.799 (A 0.478 -> 0.808). 4-stem: 150-1000 Hz 0.908 -> 0.936 (A 0.844 -> 0.907), although its full band falls 0.962 -> 0.869 because that stem has no A shaker. SW6: full 0.883 -> 0.943. Full table: work/v3/vdrums/eval_verify.json. FOR THE INTEGRATOR: chords.json's 'Csus4(add9)' does not match CHORD_RE in validate_parts.py, so drums.json now shows the same parse error as bass.json until the symbol or the regex is changed. guitar.json and guitar_violin_line.json still have their own chord lists. PREVIOUS (v2) VERIFICATION, kept for reference: Independent verification (verify_drums/v2). Evidence re-derived for every bar 11-34 from audio/stems/drums.wav: per-slot band features (1-4 kHz and 7-13 kHz Hilbert envelopes: peak relative to the section backbeat and rise above the local floor; 150-1000 Hz spectral flux; 95-160 Hz kick pitch-sweep onset jump), a two-template matching pursuit on the <180 Hz waveform (kick template averaged from the eighth-3 kicks, which correlate 0.95-0.99 with each other, plus a snare-body template taken from the bar-11 fill), cross-correlation of the low waveforms between slots, bar-averaged spectrograms for A and B, and the stem's own onsets() detector (full band and 1-4 kHz) against the part. Images: verify_drums/v2/f_*.png (final part over the spectrogram, bands and envelopes), avgbar.png, avglow.png, ring.png, ring_stems.png, pos6.png, pos8.png. CHANGES (26): (1) Removed kick at 14:6. The low end matches the snare-only backbeats of 13:6 and 18:6: matching-pursuit kick amplitude is -13 dB (true kick+snare backbeats are -5 to +2 dB), low-band RMS is 0.045 (snare-only 0.038-0.046, kick+snare 0.066-0.10), and it correlates 0.80-0.84 with the bar-11 snare-only hits but only 0.47-0.49 with 20:6 and 21:6. (2) Added kick at 19:10, under the fill snare. There is a 57 Hz ring (snare body is 72-76 Hz), the kick amplitude is -4 dB, and the hit correlates 0.73 with the 20:10 and 21:10 kicks against 0.10-0.24 with snare-only hits. (3) Added snare_ghost on eighth 2 in bars 12-18 and 20. These are sharp 0.5-5 kHz transients 16-25 dB above the local floor, at -16 to -25 dB relative to the A backbeat, the same level as the B-section eighth-2 ghosts already in the part. The full-band onsets() detector finds them in 12, 13, 14, 15, 16 and 18, and the 1-4 kHz detector finds 17. The original reason for leaving them out (guitar strums leaking from other.wav) does not hold: other.wav, bass.wav and vocals.wav show no transient on eighth 2 in their bar-averaged 1-4 kHz envelopes, and no guitar is audible (see guitar.json). (4) Added snare_ghost at 12:9 and 20:9. Both are detected by onsets() in the full and 1-4 kHz bands, at -24 and -13 dB with 17-18 dB rises; this matches the existing 21:9 ghost. (5) Added snare_ghost on eighth 5 in bars 22-26, 28, 29 and 31-34. Every B bar has a soft hit on eighth 5: onsets() detects it in 22, 23, 25, 26, 28, 29, 31 and 33 (full band) and in 32 and 34 (1-4 kHz). Its attack spectrum (150-400 Hz body plus broadband up to 8 kHz) matches the existing eighth-9 and eighth-11 ghosts, and it is only about 3 dB softer than the eighth-11 ghosts (about -28 dB relative to the backbeat). Bar 30 was left out (no detector onset). Bar 27 already has a snare on 5. (6) Added shaker at 14:10 and 18:10. These are 8-15 kHz bursts at -15 and -17 dB relative to the B shaker with 19-23 dB rises. That is stronger than the shaker already notated at 12:4 (-18 dB, rise 17) and well above kick-only eighth-10 slots (-23 to -29 dB, rise 8-9). (7) Removed shaker at 31:9. Its 8-15 kHz burst (-5 dB, rise 16) cannot be told apart from 23:9, 25:9, 28:9, 30:9 and 32:9, which carry only the eighth-9 ghost snare. The bar-24 off-beat shakes (0/-3/-4 dB, rises 19-24) are clearly stronger and were kept. CHECKED AND KEPT: no kick on 8 in bars 12, 16 and 17. The kick-sweep (95-160 Hz) onset jump is 7, 4 and 2 dB there, against 9-13 dB for real kicks; the 57 Hz phase-extrapolation residual shows only a weak excess. The soft kick at 34:8 has a 15 dB sweep-band jump (a real kick, attenuated by the end fade). Snare-only backbeats at 13:6, 18:6 and 19:6 are kept. Fill notes in bars 11, 19, 21, 27, 30 and 33 are all confirmed by strong 1-4 kHz attacks. Downbeat snare and ghost choices are roughly right; 17:0 and 19:0 are only 4-5 dB above a kick alone and stay unnotated. Bars 1-10 are tacet, as before: the only drum-stem onsets are the isolated 60 Hz thump at 10.03 s and a negligible -48 dB event at 11.68 s. The grid is fine: all onsets land within +8 to +16 ms of the eighth grid, with no sixteenths. NOT CHANGED, BUT PRESENT: very faint hits at about -26 to -28 dB on 13:5, 16:5, 15:9 and 17:9, picked up only by the 1-4 kHz detector, and late swells at 16:8.2 and 18:4.2. These are too sporadic and soft to notate. Kit identity: kick plus deep snare plus shaker is confirmed; no hi-hat, ride, crash or toms. The eighth-5 B hits could also be a soft second percussion sound, but their spectrum is snare-like. METRICS before -> after (50 ms window, stem onsets() vs part event times). Full band: F 0.918 -> 0.957, P 0.931 -> 0.922, R 0.905 -> 0.994. 1-4 kHz band (vs snare, ghost and kick times): F 0.893 -> 0.953. 7-13 kHz band (vs shaker and snare): F 0.734 -> 0.738. 30-150 Hz band (vs kick and snare; the kick ring makes the detector fire twice): F 0.685 -> 0.726. Detector-matched (onsets() of synth_drums vs of the stem): F 0.806 -> 0.867. Per-bar full-band F before: 11:1.00 12:0.67 13:0.67 14:0.80 15:0.83 16:0.89 17:1.00 18:0.80 19:1.00 20:0.86 21:0.94 22:0.82 23:0.95 24:1.00 25:0.94 26:0.95 27:1.00 28:0.94 29:0.89 30:1.00 31:0.89 32:1.00 33:0.95 34:1.00. After: 11:1.00 12:0.86 13:0.80 14:0.91 15:0.92 16:1.00 17:0.89 18:0.91 19:1.00 20:0.93 21:0.94 22:0.89 23:1.00 24:1.00 25:1.00 26:1.00 27:1.00 28:1.00 29:0.95 30:1.00 31:0.95 32:0.95 33:1.00 34:0.91. Per-bar 1-4 kHz F after: 11:1.00 12:1.00 13:0.73 14:1.00 15:0.86 16:0.83 17:0.91 18:0.92 19:1.00 20:1.00 21:0.93 22:0.94 23:1.00 24:0.89 25:1.00 26:0.94 27:0.95 28:1.00 29:1.00 30:1.00 31:1.00 32:0.95 33:0.95 34:1.00. Chroma similarity does not apply to unpitched percussion; band-envelope agreement was used instead (see the images).",
+ "verification_v3": "Re-verification v3 against audio/sep2/sw6/full/drums.wav (BS-RoFormer SW), audio/sep6/htdemucs_6s/full/drums.wav and audio/stems/drums.wav (htdemucs 4-stem, the stem v2 was fitted to); scripts and images in work/v3/drums3/. CHANGES: 77 notes added, none removed (31 snare_ghost, 46 shaker); kicks and accented snares unchanged. (1) SHAKER IN THE A SECTION. Added the quarter-note shaker pulse (pos 0,2,4,6,8,10) in bars 12-19 (v2 started it at bar 20 and had only 12:4, 12:10, 14:10, 18:10, 19:10), plus the missing pulses 21:2, 21:8 and 34:4. Evidence: in the SW6 stem the 8-16 kHz energy 15-35 ms after A-section eighths 2/4/8/10 lies within -10..+1 dB of the B-section shaker (odd eighths -9..-25 dB); the bar-averaged envelope shows the same rounded swell (rise from ~-5 ms, peak ~+20 ms, -15 dB by ~95 ms) as the B shaker, unlike acoustic-guitar strums (HF rise starts ~40 ms early, peak 0-10 ms); the 1/3-octave spectrum at A eighth 4 peaks at 8-12.7 kHz exactly like B eighth 4 (-17.5 vs -16.1 dB) while strums peak at 2-8 kHz; in the MIX the 10-12.7 kHz band at A eighth 4 is 7.3 dB above the half-eighth before it (B: 4.9 dB) and the Mega acoustic-guitar stem is 14 dB below the mix there; the 8-16 kHz L/R correlation at these slots is 0.69 (SW6) / 0.91 (htdemucs_6s), i.e. a mono-ish source, whereas the acoustic guitar is wide (0.13); htdemucs_6s shows the same pulse (A eighth 4 at -3..-15 dB re the B shaker); the SW6 drum stem stays silent (-100..-123 dB) through the strummed intro, so it does not leak guitar strums into drums. The htdemucs 4-stem drums put these swells into 'other' (-19..-35 dB), which is why v2 missed them. Bar 11 has no shaker (pos 0-4 at -67..-86 dB). (2) GHOST NOTES: the B ghost pattern (eighths 2, 5, 9, 11) is also present in A. Added snare_ghost at 13:9 14:9 15:9 16:9 17:9 18:9 19:9; 12:11 13:11 14:11 16:11 17:11 18:11 20:11; 12:5 ... 21:5 (every A bar); 19:2 (the only groove bar without the eighth-2 ghost); 25:11, 28:11, 30:5, 34:9 (gaps in B); and 17:0, 19:0 under the kick. Evidence: SW6 1.5-6 kHz band-passed waveforms show sharp 10-30 ms bursts at -34..-49 dB on A eighths 9/11 (empty eighths show only noise without a burst, peaks -40..-51 dB); Hilbert peak/background (150-1000 Hz | 1.5-6 kHz) A eighth 9: 16-27 | 12-23 dB, A eighth 11: 12-21 | 8-20 dB, against p95 11 | 7 dB (max 14 | 7) for empty eighths 1/7; their onset spectra match the accepted ghosts (head-ring band ~520 Hz +15..22 dB); stereo: 1.5-6 kHz L/R -4.9 dB (eighth 9) and -3.1 dB (eighth 11), on the snare side like the backbeat (-3.9) and the eighth-2 ghosts (-4.5), while the acoustic guitar leans left (+2.2), the violin is centred (+0.4) and the kick is -0.6; not guitar bleed: in C-chord bars 13/15/17 the guitar does not strum on 9/11 yet the drum-stem hits are as strong (13:9, 15:9, 17:9 rises 16-19 dB), per-bar drum vs guitar 1-4 kHz level correlation on eighths 5/9/11 is -0.57..0.49, and drum-stem onset timing on 5/9/11 is tight (IQR 2-5 ms) while strums scatter (IQR 14-28 ms). The two Demucs stems show the A eighth-9/11 ghosts only partly (12:9, 14:9, 15:11, 17:9), most likely because the A-section violin (A4-D5 with harmonics to ~2 kHz) covers the ghost energy; in B, with the violin an octave higher, all three stems agree. Eighth 5 is the softest ghost: the SW6 stem shows a 150-1000 Hz click 12-27 dB above background in every groove bar, A and B alike (htdemucs_6s and 4-stem agree except 24:5 resp. 17:5), with snare-side pan in 150-1000 Hz (-2.7..-8.7 dB), but its 1.5-6 kHz part is near the noise floor (-43..-56 dB), so it is optional for the player. 17:0/19:0: SW6 1.5-6 kHz energy +3/+8 dB above a kick-only hit with snare-side pan (-3.4/-2.6 dB), the same class as 14:0/15:0 (+4/+7) that v2 already wrote as ghosts. CHECKED AND KEPT: all v2 kicks (SW6 30-90 Hz rise >= 10 dB, median 16.8; only 34:8 is 6.4 dB in the end fade; no non-kick slot shows a 57 Hz onset); snare-only backbeats 13:6, 14:6, 18:6, 19:6 (70-75 Hz body, low-pass period ~13-14 ms vs ~17 ms for the kick, 57 Hz band 7-11 dB below kick hits; the v2 removal of the 14:6 kick is confirmed); no kick on eighth 8 in bars 12, 16, 17 (30-90 Hz rise 1-3 dB). The mid/high transient on eighth 8 of those bars is panned LEFT (+5.7/0.0/+3.7 dB) unlike every kit element (centre or right) and coincides with a guitar strum, so it is treated as guitar bleed and not notated. Fills (11, 19, 21, 27, 30, 33) and accents unchanged. NOT PRESENT: hi-hat, tambourine, toms, crash/ride. Every 8-16 kHz event in the groove has the rounded shaker envelope and is centred (-0.2 dB), with no sharp panned HF ticks (hi-hat) and no metallic ring (tambourine); the strongest HF events decay by a median 14 dB within 100-120 ms; section downbeats 12/18/20/22/28/31/34 add no 6-16 kHz energy 0.3-0.6 s later compared with the previous bar (no cymbal); fill hits all share the snare body (65-78 Hz + 140-210 Hz modes) with no separately pitched tom resonance (100-108 Hz peaks in bars 19/21/23/33 match bass A1/G2 harmonics). Not notated: weak off-grid 7-11 kHz onsets ~150-170 ms after loud downbeats/backbeats (x:1.2-1.4, x:7.0-7.3; shaker return stroke or snare decay); half-eighth slots show no hits. Bars 1-10: tacet confirmed (SW6 drum stem -100..-123 dB per bar; the 10.02/11.54 s thumps and a 5.16 s click appear only in the Demucs stems). METRICS v2 -> v3 (onsets() of stem vs part times, 50 ms, +10 ms lag): SW6 full band F 0.883 -> 0.943 (P 0.92->0.89, R 0.85->1.00); 1-4 kHz 0.911 -> 0.963; 7-11 kHz (shaker+snare) 0.709 -> 0.823. htdemucs_6s full 0.935 -> 0.941, 7-11 kHz 0.684 -> 0.799. htdemucs 4-stem full 0.962 -> 0.869 (precision drops because that stem lacks the A-section shaker and soft ghosts). Detector-matched (onsets of synth_drums(part) vs of the SW6 stem) F 0.765 -> 0.869. Every v3 event has an onsets() hit in at least one band (full, 150-1000 Hz, 1-4 kHz, 7-11 kHz) of the SW6 stem, and every full-band SW6 onset in bars 11-34 is matched by a v3 event. Per-bar SW6 full-band F v2: 11:1.00 12:0.82 13:0.80 14:0.75 15:0.82 16:0.67 17:0.67 18:0.80 19:0.80 20:0.93 21:0.94 22:0.82 23:1.00 24:0.89 25:0.94 26:0.89 27:0.95 28:1.00 29:1.00 30:1.00 31:0.82 32:1.00 33:0.95 34:0.77. v3: 11:1.00 12:1.00 13:0.95 14:1.00 15:1.00 16:1.00 17:1.00 18:0.95 19:0.95 20:0.82 21:0.89 22:0.82 23:1.00 24:0.89 25:0.89 26:0.89 27:0.95 28:0.95 29:1.00 30:0.95 31:0.82 32:1.00 33:0.95 34:0.93.",
+ "reconciled_v2": "Reconciled with bass/pad/guitar/drums/harmony: one chord list and one sections list for all parts (see chords.json). Chord decisions checked on the violin-notched accompaniment (guitar/accomp.wav), the other-stem side channel and the bass stem: 13b/15b/17b = Csus2 (C4+G4 loudest, the D3 pedal keeps sounding ~17 dB below); bars 18-19 = one Am7 (bass A1 tied, pad D3-G3 tied over the barline, C4 tail still ~8 dB above the floor in 19a, so no chord change at bar 19); bar 21 = G for the whole bar (backing G3-D4-G4, no E or B; bass E2 is a one-quarter passing note at pos 8); 27b Esus4 kept (A2/A3/E on top of bass E2, no G/G#, no B). Grid-shift test of every part against its stem: best at 0 (no part offset by a grid step).",
+ "reconciled": "RECONCILER (v3): chords and sections set to the verified chart in parts_v3/chords.json, identical in every part file (8 chord entries differed before: Csus4(add9)->Csus2 at 13b/15b/17b and Asus2->Asus4 at 24b for bass/drums; the violin-line arrangement carried the guitar transcriber's G7sus4/C, Dm7/A, Am11, D5, Asus2 names). No events changed. Grid check: bass onsets (SW bass stem) median +0.02 eighth (+3 ms), kick +0.05 (+6 ms), snare -0.01 (-1 ms); no part is offset by a grid step."
 }

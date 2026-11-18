@@ -423,12 +423,12 @@
    "pos": 8,
    "dur": 2,
    "pitches": [
-    "A2"
+    "A1"
    ],
    "tab": [
     [
-     1,
-     2
+     3,
+     0
     ]
    ]
   },
@@ -437,12 +437,12 @@
    "pos": 10,
    "dur": 2,
    "pitches": [
-    "A2"
+    "A1"
    ],
    "tab": [
     [
-     1,
-     2
+     3,
+     0
     ]
    ]
   },
@@ -500,7 +500,8 @@
      2,
      5
     ]
-   ]
+   ],
+   "tech": "sl"
   },
   {
    "bar": 22,
@@ -884,132 +885,132 @@
  "chords": [
   {
    "bar": 1,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D5"
   },
   {
    "bar": 13,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Csus2"
   },
   {
    "bar": 14,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D5"
   },
   {
    "bar": 15,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Csus2"
   },
   {
    "bar": 16,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D5"
   },
   {
    "bar": 17,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Csus2"
   },
   {
    "bar": 18,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Am7"
   },
   {
    "bar": 20,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 21,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 22,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 23,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 24,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Bm"
   },
   {
    "bar": 24,
-   "pos": 6,
+   "pos": 6.0,
    "symbol": "Asus4"
   },
   {
    "bar": 25,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 26,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 27,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Asus4"
   },
   {
    "bar": 27,
-   "pos": 6,
-   "symbol": "Esus4"
+   "pos": 6.0,
+   "symbol": "Asus4/E"
   },
   {
    "bar": 28,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Bm"
   },
   {
    "bar": 29,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 30,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 30,
-   "pos": 6,
-   "symbol": "Asus4"
+   "pos": 6.0,
+   "symbol": "A"
   },
   {
    "bar": 31,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "Bm"
   },
   {
    "bar": 32,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "G"
   },
   {
    "bar": 33,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   },
   {
    "bar": 33,
-   "pos": 6,
-   "symbol": "Asus4"
+   "pos": 6.0,
+   "symbol": "A"
   },
   {
    "bar": 34,
-   "pos": 0,
+   "pos": 0.0,
    "symbol": "D"
   }
  ],
@@ -1051,7 +1052,7 @@
   "16": "medium",
   "17": "high",
   "18": "high",
-  "19": "high",
+  "19": "medium",
   "20": "high",
   "21": "medium",
   "22": "high",
@@ -1068,8 +1069,117 @@
   "33": "high",
   "34": "high"
  },
- "notes_ja": "1〜11小節目は休み。11小節目後半のスネアのフィルを合図に12小節目から入ります。A（12〜21小節）は開放Dを付点4分で4回ずつ弾き直し、13・15・17小節目の後半だけC（A弦3フレット）を4分音符3つで弾きます（3拍子に聞こえるヘミオラ）。キックは小節後半を8分の9・11番目で踏みますが、ベースはDの小節では4拍目頭（10番目）なので、つられないように。18小節目から開放Aを1小節半伸ばし、19小節目後半はオクターブ上のA2を4分音符2つ。21小節目はG→E→Gのスライドで22小節目のDへつなぎます。B（22小節〜）は1小節か半小節の長い音が中心で、28・29・31・32小節目は後半の4分音符2つ（B-A、G-F#、B-A、G-E）で次のコードへ。31小節目は頭がB1（A弦2フレット）で後半にB2へ上がる点に注意し、どの音も次の音の直前までレガートで伸ばしてください。",
- "method": "Bars 1-11: bass tacet. The bass stem there is ~-80 dBFS RMS vs ~-29 dBFS once the groove starts (≈50 dB lower); its faint D3 sits ~50 dB below the D3 of other.wav and follows that envelope, and the full mix has no low D2/A1 energy beyond what other.wav carries, so the D3 is separation bleed of the drone. The low \"D2\" thumps basic-pitch found in bars 7-8 and the end of bar 11 are broadband (F#1-A2), coincide with drum hits and the bar-11 fill (drums stem ~15 dB louder in the same frames), i.e. drum bleed, not bass notes. Rhythm: basic-pitch note splits were ignored; re-attacks were taken from dips in the 30-400 Hz RMS envelope and in the 2nd-4th harmonic CQT envelopes (re-plucks show 5-40 dB dips just before the grid point), checked against pYIN f0 and zoomed CQT images. Groove A is legato dotted quarters on D (re-plucked on every beat, bar 16 beat 2 only softly), and in bars 13/15/17 the second half is three quarter-note Cs (eighths 6, 8, 10: a hemiola), not jig eighths; bar 20 is one sustained D. Bars 19/21/28/29/31/32 end with the same two-quarter figure on eighths 8 and 10. Octaves verified from the CQT fundamental (no energy an octave below any written note; A1/B1 fundamentals within 2-5 dB of their 2nd harmonic; A2/B2 in bars 19, 24, 28, 31 have no A1/B1 energy). Tuning ≈ +7 cents (A=440). Attack timing vs grid: median +5 ms, IQR -10..+17 ms. Evaluation (synth vs stem): onset F-measure (50 ms) vs onsets(bass stem, 30-1000 Hz, delta 0.1) per bar: 12:0.75 13:0.75 14:0.86 15:0.50 16:0.33 17:0.89 18:1.00 19:0.86 20:0.67 21:1.00 22:1.00 23:0.00 24:1.00 25:1.00 26:1.00 27:1.00 28:1.00 29:1.00 30:0.57 31:1.00 32:0.86 33:1.00 34:1.00; overall F=0.81 (P=0.77, R=0.86) vs 0.66 for raw basic-pitch; detector-matched (synth through the same detector) F=0.83. Low bars (15, 16, 23, 30) are legato pitch changes with no energy onset plus ~40-60 ms detector lag, not missing notes. Against full-band onsets() F=0.60 because the stem carries hi-hat/drum bleed onsets inside long notes. Bass-band chroma similarity per bar (sustained synth) min 0.955, mean 0.990; worst half-bar 0.897 (bar 19 first half, decaying A1 tail). Uncertain: release points of decaying notes rounded (bar 19 A1 stops ~eighth 7, bar 21 G2 ~7, bar 25 G2 ~10.5); bar 21 E2 is scooped up from ~D2 and slides to G2 without a re-pluck; bar 26 D2 has a quiet slide-in from below. Fingering is a suggestion (open D/A/G strings, B2/A2 on the G string); D-C-A could also be played on the A/E strings with slides. chords = bass note at each change; the eighth-10 notes in bars 21, 28, 29, 31, 32 (and bar 21 eighth 8) are passing/approach tones.",
- "verification": "Independent verification (verifier agent). NOTES/RHYTHM/TAB: no changes - every event was re-derived and confirmed. Evidence: (1) pitch per event from zero-padded harmonic-sum spectra: all 62 events match the written pitch (C2 not C#2, F#2 not F2, B not Bb; tuning within ~+-20 c); (2) octave: real A1/B1 notes have the fundamental 0-7 dB below the 2nd harmonic, while the written A2/B2 notes in bars 19, 24, 28, 31 have the lower octave 13-40 dB down (bar 31 eighth 8: B1 drops 14 dB at the re-attack while B2 stays, so the new note is B2); E2 in 27/32 has no E1; (3) re-attacks from 40-800 Hz level dips and harmonic-band (h1-h5) envelopes at every eighth of bars 11-34: every written onset has a dip/attack and no unwritten slot has one; the kick (drums.json: eighths 0,3,6,8,10) causes no dips in sustained bars 20/22/23/26, so the A-section dips at 3/6/9 and the 8/10 hemiola in bars 13/15/17 are real bass articulations; (4) pYIN f0 per sixteenth agrees with the part except transition sixteenths (pre-attack mutes, release glides); (5) releases (level < sustained-15 dB) agree with written ends (bar 21 G2 6.2, bar 25 G2 10.4); bars 18 and 20 have no re-attack; (6) bars 1-11: pYIN finds no voiced pitch; the bar-11 eighth-9 thump is broadband and the ~70 Hz tone there is in drums.wav (fill), so tacet is confirmed; (7) attack timing vs grid median +4 ms (IQR -10..+17 ms); bar 23 G2 enters ~55 ms late and bar 19 A2 ~40 ms early, still best quantized to eighths 0 and 8. Extra observations (not notated, added to notes_ja): bar 15->16 C2->D2 is a slide without a new pluck (pYIN glides 36.1->37.9 across the barline); bar 16 beat-2 re-pluck is a ~5 dB harmonic dip with no fresh attack (kept, medium). CHANGED - chords: the old list was bass roots, written as plain triad symbols, and it included passing tones as chord changes. build_player.py uses bass.json's chords for the whole page, because bass comes first in ORDER and there is no chords.json. The old symbols B (24, 28, 31) were wrong: the violin-removed accompaniment (guitar/accomp.wav) has D natural and no D#, so these are Bm. The old A at bar 18 was wrong because C natural is present and C# absent. The old A at bar 19 had neither C nor C#, with G present. The old A at 27/30b/33b had no third, with D present. The old E at 27b had no G or G#. The old C at 13b/15b/17b had no E. 21.8 E, 21.10 G, 28.10 A, 29.10 F#, 31.10 A and 32.10 E were passing tones. Replaced with the harmony/pad/guitar consensus, which my chroma checks confirm: D5 (from bar 1, intro included) | Csus2 at 13/15/17 eighth 6 | Am7 18 | A7sus4 19 | D 20 | G, Em7 at 21.6 | D | G | Bm, Asus4 at 24.6 | G | D | Asus4, Esus4 at 27.6 | Bm | G | D, Asus4 at 30.6 | Bm | G | D, Asus4 at 33.6 | D. old chords=[{\"bar\":12,\"pos\":0,\"symbol\":\"D\"},{\"bar\":13,\"pos\":6,\"symbol\":\"C\"},{\"bar\":14,\"pos\":0,\"symbol\":\"D\"},{\"bar\":15,\"pos\":6,\"symbol\":\"C\"},{\"bar\":16,\"pos\":0,\"symbol\":\"D\"},{\"bar\":17,\"pos\":6,\"symbol\":\"C\"},{\"bar\":18,\"pos\":0,\"symbol\":\"A\"},{\"bar\":20,\"pos\":0,\"symbol\":\"D\"},{\"bar\":21,\"pos\":0,\"symbol\":\"G\"},{\"bar\":21,\"pos\":8,\"symbol\":\"E\"},{\"bar\":21,\"pos\":10,\"symbol\":\"G\"},{\"bar\":22,\"pos\":0,\"symbol\":\"D\"},{\"bar\":23,\"pos\":0,\"symbol\":\"G\"},{\"bar\":24,\"pos\":0,\"symbol\":\"B\"},{\"bar\":24,\"pos\":6,\"symbol\":\"A\"},{\"bar\":25,\"pos\":0,\"symbol\":\"G\"},{\"bar\":26,\"pos\":0,\"symbol\":\"D\"},{\"bar\":27,\"pos\":0,\"symbol\":\"A\"},{\"bar\":27,\"pos\":6,\"symbol\":\"E\"},{\"bar\":28,\"pos\":0,\"symbol\":\"B\"},{\"bar\":28,\"pos\":10,\"symbol\":\"A\"},{\"bar\":29,\"pos\":0,\"symbol\":\"G\"},{\"bar\":29,\"pos\":10,\"symbol\":\"F#\"},{\"bar\":30,\"pos\":0,\"symbol\":\"D\"},{\"bar\":30,\"pos\":6,\"symbol\":\"A\"},{\"bar\":31,\"pos\":0,\"symbol\":\"B\"},{\"bar\":31,\"pos\":10,\"symbol\":\"A\"},{\"bar\":32,\"pos\":0,\"symbol\":\"G\"},{\"bar\":32,\"pos\":10,\"symbol\":\"E\"},{\"bar\":33,\"pos\":0,\"symbol\":\"D\"},{\"bar\":33,\"pos\":6,\"symbol\":\"A\"},{\"bar\":34,\"pos\":0,\"symbol\":\"D\"}]. Confidence reviewed, no change. METRICS (identical before/after, since no notes changed), bars 12-34: onset F (50 ms, part onsets vs onsets(bass,30-1000 Hz,delta .1)) = 0.803 (P 0.770, R 0.839); detector-matched synth F = 0.807; vs full-band onsets F = 0.591; per bar: 12:0.75 13:0.75 14:0.86 15:0.50 16:0.33 17:0.89 18:1.00 19:0.67 20:0.67 21:1.00 22:1.00 23:0.00 24:1.00 25:1.00 26:1.00 27:1.00 28:1.00 29:1.00 30:0.57 31:1.00 32:0.86 33:1.00 34:1.00. The low-scoring bars are explained by detector lag (+40..+80 ms on legato pitch changes: bars 12.9, 15.6, 16.6, 23.0, 30.6), by missed soft re-plucks (bars 13.6/8, 15.8/10, 16.0/3, 30.10), and by drum-bleed false onsets (bars 20.3, 32.9). None of these is a missing note. Bass-band (C1-C4) chroma per half bar: mean 0.987, min 0.869 (bar 19 first half, decaying A1 tail); per-bar full chroma min 0.947.",
- "reconciled": "Reconciled with bass/pad/guitar/drums/harmony: one chord list and one sections list for all parts (see chords.json). Chord decisions checked on the violin-notched accompaniment (guitar/accomp.wav), the other-stem side channel and the bass stem: 13b/15b/17b = Csus2 (C4+G4 loudest, the D3 pedal keeps sounding ~17 dB below); bars 18-19 = one Am7 (bass A1 tied, pad D3-G3 tied over the barline, C4 tail still ~8 dB above the floor in 19a, so no chord change at bar 19); bar 21 = G for the whole bar (backing G3-D4-G4, no E or B; bass E2 is a one-quarter passing note at pos 8); 27b Esus4 kept (A2/A3/E on top of bass E2, no G/G#, no B). Grid-shift test of every part against its stem: best at 0 (no part offset by a grid step)."
+ "notes_ja": "1〜11小節目は休み。11小節目後半のスネアのフィルを合図に12小節目から入ります。A（12〜21小節）は開放Dを付点4分で4回ずつ弾き直し、13・15・17小節目の後半だけC（A弦3フレット）を4分音符3つで弾きます（3拍子に聞こえるヘミオラ）。16小節目頭のDは半音下から滑り込むように聞こえるので、慣れたらA弦3→5フレットのスライドで入っても原曲に近くなります。キックは小節後半を8分の9・11番目で踏みますが、ベースはDの小節では4拍目頭（10番目）なので、つられないように。18小節目から開放Aを1小節半伸ばして19小節目の3拍目で止め、19小節目後半も同じ開放AのA1を4分音符2つ（オクターブ上ではありません。1つ目はやや前ノリ）。21小節目はG→E→Gのスライドで22小節目のDへつなぎます。B（22小節〜）は1小節か半小節の長い音が中心で、28・29・31・32小節目は後半の4分音符2つ（B-A、G-F#、B-A、G-E）で次のコードへ。31小節目は頭がB1（A弦2フレット）で後半にB2へ上がる点に注意し、25小節目最後の8分2つ分の休み以外は、どの音も次の音の直前までレガートで伸ばしてください。",
+ "method": "v3 (re-verified bar by bar against the BS-RoFormer SW 6-stem bass stem and the htdemucs_6s bass stem, plus the old htdemucs stem and the full mix): one correction - bar 19 eighths 8 and 10 are A1 (open A), not A2 (CREPE on both new stems, odd/even harmonic structure); every other pitch, onset, duration and tie confirmed; bars 1-11 tacet confirmed (SW bass stem -114..-125 dBFS per bar). Details and numbers in verification_v3. v2: Bars 1-11: bass tacet. The bass stem there is ~-80 dBFS RMS vs ~-29 dBFS once the groove starts (≈50 dB lower); its faint D3 sits ~50 dB below the D3 of other.wav and follows that envelope, and the full mix has no low D2/A1 energy beyond what other.wav carries, so the D3 is separation bleed of the drone. The low \"D2\" thumps basic-pitch found in bars 7-8 and the end of bar 11 are broadband (F#1-A2), coincide with drum hits and the bar-11 fill (drums stem ~15 dB louder in the same frames), i.e. drum bleed, not bass notes. Rhythm: basic-pitch note splits were ignored; re-attacks were taken from dips in the 30-400 Hz RMS envelope and in the 2nd-4th harmonic CQT envelopes (re-plucks show 5-40 dB dips just before the grid point), checked against pYIN f0 and zoomed CQT images. Groove A is legato dotted quarters on D (re-plucked on every beat, bar 16 beat 2 only softly), and in bars 13/15/17 the second half is three quarter-note Cs (eighths 6, 8, 10: a hemiola), not jig eighths; bar 20 is one sustained D. Bars 19/21/28/29/31/32 end with the same two-quarter figure on eighths 8 and 10 (bar 19: A1 A1 on the open A string, corrected in v3). Octaves verified from the CQT fundamental (no energy an octave below any written note; A1/B1 fundamentals within 2-5 dB of their 2nd harmonic; A2/B2 in bars 24, 28, 31 have no A1/B1 energy (v3: the bar-19 eighth-8/10 notes are A1, not A2 - see verification_v3)). Tuning ≈ +7 cents (A=440). Attack timing vs grid: median +5 ms, IQR -10..+17 ms. Evaluation (synth vs stem): onset F-measure (50 ms) vs onsets(bass stem, 30-1000 Hz, delta 0.1) per bar: 12:0.75 13:0.75 14:0.86 15:0.50 16:0.33 17:0.89 18:1.00 19:0.86 20:0.67 21:1.00 22:1.00 23:0.00 24:1.00 25:1.00 26:1.00 27:1.00 28:1.00 29:1.00 30:0.57 31:1.00 32:0.86 33:1.00 34:1.00; overall F=0.81 (P=0.77, R=0.86) vs 0.66 for raw basic-pitch; detector-matched (synth through the same detector) F=0.83. Low bars (15, 16, 23, 30) are legato pitch changes with no energy onset plus ~40-60 ms detector lag, not missing notes. Against full-band onsets() F=0.60 because the stem carries hi-hat/drum bleed onsets inside long notes. Bass-band chroma similarity per bar (sustained synth) min 0.955, mean 0.990; worst half-bar 0.897 (bar 19 first half, decaying A1 tail). Uncertain: release points of decaying notes rounded (bar 19 A1 stops ~eighth 7, bar 21 G2 ~7, bar 25 G2 ~10.5); bar 21 E2 is scooped up from ~D2 and slides to G2 without a re-pluck; bar 26 D2 has a quiet slide-in from below. Fingering is a suggestion (open D/A/G strings, B2/A2 on the G string); D-C-A could also be played on the A/E strings with slides. chords: the shared list from parts_v3/chords.json (harmony v3; synced into this file by the v3 verifier); the eighth-10 notes in bars 21, 28, 29, 31, 32 (and bar 21 eighth 8) are passing/approach tones and are listed in chords.json passing_chords, not as chord changes. | Fingering (tabtools/fingering.py (position-aware Viterbi, minimax-capped), profile 'normal', bass, re-run in v3 on the corrected events): 62 events re-fingered; mean Fretting-Transformer difficulty 1.45, max stretch 0 frets (0 mm), 2 position shifts, positions [2, 3], open notes 40/62, slurs on one string 1/1, graces on the main note's string 0/0; worst step bar 21 pos 10 cost 0.84 (minimax bottleneck 0.64, cap 6.00); agreement with the previous hand-made tab 62/62 events; validation: every tab entry sounds the written pitch, no event beyond the physical limits.",
+ "verification": "v3 INDEPENDENT VERIFICATION (verifier agent, 2026-11-18; scripts/images in work/v3/vbass_r2/ r01-r16; backup of the checked file: parts_v3/bass.pre_verify.json). VERDICT: the transcriber's notes are confirmed, including the bar-19 change (eighths 8 and 10 = A1 on the open A string). No event, pitch, octave, onset, duration, tie, slide or tab was changed. CHANGED: (1) chords: bass.json still carried the older v3 chord names (Csus2 at 13b/15b/17b, Asus4 at 24b/30b/33b, Esus4 at 27b), while parts_v3/chords.json was updated afterwards by the harmony v3 pass (Csus4(add9), Asus2 at 24b, Asus4/E at 27b, A at 30b/33b). validate_parts.py therefore failed with \"bass.json: chords differ from chords.json\". The chord list is now copied from chords.json; the sections were already identical. (2) method: the stale sentence \"chords = bass note at each change\" now points to chords.json and its passing_chords. (3) notes_ja: \"every note legato up to the next note\" now excludes the written rest at 25.10-12. The 'reconciled' field's chord names (Csus2, Esus4) are historical; chords.json is authoritative. EVIDENCE, re-derived from stems and tools the transcriber relied on least: the old htdemucs 4-stem bass (h4b) and the mix L channel / low-passed mix as the main new inputs, with the SW and htdemucs_6s bass stems for comparison; the guitar (SW, Mega acoustic, 6s), SW drums and Mega synth stems for leakage; SwiftF0, torchfcpe and basic-pitch instead of CREPE/PESTO/pYIN; plus my own exemplar classifier, slot dip/rise detector, superflux onsets and release tracker. (a) Bar 19 eighths 8/10 octave: at 165 Hz (3rd harmonic of A1; an A2 cannot produce it) the h4b stem shows a sharp tonal peak 22 dB above the local floor at -18 dB re the 110 Hz partial. That peak rises 9-26 dB with each attack, from -70 dB at 19.6.5-7, after the bar-18 A1 is damped. It is not leakage: the SW guitar stem is 25-29 dB below the bass stems at 165 Hz (the guitar plays A2-D3-G3-C4 here, no E3), and the SW drums stem has only broadband energy there, with no peak and no snare at 19.8. The partials an A2 would need are missing: 220 Hz is -24..-29 dB and 330 Hz is -40..-43 dB re 110 in h4b. Real A2s (24.6, 28.10, 31.10) have -8..-13 dB and -20..-32 dB, and real A1s (27.0, 30.x, 33.6) have -17..-28 dB and -35..-41 dB. A nearest-exemplar test on the 6-partial vector (55-330 Hz) classifies both notes as A1 on h4b, SW and 6s (leave-one-out accuracy on the 10 undisputed A1/A2 exemplars: 10/10 on each stem). SwiftF0 reads A1 for 19.8 on h4b, SW and the low-passed mix L, and for 19.10 on SW and the mix L. h4b SwiftF0 (19.10), FCPE (h4b) and basic-pitch (h4b, 19.10) say A2, but FCPE and basic-pitch also fold the undisputed A1 at 27.0 to A2 on h4b, so they fail on weak A1 fundamentals. The fundamental is weaker than in the other A1s (in h4b 19.10 the 55 Hz has no clear peak), but the 110/165/220 Hz partials give a residue pitch of 55 Hz. Keeping bar 19 at medium confidence is right. (b) Pitch of all other events: per-sixteenth agreement with SwiftF0 is SW 484/486 for v3 (v2 477/486) and h4b 471/485 (v2 469/485). The h4b mismatches are 19.10.5 (see a) and transition sixteenths: attack and release edges, the 16.0 approach from C2/C#2, the 21.8 scoop from D2, the 21.10 slide arrival, the late 23.0 and 30.6 entries, and the 23.11 bend before B2. Per event (median over the note), SwiftF0 on h4b and SW matches every other written pitch: C2 not C#2, F#2, B1 at 31.0, and B2/A2 in bars 24/28/31. basic-pitch on h4b matches every event except the weak-fundamental A1s (19.10, 27.0, 30.8). Octave check on every event (the 1.5f partial vs 2f): on SW it is at least 25 dB down for all 62 events, so no event is an octave too high. Higher values on h4b/6s (24.0, 28.8, 29.0, 34.0, and 31.10 on h4b only) coincide with guitar bleed at that pitch (F#3, D3, A2), are absent from SW, and the 2f/3f structure stays that of the written note. Bar 34 has some A2 under the D2 (-15..-35 dB re D2 in the three bass stems). It follows the louder guitar A2 in that bar (SW guitar -37 dB, against -42..-44 dB in the other D bars), too weak for a bass double stop, so it is not notated. (c) Onsets: per half-eighth slot, the dip-then-rise of the current note's harmonics (h1-h4) on h4b/SW/6s gives a median rise of 15-18 dB (10th percentile 5.4 dB) at written onsets. At unwritten eighth slots the median is 0.2 dB (90th percentile <= 1.2 dB). Kick-only control slots inside the sustained bars 20/22/23/26 show dips of <= 0.9 dB, so the A-section re-plucks are real. The weakest written ones (16.3: 1.2/5.6/3.3 dB dip on h4b/SW/6s; 15.8: 2.2/4.9/0.5; 16.0: 1.3/6.0/3.4; 14.0: 2.8/2.3/2.3) still exceed the control. No unwritten slot shows a consistent attack. The only small bumps are at 29.7 (+3.5 dB on all stems, the pre-damping before the 29.8 re-pluck) and 32.11 (<= 3.9 dB, release of E2), plus 19.4-19.7 on h4b/6s only, the decaying A1 (not on SW, no pitch change); none is a note. A superflux onset detector, which the transcriber did not use, gives F=0.909 (P 0.917, R 0.902) on SW and F=0.762 (P 0.909, R 0.656) on h4b, where it misses the legato same-pitch re-plucks of bars 13-17, which the dip test does find. These scores are identical for v2 and v3. (d) Grid/timing (attack time per stem, relative to the stem median): IQR of the per-event mean offset is -11..+11 ms. Only 30.6 is late by more than 40 ms (+47 ms, under a sixteenth), so every note stays on its eighth. (e) Durations: releases (15 dB below the sustained level) on h4b/SW/6s agree with every written end within 0.8 eighth (for example 21.6 G2 end, h4b 21.6.2; 25.10 G2 end, 25.10.4-10.5; 33.5.2 release before 33.6; 24.5.3-5.4 before 24.6). Two cases are explained separately. The long A1 of bars 18-19 decays gradually. Its 165 Hz partial drops 9-17 dB at 19.5-19.6 on h4b/SW, and the h4b harmonic level falls from -49 dB at 19.6 to -71 dB at 19.7.5, so the string is damped at about 19.6, as written. Bar 34 fades with the end of the video at about 34.9-10. The extra G2 sustain at 21.6-7.5 appears only in SW, not in h4b (no voiced SwiftF0 frames there). (f) Bars 1-11 tacet: the bass stems are <= -90 dB (35-100 Hz) in bars 1-10. The mix's low D2 in bars 7-11 (-47..-58 dB) is the synth swell: the Mega synth stem holds the same D2 (-51..-73 dB), and the guitar part has no D2. In bar 11, eighths 5-11, the D2-band energy matches the SW drums stem (snare fill, -25..-42 dB), while the SW bass stays <= -88 dB until the bar-12 pre-attack. (g) TAB: every tab entry sounds the written pitch on EADG. The fingering is idiomatic: open D/A/G strings, C2 on A3, E2/F#2 on the D string at frets 2/4, the E2->G2 slide on the D string from fret 2 to 5, B1 on A2 with the octave B2 on G4, B2/A2 on the G string at frets 4/2. There is no stretch beyond 2 frets and no position jump beyond fret 5. (h) Schema: events, tab, ties, pitch spelling and confidence pass validate_parts.py. Before the sync it reported 1 error for bass.json (chords differ from chords.json). After the sync, the only errors are 3x \"chord symbol 'Csus4(add9)' does not parse\". That symbol comes from chords.json (harmony v3) and is not covered by the validator's CHORD_RE, and chords.json itself is not regex-checked. Any part synced to chords.json will show the same error, so the fix belongs with the owner of the harmony or the validator: extend CHORD_RE or respell the symbol. The page generator reads chords.json directly, so this does not affect the bass score. The chord mismatches in drums, guitar and guitar_violin_line are outside this check. CAVEAT, reported for completeness: the octave-aware CQT cosine against a synthetic sustained tone with a strong fundamental (0.6^h harmonics) gets slightly worse with v3. The mean per half bar is h4b 0.958 -> 0.952, SW 0.960 -> 0.960, 6s 0.958 -> 0.951, and 19b drops from 0.90 to 0.56-0.61 on h4b/6s. This is because the synthetic A1 puts most of its energy at 55 Hz, while the recorded notes have their strongest partial at 110 Hz. The undisputed A1 half-bars (18a, 27a, 30b) are also the worst-scoring ones (0.78-0.88). So this metric tests timbre, not octave, and was not used for the decision. || Earlier verification of v2 (kept for reference; its chord list is superseded by chords.json and its bar-19 octave statement by verification_v3): Independent verification (verifier agent). NOTES/RHYTHM/TAB: no changes - every event was re-derived and confirmed. Evidence: (1) pitch per event from zero-padded harmonic-sum spectra: all 62 events match the written pitch (C2 not C#2, F#2 not F2, B not Bb; tuning within ~+-20 c); (2) octave: real A1/B1 notes have the fundamental 0-7 dB below the 2nd harmonic, while the written A2/B2 notes in bars 19, 24, 28, 31 have the lower octave 13-40 dB down (bar 31 eighth 8: B1 drops 14 dB at the re-attack while B2 stays, so the new note is B2); E2 in 27/32 has no E1; (3) re-attacks from 40-800 Hz level dips and harmonic-band (h1-h5) envelopes at every eighth of bars 11-34: every written onset has a dip/attack and no unwritten slot has one; the kick (drums.json: eighths 0,3,6,8,10) causes no dips in sustained bars 20/22/23/26, so the A-section dips at 3/6/9 and the 8/10 hemiola in bars 13/15/17 are real bass articulations; (4) pYIN f0 per sixteenth agrees with the part except transition sixteenths (pre-attack mutes, release glides); (5) releases (level < sustained-15 dB) agree with written ends (bar 21 G2 6.2, bar 25 G2 10.4); bars 18 and 20 have no re-attack; (6) bars 1-11: pYIN finds no voiced pitch; the bar-11 eighth-9 thump is broadband and the ~70 Hz tone there is in drums.wav (fill), so tacet is confirmed; (7) attack timing vs grid median +4 ms (IQR -10..+17 ms); bar 23 G2 enters ~55 ms late and bar 19 A2 ~40 ms early, still best quantized to eighths 0 and 8. Extra observations (not notated, added to notes_ja): bar 15->16 C2->D2 is a slide without a new pluck (pYIN glides 36.1->37.9 across the barline); bar 16 beat-2 re-pluck is a ~5 dB harmonic dip with no fresh attack (kept, medium). CHANGED - chords: the old list was bass roots, written as plain triad symbols, and it included passing tones as chord changes. build_player.py uses bass.json's chords for the whole page, because bass comes first in ORDER and there is no chords.json. The old symbols B (24, 28, 31) were wrong: the violin-removed accompaniment (guitar/accomp.wav) has D natural and no D#, so these are Bm. The old A at bar 18 was wrong because C natural is present and C# absent. The old A at bar 19 had neither C nor C#, with G present. The old A at 27/30b/33b had no third, with D present. The old E at 27b had no G or G#. The old C at 13b/15b/17b had no E. 21.8 E, 21.10 G, 28.10 A, 29.10 F#, 31.10 A and 32.10 E were passing tones. Replaced with the harmony/pad/guitar consensus, which my chroma checks confirm: D5 (from bar 1, intro included) | Csus2 at 13/15/17 eighth 6 | Am7 18 | A7sus4 19 | D 20 | G, Em7 at 21.6 | D | G | Bm, Asus4 at 24.6 | G | D | Asus4, Esus4 at 27.6 | Bm | G | D, Asus4 at 30.6 | Bm | G | D, Asus4 at 33.6 | D. old chords=[{\"bar\":12,\"pos\":0,\"symbol\":\"D\"},{\"bar\":13,\"pos\":6,\"symbol\":\"C\"},{\"bar\":14,\"pos\":0,\"symbol\":\"D\"},{\"bar\":15,\"pos\":6,\"symbol\":\"C\"},{\"bar\":16,\"pos\":0,\"symbol\":\"D\"},{\"bar\":17,\"pos\":6,\"symbol\":\"C\"},{\"bar\":18,\"pos\":0,\"symbol\":\"A\"},{\"bar\":20,\"pos\":0,\"symbol\":\"D\"},{\"bar\":21,\"pos\":0,\"symbol\":\"G\"},{\"bar\":21,\"pos\":8,\"symbol\":\"E\"},{\"bar\":21,\"pos\":10,\"symbol\":\"G\"},{\"bar\":22,\"pos\":0,\"symbol\":\"D\"},{\"bar\":23,\"pos\":0,\"symbol\":\"G\"},{\"bar\":24,\"pos\":0,\"symbol\":\"B\"},{\"bar\":24,\"pos\":6,\"symbol\":\"A\"},{\"bar\":25,\"pos\":0,\"symbol\":\"G\"},{\"bar\":26,\"pos\":0,\"symbol\":\"D\"},{\"bar\":27,\"pos\":0,\"symbol\":\"A\"},{\"bar\":27,\"pos\":6,\"symbol\":\"E\"},{\"bar\":28,\"pos\":0,\"symbol\":\"B\"},{\"bar\":28,\"pos\":10,\"symbol\":\"A\"},{\"bar\":29,\"pos\":0,\"symbol\":\"G\"},{\"bar\":29,\"pos\":10,\"symbol\":\"F#\"},{\"bar\":30,\"pos\":0,\"symbol\":\"D\"},{\"bar\":30,\"pos\":6,\"symbol\":\"A\"},{\"bar\":31,\"pos\":0,\"symbol\":\"B\"},{\"bar\":31,\"pos\":10,\"symbol\":\"A\"},{\"bar\":32,\"pos\":0,\"symbol\":\"G\"},{\"bar\":32,\"pos\":10,\"symbol\":\"E\"},{\"bar\":33,\"pos\":0,\"symbol\":\"D\"},{\"bar\":33,\"pos\":6,\"symbol\":\"A\"},{\"bar\":34,\"pos\":0,\"symbol\":\"D\"}]. Confidence reviewed, no change. METRICS (identical before/after, since no notes changed), bars 12-34: onset F (50 ms, part onsets vs onsets(bass,30-1000 Hz,delta .1)) = 0.803 (P 0.770, R 0.839); detector-matched synth F = 0.807; vs full-band onsets F = 0.591; per bar: 12:0.75 13:0.75 14:0.86 15:0.50 16:0.33 17:0.89 18:1.00 19:0.67 20:0.67 21:1.00 22:1.00 23:0.00 24:1.00 25:1.00 26:1.00 27:1.00 28:1.00 29:1.00 30:0.57 31:1.00 32:0.86 33:1.00 34:1.00. The low-scoring bars are explained by detector lag (+40..+80 ms on legato pitch changes: bars 12.9, 15.6, 16.6, 23.0, 30.6), by missed soft re-plucks (bars 13.6/8, 15.8/10, 16.0/3, 30.10), and by drum-bleed false onsets (bars 20.3, 32.9). None of these is a missing note. Bass-band (C1-C4) chroma per half bar: mean 0.987, min 0.869 (bar 19 first half, decaying A1 tail); per-bar full chroma min 0.947.",
+ "fingering": {
+  "engine": "tabtools/fingering.py (position-aware Viterbi, minimax-capped)",
+  "profile": "normal",
+  "instrument": "bass",
+  "bars": "all",
+  "n_assigned": 62,
+  "n_fixed": 0,
+  "agreement": "62/62",
+  "bottleneck": 0.637,
+  "cap": 6.0,
+  "worst_step": {
+   "bar": 21,
+   "pos": 10,
+   "cost": 0.839,
+   "into_fixed": false
+  },
+  "line": {
+   "ft_difficulty": 1.451,
+   "max_stretch_frets": 0,
+   "max_stretch_mm": 0.0,
+   "shifts": 2,
+   "positions": [
+    2,
+    3
+   ]
+  }
+ },
+ "verification_v3": {
+  "verdict": "1 musical change: bar 19 eighths 8 and 10 A2 -> A1 (tab G-string fret 2 -> open A string). Everything else: no change (pitches, octaves, onsets, durations, ties, slide marking, bars 1-11 tacet).",
+  "sources": "BS-RoFormer SW 6-stem bass (audio/sep2/sw6/full/bass.wav), htdemucs_6s bass (audio/sep6/htdemucs_6s/full/bass.wav), htdemucs 4-stem bass (audio/stems/bass.wav), full mix (incl. L/R channels). Tools: torchcrepe \"full\" (Viterbi, 5 ms hop) and PESTO on both new stems, librosa pYIN on all three, band-limited attack detector (200-2000 Hz rise > 6 dB), narrow-band harmonic levels (Hann windows, 2^17-point FFT), CQT / STFT zoom images per bar. Scratch: work/v3/bass2/.",
+  "changes": [
+   {
+    "bar": 19,
+    "pos": 8,
+    "field": "pitches/tab",
+    "old": "A2 [1,2]",
+    "new": "A1 [3,0]",
+    "evidence": "(1) CREPE on the SW and the htdemucs_6s stems: median MIDI 33.1 / 33.0 (A1) over 19.8-9.8, 0% of voiced frames above MIDI 40; the same tracker reads every real A2 (24.6, 28.10, 31.10) as 45.0 with 100% of frames above 40, and the B2s (24.0, 28.0, 28.8, 31.8) as 47.0. (2) Harmonic structure relative to the 110 Hz partial: 165 Hz (3rd harmonic of A1, impossible for an A2) is -12 / -18 / -18 dB (SW / 6s / htdemucs), like the undisputed A1 quarter notes of bar 30 (-10 / -11 / -10 dB) and unlike the real A2s of bars 24/28/31 (-27..-56 dB); 220 Hz (the A2's own octave partial) is -24 / -32 / -30 dB, like the A1s (-17..-33 dB) and unlike the A2s (-4..-13 dB). In the SW stem the 55/110/165/220 Hz levels of 19.8-9.8 (29.0/37.5/25.3/13.9 dB) almost equal those of the A1 at 30.8-9.8 (32.2/38.0/28.5/5.2 dB). (3) The 165 Hz partial of the bar-18 A1 falls 14-18 dB between 19.4.5 and 19.6.5 in all three bass stems (about 20 dB below its level at the barline) (the string is damped) and comes back with the 19.8 attack, so the open A string is re-plucked. (4) Why v2 read A2: in these plucks the 110 Hz 2nd harmonic is the strongest partial (fundamental 8-23 dB below it in 19b, 0-9 dB in the other A1s), and v2 only checked the level one octave below."
+   },
+   {
+    "bar": 19,
+    "pos": 10,
+    "field": "pitches/tab",
+    "old": "A2 [1,2]",
+    "new": "A1 [3,0]",
+    "evidence": "Same tests over 19.10-11.8: CREPE MIDI 33.0 (SW) / 32.9 (6s), 0% above MIDI 40; 165 Hz is -9 / -11 / -19 dB and 220 Hz is -19 / -19 / -25 dB below the 110 Hz partial (A1-type). The SW 55/110/165/220 Hz levels (27.6/37.4/28.2/18.6 dB) match the A1 at 30.10-11.8 (26.2/35.1/26.4/13.3 dB)."
+   },
+   {
+    "bar": 19,
+    "field": "confidence",
+    "old": "high",
+    "new": "medium",
+    "evidence": "The octave was reversed on harmonic evidence. The fundamental is weaker than in the other A1 plucks, and pYIN on the 6s stem still prefers A2, so the bar is not marked high."
+   },
+   {
+    "field": "notes_ja / method / fingering",
+    "old": "notes_ja said \"19小節目後半はオクターブ上のA2\"; method claimed no A1 energy under the bar-19 \"A2\"s",
+    "new": "notes_ja and method text corrected; notes_ja gains one sentence on the slide into bar 16 (no event change); fingering re-run with tabtools/fingering.py (62/62 events agree with the hand tab after the correction, no validation issues)",
+    "evidence": "Follows from the bar-19 change."
+   }
+  ],
+  "no_change": [
+   "Bars 1-11 tacet: confirmed. SW bass stem RMS per bar is -114..-125 dBFS in bars 1-10 (digital silence), and every eighth of bar 11 up to eighth 10 is <= -107 dB. Bar 11 reads -63 dB only because the bar-12 attack starts about 15 ms before the downbeat (-50 dB in the 20 ms frame at position 11.8). The groove bars 12-34 are at -29..-35 dB, so the margin is >= 80 dB. htdemucs_6s gives -89..-93 dB and htdemucs -78..-82 dB in bars 1-10 (bleed). There is no pickup note.",
+   "Pitch: CREPE on the SW stem agrees with v3 on 461 of 464 voiced sixteenths of bars 12-34 (v2: 454/464). The 3 left over are transition glides (16.11.5 release, 21.8.5 E2 scoop, 26.11.5 fall-off). On the 6s stem the agreement is 449/462 (v2 443/462), and every remaining mismatch is a low-periodicity transition frame. Every written letter and accidental is confirmed (C2 not C#2, F#2, B1/B2, E2, G2). Octaves of all 62 events were checked by sub-octave and 1.5x partials: only bar 19 eighths 8 and 10 show A1 structure. 31.8 B2 has the B1 at -14..-23 dB and the odd partial at -34..-45 dB, so it is a real B2 over the decaying B1. PESTO folds A1 to A2 and pYIN with 4096-sample frames smears transitions into false glides, so neither was used for decisions.",
+   "Onsets: the attack detector on the SW stem (66 attacks) against the v3 onsets gives F=0.913 (P 0.951, R 0.879, +-50 ms after removing the 20 ms detector latency). On the 6s stem F=0.820 (P 0.934, R 0.731, with more bleed attacks). Every written onset has an attack, a level dip or a pitch change. 13.8 is a soft re-pluck: 10 dB dip in 40-800 Hz exactly at the grid, CREPE periodicity drops to 0.05, no high-band transient. 16.3 is a real re-pluck (+40 ms, 21 dB high-band rise), which v2 had marked medium. Extra detections are not notes. 11.11.2 is the bar-12 pre-attack. 13.8.8 is the tail of the 13.8 re-pluck. 19.6.4 and 19.7.1 are high-band noise before the 19.8 attack, with no low-band rise. 23.11.5 is the G2 bending up before B2. 25.11.3 is a ghost 30-50 dB below note level (G2 string noise). 27.10 has no dip or pitch change. 21.6.5, 26.9, 32.10.6 and 33.10 appear only in the 6s stem (bleed).",
+   "Timing: deviations from the median attack offset are within +-30 ms except 17.10 (-40 ms), 19.8 (-37), 32.8 (-31), 23.0 (+51) and 30.6 (+44). All of these are under a sixteenth (63 ms), and the same figures sit on the eighth grid in the parallel bars (13.10 -10 ms, 15.10 -17 ms; 28.8/29.8/31.8 within 12 ms), so they stay on eighths as a pushed or laid-back feel, not sixteenths.",
+   "Durations: the G2 at 21.0-6 is kept. The SW stem seems to sustain it to about 7.9, but that is a separation artefact. In 21.6.2-7.8 the SW bass (33.2 dB) and the SW guitar (29-32 dB) are each louder at 98 Hz than the mix itself (25-26 dB), so they cancel in anti-phase. The mix L channel, where the bass is centred and the guitar is panned right, drops 12 dB at 98 Hz from 21.4.2-5.8 to 21.6.2-7.8. htdemucs 98 Hz falls from 22.6 to 5.3 dB between 21.5.5 and 21.7.0. The A1 at 18.0-19.6 is kept: its 165 Hz partial falls 14-18 dB between 19.4.5 and 19.6.5 in all stems. The G2 at 25.0-10 is kept: it is 15 dB down by 25.10.5-10.7 and about 50 dB down by 25.11. Every other note lasts until the next onset, apart from short gaps of at most 0.7 eighth before many note changes (for example 24.6, 28.0, 29.8, 33.6), which are articulation, not rests. The ties at 18 to 19 are confirmed: there is no re-attack at 19.0.",
+   "Slides: the 21.10 E2->G2 \"sl\" is kept. The pitch jumps from 40.0 to 42.8 within about 25 ms, and the high-band re-attack is only +7 dB, against +14..+70 dB for most picked notes. 21.8 E2 is scooped from about D2 (MIDI 38.4-38.9 for the first ~0.5 eighth; E2 is reached around 8.6-9) and is left un-notated, as in v2. 16.0 D2 is approached from C#2: about 75-90 ms at MIDI 37.0-37.2 around the barline in both stems, with D2 reached about 60 ms after the downbeat, but with a normal re-pluck at the downbeat. That makes it a slide-in from one fret below, so it is mentioned in notes_ja but not marked \"sl\", because \"sl\" here means a legato slide with no re-pluck. 13 to 14 and 17 to 18 have no such scoop. These are short left-hand noises and are not notated: 15.5.6 (about 40 ms of C#2 before the C2), the falls at 17.11.5 and 26.11.5, and the G2 bending about 1.5 semitones up in its last 70 ms before the re-plucked B2 at 24.0. There are no slides at 20 to 21 or 22 to 23: the pYIN glides there were frame-length artefacts, and CREPE jumps cleanly.",
+   "Passing notes: none added and none removed. 21.8 E2, 28.10 A2, 29.10 F#2, 31.10 A2 and 32.10 E2 are confirmed by pitch (CREPE) and attack.",
+   "Chords, sections and other fields: unchanged. The bass note at 19.8/10 is A in either octave, so the Am7 of bars 18-19 is unaffected."
+  ],
+  "metrics": {
+   "crepe_pitch_agreement": {
+    "sw": {
+     "v2": "454/464",
+     "v3": "461/464"
+    },
+    "htdemucs_6s": {
+     "v2": "443/462",
+     "v3": "449/462"
+    }
+   },
+   "onset_F_vs_attack_detector_sw": {
+    "F": 0.913,
+    "P": 0.951,
+    "R": 0.879,
+    "per_bar": "12:1.00 13:0.80 14:1.00 15:1.00 16:1.00 17:0.80 18:1.00 19:0.67 20:1.00 21:1.00 22:1.00 23:0.67 24:1.00 25:0.67 26:1.00 27:0.80 28:1.00 29:1.00 30:0.86 31:1.00 32:1.00 33:1.00 34:1.00"
+   },
+   "onset_F_vs_attack_detector_htdemucs_6s": {
+    "F": 0.82,
+    "P": 0.934,
+    "R": 0.731
+   },
+   "onset_F_vs_librosa_onsets_sw_30_1000Hz_delta0_1": {
+    "F": 0.686,
+    "P": 0.787,
+    "R": 0.608,
+    "note": "librosa onset_detect misses many legato re-plucks and adds level-fluctuation onsets on this stem; identical for v2 and v3"
+   },
+   "bass_chroma_per_halfbar_vs_sw": {
+    "mean": 0.992,
+    "min": 0.959,
+    "worst": "21b, 28b, 32b (passing-note half bars)",
+    "note": "identical for v2 and v3, because chroma ignores the octave"
+   },
+   "explained_low_onset_bars": "13 (soft 13.8 re-pluck), 17 (17.10 -40 ms), 19 (19.8 -37 ms plus pre-attack noise), 23 (23.0 +51 ms, G2 bend before 24.0), 25 (ghost at 25.11.3), 27 (legato A1->E2 change), 30 (legato D2->A1 change)"
+  }
+ },
+ "reconciled_v2": "Reconciled with bass/pad/guitar/drums/harmony: one chord list and one sections list for all parts (see chords.json). Chord decisions checked on the violin-notched accompaniment (guitar/accomp.wav), the other-stem side channel and the bass stem: 13b/15b/17b = Csus2 (C4+G4 loudest, the D3 pedal keeps sounding ~17 dB below); bars 18-19 = one Am7 (bass A1 tied, pad D3-G3 tied over the barline, C4 tail still ~8 dB above the floor in 19a, so no chord change at bar 19); bar 21 = G for the whole bar (backing G3-D4-G4, no E or B; bass E2 is a one-quarter passing note at pos 8); 27b Esus4 kept (A2/A3/E on top of bass E2, no G/G#, no B). Grid-shift test of every part against its stem: best at 0 (no part offset by a grid step).",
+ "reconciled": "RECONCILER (v3): chords and sections set to the verified chart in parts_v3/chords.json, identical in every part file (8 chord entries differed before: Csus4(add9)->Csus2 at 13b/15b/17b and Asus2->Asus4 at 24b for bass/drums; the violin-line arrangement carried the guitar transcriber's G7sus4/C, Dm7/A, Am11, D5, Asus2 names). No events changed. Grid check: bass onsets (SW bass stem) median +0.02 eighth (+3 ms), kick +0.05 (+6 ms), snare -0.01 (-1 ms); no part is offset by a grid step."
 }
