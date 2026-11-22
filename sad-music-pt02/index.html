@@ -1,0 +1,453 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0}[hidden]{display:none!important}</style>
+</head>
+<body>
+<title>sad music pt.02 TAB</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&family=Zen+Kaku+Gothic+New:wght@400;500;700&family=JetBrains+Mono:wght@500;700&display=swap">
+<style>
+/* Layout: a dusk-toned practice desk. Video + transport on the left (sticky on wide screens), TAB sheet on the right; chord shapes and notes below. */
+:root {
+  --bg: #eef0f4; --panel: #ffffff; --ink: #1d2433; --muted: #5d6679; --line: #d4d9e3;
+  --accent: #c8611f; --accent-ink: #ffffff; --accent-soft: #f6e2d3;
+  --hi: #e07a2e; --hi-soft: rgba(224,122,46,.16); --loop: #3c6fb0; --loop-soft: rgba(60,111,176,.10);
+  --tabline: #9aa3b4; --tabbg: #fbfcfd;
+  --f-display: "Space Grotesk", "Zen Kaku Gothic New", system-ui, sans-serif;
+  --f-body: "Zen Kaku Gothic New", "Hiragino Sans", "Noto Sans JP", system-ui, sans-serif;
+  --f-mono: "JetBrains Mono", ui-monospace, "SFMono-Regular", Menlo, monospace;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #141821; --panel: #1c212d; --ink: #e8ebf2; --muted: #9aa3b6; --line: #2e3543;
+  --accent: #f08a3e; --accent-ink: #1a1206; --accent-soft: #3a2a1d;
+  --hi: #f39a52; --hi-soft: rgba(243,154,82,.18); --loop: #7ea6dd; --loop-soft: rgba(126,166,221,.12);
+  --tabline: #59627a; --tabbg: #181c27; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #141821; --panel: #1c212d; --ink: #e8ebf2; --muted: #9aa3b6; --line: #2e3543;
+  --accent: #f08a3e; --accent-ink: #1a1206; --accent-soft: #3a2a1d;
+  --hi: #f39a52; --hi-soft: rgba(243,154,82,.18); --loop: #7ea6dd; --loop-soft: rgba(126,166,221,.12);
+  --tabline: #59627a; --tabbg: #181c27; color-scheme: dark; }
+* { box-sizing: border-box; }
+body { background: var(--bg); color: var(--ink); font-family: var(--f-body); font-size: 15px; line-height: 1.65; }
+.wrap { max-width: 1240px; margin: 0 auto; padding-block: 22px 60px;
+  padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); }
+header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 10px 24px; margin-bottom: 18px; }
+h1 { font-family: var(--f-display); font-size: clamp(26px, 4vw, 36px); line-height: 1.1; margin: 0; letter-spacing: -.01em; text-wrap: balance; }
+.sub { margin: 4px 0 0; color: var(--muted); font-size: 13.5px; }
+.chips { display: flex; flex-wrap: wrap; gap: 6px; }
+.chip { display: inline-flex; gap: 6px; align-items: baseline; padding: 4px 10px; border: 1px solid var(--line); border-radius: 999px; background: var(--panel); font-size: 12.5px; white-space: nowrap; }
+.chip b { font-family: var(--f-mono); font-weight: 700; }
+.chip span { color: var(--muted); font-size: 11px; letter-spacing: .04em; }
+.grid { display: grid; grid-template-columns: minmax(0, 340px) minmax(0, 1fr); gap: 18px; align-items: start; }
+@media (max-width: 860px) { .grid { grid-template-columns: minmax(0, 1fr); } }
+.side { display: grid; gap: 12px; position: sticky; top: calc(env(safe-area-inset-top, 0px) + 12px); }
+@media (max-width: 860px) { .side { position: static; } }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 12px; padding: 14px; min-width: 0; }
+.drop { display: grid; gap: 8px; place-items: center; text-align: center; padding: 18px 12px; border: 1.5px dashed var(--line); border-radius: 10px; }
+.drop p { margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.6; }
+video { width: 100%; max-height: 46vh; border-radius: 10px; background: #000; display: block; object-fit: contain; }
+.btn { appearance: none; border: 1px solid var(--line); background: var(--panel); color: var(--ink); border-radius: 999px; padding: 7px 14px; font: 700 13px var(--f-body); cursor: pointer; }
+.btn.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+.btn:focus-visible, select:focus-visible, input:focus-visible, svg.tab:focus-visible { outline: 2px solid var(--loop); outline-offset: 2px; }
+.now { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 8px; }
+.now div { border: 1px solid var(--line); border-radius: 10px; padding: 6px 10px; min-width: 0; }
+.now small { display: block; color: var(--muted); font-size: 11px; letter-spacing: .05em; }
+.now b { font-family: var(--f-display); font-size: 20px; line-height: 1.3; }
+.now i { font-style: normal; display: block; font-size: 11.5px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.transport { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 10px; }
+.play { width: 48px; height: 48px; border-radius: 50%; border: 0; background: var(--accent); color: var(--accent-ink); cursor: pointer; display: grid; place-items: center; }
+.play svg { width: 20px; height: 20px; fill: currentColor; }
+label.f { display: inline-flex; align-items: center; gap: 6px; font-size: 12.5px; color: var(--muted); }
+select { font: 500 13px var(--f-body); padding: 5px 8px; border: 1px solid var(--line); border-radius: 8px; background: var(--panel); color: var(--ink); }
+input[type="checkbox"] { accent-color: var(--accent); width: 16px; height: 16px; }
+.time { font-family: var(--f-mono); font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+.msg { margin: 0; font-size: 12.5px; color: var(--accent); }
+.sheet { padding: 10px 6px 14px; }
+.sheet h2, section h2 { font-family: var(--f-display); font-size: 19px; margin: 0 0 4px; }
+.legend { margin: 0 8px 8px; color: var(--muted); font-size: 12.5px; }
+.legend b { font-family: var(--f-mono); color: var(--ink); }
+#tabs { display: grid; gap: 4px; }
+svg.tab { width: 100%; height: auto; display: block; cursor: pointer; }
+svg.tab text { font-family: var(--f-mono); }
+.t-line { stroke: var(--tabline); stroke-width: 1; }
+.t-bar { stroke: var(--ink); stroke-width: 1.4; }
+.t-beat { fill: var(--muted); font-size: 10px; }
+.t-num { fill: var(--muted); font-size: 10px; }
+.t-fbg { fill: var(--tabbg); }
+.t-fret { fill: var(--ink); font-size: 12.5px; font-weight: 700; }
+.t-fret.on { fill: var(--hi); }
+.t-chord { fill: var(--ink); font-family: var(--f-display) !important; font-weight: 700; font-size: 15px; }
+.t-shape { fill: var(--muted); font-family: var(--f-mono); font-weight: 500; font-size: 10.5px; }
+.t-cur { fill: var(--hi-soft); }
+.t-curline { fill: var(--hi); }
+.t-loop { fill: var(--loop-soft); }
+.t-ground { fill: var(--tabbg); }
+.t-sname { fill: var(--muted); font-size: 10.5px; }
+section { margin-top: 18px; }
+.shapes { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+@media (max-width: 700px) { .shapes { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+.shape { text-align: center; }
+.shape svg { width: 100%; max-width: 150px; height: auto; }
+.shape h3 { margin: 4px 0 0; font-family: var(--f-display); font-size: 17px; }
+.shape p { margin: 2px 0 0; font-size: 12px; color: var(--muted); line-height: 1.5; }
+.d-str { stroke: var(--tabline); stroke-width: 1.2; }
+.d-fret { stroke: var(--tabline); stroke-width: 1.2; }
+.d-nut { stroke: var(--ink); stroke-width: 4; }
+.d-dot { fill: var(--accent); }
+.d-dotx { fill: none; stroke: var(--accent); stroke-width: 1.6; }
+.d-txt { fill: var(--ink); font: 700 11px var(--f-mono); }
+.d-mut { fill: var(--muted); font: 500 10px var(--f-mono); }
+.cols { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 18px; }
+@media (max-width: 860px) { .cols { grid-template-columns: minmax(0, 1fr); } }
+.prose { max-width: 66ch; }
+.prose p, .prose li { font-size: 14px; }
+.prose ul, .prose ol { padding-left: 1.3em; margin: 6px 0; display: grid; gap: 4px; }
+.conf { display: inline-block; padding: 0 7px; border-radius: 999px; font-size: 11px; font-weight: 700; letter-spacing: .03em; vertical-align: 1px; }
+.conf.h { background: var(--loop-soft); color: var(--loop); }
+.conf.m { background: var(--accent-soft); color: var(--accent); }
+.tuning { font-family: var(--f-mono); font-weight: 700; letter-spacing: .04em; }
+code { font-family: var(--f-mono); font-size: .92em; }
+@media (prefers-reduced-motion: reduce) { * { scroll-behavior: auto !important; } }
+</style>
+
+<div class="wrap">
+  <header>
+    <div>
+      <h1>sad music pt.02 TAB</h1>
+      <p class="sub">「making sad music for happy people pt.02」の耳コピTAB（アコギ・指弾き）。画面収録を読み込むと、再生に合わせてTABが動きます。</p>
+    </div>
+    <div class="chips" aria-label="曲の情報">
+      <span class="chip"><span>キー</span><b>A♭</b></span>
+      <span class="chip"><span>テンポ</span><b>♩=81</b></span>
+      <span class="chip"><span>拍子</span><b>4/4・16分</b></span>
+      <span class="chip"><span>チューニング</span><b>Drop D 半音下げ</b></span>
+    </div>
+  </header>
+
+  <div class="grid">
+    <aside class="side">
+      <div class="panel">
+        <div id="drop" class="drop">
+          <button id="pick" class="btn primary" type="button">画面収録を選ぶ</button>
+          <p>送ってもらった画面収録（.mov）をそのまま使えます。ファイルはこの端末の中だけで再生され、どこにも送信されません。</p>
+          <button id="noVideo" class="btn" type="button">動画なしでTABの音を鳴らす</button>
+          <input id="file" type="file" accept="video/*" hidden>
+        </div>
+        <video id="video" playsinline hidden></video>
+        <p id="vmsg" class="msg" hidden></p>
+      </div>
+      <div class="panel" style="display:grid;gap:12px">
+        <div class="now">
+          <div><small>小節</small><b id="nowBar">1</b><i id="nowBeat">/ 4</i></div>
+          <div><small>コード</small><b id="nowChord">D♭</b><i id="nowShape">D形</i></div>
+          <div><small>次</small><b id="nextChord">E♭</b><i id="nextShape">E形</i></div>
+        </div>
+        <div class="transport">
+          <button id="play" class="play" type="button" aria-label="再生"><svg viewBox="0 0 20 20"><path id="playIcon" d="M5 3l12 7-12 7z"/></svg></button>
+          <span id="time" class="time">0:00.0</span>
+          <label class="f" for="speed">速度
+            <select id="speed"><option value="1">100%</option><option value="0.85">85%</option><option value="0.7">70%</option><option value="0.5">50%</option></select>
+          </label>
+        </div>
+        <div class="transport">
+          <label class="f" for="loop">くり返し
+            <select id="loop">
+              <option value="0-4">1〜4小節（全部）</option><option value="0-2">1〜2小節</option><option value="2-4">3〜4小節</option>
+              <option value="0-1">1小節目</option><option value="1-2">2小節目</option><option value="2-3">3小節目</option><option value="3-4">4小節目</option>
+              <option value="none">くり返さない</option>
+            </select>
+          </label>
+          <label class="f" for="synth"><input id="synth" type="checkbox"> TABの音も鳴らす</label>
+          <label class="f" for="click"><input id="click" type="checkbox"> 拍のクリック</label>
+        </div>
+      </div>
+    </aside>
+
+    <div class="panel sheet">
+      <h2 style="margin:0 8px 2px">TAB</h2>
+      <p class="legend">フレットはドロップD（6弦D）として書いています。実際は全弦を半音下げるので、6弦から <b>C# G# C# F# A# D#</b>。数字をタップするとそこへ移動します。</p>
+      <div id="tabs" role="img" aria-label="4小節のTAB譜"></div>
+    </div>
+  </div>
+
+  <section class="panel">
+    <h2>4つのフォーム</h2>
+    <p class="legend" style="margin:0 0 10px">左がこの動画で鳴っているコード、下が押さえる形（ドロップDでの名前）です。白丸は飾りで入る音です。</p>
+    <div id="shapes" class="shapes"></div>
+  </section>
+
+  <div class="cols">
+    <section class="panel prose">
+      <h2>練習の順番</h2>
+      <ol>
+        <li><b>チューニング</b>：全部の弦を半音下げ、さらに6弦だけもう1音下げます（6弦から <span class="tuning">C# G# C# F# A# D#</span>）。動画と合わせないなら、普通のドロップD（D A D G B E）でも同じ形で弾けます。</li>
+        <li><b>形を覚える</b>：上の4つを押さえて、1つずつ全部の弦をゆっくり鳴らします。D♭（D形）だけ6〜9フレットの高い位置、ほかは2〜4フレットです。</li>
+        <li><b>親指だけ</b>：低音は各コードの「1拍目」と「その16分3つ後」の2回です（ドン・・ドン）。D♭は6弦開放、E♭は6弦2、Fmは6弦4、A♭は5弦開放。</li>
+        <li><b>50%で1小節ずつ</b>：くり返しを「1小節目」にして、TABの音を鳴らしながら合わせます。</li>
+        <li><b>つなげる</b>：「1〜2小節」→「全部」→ 速度を 70% → 85% → 100% に。最後のA♭は最後の和音を伸ばして終わります。</li>
+      </ol>
+      <h2 style="margin-top:14px">もっと簡単に弾くなら</h2>
+      <p>普通のチューニングで <b>カポ1</b> にすると、<b>C → D → Em7 → G</b> の形で同じコード（D♭ → E♭ → Fm → A♭）になります。Cadd9（x32033）・D（xx0232）・Em7（022033）・G（320033）を、同じ「ドン・・ドン」の親指＋アルペジオで弾けば雰囲気が出ます。</p>
+    </section>
+
+    <section class="panel prose">
+      <h2>どうやって調べたか</h2>
+      <ul>
+        <li><span class="conf h">確度 高</span> <b>コード進行とテンポ</b>：音声のピッチ解析（basic-pitch）と、音の成分（クロマ）の分析から。D♭ → E♭ → Fm → E♭ ｜ D♭ → E♭ → Fm → A♭ の4小節を、♩=81 の16分音符で弾いています。このTABを合成した音と原曲を比べると、和音の一致度は半小節ごとに 0.83〜0.94 でした。</li>
+        <li><span class="conf h">確度 高</span> <b>低音</b>：一番低い音が C#2（ふつうのチューニングより低い）なので、6弦をC#まで下げたチューニングと判断しました。スマホのマイクは低音が弱いので、解析では1オクターブ上に出ていた音を直しています。</li>
+        <li><span class="conf m">推定</span> <b>どの弦・何フレットか</b>：映像で12フレットのドットを目印に手の位置を数えました。D♭のときは手が6〜9フレットあたり、ほかは低い位置です。ただし指先が画面の端で切れているので、弦の選び方は「鳴っている音が一番自然に出る押さえ方」で決めています。</li>
+        <li><span class="conf m">推定</span> <b>高い音（1弦9フレット）</b>：3小節目の頭と最後の和音で聞こえる高い C の音です。最後の和音では手が低い位置にあるので、本当はハーモニクスかもしれません。届かなければ省略してください。</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<script>
+(() => {
+  'use strict';
+  // ---- data (16th-note grid fitted to the screen recording) ----
+  const T0 = 0.844, U = 0.1844, NS = 64;              // first downbeat (s), one 16th (s), slots in 4 bars
+  const OPEN = { 6: 37, 5: 44, 4: 49, 3: 54, 2: 58, 1: 63 };   // Drop C# sounding MIDI
+  const EV = [[0,6,0,1],[0,4,7,1],[1,5,7,1],[2,4,7,1],[3,6,0,1],[4,4,7,1],[4,2,9,1],[5,1,0,1],[6,3,6,1],[7,4,7,1],[7,1,0,1],[8,6,2,1],[8,2,0,1],[9,4,2,1],[10,3,2,1],[11,6,2,1],[12,3,2,1],[13,1,0,1],[14,2,3,1],[14,1,2,1],[15,2,0,1],[16,6,4,1],[16,2,2,1],[17,4,2,1],[18,3,2,1],[18,1,5,1],[19,6,4,1],[20,5,4,1],[20,3,2,1],[20,2,2,1],[21,3,2,1],[22,2,0,1],[23,2,2,1],[24,6,2,1],[24,2,0,1],[25,4,2,1],[26,3,2,1],[27,6,2,1],[28,3,2,1],[29,4,2,1],[30,5,4,1],[31,5,0,1],[31,3,2,1],[31,2,2,1],[32,6,0,1],[32,4,7,1],[33,5,7,1],[33,1,9,1],[34,4,7,1],[35,6,0,1],[36,4,7,1],[36,2,9,1],[37,1,0,1],[38,3,6,1],[39,4,7,1],[39,2,0,1],[40,6,2,1],[40,2,0,1],[41,4,2,1],[42,3,2,1],[43,6,2,1],[44,3,1,1],[44,1,0,1],[45,4,2,1],[46,1,2,1],[47,1,5,1],[48,6,4,1],[48,2,2,1],[49,4,2,1],[50,3,2,1],[51,6,4,1],[52,3,2,1],[52,1,0,1],[53,2,2,1],[54,4,2,1],[55,3,2,1],[55,1,0,1],[56,5,0,1],[56,3,2,1],[57,4,2,1],[57,2,2,1],[57,1,5,1],[58,3,2,1],[59,5,0,1],[59,4,2,1],[60,5,0,4],[60,4,2,4],[60,3,2,4],[60,2,2,4],[60,1,9,4]]
+    .map(([s, st, f, d]) => ({ s, st, f, d, m: OPEN[st] + f }));
+  const HALF = [['D♭','D形'],['E♭','E形'],['Fm','F#m7形'],['E♭→A♭','E→A'],['D♭','D形'],['E♭','E形'],['Fm','F#m7形'],['A♭','A形']];
+  const SHAPES = [
+    { name: 'D♭', shape: 'D形（6〜9フレット）', frets: [0, 7, 7, 6, 9, 9], base: 6, extra: [[1, 0]], note: '1弦は開放と9フレットを使い分け' },
+    { name: 'E♭', shape: 'E形', frets: [2, 'x', 2, 2, 0, 0], base: 1, extra: [[2, 3], [1, 2], [1, 5], [3, 1]], note: '2弦3・1弦2・1弦5は飾り' },
+    { name: 'Fm', shape: 'F#m7形', frets: [4, 4, 2, 2, 2, 0], base: 1, extra: [[1, 5], [2, 0]], note: '1弦5で高い音を足す' },
+    { name: 'A♭', shape: 'A形', frets: ['x', 0, 2, 2, 2, 0], base: 1, extra: [[1, 5]], note: '最後は1弦9（高いC）を足して伸ばす' },
+  ];
+  const bySlot = Array.from({ length: NS }, () => []);
+  EV.forEach((e) => bySlot[e.s].push(e));
+
+  const $ = (id) => document.getElementById(id);
+  const video = $('video'), tabsEl = $('tabs');
+  const store = { get(k, d) { try { const v = localStorage.getItem('smp2:' + k); return v === null ? d : JSON.parse(v); } catch (e) { return d; } },
+                  set(k, v) { try { localStorage.setItem('smp2:' + k, JSON.stringify(v)); } catch (e) {} } };
+
+  // ---- state ----
+  const S = { mode: 'none', playing: false, t: T0, speed: 1, loop: [0, 4], lastSlot: -1, clockStart: 0, clockT: T0 };
+  $('speed').value = String(store.get('speed', 1)); S.speed = +$('speed').value;
+  $('loop').value = store.get('loop', '0-4'); setLoop($('loop').value);
+  $('synth').checked = !!store.get('synth', false);
+  $('click').checked = !!store.get('click', false);
+
+  // ---- TAB rendering ----
+  const NS_SVG = 'http://www.w3.org/2000/svg';
+  let rows = [];          // {svg, bars:[...], x0, colW, cur, curLine, loopRect, frets: Map(slot -> [text])}
+  function el(tag, attrs, parent) { const n = document.createElementNS(NS_SVG, tag); for (const k in attrs) n.setAttribute(k, attrs[k]); if (parent) parent.appendChild(n); return n; }
+  function render() {
+    const w = Math.max(300, tabsEl.clientWidth || 600);
+    const per = w >= 760 ? 2 : 1;
+    tabsEl.innerHTML = ''; rows = [];
+    const lineGap = 17, top = 44, left = 22, right = 8, H = top + lineGap * 5 + 30;
+    for (let b0 = 0; b0 < 4; b0 += per) {
+      const W = w, svg = el('svg', { class: 'tab', viewBox: `0 0 ${W} ${H}`, width: W, height: H, tabindex: '0' });
+      const colW = (W - left - right) / (16 * per);
+      const row = { svg, b0, per, left, colW, top, lineGap, frets: new Map() };
+      el('rect', { x: 0, y: 0, width: W, height: H, class: 't-ground' }, svg);
+      row.loopRect = el('rect', { x: 0, y: top - 8, width: 0, height: lineGap * 5 + 16, class: 't-loop' }, svg);
+      row.cur = el('rect', { x: 0, y: top - 10, width: colW, height: lineGap * 5 + 20, class: 't-cur', rx: 3, visibility: 'hidden' }, svg);
+      for (let i = 0; i < 6; i++) {
+        el('line', { x1: left, x2: W - right, y1: top + i * lineGap, y2: top + i * lineGap, class: 't-line' }, svg);
+        const t = el('text', { x: 4, y: top + i * lineGap + 3.5, class: 't-sname' }, svg); t.textContent = ['e', 'B', 'G', 'D', 'A', 'D'][i];
+      }
+      for (let k = 0; k <= per; k++) {
+        const x = left + k * 16 * colW;
+        el('line', { x1: x, x2: x, y1: top, y2: top + lineGap * 5, class: 't-bar' }, svg);
+      }
+      for (let bi = 0; bi < per; bi++) {
+        const bar = b0 + bi, bx = left + bi * 16 * colW;
+        const n = el('text', { x: bx + 2, y: 12, class: 't-num' }, svg); n.textContent = String(bar + 1);
+        for (let h = 0; h < 2; h++) {
+          const [cn, sh] = HALF[bar * 2 + h], hx = bx + h * 8 * colW + colW * 0.15;
+          const c = el('text', { x: hx, y: 27, class: 't-chord' }, svg);
+          el('tspan', {}, c).textContent = cn;
+          const s = el('tspan', { dx: 5, class: 't-shape' }, c); s.textContent = sh;
+        }
+        for (let q = 0; q < 4; q++) {
+          for (let k = 0; k < 4; k++) {
+            const t = el('text', { x: bx + (q * 4 + k + 0.5) * colW, y: top + lineGap * 5 + 20, 'text-anchor': 'middle', class: 't-beat' }, svg);
+            t.textContent = k === 0 ? String(q + 1) : (colW > 20 ? ['', 'e', '&', 'a'][k] : '');
+          }
+        }
+        for (let s = bar * 16; s < bar * 16 + 16; s++) {
+          const x = bx + (s - bar * 16 + 0.5) * colW, list = [];
+          bySlot[s].forEach((e) => {
+            const y = top + (e.st - 1) * lineGap, txt = String(e.f), bw = txt.length * 8 + 4;
+            el('rect', { x: x - bw / 2, y: y - 8, width: bw, height: 16, class: 't-fbg' }, svg);
+            const t = el('text', { x, y: y + 4.5, 'text-anchor': 'middle', class: 't-fret' }, svg); t.textContent = txt; list.push(t);
+          });
+          row.frets.set(s, list);
+        }
+      }
+      svg.addEventListener('click', (ev) => {
+        const r = svg.getBoundingClientRect(), x = (ev.clientX - r.left) * (W / r.width);
+        const s = Math.floor((x - left) / colW); if (s < 0 || s >= 16 * per) return;
+        seek(T0 + (b0 * 16 + s) * U);
+      });
+      svg.addEventListener('keydown', (ev) => { if (ev.key === 'Enter' || ev.key === ' ') { ev.preventDefault(); toggle(); } });
+      tabsEl.appendChild(svg); rows.push(row);
+    }
+    drawLoop(); paint(true);
+  }
+  function drawLoop() {
+    rows.forEach((r) => {
+      if (!S.loop) { r.loopRect.setAttribute('width', 0); return; }
+      const a = Math.max(S.loop[0], r.b0), b = Math.min(S.loop[1], r.b0 + r.per);
+      if (b <= a) { r.loopRect.setAttribute('width', 0); return; }
+      r.loopRect.setAttribute('x', r.left + (a - r.b0) * 16 * r.colW); r.loopRect.setAttribute('width', (b - a) * 16 * r.colW);
+    });
+  }
+  let litSlot = -2;
+  function paint(force) {
+    const slot = Math.floor((S.t - T0) / U + 1e-3);
+    if (slot === litSlot && !force) return; litSlot = slot;
+    rows.forEach((r) => {
+      const inRow = slot >= r.b0 * 16 && slot < (r.b0 + r.per) * 16;
+      r.cur.setAttribute('visibility', inRow ? 'visible' : 'hidden');
+      if (inRow) r.cur.setAttribute('x', r.left + (slot - r.b0 * 16) * r.colW);
+      r.frets.forEach((list, s) => list.forEach((t) => t.classList.toggle('on', s === slot)));
+    });
+    const bar = Math.floor(slot / 16), beat = Math.floor((slot % 16) / 4) + 1;
+    const h = Math.min(7, Math.max(0, Math.floor(slot / 8)));
+    $('nowBar').textContent = slot < 0 ? '–' : slot >= NS ? '終' : String(bar + 1);
+    $('nowBeat').textContent = slot < 0 || slot >= NS ? '/ 4' : beat + '拍目 / 4';
+    $('nowChord').textContent = HALF[h][0]; $('nowShape').textContent = HALF[h][1];
+    $('nextChord').textContent = HALF[(h + 1) % 8][0]; $('nextShape').textContent = HALF[(h + 1) % 8][1];
+    $('time').textContent = fmt(S.t);
+  }
+  function fmt(t) { const m = Math.floor(t / 60), s = t - m * 60; return m + ':' + (s < 10 ? '0' : '') + s.toFixed(1); }
+
+  // ---- sound: Karplus-Strong plucks, rendered once per pitch ----
+  let ac = null; const bufs = new Map();
+  function audio() { if (!ac) { const C = window.AudioContext || window.webkitAudioContext; if (C) ac = new C(); } if (ac && ac.state === 'suspended') ac.resume(); return ac; }
+  function pluckBuf(m) {
+    if (bufs.has(m)) return bufs.get(m);
+    const sr = ac.sampleRate, f = 440 * Math.pow(2, (m - 69) / 12), N = Math.round(sr / f), len = Math.floor(sr * 2.6);
+    const b = ac.createBuffer(1, len, sr), d = b.getChannelData(0), ring = new Float32Array(N);
+    let seed = m * 9301 + 49297; const rnd = () => ((seed = (seed * 9301 + 49297) % 233280) / 233280) * 2 - 1;
+    for (let i = 0; i < N; i++) ring[i] = rnd() * 0.5;
+    const decay = 0.996 - Math.max(0, m - 60) * 0.00012; let p = 0, prev = 0;
+    for (let i = 0; i < len; i++) { const nx = (p + 1) % N, v = decay * 0.5 * (ring[p] + ring[nx]); d[i] = ring[p] * 0.7 + prev * 0.3; prev = ring[p]; ring[p] = v; p = nx; }
+    bufs.set(m, b); return b;
+  }
+  function playSlot(s) {
+    const a = audio(); if (!a) return; const now = a.currentTime;
+    if ($('synth').checked || S.mode === 'synth') bySlot[s].forEach((e, i) => {
+      const src = a.createBufferSource(), g = a.createGain(); src.buffer = pluckBuf(e.m);
+      const len = Math.min(2.4, (e.d + 3) * U / S.speed);
+      g.gain.setValueAtTime(0.0001, now); g.gain.linearRampToValueAtTime(e.st >= 5 ? 0.5 : 0.36, now + 0.004);
+      g.gain.setValueAtTime(e.st >= 5 ? 0.5 : 0.36, now + len); g.gain.exponentialRampToValueAtTime(0.0001, now + len + 0.25);
+      src.connect(g).connect(a.destination); src.start(now + i * 0.008); src.stop(now + len + 0.3);
+    });
+    if ($('click').checked && s % 4 === 0) {
+      const o = a.createOscillator(), g = a.createGain(); o.frequency.value = s % 16 === 0 ? 1500 : 1000;
+      g.gain.setValueAtTime(0.18, now); g.gain.exponentialRampToValueAtTime(0.0001, now + 0.05); o.connect(g).connect(a.destination); o.start(now); o.stop(now + 0.06);
+    }
+  }
+
+  // ---- transport ----
+  function loopBounds() { return S.loop ? [T0 + S.loop[0] * 16 * U, T0 + S.loop[1] * 16 * U] : [0, Infinity]; }
+  function seek(t) {
+    if (S.mode === 'video') video.currentTime = Math.max(0, t);
+    S.t = t; S.clockT = t; S.clockStart = performance.now(); S.lastSlot = Math.floor((t - T0) / U + 1e-3) - 1; paint(true);
+  }
+  function toggle() { S.playing ? pause() : play(); }
+  function play() {
+    if (S.mode === 'none') { S.mode = 'synth'; showMode(); }
+    audio();
+    const [a, b] = loopBounds(); if (S.t >= b - 0.02 || S.t < a - 0.6) seek(a - (S.loop ? 0.3 : 0));
+    S.playing = true; S.clockT = S.t; S.clockStart = performance.now();
+    if (S.mode === 'video') { video.playbackRate = S.speed; const p = video.play(); if (p && p.catch) p.catch(() => { S.playing = false; setIcon(); }); }
+    setIcon();
+  }
+  function pause() { S.playing = false; if (S.mode === 'video') video.pause(); setIcon(); }
+  function setIcon() { $('playIcon').setAttribute('d', S.playing ? 'M4 3h4v14H4zM12 3h4v14h-4z' : 'M5 3l12 7-12 7z'); $('play').setAttribute('aria-label', S.playing ? '一時停止' : '再生'); }
+  function setLoop(v) { S.loop = v === 'none' ? null : v.split('-').map(Number); }
+  function tick() {
+    if (S.playing) {
+      S.t = S.mode === 'video' ? video.currentTime : S.clockT + (performance.now() - S.clockStart) / 1000 * S.speed;
+      const [a, b] = loopBounds();
+      if (S.t >= b) { seek(a); if (S.mode === 'video' && video.paused) video.play(); }
+      else if (S.mode === 'synth' && !S.loop && S.t > T0 + NS * U + 1.5) { pause(); }
+      const slot = Math.floor((S.t - T0) / U + 1e-3);
+      if (slot !== S.lastSlot) { if (slot === S.lastSlot + 1 && slot >= 0 && slot < NS) playSlot(slot); S.lastSlot = slot; }
+      paint(false);
+    }
+    requestAnimationFrame(tick);
+  }
+
+  // ---- video loading ----
+  function showMode() {
+    const v = S.mode === 'video';
+    video.hidden = !v; $('drop').hidden = v;
+    if (S.mode === 'synth') { $('drop').querySelector('p').textContent = 'TABの音で再生中です。動画と合わせるときは画面収録を選んでください。'; $('noVideo').hidden = true; }
+  }
+  function loadFile(f) {
+    if (!f) return; video.src = URL.createObjectURL(f); video.load();
+    $('vmsg').hidden = true; S.mode = 'video'; pause(); showMode(); seek(T0 + (S.loop ? S.loop[0] * 16 * U : 0) - 0.3);
+  }
+  video.addEventListener('error', () => {
+    $('vmsg').hidden = false; $('vmsg').textContent = 'このブラウザではこの動画を再生できませんでした。iPhoneのSafariで開くか、mp4に書き出したファイルで試してください。動画なしでもTABの音で練習できます。';
+    S.mode = 'synth'; video.hidden = true; $('drop').hidden = false; showMode();
+  });
+  video.addEventListener('pause', () => { if (S.mode === 'video' && S.playing && !video.seeking) { S.playing = false; setIcon(); } });
+  video.addEventListener('seeked', () => { if (S.mode === 'video' && !S.playing) { S.t = video.currentTime; S.lastSlot = Math.floor((S.t - T0) / U) - 1; paint(true); } });
+  $('pick').addEventListener('click', () => $('file').click());
+  $('file').addEventListener('change', (e) => loadFile(e.target.files[0]));
+  $('drop').addEventListener('dragover', (e) => e.preventDefault());
+  $('drop').addEventListener('drop', (e) => { e.preventDefault(); loadFile(e.dataTransfer.files[0]); });
+  $('noVideo').addEventListener('click', () => { S.mode = 'synth'; showMode(); play(); });
+  $('play').addEventListener('click', toggle);
+  $('speed').addEventListener('change', (e) => { S.speed = +e.target.value; store.set('speed', S.speed); if (S.mode === 'video') video.playbackRate = S.speed; S.clockT = S.t; S.clockStart = performance.now(); });
+  $('loop').addEventListener('change', (e) => { setLoop(e.target.value); store.set('loop', e.target.value); drawLoop(); if (S.loop) seek(T0 + S.loop[0] * 16 * U - (S.playing ? 0 : 0.3)); });
+  $('synth').addEventListener('change', (e) => store.set('synth', e.target.checked));
+  $('click').addEventListener('change', (e) => store.set('click', e.target.checked));
+  document.addEventListener('keydown', (e) => {
+    if (e.target.closest && e.target.closest('select,input,button,svg')) return;
+    if (e.code === 'Space') { e.preventDefault(); toggle(); }
+  });
+
+  // ---- chord diagrams ----
+  function diagram(c) {
+    const W = 120, H = 162, x0 = 18, y0 = 30, sw = 17, fh = 22, nf = 5;
+    const svg = el('svg', { viewBox: `0 0 ${W} ${H}`, role: 'img', 'aria-label': c.name + '（' + c.shape + '）' });
+    if (c.base === 1) el('line', { x1: x0, x2: x0 + sw * 5, y1: y0, y2: y0, class: 'd-nut' }, svg);
+    else { const t = el('text', { x: x0 + sw * 5 + 6, y: y0 + fh * 0.65, class: 'd-mut' }, svg); t.textContent = c.base + 'fr'; }
+    for (let i = 0; i <= nf; i++) el('line', { x1: x0, x2: x0 + sw * 5, y1: y0 + i * fh, y2: y0 + i * fh, class: 'd-fret' }, svg);
+    for (let s = 0; s < 6; s++) el('line', { x1: x0 + s * sw, x2: x0 + s * sw, y1: y0, y2: y0 + nf * fh, class: 'd-str' }, svg);
+    const fy = (f) => y0 + (f - c.base + 0.5) * fh;
+    c.frets.forEach((f, i) => {          // i = 0 -> 6th string (left)
+      const x = x0 + i * sw;
+      if (f === 'x' || f === 0) { const t = el('text', { x, y: y0 - 8, 'text-anchor': 'middle', class: 'd-mut' }, svg); t.textContent = f === 'x' ? '×' : '○'; }
+      else { el('circle', { cx: x, cy: fy(f), r: 6.5, class: 'd-dot' }, svg); }
+    });
+    c.extra.forEach(([st, f]) => {
+      const x = x0 + (6 - st) * sw;
+      if (f === 0) return; if (f < c.base || f >= c.base + nf) return;
+      el('circle', { cx: x, cy: fy(f), r: 6, class: 'd-dotx' }, svg);
+    });
+    ['D', 'A', 'D', 'G', 'B', 'E'].forEach((n, i) => { const t = el('text', { x: x0 + i * sw, y: y0 + nf * fh + 14, 'text-anchor': 'middle', class: 'd-mut' }, svg); t.textContent = n; });
+    return svg;
+  }
+  SHAPES.forEach((c) => {
+    const d = document.createElement('div'); d.className = 'shape';
+    d.appendChild(diagram(c));
+    const h = document.createElement('h3'); h.textContent = c.name; d.appendChild(h);
+    const p = document.createElement('p'); p.textContent = c.shape + '｜' + c.note; d.appendChild(p);
+    $('shapes').appendChild(d);
+  });
+
+  let rt = 0; window.addEventListener('resize', () => { clearTimeout(rt); rt = setTimeout(render, 120); });
+  render(); seek(T0 - 0.3); requestAnimationFrame(tick);
+  window.__smp2 = { S, seek, play, pause };
+})();
+</script>
+
+</body>
+</html>
